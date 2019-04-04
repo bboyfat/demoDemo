@@ -1,0 +1,21 @@
+PODS:
+  - iOSUtilitiesSource (1.0.0)
+
+DEPENDENCIES:
+  - iOSUtilitiesSource (from `https://github.com/hasnine/iOSUtilitiesSource.git`)
+
+EXTERNAL SOURCES:
+  iOSUtilitiesSource:
+    :git: https://github.com/hasnine/iOSUtilitiesSource.git
+
+CHECKOUT OPTIONS:
+  iOSUtilitiesSource:
+    :commit: 0f29394bfdf3bb82a6a0c243be1293e48c997ec1
+    :git: https://github.com/hasnine/iOSUtilitiesSource.git
+
+SPEC CHECKSUMS:
+  iOSUtilitiesSource: bd69d00b8fdf29d8d99303410ce44e9df3c6ec20
+
+PODFILE CHECKSUM: b905450a6f9de8e05ffcdf55f8840d40be776f94
+
+COCOAPODS: 1.5.3
