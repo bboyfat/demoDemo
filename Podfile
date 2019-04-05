@@ -6,5 +6,13 @@ target 'Tips-MartDemo' do
   use_frameworks!
 
   pod 'iOSUtilitiesSource', :git => 'https://github.com/hasnine/iOSUtilitiesSource.git'
-
+  pod "SwiftPhoneNumberFormatter"
+  
+  
+   pod 'Firebase/Core'
+   pod 'Firebase/Database'
+   
+   pod 'FacebookCore' 
+   pod 'FacebookLogin' 
+   pod 'FacebookShare'
 end
