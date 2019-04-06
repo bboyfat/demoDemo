@@ -45,7 +45,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var getStartedBtn: UIButton!
     
-   
+    let placeHoplder: UILabel = {
+        let label = UILabel()
+        
+        label.text = "PhoneNumber"
+        label.textColor = .lightGray
+        
+        return label
+    }()
 
     
     override func viewDidLoad() {
@@ -53,12 +60,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
       
         phoneTextField.delegate = self
-        phoneTextField.difference = 25
+//        phoneTextField.difference = 25
         
        
         
-       
-        
+       placeHoplder.frame = phoneTextField.bounds
+        phoneTextField.addSubview(placeHoplder)
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleEndEdit))
         self.view.addGestureRecognizer(tap)
     }
@@ -79,7 +86,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var regUnderscore: UIView!
     @IBAction func enterBtn(_ sender: UIButton) {
         
-       self.passwordNumberText.isHidden = false
+//       self.passwordNumberText.isHidden = false
         self.repeatPass.isHidden = true
         self.friendId.isHidden = true
         self.getStartedBtn.setTitle("Вход", for: .normal)
@@ -96,10 +103,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    func moveUP(view: UILabel){
+        UIView.animate(withDuration: 0.25, animations: {
+            view.frame.origin.y = -20
+            view.font = view.font.withSize(10)
+            self.placeHoplder.textColor = .lightGray
+            self.placeHoplder.text = "Введите номер"
+        }, completion: nil)
+    }
+    
+    func moveBack(view: UIView){
+        UIView.animate(withDuration: 0.25, animations: {
+            view.frame.origin.y = 0
+        }, completion: nil)
+    }
+    func moveDown(view: UIView){
+        UIView.animate(withDuration: 0.25, animations: {
+            view.frame.origin.y = 20
+        }, completion: nil)
+    }
     
     @IBAction func registrationBtn(_ sender: UIButton) {
        sender.setTitleColor(.white, for: .normal)
         
+        self.phoneTextField.isHidden = false
         self.repeatPass.isHidden = false
         self.friendId.isHidden = false
         self.getStartedBtn.setTitle("Регистрация", for: .normal)
@@ -150,32 +177,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.text = formattedNumber(number: textField.text!)
        
         var currentText = textField.text ?? ""
-//        var rangeArr = [0,1,2,3,4,8,9,13,16]
-//             let rangeLoc = range.location
-//
-//
-//
-//
-//        switch rangeLoc {
-//        case 0,1,2,3,4:
-//          textField.text? = "+38 ("
-//        case 8,9:
-//
-//            textField.text? += "3"
-//////        case 3:
-//////           textField.text? += "8"
-//////        case 4:
-//////            " "
-//////        case 4:
-//////            "("
-//////        case 5:
-//////            "0"
-//        case 20:
-//            return false
-//        default:
-//           return true
-//        }
-        
+
         
         
         
@@ -193,10 +195,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return updateText.count <= 19
     }
     
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
 //        textField.text = "+38 (0..)"
-      
+       moveUP(view: placeHoplder)
       }
     
     
@@ -212,29 +215,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func isPhoneNumber(phone: String) -> Bool{
         var isValid = true
         
-         let phoneRegEx = "\\+38\\ +(+0+[6-9]+[0-9]+)\\ +[0-90-90-9]\\ +[0-90-9]\\ +[0-90-9]"
-        do{
-            //An immutable representation of a compiled regular expression that you apply to Unicode strings.
-            let regex = try NSRegularExpression(pattern: phoneRegEx)
-            // convert our String to NSString
-            let nsString = phone as NSString
-            //Returns an array containing all the matches of the regular expression in the string.
-            
-            let result = regex.matches(in: phone, range: NSRange(location: 0, length: nsString.length))
-            
-            if result.count == 0{
-                isValid = false
-                
-            }
-            
-        } catch{
-            print("Email is not Valid")
-            
+        
+        
+        
+        if  phone.count < 19{
+            isValid = false
         }
-        
-        
-        
-        print(isValid)
+//        let regEx = "\\++[38]\\ +(+[0]+[6-9]+[0-9]+)\\ +[0-9{3}]\\ +[0-9{2}}]\\ +[0-9{2}]"
+//        let phoneRegEx = "^(\\+38\\s*(?0\\d{2}*)\\s\\d{3}\\)?)\\s?\\d{2}\\s?\\d{2}$"
+//        do{
+//            //An immutable representation of a compiled regular expression that you apply to Unicode strings.
+//            let regex = try NSRegularExpression(pattern: phoneRegEx)
+//            // convert our String to NSString
+//            let nsString = phone as NSString
+//            //Returns an array containing all the matches of the regular expression in the string.
+//
+//            let result = regex.matches(in: phone, range: NSRange(location: 0, length: nsString.length))
+//
+//            if result.count == 0{
+//                isValid = false
+//
+//            }
+//
+//        } catch{
+//            print("Email is not Valid")
+//
+//        }
+//
+//        print(isValid)
         return isValid
         
         
@@ -250,11 +258,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else {return}
         
-       
+        if textField.text?.count == 0{
+            moveBack(view: placeHoplder)
+            placeHoplder.textColor = .lightGray
+            placeHoplder.text = "Введите номер"
+        }
        
         if !isPhoneNumber(phone: text){
             textField.textColor = .red
-            
+            moveDown(view: placeHoplder)
+            placeHoplder.textColor = .red
+            placeHoplder.font = UIFont(name: "gotham_pro_light.ttf", size: 7)
+            placeHoplder.text = "Номер: +38 (0"
         } else {
             textField.textColor = .green
         }

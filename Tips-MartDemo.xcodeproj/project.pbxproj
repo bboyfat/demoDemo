@@ -16,6 +16,10 @@
 		C2BA3C6B22573CC20016CA9E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BA3C6A22573CC20016CA9E /* CustomTextField.swift */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
 		C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* LaunchViewController.swift */; };
+		C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */; };
+		C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */; };
+		C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FD2258B2D0006FDDDB /* gotham_pro_light.ttf */; };
+		C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */; };
 		C6EEFF074AC8CA70738BF766 /* Pods_Tips_MartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,10 @@
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C722257D09D0016CA9E /* Tips-MartDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tips-MartDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2C96D202255FC17009F7050 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro.ttf; sourceTree = "<group>"; };
+		C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_bold.ttf; sourceTree = "<group>"; };
+		C2E699FD2258B2D0006FDDDB /* gotham_pro_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_light.ttf; sourceTree = "<group>"; };
+		C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_medium.ttf; sourceTree = "<group>"; };
 		F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_MartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +90,7 @@
 		C25BBF672255E0D2008D78F9 /* Tips-MartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C2E699F82258B26C006FDDDB /* Fonts */,
 				C2C96D222255FC1C009F7050 /* LauncScreen */,
 				C25BBF682255E0D2008D78F9 /* AppDelegate.swift */,
 				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
@@ -103,6 +112,17 @@
 				C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */,
 			);
 			path = LauncScreen;
+			sourceTree = "<group>";
+		};
+		C2E699F82258B26C006FDDDB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */,
+				C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */,
+				C2E699FD2258B2D0006FDDDB /* gotham_pro_light.ttf */,
+				C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DB4E567917A9798C36844C29 /* Pods */ = {
@@ -176,9 +196,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */,
+				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
+				C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */,
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
 				C25BBF6E2255E0D2008D78F9 /* Main.storyboard in Resources */,
+				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
+				C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
