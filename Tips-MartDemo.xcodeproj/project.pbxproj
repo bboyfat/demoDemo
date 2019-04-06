@@ -13,13 +13,14 @@
 		C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF6F2255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld */; };
 		C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF722255E0D3008D78F9 /* Assets.xcassets */; };
 		C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */; };
-		C2BA3C6B22573CC20016CA9E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BA3C6A22573CC20016CA9E /* CustomTextField.swift */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
 		C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* LaunchViewController.swift */; };
 		C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */; };
 		C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */; };
 		C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FD2258B2D0006FDDDB /* gotham_pro_light.ttf */; };
 		C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */; };
+		C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A0322596327006FDDDB /* FloatingTextField.swift */; };
+		C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A052259636F006FDDDB /* ValidPhonePass.swift */; };
 		C6EEFF074AC8CA70738BF766 /* Pods_Tips_MartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +35,6 @@
 		C25BBF722255E0D3008D78F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C25BBF752255E0D3008D78F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25BBF772255E0D3008D78F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2BA3C6A22573CC20016CA9E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2BA3C6E2257CEA50016CA9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,8 @@
 		C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_bold.ttf; sourceTree = "<group>"; };
 		C2E699FD2258B2D0006FDDDB /* gotham_pro_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_light.ttf; sourceTree = "<group>"; };
 		C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_medium.ttf; sourceTree = "<group>"; };
+		C2E69A0322596327006FDDDB /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		C2E69A052259636F006FDDDB /* ValidPhonePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidPhonePass.swift; sourceTree = "<group>"; };
 		F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_MartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,7 +96,8 @@
 				C2C96D222255FC1C009F7050 /* LauncScreen */,
 				C25BBF682255E0D2008D78F9 /* AppDelegate.swift */,
 				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
-				C2BA3C6A22573CC20016CA9E /* CustomTextField.swift */,
+				C2E69A0322596327006FDDDB /* FloatingTextField.swift */,
+				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
 				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
 				C25BBF722255E0D3008D78F9 /* Assets.xcassets */,
 				C25BBF772255E0D3008D78F9 /* Info.plist */,
@@ -284,9 +287,10 @@
 			files = (
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
+				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
+				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
 				C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */,
-				C2BA3C6B22573CC20016CA9E /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

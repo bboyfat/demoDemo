@@ -43,7 +43,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HC-MT-rXQ">
-                                <rect key="frame" x="55" y="327" width="210" height="50"/>
+                                <rect key="frame" x="55" y="331" width="210" height="50"/>
                                 <color key="backgroundColor" red="0.27470073103904724" green="0.7920336127281189" blue="0.47838234901428223" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CE8-yG-qHg"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти с помощью FaceBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-b1-rJF">
-                                <rect key="frame" x="20" y="452" width="280" height="15"/>
+                                <rect key="frame" x="20" y="456" width="280" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="cXc-qk-4Xy"/>
                                 </constraints>
@@ -95,105 +95,217 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView clipsSubviews="YES" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" axis="vertical" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-ED-ceH">
-                                <rect key="frame" x="20" y="220" width="280" height="73"/>
+                            <stackView clipsSubviews="YES" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-ED-ceH">
+                                <rect key="frame" x="20" y="220" width="280" height="77"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9QI-dT-tby">
-                                        <rect key="frame" x="15" y="0.0" width="250" height="24"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aUz-pP-TIZ" userLabel="PhoneNumber">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="26"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9QI-dT-tby">
+                                                <rect key="frame" x="20" y="0.0" width="240" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Lda-b0-elz"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc8-sq-i4p" userLabel="phoneUnderscore">
+                                                <rect key="frame" x="0.0" y="24" width="280" height="2"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="7fv-Xj-Mtp"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="KfM-Pw-u8O"/>
-                                            <constraint firstAttribute="height" constant="24" id="bOh-B3-QnB"/>
+                                            <constraint firstItem="9QI-dT-tby" firstAttribute="top" secondItem="aUz-pP-TIZ" secondAttribute="top" id="05e-sx-zSL"/>
+                                            <constraint firstItem="9QI-dT-tby" firstAttribute="leading" secondItem="aUz-pP-TIZ" secondAttribute="leading" constant="20" id="3tC-C9-Iyo"/>
+                                            <constraint firstAttribute="trailing" secondItem="9QI-dT-tby" secondAttribute="trailing" constant="20" id="Dx7-YO-r9r"/>
+                                            <constraint firstItem="nc8-sq-i4p" firstAttribute="leading" secondItem="aUz-pP-TIZ" secondAttribute="leading" id="ctB-Bg-K28"/>
+                                            <constraint firstAttribute="trailing" secondItem="nc8-sq-i4p" secondAttribute="trailing" id="d0d-w5-Xv0"/>
+                                            <constraint firstItem="9QI-dT-tby" firstAttribute="leading" secondItem="aUz-pP-TIZ" secondAttribute="leading" constant="20" id="hzX-oc-5yZ"/>
+                                            <constraint firstItem="nc8-sq-i4p" firstAttribute="top" secondItem="9QI-dT-tby" secondAttribute="bottom" id="njx-Ih-KzH"/>
+                                            <constraint firstItem="9QI-dT-tby" firstAttribute="top" secondItem="aUz-pP-TIZ" secondAttribute="top" id="rao-Zi-EcD"/>
+                                            <constraint firstAttribute="trailing" secondItem="9QI-dT-tby" secondAttribute="trailing" constant="20" id="wnt-dY-t9O"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код из смс" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NhT-WW-Ea3" customClass="CustomTextField" customModule="Tips_MartDemo" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="36.5" width="250" height="24"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o9h-iF-TQe" userLabel="PasswordTextField">
+                                        <rect key="frame" x="0.0" y="51" width="280" height="26"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-Vl-rG2" userLabel="password">
+                                                <rect key="frame" x="20" y="0.0" width="240" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="O3y-Gs-4cg"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35O-OS-XA7" userLabel="passwordUnderline">
+                                                <rect key="frame" x="0.0" y="24" width="280" height="2"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="YMq-jq-Txu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="sPP-pG-dlD"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="xeG-QD-L2I"/>
+                                            <constraint firstItem="35O-OS-XA7" firstAttribute="leading" secondItem="o9h-iF-TQe" secondAttribute="leading" id="OQA-SV-p9F"/>
+                                            <constraint firstItem="zaE-Vl-rG2" firstAttribute="leading" secondItem="o9h-iF-TQe" secondAttribute="leading" constant="20" id="edY-ZC-gku"/>
+                                            <constraint firstAttribute="trailing" secondItem="35O-OS-XA7" secondAttribute="trailing" id="f2T-qg-Fwc"/>
+                                            <constraint firstAttribute="trailing" secondItem="zaE-Vl-rG2" secondAttribute="trailing" constant="20" id="g1s-jz-LEC"/>
+                                            <constraint firstItem="zaE-Vl-rG2" firstAttribute="top" secondItem="o9h-iF-TQe" secondAttribute="top" id="hpN-46-PIj"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73d-oW-iaf" customClass="CustomTextField" customModule="Tips_MartDemo" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="49" width="250" height="24"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Non-cO-cO5" userLabel="RepeatPAsswordTextField">
+                                        <rect key="frame" x="0.0" y="102" width="280" height="26"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Aam-lB-roF" userLabel="repeatPassword">
+                                                <rect key="frame" x="20" y="0.0" width="240" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="9Sp-RF-b3T"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTh-6K-rho" userLabel="repeatPasswordUNderLine">
+                                                <rect key="frame" x="0.0" y="24" width="280" height="2"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="8Jb-v9-Ezd"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="YEy-zZ-h2T"/>
-                                            <constraint firstAttribute="height" constant="24" id="g0s-vw-bLa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Aam-lB-roF" secondAttribute="trailing" constant="20" id="4Mk-5g-hiM"/>
+                                            <constraint firstItem="Aam-lB-roF" firstAttribute="leading" secondItem="Non-cO-cO5" secondAttribute="leading" constant="20" id="5HY-sR-j60"/>
+                                            <constraint firstItem="Aam-lB-roF" firstAttribute="top" secondItem="Non-cO-cO5" secondAttribute="top" id="A1n-WH-xPM"/>
+                                            <constraint firstItem="tTh-6K-rho" firstAttribute="leading" secondItem="Non-cO-cO5" secondAttribute="leading" id="qqW-K5-52m"/>
+                                            <constraint firstAttribute="trailing" secondItem="tTh-6K-rho" secondAttribute="trailing" id="seh-kU-P2W"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MUR-ti-19U" userLabel="repeatPassword" customClass="IuFloatingTextFiledPlaceHolder" customModule="iOSUtilitiesSource">
-                                        <rect key="frame" x="15" y="73" width="250" height="24"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aY4-p3-nCG" userLabel="MassegePassword">
+                                        <rect key="frame" x="0.0" y="153" width="280" height="26"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U1F-pO-eKG" userLabel="massegePass">
+                                                <rect key="frame" x="20" y="0.0" width="240" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="t6f-RW-OKX"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKt-cn-AhS" userLabel="massegePassUnderLine">
+                                                <rect key="frame" x="0.0" y="24" width="280" height="2"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="fha-VG-KnT"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="PHH-Lz-XjL"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="pKS-3z-b2S"/>
+                                            <constraint firstItem="U1F-pO-eKG" firstAttribute="leading" secondItem="aY4-p3-nCG" secondAttribute="leading" constant="20" id="Dbj-Kp-Q9A"/>
+                                            <constraint firstItem="QKt-cn-AhS" firstAttribute="leading" secondItem="aY4-p3-nCG" secondAttribute="leading" id="Dtr-ox-ml7"/>
+                                            <constraint firstAttribute="trailing" secondItem="QKt-cn-AhS" secondAttribute="trailing" id="qNa-ob-ANx"/>
+                                            <constraint firstItem="U1F-pO-eKG" firstAttribute="top" secondItem="aY4-p3-nCG" secondAttribute="top" id="xlg-uz-Mf7"/>
+                                            <constraint firstAttribute="trailing" secondItem="U1F-pO-eKG" secondAttribute="trailing" constant="20" id="zlM-dL-LRF"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="password"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID of friend" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BUQ-m9-LhV" userLabel="friendsID" customClass="IuFloatingTextFiledPlaceHolder" customModule="iOSUtilitiesSource">
-                                        <rect key="frame" x="15" y="73" width="250" height="24"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RZA-nc-T0o" userLabel="FriendsID">
+                                        <rect key="frame" x="0.0" y="204" width="280" height="26"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ipM-7H-0vA" userLabel="frriendsID">
+                                                <rect key="frame" x="20" y="0.0" width="240" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="UXJ-j3-8AU"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fst-rI-9Jf" userLabel="friendsIdUnderline">
+                                                <rect key="frame" x="0.0" y="24" width="280" height="2"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="Tnk-SS-BFo"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="HHJ-4H-nhd"/>
-                                            <constraint firstAttribute="height" constant="24" id="JGs-MG-kxT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fst-rI-9Jf" secondAttribute="trailing" id="gUL-ZY-3gn"/>
+                                            <constraint firstItem="ipM-7H-0vA" firstAttribute="top" secondItem="RZA-nc-T0o" secondAttribute="top" id="kTm-hu-khK"/>
+                                            <constraint firstAttribute="trailing" secondItem="ipM-7H-0vA" secondAttribute="trailing" constant="20" id="kj3-pw-Mew"/>
+                                            <constraint firstItem="ipM-7H-0vA" firstAttribute="leading" secondItem="RZA-nc-T0o" secondAttribute="leading" constant="20" id="trE-zI-f7F"/>
+                                            <constraint firstItem="Fst-rI-9Jf" firstAttribute="leading" secondItem="RZA-nc-T0o" secondAttribute="leading" id="xzD-fb-p4R"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aUz-pP-TIZ" firstAttribute="top" secondItem="fZh-ED-ceH" secondAttribute="top" id="15t-GQ-JSM"/>
+                                    <constraint firstItem="RZA-nc-T0o" firstAttribute="top" secondItem="aY4-p3-nCG" secondAttribute="bottom" constant="25" id="8S7-Oa-Wd6"/>
+                                    <constraint firstItem="o9h-iF-TQe" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="8xD-LC-reG"/>
+                                    <constraint firstItem="o9h-iF-TQe" firstAttribute="top" secondItem="aUz-pP-TIZ" secondAttribute="bottom" constant="25" id="C6f-N0-Ubr"/>
+                                    <constraint firstItem="Non-cO-cO5" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="DC1-E3-clb"/>
+                                    <constraint firstAttribute="trailing" secondItem="o9h-iF-TQe" secondAttribute="trailing" id="F8F-bv-tyl"/>
+                                    <constraint firstAttribute="trailing" secondItem="aUz-pP-TIZ" secondAttribute="trailing" id="Qju-Ch-OEo"/>
+                                    <constraint firstItem="aY4-p3-nCG" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="Rlg-ku-vx8"/>
+                                    <constraint firstAttribute="trailing" secondItem="aY4-p3-nCG" secondAttribute="trailing" id="Xyh-O7-3L7"/>
+                                    <constraint firstItem="aY4-p3-nCG" firstAttribute="top" secondItem="Non-cO-cO5" secondAttribute="bottom" constant="25" id="a63-ow-pqG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Non-cO-cO5" secondAttribute="trailing" id="amc-9D-ZMq"/>
+                                    <constraint firstItem="RZA-nc-T0o" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="ej7-9z-R2x"/>
+                                    <constraint firstItem="aUz-pP-TIZ" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="lZO-0F-cAc"/>
+                                    <constraint firstAttribute="trailing" secondItem="RZA-nc-T0o" secondAttribute="trailing" id="t8F-3x-vpe"/>
+                                    <constraint firstItem="Non-cO-cO5" firstAttribute="top" secondItem="o9h-iF-TQe" secondAttribute="bottom" constant="25" id="y92-5l-Gcg"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7K-7W-Ded">
-                                <rect key="frame" x="140" y="477" width="40" height="40"/>
+                                <rect key="frame" x="140" y="481" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bee-TG-HU6"/>
                                 </constraints>
                                 <state key="normal" image="FBLogo"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOQ-ci-Kxw">
-                                <rect key="frame" x="118" y="409" width="85" height="21"/>
+                                <rect key="frame" x="118" y="413" width="85" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="SIY-xW-xPd"/>
                                 </constraints>
@@ -280,13 +392,18 @@
                         <outlet property="fbBtnLabel" destination="y7K-7W-Ded" id="bvE-5M-OFW"/>
                         <outlet property="fbLabel" destination="Ktf-b1-rJF" id="tf4-S1-fYC"/>
                         <outlet property="forgetPass" destination="AOQ-ci-Kxw" id="15U-Xq-Rq7"/>
-                        <outlet property="friendId" destination="BUQ-m9-LhV" id="Exf-hx-H2t"/>
+                        <outlet property="friendId" destination="ipM-7H-0vA" id="Dcn-od-FSK"/>
+                        <outlet property="friendsIdStack" destination="RZA-nc-T0o" id="2zq-FM-XH0"/>
                         <outlet property="getStartedBtn" destination="3HC-MT-rXQ" id="1P4-ek-b8O"/>
-                        <outlet property="messagePassLabel" destination="NhT-WW-Ea3" id="nLQ-NS-Yjg"/>
-                        <outlet property="passwordNumberText" destination="73d-oW-iaf" id="A1h-zd-zdL"/>
+                        <outlet property="massegePasswordStack" destination="aY4-p3-nCG" id="y0q-8I-LeP"/>
+                        <outlet property="messagePassLabel" destination="U1F-pO-eKG" id="z5t-5w-wGk"/>
+                        <outlet property="passwordStack" destination="o9h-iF-TQe" id="uZc-9w-VAV"/>
+                        <outlet property="passwordTetField" destination="zaE-Vl-rG2" id="hxo-0y-q5Y"/>
+                        <outlet property="phonNumberStack" destination="aUz-pP-TIZ" id="ecs-CH-Y3i"/>
                         <outlet property="phoneTextField" destination="9QI-dT-tby" id="84f-BZ-aAB"/>
                         <outlet property="regUnderscore" destination="K5T-4t-PIH" id="uhK-UA-Hq1"/>
-                        <outlet property="repeatPass" destination="MUR-ti-19U" id="Ht5-Gs-LNp"/>
+                        <outlet property="repeatPass" destination="Aam-lB-roF" id="7k3-RB-gcT"/>
+                        <outlet property="repeatPasswordStack" destination="Non-cO-cO5" id="QmX-BS-IHk"/>
                         <outlet property="signInLabel" destination="GGo-X1-eN1" id="7kL-S1-RQb"/>
                         <outlet property="signUpLabel" destination="q1Y-U8-reo" id="5f9-xz-IT5"/>
                         <outlet property="stackTextField" destination="fZh-ED-ceH" id="KfL-9Z-OfM"/>
