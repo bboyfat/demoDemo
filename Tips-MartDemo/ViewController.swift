@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var floatingDelegate: FloatingTextDelegate?
     var validateDelegate: ValidationDelegate?
-    
+    var hideAndShowDelegate: HideShowDelegate?
     
     
     
@@ -98,7 +98,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
       
         floatingDelegate = FloatingTextField()
         validateDelegate = ValidPhonePass()
-        
+        hideAndShowDelegate = HideOrNot()
         
         phoneTextField.delegate = self
         passwordTetField.delegate = self
@@ -120,20 +120,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func enterBtn(_ sender: UIButton) {
-        
-
+        if let showOrHide = self.hideAndShowDelegate{
+        let viewsToHide:[UIView] = [self.repeatPasswordStack, self.massegePasswordStack, self.friendsIdStack, self.regUnderscore ]
+        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.fbLabel, self.fbBtnLabel, self.enterUnderscore]
+            showOrHide.hide(views: viewsToHide)
+            showOrHide.show(views: viewsToShow)
+               animateShowAndHide()
+        }
+      
         
     }
     
     @IBAction func registrationBtn(_ sender: UIButton) {
        sender.setTitleColor(.white, for: .normal)
-        
-      
+        if let showOrHide = self.hideAndShowDelegate{
+        let viewsToHide:[UIView] = [ self.massegePasswordStack, self.fbLabel, self.fbBtnLabel, self.enterUnderscore]
+        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore]
+            showOrHide.hide(views: viewsToHide)
+            showOrHide.show(views: viewsToShow)
+            animateShowAndHide()
+        }
         
     }
-    
+    @IBAction func forgetPassBtn(_ sender: Any) {
+        if let showOrHide = self.hideAndShowDelegate{
+        let viewsToShow:[UIView] = [ self.massegePasswordStack, self.fbLabel, self.fbBtnLabel]
+        let viewsToHide:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.enterUnderscore]
+            showOrHide.hide(views: viewsToHide)
+            showOrHide.show(views: viewsToShow)
+            animateShowAndHide()
+        }
+        
+        
+        
+    }
     @IBAction func sendDataBtn(_ sender: UIButton) {
        
+    }
+    
+    func animateShowAndHide(){
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+            
+        }, completion: nil)
     }
     
     private func formattedNumber(number: String) -> String {
@@ -171,7 +200,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let updateText = currentText.replacingCharacters(in: stringRange, with: string)
          return updateText.count <= 19
     }
-    
+   
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.becomeFirstResponder()
@@ -218,10 +247,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func forgetPassBtn(_ sender: Any) {
-        
-      
-    }
+    
     
     func setPlaceHolders(){
         phonePlaceHolder.frame = phoneTextField.bounds

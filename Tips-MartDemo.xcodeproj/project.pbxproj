@@ -21,6 +21,7 @@
 		C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */; };
 		C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A0322596327006FDDDB /* FloatingTextField.swift */; };
 		C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A052259636F006FDDDB /* ValidPhonePass.swift */; };
+		C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A07225975B4006FDDDB /* HideOrNot.swift */; };
 		C6EEFF074AC8CA70738BF766 /* Pods_Tips_MartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_medium.ttf; sourceTree = "<group>"; };
 		C2E69A0322596327006FDDDB /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		C2E69A052259636F006FDDDB /* ValidPhonePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidPhonePass.swift; sourceTree = "<group>"; };
+		C2E69A07225975B4006FDDDB /* HideOrNot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideOrNot.swift; sourceTree = "<group>"; };
 		F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_MartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				C25BBF682255E0D2008D78F9 /* AppDelegate.swift */,
 				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
 				C2E69A0322596327006FDDDB /* FloatingTextField.swift */,
+				C2E69A07225975B4006FDDDB /* HideOrNot.swift */,
 				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
 				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
 				C25BBF722255E0D3008D78F9 /* Assets.xcassets */,
@@ -288,6 +291,7 @@
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
+				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
 				C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */,

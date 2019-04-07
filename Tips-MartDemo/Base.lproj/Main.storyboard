@@ -334,9 +334,9 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5T-4t-PIH" userLabel="regUnderscore">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5T-4t-PIH" userLabel="regUnderscore">
                                 <rect key="frame" x="165.5" y="182" width="130" height="4"/>
-                                <color key="backgroundColor" red="0.36269530653953552" green="0.79204827547073364" blue="0.47838085889816284" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="SG5-VL-uYu"/>
                                     <constraint firstAttribute="height" constant="4" id="vh9-ve-6gz"/>
