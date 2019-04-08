@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A13B7225B405F00499C3C /* CustomFonts.swift */; };
 		C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF682255E0D2008D78F9 /* AppDelegate.swift */; };
 		C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF6A2255E0D2008D78F9 /* ViewController.swift */; };
 		C25BBF6E2255E0D2008D78F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF6C2255E0D2008D78F9 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		3EBC54FE841F31A392D6F0C0 /* Pods-Tips-MartDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-MartDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5BD178FC3E760D3DA416BF08 /* Pods-Tips-MartDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-MartDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C25A13B7225B405F00499C3C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		C25BBF652255E0D2008D78F9 /* Tips-MartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tips-MartDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BBF682255E0D2008D78F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C25BBF6A2255E0D2008D78F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C25BBF682255E0D2008D78F9 /* AppDelegate.swift */,
 				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
 				C2E69A0322596327006FDDDB /* FloatingTextField.swift */,
+				C25A13B7225B405F00499C3C /* CustomFonts.swift */,
 				C2E69A07225975B4006FDDDB /* HideOrNot.swift */,
 				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
 				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
+				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,

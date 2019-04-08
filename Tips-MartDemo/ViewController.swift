@@ -35,7 +35,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var repeatPasswordStack: UIStackView!
     @IBOutlet weak var massegePasswordStack: UIStackView!
     @IBOutlet weak var friendsIdStack: UIStackView!
+    //MARK: labelsStack
+    @IBOutlet weak var checkBoxStack: UIStackView!
     
+    @IBOutlet weak var haveNoFriends: UIStackView!
     // MARK: TextFieldOutlets
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTetField: UITextField!
@@ -52,7 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var validateDelegate: ValidationDelegate?
     var hideAndShowDelegate: HideShowDelegate?
     
-    
+    let fonts = CustomFonts()
     
     
     
@@ -78,53 +81,130 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     let massegePlaceHolder: UILabel = {
         let label = UILabel()
-        label.text = "oass"
+        label.text = "Пароль из СМС"
         label.textColor = .lightGray
         return label
     }()
 
     let frindsPlaceHolder: UILabel = {
         let label = UILabel()
-        label.text = "ID"
+        label.text = "ID или мобильный номер пригласившего"
         label.textColor = .lightGray
+        label.font = label.font.withSize(10)
+        return label
+    }()
+    let eyeButton: UIButton = {
+       let button = UIButton()
+       button.setImage(#imageLiteral(resourceName: "EyeOpen"), for: .normal)
+        button.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        button.imageView?.frame = button.bounds
+        button.imageView?.contentMode = .scaleAspectFill
+        return button
+    }()
+    let repeatEyeButton: UIButton = {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "EyeOpen"), for: .normal)
+        button.addTarget(self, action: #selector(showRepeatPassword), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        button.imageView?.frame = button.bounds
+        button.imageView?.contentMode = .scaleAspectFill
+        return button
+    }()
+    
+    let rightView: UIView = {
+        let view = UIView()
+        
+        view.backgroundColor = .blue
+        view.frame = CGRect(x: 0, y: 0, width: 20, height: 24)
+        return view
+    }()
+    
+    let buttonsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Регистрация"
+        label.textColor = .lightGray
+//        gotham_pro_medium
+        print(UIFont.familyNames)
+        let font = UIFont(name: "GothamPro-Medium", size: 20)
+        label.font = font
         return label
     }()
 
-
-    
+    var iconClick = false
+    var iconRepClick = false
+    var isAgreed = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+       passwordTetField.rightView?.addSubview(rightView)
         floatingDelegate = FloatingTextField()
         validateDelegate = ValidPhonePass()
         hideAndShowDelegate = HideOrNot()
         
         phoneTextField.delegate = self
         passwordTetField.delegate = self
-       
+        repeatPass.delegate = self
+        friendId.delegate = self
+        messagePassLabel.delegate = self
+        
         setPlaceHolders()
+        setUpButtons()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleEndEdit))
         self.view.addGestureRecognizer(tap)
         
     }
     
-   @objc func handleEndEdit(){
-       self.view.endEditing(true)
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
     
+   @objc func handleEndEdit(){
+       self.view.endEditing(true)
+    }
     
+    @objc func showPassword(sender: UIButton){
+        
+        if (iconClick == false) {
+            sender.setImage(#imageLiteral(resourceName: "EyeClosed"), for: .normal)
+            self.passwordTetField.isSecureTextEntry = false
+            
+        } else {
+            sender.setImage(#imageLiteral(resourceName: "EyeOpen"), for: .normal)
+            self.passwordTetField.isSecureTextEntry = true
+        }
+        iconClick = !iconClick
+        print(iconClick)
+        
+    }
+    @objc func showRepeatPassword(sender: UIButton){
+        
+        if (iconRepClick == false) {
+            sender.setImage(#imageLiteral(resourceName: "EyeClosed"), for: .normal)
+            self.repeatPass.isSecureTextEntry = false
+            
+        } else {
+            sender.setImage(#imageLiteral(resourceName: "EyeOpen"), for: .normal)
+            self.repeatPass.isSecureTextEntry = true
+        }
+        iconRepClick = !iconRepClick
+        print(iconRepClick)
+        
+    }
+    
+    //MARK: IBAction stack
     @IBAction func enterBtn(_ sender: UIButton) {
         if let showOrHide = self.hideAndShowDelegate{
-        let viewsToHide:[UIView] = [self.repeatPasswordStack, self.massegePasswordStack, self.friendsIdStack, self.regUnderscore ]
-        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.fbLabel, self.fbBtnLabel, self.enterUnderscore]
+        let viewsToHide:[UIView] = [self.repeatPasswordStack, self.massegePasswordStack, self.friendsIdStack, self.regUnderscore, self.checkBoxStack, self.haveNoFriends ]
+        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.fbLabel, self.fbBtnLabel, self.enterUnderscore, self.forgetPass]
             showOrHide.hide(views: viewsToHide)
             showOrHide.show(views: viewsToShow)
+            getStartedBtn.setTitle("Вход", for: .normal)
+            getStartedBtn.isEnabled = true
+            signUpLabel.titleLabel?.font = UIFont(name: fonts.lihgtGotham, size: 20)
+            signInLabel.titleLabel?.font = UIFont(name: fonts.mediumGotham, size: 20)
+            
                animateShowAndHide()
         }
       
@@ -134,18 +214,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func registrationBtn(_ sender: UIButton) {
        sender.setTitleColor(.white, for: .normal)
         if let showOrHide = self.hideAndShowDelegate{
-        let viewsToHide:[UIView] = [ self.massegePasswordStack, self.fbLabel, self.fbBtnLabel, self.enterUnderscore]
-        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore]
+        let viewsToHide:[UIView] = [ self.massegePasswordStack, self.fbLabel, self.fbBtnLabel, self.enterUnderscore, self.forgetPass, self.haveNoFriends]
+        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.checkBoxStack]
             showOrHide.hide(views: viewsToHide)
             showOrHide.show(views: viewsToShow)
+//            buttonsLabel.frame = sender.bounds
+//            sender.titleLabel?.font = UIFont(name: fonts.mediumGotham, size: 20)
+//            sender.addSubview(buttonsLabel)
+           signUpLabel.titleLabel?.font = UIFont(name: fonts.mediumGotham, size: 20)
+            signInLabel.titleLabel?.font = UIFont(name: fonts.lihgtGotham, size: 20)
+            getStartedBtn.setTitle("Регистрация", for: .normal)
+            getStartedBtn.isEnabled = false
+            
             animateShowAndHide()
         }
         
     }
-    @IBAction func forgetPassBtn(_ sender: Any) {
+    
+    @IBAction func checkBoxBtn(_ sender: UIButton) {
+        if (isAgreed == false) {
+            sender.setImage(#imageLiteral(resourceName: "checkNonActive"), for: .normal)
+           self.getStartedBtn.isEnabled = false
+            
+        } else {
+            sender.setImage(#imageLiteral(resourceName: "checkActive"), for: .normal)
+           self.getStartedBtn.isEnabled = true
+            
+        }
+        isAgreed = !isAgreed
+        print(isAgreed)
+        
+    }
+    
+    @IBAction func forgetPassBtn(_ sender: UIButton) {
         if let showOrHide = self.hideAndShowDelegate{
         let viewsToShow:[UIView] = [ self.massegePasswordStack, self.fbLabel, self.fbBtnLabel]
-        let viewsToHide:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.enterUnderscore]
+        let viewsToHide:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.enterUnderscore, self.checkBoxStack, self.haveNoFriends]
+            
             showOrHide.hide(views: viewsToHide)
             showOrHide.show(views: viewsToShow)
             animateShowAndHide()
@@ -161,8 +266,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func animateShowAndHide(){
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
-            
+
         }, completion: nil)
+//        UIView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
+//            self.stackTextField.alpha = 0.5
+//        }) { (_) in
+//            self.stackTextField.alpha = 1
+////            self.stackTextField.removeFromSuperview()
+//        }
     }
     
     private func formattedNumber(number: String) -> String {
@@ -186,9 +297,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return result
     }
     
+    // MARK: TextFieldDelegate Stack
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == phoneTextField{
         textField.text = formattedNumber(number: textField.text!)
-       
+        }
+        
+        
         return maxCount(textField, range: range, string: string)
     }
     
@@ -201,6 +316,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
          return updateText.count <= 19
     }
    
+    
+    
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.becomeFirstResponder()
@@ -228,6 +346,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
             } else if textField == passwordTetField {
                 floatingDelegate?.moveBack(view: passPlaceHolder)
                 return true
+            } else if textField == repeatPass {
+                floatingDelegate?.moveBack(view: repeatPlaceHolder)
+                return true
+            } else if textField == friendId {
+                floatingDelegate?.moveBack(view: frindsPlaceHolder)
+                
+              
+                
+                return true
+            } else if textField == messagePassLabel {
+                floatingDelegate?.moveBack(view: massegePlaceHolder)
+                return true
+            }
+        } else {
+            if textField == passwordTetField{
+                if textField.text!.count <= 8{
+                    floatingDelegate?.moveDown(view: passPlaceHolder)
+                }
             }
         }
         
@@ -237,7 +373,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        guard let text = textField.text else {return}
+        
+        if textField == friendId {
+            
+            if textField.text?.count == 0{
+            
+            self.haveNoFriends.isHidden = false
+            self.getStartedBtn.titleLabel?.numberOfLines = 0
+            self.getStartedBtn.titleLabel?.textAlignment = .center
+            self.getStartedBtn.setTitle("Меня никто не приглашал", for: .normal)
+            
+            }
+        }
         
         
         
@@ -248,7 +395,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
+    //MARK: SetUP TexField'sPlaceholders
     func setPlaceHolders(){
         phonePlaceHolder.frame = phoneTextField.bounds
         self.phoneTextField.addSubview(phonePlaceHolder)
@@ -262,6 +409,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.friendId.addSubview(frindsPlaceHolder)
         
       }
+    
+    func setUpButtons(){
+        
+       
+        
+        self.passwordTetField.rightView = self.eyeButton
+        self.passwordTetField.rightViewMode = .always
+        self.repeatPass.rightView = self.repeatEyeButton
+        self.repeatPass.rightViewMode = .always
+    }
     
   }
 

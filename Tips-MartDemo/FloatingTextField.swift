@@ -26,7 +26,7 @@ class FloatingTextField: FloatingTextDelegate {
     func moveUp(view: UILabel){
         
         UIView.animate(withDuration: 0.25, animations: {
-            view.frame.origin.y = -30
+            view.frame.origin.y = -20
             view.textColor = .lightGray
             view.font = view.font.withSize(10)
         }, completion: nil)
@@ -41,7 +41,7 @@ class FloatingTextField: FloatingTextDelegate {
     }
     func moveDown(view: UILabel){
         UIView.animate(withDuration: 0.25, animations: {
-            view.frame.origin.y = 30
+            view.frame.origin.y = 25
             view.textColor = .red
             view.font = view.font.withSize(10)
             

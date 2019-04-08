@@ -43,7 +43,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HC-MT-rXQ">
-                                <rect key="frame" x="55" y="331" width="210" height="50"/>
+                                <rect key="frame" x="55" y="325" width="210" height="50"/>
                                 <color key="backgroundColor" red="0.27470073103904724" green="0.7920336127281189" blue="0.47838234901428223" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CE8-yG-qHg"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти с помощью FaceBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-b1-rJF">
-                                <rect key="frame" x="20" y="456" width="280" height="15"/>
+                                <rect key="frame" x="20" y="450" width="280" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="cXc-qk-4Xy"/>
                                 </constraints>
@@ -85,7 +85,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1Y-U8-reo">
                                         <rect key="frame" x="141" y="0.0" width="139" height="30"/>
-                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="20"/>
                                         <state key="normal" title="Регистрация">
                                             <color key="titleColor" white="1" alpha="0.33866652397260272" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -95,8 +95,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView clipsSubviews="YES" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-ED-ceH">
-                                <rect key="frame" x="20" y="220" width="280" height="77"/>
+                            <stackView clipsSubviews="YES" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-ED-ceH">
+                                <rect key="frame" x="20" y="220" width="280" height="71"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aUz-pP-TIZ" userLabel="PhoneNumber">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="26"/>
@@ -138,7 +138,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o9h-iF-TQe" userLabel="PasswordTextField">
-                                        <rect key="frame" x="0.0" y="51" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="45" width="280" height="26"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-Vl-rG2" userLabel="password">
                                                 <rect key="frame" x="20" y="0.0" width="240" height="24"/>
@@ -149,7 +149,7 @@
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="tel"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,7 +173,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Non-cO-cO5" userLabel="RepeatPAsswordTextField">
-                                        <rect key="frame" x="0.0" y="102" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="71" width="280" height="26"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Aam-lB-roF" userLabel="repeatPassword">
                                                 <rect key="frame" x="20" y="0.0" width="240" height="24"/>
@@ -184,7 +184,7 @@
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,7 +208,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aY4-p3-nCG" userLabel="MassegePassword">
-                                        <rect key="frame" x="0.0" y="153" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="71" width="280" height="26"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U1F-pO-eKG" userLabel="massegePass">
                                                 <rect key="frame" x="20" y="0.0" width="240" height="24"/>
@@ -243,7 +243,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RZA-nc-T0o" userLabel="FriendsID">
-                                        <rect key="frame" x="0.0" y="204" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="71" width="280" height="26"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="&gt;" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ipM-7H-0vA" userLabel="frriendsID">
                                                 <rect key="frame" x="20" y="0.0" width="240" height="24"/>
@@ -277,35 +277,77 @@
                                             <constraint firstItem="Fst-rI-9Jf" firstAttribute="leading" secondItem="RZA-nc-T0o" secondAttribute="leading" id="xzD-fb-p4R"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-3q-RGp" userLabel="labelHaveNoFriends">
+                                        <rect key="frame" x="0.0" y="71" width="280" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У меня нет друзей и меня никто не приглашал" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIU-gi-mNs" userLabel="haveNoFriends">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="fA2-XJ-1YO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <color key="textColor" red="1" green="0.67114567995651675" blue="0.11668175370693479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="CIU-gi-mNs" firstAttribute="leading" secondItem="1rh-3q-RGp" secondAttribute="leading" id="6Mx-UG-Clb"/>
+                                            <constraint firstAttribute="trailing" secondItem="CIU-gi-mNs" secondAttribute="trailing" id="zJm-8g-tj2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="RFp-Y8-di5" userLabel="checkBoxStack">
+                                        <rect key="frame" x="0.0" y="71" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jS-xx-C12">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="DNQ-sD-Xwt"/>
+                                                    <constraint firstAttribute="width" constant="30" id="lnA-xx-hDz"/>
+                                                </constraints>
+                                                <state key="normal" image="checkNonActive">
+                                                    <color key="titleShadowColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="checkBoxBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="veG-Vd-P6I"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я принимаю условия пользовательского соглашения и политики конфидециальности" lineBreakMode="headTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZd-4I-YuT">
+                                                <rect key="frame" x="51" y="0.0" width="229" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="RFp-Y8-di5" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="02R-WB-0CA"/>
                                     <constraint firstItem="aUz-pP-TIZ" firstAttribute="top" secondItem="fZh-ED-ceH" secondAttribute="top" id="15t-GQ-JSM"/>
-                                    <constraint firstItem="RZA-nc-T0o" firstAttribute="top" secondItem="aY4-p3-nCG" secondAttribute="bottom" constant="25" id="8S7-Oa-Wd6"/>
                                     <constraint firstItem="o9h-iF-TQe" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="8xD-LC-reG"/>
-                                    <constraint firstItem="o9h-iF-TQe" firstAttribute="top" secondItem="aUz-pP-TIZ" secondAttribute="bottom" constant="25" id="C6f-N0-Ubr"/>
                                     <constraint firstItem="Non-cO-cO5" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="DC1-E3-clb"/>
                                     <constraint firstAttribute="trailing" secondItem="o9h-iF-TQe" secondAttribute="trailing" id="F8F-bv-tyl"/>
+                                    <constraint firstAttribute="trailing" secondItem="RFp-Y8-di5" secondAttribute="trailing" id="IfL-O9-zHb"/>
                                     <constraint firstAttribute="trailing" secondItem="aUz-pP-TIZ" secondAttribute="trailing" id="Qju-Ch-OEo"/>
                                     <constraint firstItem="aY4-p3-nCG" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="Rlg-ku-vx8"/>
                                     <constraint firstAttribute="trailing" secondItem="aY4-p3-nCG" secondAttribute="trailing" id="Xyh-O7-3L7"/>
-                                    <constraint firstItem="aY4-p3-nCG" firstAttribute="top" secondItem="Non-cO-cO5" secondAttribute="bottom" constant="25" id="a63-ow-pqG"/>
                                     <constraint firstAttribute="trailing" secondItem="Non-cO-cO5" secondAttribute="trailing" id="amc-9D-ZMq"/>
                                     <constraint firstItem="RZA-nc-T0o" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="ej7-9z-R2x"/>
+                                    <constraint firstItem="1rh-3q-RGp" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="f5V-gF-rmi"/>
                                     <constraint firstItem="aUz-pP-TIZ" firstAttribute="leading" secondItem="fZh-ED-ceH" secondAttribute="leading" id="lZO-0F-cAc"/>
+                                    <constraint firstAttribute="trailing" secondItem="1rh-3q-RGp" secondAttribute="trailing" id="meu-Ir-ZgM"/>
                                     <constraint firstAttribute="trailing" secondItem="RZA-nc-T0o" secondAttribute="trailing" id="t8F-3x-vpe"/>
-                                    <constraint firstItem="Non-cO-cO5" firstAttribute="top" secondItem="o9h-iF-TQe" secondAttribute="bottom" constant="25" id="y92-5l-Gcg"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7K-7W-Ded">
-                                <rect key="frame" x="140" y="481" width="40" height="40"/>
+                                <rect key="frame" x="140" y="475" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bee-TG-HU6"/>
                                 </constraints>
                                 <state key="normal" image="FBLogo"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOQ-ci-Kxw">
-                                <rect key="frame" x="118" y="413" width="85" height="21"/>
+                                <rect key="frame" x="118" y="407" width="85" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="SIY-xW-xPd"/>
                                 </constraints>
@@ -335,10 +377,10 @@
                                 </state>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5T-4t-PIH" userLabel="regUnderscore">
-                                <rect key="frame" x="165.5" y="182" width="130" height="4"/>
+                                <rect key="frame" x="160.5" y="182" width="140" height="4"/>
                                 <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="SG5-VL-uYu"/>
+                                    <constraint firstAttribute="width" constant="140" id="SG5-VL-uYu"/>
                                     <constraint firstAttribute="height" constant="4" id="vh9-ve-6gz"/>
                                 </constraints>
                             </view>
@@ -388,6 +430,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="checkBoxStack" destination="RFp-Y8-di5" id="SMP-en-4ke"/>
                         <outlet property="enterUnderscore" destination="rZO-3h-UX5" id="JoC-ce-mKu"/>
                         <outlet property="fbBtnLabel" destination="y7K-7W-Ded" id="bvE-5M-OFW"/>
                         <outlet property="fbLabel" destination="Ktf-b1-rJF" id="tf4-S1-fYC"/>
@@ -395,6 +438,7 @@
                         <outlet property="friendId" destination="ipM-7H-0vA" id="Dcn-od-FSK"/>
                         <outlet property="friendsIdStack" destination="RZA-nc-T0o" id="2zq-FM-XH0"/>
                         <outlet property="getStartedBtn" destination="3HC-MT-rXQ" id="1P4-ek-b8O"/>
+                        <outlet property="haveNoFriends" destination="1rh-3q-RGp" id="RwV-3C-27v"/>
                         <outlet property="massegePasswordStack" destination="aY4-p3-nCG" id="y0q-8I-LeP"/>
                         <outlet property="messagePassLabel" destination="U1F-pO-eKG" id="z5t-5w-wGk"/>
                         <outlet property="passwordStack" destination="o9h-iF-TQe" id="uZc-9w-VAV"/>
@@ -417,5 +461,6 @@
     <resources>
         <image name="FBLogo" width="40" height="40"/>
         <image name="MainLogo" width="241" height="61"/>
+        <image name="checkNonActive" width="24" height="24"/>
     </resources>
 </document>
