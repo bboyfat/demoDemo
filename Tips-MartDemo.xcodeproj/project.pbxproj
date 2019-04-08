@@ -15,6 +15,9 @@
 		C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF722255E0D3008D78F9 /* Assets.xcassets */; };
 		C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
+		C2BE0BF2225B658A00A0BFCF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE0BF1225B658900A0BFCF /* LoginModel.swift */; };
+		C2BE0BF4225B663300A0BFCF /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE0BF3225B663300A0BFCF /* RegistrationController.swift */; };
+		C2BE0BF6225B664500A0BFCF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BE0BF5225B664500A0BFCF /* LoginController.swift */; };
 		C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* LaunchViewController.swift */; };
 		C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */; };
 		C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */; };
@@ -42,6 +45,9 @@
 		C2BA3C6E2257CEA50016CA9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C722257D09D0016CA9E /* Tips-MartDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tips-MartDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C2BE0BF1225B658900A0BFCF /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		C2BE0BF3225B663300A0BFCF /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		C2BE0BF5225B664500A0BFCF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C2C96D202255FC17009F7050 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro.ttf; sourceTree = "<group>"; };
 		C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_bold.ttf; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 		C25BBF672255E0D2008D78F9 /* Tips-MartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C2BE0BF7225B664D00A0BFCF /* LoginRegistration */,
+				C2BE0BF0225B656A00A0BFCF /* Model */,
 				C2E699F82258B26C006FDDDB /* Fonts */,
 				C2C96D222255FC1C009F7050 /* LauncScreen */,
 				C25BBF682255E0D2008D78F9 /* AppDelegate.swift */,
@@ -112,6 +120,23 @@
 				C2BA3C722257D09D0016CA9E /* Tips-MartDemo-Bridging-Header.h */,
 			);
 			path = "Tips-MartDemo";
+			sourceTree = "<group>";
+		};
+		C2BE0BF0225B656A00A0BFCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2BE0BF1225B658900A0BFCF /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2BE0BF7225B664D00A0BFCF /* LoginRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				C2BE0BF3225B663300A0BFCF /* RegistrationController.swift */,
+				C2BE0BF5225B664500A0BFCF /* LoginController.swift */,
+			);
+			path = LoginRegistration;
 			sourceTree = "<group>";
 		};
 		C2C96D222255FC1C009F7050 /* LauncScreen */ = {
@@ -291,13 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BE0BF6225B664500A0BFCF /* LoginController.swift in Sources */,
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
 				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
+				C2BE0BF2225B658A00A0BFCF /* LoginModel.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
+				C2BE0BF4225B663300A0BFCF /* RegistrationController.swift in Sources */,
 				C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
