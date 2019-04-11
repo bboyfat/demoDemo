@@ -1,0 +1,63 @@
+
+/* Class = "UIButton"; normalTitle = "Подтвердить"; ObjectID = "2MH-SW-r8G"; */
+"2MH-SW-r8G.normalTitle" = "Подтвердить";
+
+/* Class = "UIButton"; normalTitle = "Вход"; ObjectID = "3HC-MT-rXQ"; */
+"3HC-MT-rXQ.normalTitle" = "Вход";
+
+/* Class = "UIButton"; normalTitle = "Забыли пароль?"; ObjectID = "AOQ-ci-Kxw"; */
+"AOQ-ci-Kxw.normalTitle" = "Забыли пароль?";
+
+/* Class = "UITextField"; placeholder = ">"; ObjectID = "Aam-lB-roF"; */
+"Aam-lB-roF.placeholder" = ">";
+
+/* Class = "UILabel"; text = "У меня нет друзей и меня никто не приглашал"; ObjectID = "CIU-gi-mNs"; */
+"CIU-gi-mNs.text" = "У меня нет друзей и меня никто не приглашал";
+
+/* Class = "UIButton"; normalTitle = "Мужской"; ObjectID = "ERs-eR-ibn"; */
+"ERs-eR-ibn.normalTitle" = "Мужской";
+
+/* Class = "UIButton"; normalTitle = "Вход"; ObjectID = "GGo-X1-eN1"; */
+"GGo-X1-eN1.normalTitle" = "Вход";
+
+/* Class = "UILabel"; text = "Войти с помощью FaceBook"; ObjectID = "Ktf-b1-rJF"; */
+"Ktf-b1-rJF.text" = "Войти с помощью FaceBook";
+
+/* Class = "UIButton"; normalTitle = "Пропустить"; ObjectID = "P0N-nV-cNW"; */
+"P0N-nV-cNW.normalTitle" = "Пропустить";
+
+/* Class = "UIButton"; normalTitle = "     < Назад"; ObjectID = "R6m-Zs-Myl"; */
+"R6m-Zs-Myl.normalTitle" = "     < Назад";
+
+/* Class = "UILabel"; text = "Я принимаю условия пользовательского соглашения "; ObjectID = "RZd-4I-YuT"; */
+"RZd-4I-YuT.text" = "Я принимаю условия пользовательского соглашения ";
+
+/* Class = "UITextField"; placeholder = ">"; ObjectID = "U1F-pO-eKG"; */
+"U1F-pO-eKG.placeholder" = ">";
+
+/* Class = "UIButton"; normalTitle = "Женский"; ObjectID = "Who-iW-cIw"; */
+"Who-iW-cIw.normalTitle" = "Женский";
+
+/* Class = "UIButton"; normalTitle = "Прислать код повторно"; ObjectID = "iSW-pX-fFQ"; */
+"iSW-pX-fFQ.normalTitle" = "Прислать код повторно";
+
+/* Class = "UITextField"; placeholder = ">"; ObjectID = "ipM-7H-0vA"; */
+"ipM-7H-0vA.placeholder" = ">";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "lWZ-Po-DjS"; */
+"lWZ-Po-DjS.normalTitle" = "Продолжить";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "nRr-A5-2NX"; */
+"nRr-A5-2NX.title" = "Item 1";
+
+/* Class = "UIButton"; normalTitle = "Регистрация"; ObjectID = "q1Y-U8-reo"; */
+"q1Y-U8-reo.normalTitle" = "Регистрация";
+
+/* Class = "UIButton"; normalTitle = "Регистрация"; ObjectID = "rgW-wx-erj"; */
+"rgW-wx-erj.normalTitle" = "Регистрация";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "rjC-2R-wMQ"; */
+"rjC-2R-wMQ.title" = "Item 2";
+
+/* Class = "UITextField"; placeholder = ">"; ObjectID = "zaE-Vl-rG2"; */
+"zaE-Vl-rG2.placeholder" = ">";

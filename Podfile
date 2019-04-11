@@ -15,4 +15,6 @@ target 'Tips-MartDemo' do
    pod 'FacebookCore' 
    pod 'FacebookLogin' 
    pod 'FacebookShare'
+   pod 'Alamofire'
+   
 end

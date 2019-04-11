@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -84,6 +85,7 @@ PODS:
   - SwiftPhoneNumberFormatter (1.4)
 
 DEPENDENCIES:
+  - Alamofire
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -94,6 +96,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Bolts
     - FacebookCore
     - FacebookLogin
@@ -122,6 +125,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/hasnine/iOSUtilitiesSource.git
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FacebookCore: 74288d0add931d361b1596beae787ab72c438249
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
@@ -141,6 +145,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwiftPhoneNumberFormatter: 089f2a71dd7be621e0045b01c689cd38eac0ce58
 
-PODFILE CHECKSUM: 4680e024c4f814c6c3a4f28cb458e781a3d5fc3f
+PODFILE CHECKSUM: ec9bc2598517af11bc9c08b265183d178cafe135
 
 COCOAPODS: 1.5.3

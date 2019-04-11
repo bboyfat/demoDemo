@@ -14,4 +14,7 @@ class CustomFonts{
     let lihgtGotham = "GothamPro-Light"
     let mediumGotham = "GothamPro-Medium"
     let boldGotham = "GothamPro-Bold"
+    
+    
+
 }
