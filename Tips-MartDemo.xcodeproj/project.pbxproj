@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C242835F226469B200750768 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242835E226469B200750768 /* ProfileModel.swift */; };
+		C242836122646A5500750768 /* APIChangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836022646A5500750768 /* APIChangeInfo.swift */; };
+		C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2492A992260996A007E2037 /* Profile.storyboard */; };
+		C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9B2260A249007E2037 /* MainPageViewController.swift */; };
+		C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9D2260A25E007E2037 /* MainPageView.swift */; };
 		C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A13B7225B405F00499C3C /* CustomFonts.swift */; };
 		C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF682255E0D2008D78F9 /* AppDelegate.swift */; };
 		C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF6A2255E0D2008D78F9 /* ViewController.swift */; };
@@ -37,6 +42,11 @@
 /* Begin PBXFileReference section */
 		3EBC54FE841F31A392D6F0C0 /* Pods-Tips-MartDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-MartDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5BD178FC3E760D3DA416BF08 /* Pods-Tips-MartDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-MartDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C242835E226469B200750768 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		C242836022646A5500750768 /* APIChangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIChangeInfo.swift; sourceTree = "<group>"; };
+		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		C2492A9B2260A249007E2037 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		C2492A9D2260A25E007E2037 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		C25A13B7225B405F00499C3C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		C25BBF652255E0D2008D78F9 /* Tips-MartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tips-MartDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BBF682255E0D2008D78F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +101,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C2492A982260993A007E2037 /* Strotyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
+				C2492A992260996A007E2037 /* Profile.storyboard */,
+			);
+			path = Strotyboards;
+			sourceTree = "<group>";
+		};
 		C25BBF5C2255E0D2008D78F9 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,8 @@
 		C25BBF672255E0D2008D78F9 /* Tips-MartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8C7712261DCA400F2332F /* MainPage */,
+				C2492A982260993A007E2037 /* Strotyboards */,
 				C2E59632225E0897001D09D9 /* CoreDataStack */,
 				C29356E2225CAF13004F4510 /* APIManager */,
 				C2BE0BF0225B656A00A0BFCF /* Model */,
@@ -123,7 +144,6 @@
 				C25A13B7225B405F00499C3C /* CustomFonts.swift */,
 				C2E69A07225975B4006FDDDB /* HideOrNot.swift */,
 				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
-				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
 				C25BBF722255E0D3008D78F9 /* Assets.xcassets */,
 				C25BBF772255E0D3008D78F9 /* Info.plist */,
 				C25BBF6F2255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld */,
@@ -140,8 +160,17 @@
 				C29356E5225CAF39004F4510 /* APIManager.swift */,
 				C2E5962D225DDE87001D09D9 /* APIRegComplete.swift */,
 				C2E59635225E0BBE001D09D9 /* APILogin.swift */,
+				C242836022646A5500750768 /* APIChangeInfo.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		C2A8C7712261DCA400F2332F /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				C2492A9D2260A25E007E2037 /* MainPageView.swift */,
+			);
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 		C2BE0BF0225B656A00A0BFCF /* Model */ = {
@@ -150,6 +179,7 @@
 				C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */,
 				C293570A225CCF38004F4510 /* AuthModel.swift */,
 				C2E5962F225DE2E5001D09D9 /* RegModel.swift */,
+				C242835E226469B200750768 /* ProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +196,7 @@
 		C2E59631225DECD2001D09D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C2492A9B2260A249007E2037 /* MainPageViewController.swift */,
 				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -266,6 +297,7 @@
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
 				C25BBF6E2255E0D2008D78F9 /* Main.storyboard in Resources */,
+				C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */,
 				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
 				C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */,
 			);
@@ -353,15 +385,19 @@
 				C29356E4225CAF2A004F4510 /* APIGet.swift in Sources */,
 				C2E59634225E08C8001D09D9 /* CoreDataManager.swift in Sources */,
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
+				C242835F226469B200750768 /* ProfileModel.swift in Sources */,
 				C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */,
+				C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */,
 				C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */,
 				C2E59630225DE2E5001D09D9 /* RegModel.swift in Sources */,
 				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
+				C242836122646A5500750768 /* APIChangeInfo.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
+				C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */,
 				C2E59636225E0BBE001D09D9 /* APILogin.swift in Sources */,
 				C293570B225CCF38004F4510 /* AuthModel.swift in Sources */,
 				C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */,

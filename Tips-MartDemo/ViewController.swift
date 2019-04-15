@@ -18,24 +18,8 @@ import CoreData
 class ViewController: UIViewController {
     
     
-    var userInfo: UserParams?
     
-    func fetchData(){
-        let context = CoreDataManager.shared.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<UserParams>(entityName: "UserParams")
-        do{
-            let userInfo = try context.fetch(fetchRequest)
-            userInfo.forEach { (info) in
-                self.userInfo = info
-            }
-        } catch let fetchErr{
-            print("Fetch error", fetchRequest)
-        }
-        
-        
-        
-    }
+    
     
     
     //MARK: NameSenameStack
@@ -125,6 +109,8 @@ class ViewController: UIViewController {
     var registrationModel: RegistrationModelAPI  = RegistrationModelAPI()
     var regAuth: RegModelGet?
     var authModel: AuthModel?
+    var userInfoChanges: Changes = Changes()
+    var userInfoModel: ProfileModel = ProfileModel()
     
     //MARK: PLaceHOlders
     let phonePlaceHolder: UILabel = {
@@ -248,9 +234,7 @@ class ViewController: UIViewController {
         birthDateTextField.inputView = datePicker
         
        
-//       fetchData()
-//        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\(self.userInfo?.userId)")
-        
+
         setPlaceHolders()
         setUpButtons()
         
@@ -351,13 +335,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgetPassBtn(_ sender: UIButton) {
+      
+        
     }
     @IBAction func sendDataBtn(_ sender: UIButton) {
        
+         let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "mainScreenVc") as! MainPageViewController
         
-        
-      APILogin().getAuthCode(model: self.registrationModel)
+        APILogin().getAuthCode(model: self.registrationModel) { (info) in
+            self.regAuth = info
+            
+        }
+        guard let regData = self.regAuth else { return }
+       vc.infoModel = regData
        
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func createNewRegistration(_ sender: UIButton) {
@@ -372,7 +364,7 @@ class ViewController: UIViewController {
                 APIManager().getAuthCode(model: self.registrationModel) { (auth) in
                     self.authModel = auth
                 }
-                print(registrationModel)
+               
                 showOrHide.hide(views: viewsToHide)
                 showOrHide.show(views: viewsToShow)
                 animateShowAndHide()
@@ -411,17 +403,37 @@ class ViewController: UIViewController {
     
     @IBAction func acceptBtnAction(_ sender: UIButton) {
         if let showHide = self.hideAndShowDelegate{
-        let viewsToSow = [self.nameSenameStack, regNameStack, senameStack, birthDateStack, regUnderscore, dearUserLabel, genderStack, missBtnOutlet ]
-        let viewsToHide = [self.stackTextField, self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.checkBoxStack, backButtonStack, haveNoFriends, faceBookStack, resendPassword]
+        let viewsToSow = [self.nameSenameStack, regNameStack, senameStack, birthDateStack, regUnderscore, dearUserLabel, genderStack, missBtnOutlet, continueFinishButton ]
+        let viewsToHide = [self.stackTextField, self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.checkBoxStack, backButtonStack, haveNoFriends, faceBookStack, resendPassword, acceptPasswordBtn]
             showHide.hide(views: viewsToHide as! [UIView])
             showHide.show(views: viewsToSow as! [UIView])
+            if isMale == true{
+                self.userInfoModel.gender = "male"
+            }else if isFemale == true{
+                self.userInfoModel.gender = "female"
+            } else {
+                self.userInfoModel.gender = " "
+            }
             
-            print(registrationModel.authCode)
            
             animateShowAndHide()
         }
         
     }
+    
+    @IBAction func sendUsersDataBtn(_ sender: UIButton) {
+        print(registrationModel.authCode)
+        
+        guard let accesToken = self.regAuth?.data?.accessToken.value else { return }
+        print(accesToken, "in sendUsersDataBtn")
+            self.userInfoChanges.objChanges = self.userInfoModel
+            APIChangeInfo().getAuthCode(model: userInfoModel, accessToken: accesToken) { (user) in
+                
+            }
+        
+        print("Data in sendUsersDataBtn", userInfoModel)
+    }
+    
     @IBAction func missIntroduction(_ sender: UIButton) {
         
 //        apiDelegate = APIRegComplete()
@@ -454,6 +466,7 @@ class ViewController: UIViewController {
             maleBtnOutlet.setImage(#imageLiteral(resourceName: "radiOn"), for: .normal)
             femaleBtnOutlet.setImage(#imageLiteral(resourceName: "radioOff"), for: .normal)
             isFemale = false
+            self.userInfoModel.gender = "male"
             
         } else {
              maleBtnOutlet.setImage(#imageLiteral(resourceName: "radioOff"), for: .normal)
@@ -468,6 +481,7 @@ class ViewController: UIViewController {
         if isFemale == true{
             femaleBtnOutlet.setImage(#imageLiteral(resourceName: "radiOn"), for: .normal)
             maleBtnOutlet.setImage(#imageLiteral(resourceName: "radioOff"), for: .normal)
+            self.userInfoModel.gender = "female"
              isMale = false
             
             
@@ -535,7 +549,7 @@ class ViewController: UIViewController {
 
 
 extension ViewController{
-    
+   
 }
 
 
@@ -613,8 +627,12 @@ extension ViewController: UITextFieldDelegate{
                 return true
             } else if textField == namePlaceHolder {
                 floatingDelegate?.moveBack(view: namePlaceHolder)
+                self.userInfoModel.name = textField.text ?? " "
                 return true
             } else if textField == seNameTextField {
+               
+                self.userInfoModel.surname = textField.text ??  " "
+                print(userInfoModel.surname)
                 floatingDelegate?.moveBack(view: senamePlaceHolder)
                 return true
             } else if textField == birthDateTextField {
@@ -622,11 +640,14 @@ extension ViewController: UITextFieldDelegate{
                 
                 let date = self.datePicker.date
                 let dateFormater = DateFormatter()
-                
-                dateFormater.dateFormat = "MM dd yyyy"
+
+                dateFormater.dateFormat = "dd.MM.yyyy"
                 let birthDate = dateFormater.string(from: date)
                 
                 textField.text = birthDate
+                let todayDate = date.timeIntervalSince1970
+               self.userInfoModel.birthday = todayDate
+                print(todayDate)
                 return true
             }
         } else {
@@ -639,6 +660,7 @@ extension ViewController: UITextFieldDelegate{
             } else if textField == phoneTextField{
                 self.registrationModel.phoneNumber = textField.text ?? ""
             } else if textField == friendId {
+                
                 self.registrationModel.inviter = textField.text ?? ""
             } else if textField == messagePassLabel{
                 
@@ -648,7 +670,7 @@ extension ViewController: UITextFieldDelegate{
                 print(registrationModel.authCode)
             }
         }
-        
+       
         return true
     }
     
@@ -681,6 +703,30 @@ extension ViewController: UITextFieldDelegate{
             if count == 0{
                 self.floatingDelegate?.moveBack(view: birthDatePlaceHolder)
             }
+            
+        } else if textField == nameTextField {
+            
+            self.userInfoModel.name = textField.text ?? " "
+            print(userInfoModel.name)
+        } else if textField == seNameTextField {
+            
+            self.userInfoModel.surname = textField.text ??  " "
+            print(userInfoModel.surname)
+            
+            
+        } else if textField == birthDateTextField {
+            
+            
+//            let date = self.datePicker.date
+//            let dateFormater = DateFormatter()
+//
+//            dateFormater.dateFormat = "dd.MM.yyyy"
+//            let birthDate = dateFormater.string(from: date)
+//
+//            textField.text = birthDate
+//
+//            self.userInfoModel.birthday = birthDate
+//            print(self.userInfoModel.birthday)
             
         }
         
