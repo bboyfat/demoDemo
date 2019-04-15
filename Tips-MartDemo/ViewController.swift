@@ -340,16 +340,20 @@ class ViewController: UIViewController {
     }
     @IBAction func sendDataBtn(_ sender: UIButton) {
        
-         let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "mainScreenVc") as! MainPageViewController
         
-        APILogin().getAuthCode(model: self.registrationModel) { (info) in
-            self.regAuth = info
-            
-        }
-        guard let regData = self.regAuth else { return }
-       vc.infoModel = regData
+        let tabBarController = MainTabBarControllerViewController()
        
-        self.present(vc, animated: true, completion: nil)
+       
+        guard let regData = self.regAuth else { return }
+        if regData.success == true{
+        self.present(tabBarController, animated: true) {
+             
+        }
+        } else {
+            
+            ErrorAlerts().loginErrorAlert(controller: self)
+        }
+      
     }
     
     @IBAction func createNewRegistration(_ sender: UIButton) {
@@ -656,6 +660,10 @@ extension ViewController: UITextFieldDelegate{
                     floatingDelegate?.moveDown(view: passPlaceHolder, text: "Пароль должен быть не менее 8 символов")
                 } else{
                     self.registrationModel.password = textField.text ?? ""
+                    APILogin().getAuthCode(model: self.registrationModel) { (info) in
+                        self.regAuth = info
+                        
+                    }
                 }
             } else if textField == phoneTextField{
                 self.registrationModel.phoneNumber = textField.text ?? ""
@@ -714,21 +722,7 @@ extension ViewController: UITextFieldDelegate{
             print(userInfoModel.surname)
             
             
-        } else if textField == birthDateTextField {
-            
-            
-//            let date = self.datePicker.date
-//            let dateFormater = DateFormatter()
-//
-//            dateFormater.dateFormat = "dd.MM.yyyy"
-//            let birthDate = dateFormater.string(from: date)
-//
-//            textField.text = birthDate
-//
-//            self.userInfoModel.birthday = birthDate
-//            print(self.userInfoModel.birthday)
-            
-        }
+        } 
         
         
         

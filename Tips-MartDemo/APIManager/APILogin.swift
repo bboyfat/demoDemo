@@ -11,6 +11,8 @@ import CoreData
 
 class APILogin{
     
+    let userDefaults = UserDefaults()
+    
     
     func getAuthCode(model: RegistrationModelAPI, completion:  @escaping (RegModelGet) -> Void) {
         
@@ -45,7 +47,11 @@ class APILogin{
             do{
                 let answer = try JSONDecoder().decode(RegModelGet.self, from: data)
                completion(answer)
-                
+                self.userDefaults.set(answer.data?.name, forKey: "name")
+                self.userDefaults.set(answer.data?.surname, forKey: "surname")
+                self.userDefaults.set(answer.data?.userid, forKey: "userId")
+                    self.userDefaults.set(answer.data?.balance.green, forKey: "greenBalance")
+                        self.userDefaults.set(answer.data?.balance.gray, forKey: "grayBalance")
                 
             } catch {
                 print("!!!!!!!!!!!!!!!!!!OOPS, we have an error",error)

@@ -20,10 +20,18 @@ class MainPageView: UIView {
     @IBOutlet var nameSurnameLabel: UILabel!
     
     @IBOutlet var idLabel: UILabel!
+    //MARK: Balance Outlet
+    
+    @IBOutlet weak var greenBalance: UILabel!
+    
+    @IBOutlet weak var grayBalance: UILabel!
     
     
-    
-    
+    let name = UserDefaults.standard.string(forKey: "name")
+    let surname = UserDefaults.standard.string(forKey: "surname")
+    let userId = UserDefaults.standard.string(forKey: "userId")
+    let balanceGreen = UserDefaults.standard.string(forKey: "greenBalance")
+    let balanceGray = UserDefaults.standard.string(forKey: "grayBalance")
     
     let gradientLayer = CAGradientLayer()
     
@@ -53,23 +61,24 @@ class MainPageView: UIView {
     navigationView.layer.insertSublayer(gradientLayer, at: 0)
         self.addGestureRecognizer(swipe)
         
+       setText()
     }
     
     @objc func returnHandle(){
         
         self.reloadInputViews()
     }
+
     
-//    func setUpText(){
-//        let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "mainScreenVc") as! MainPageViewController
-//        guard let name = vc.infoModel.data?.name else { return }
-//        guard let surname = vc.infoModel.data?.surname else { return }
-//        guard let id = vc.infoModel.data?.userid else {return}
-//
-//       nameSurnameLabel.text = name + " " + surname
-//        idLabel.text = "\(id)"
-//
-//    }
+    func setText(){
+        guard let name = self.name, let surname = self.surname, let userId = self.userId, let greenBalanceString = balanceGreen, let grayBalanceString = balanceGray else { return }
+        
+        nameSurnameLabel.text = name + " " + surname
+        
+        idLabel.text = "ID: \(userId)"
+        greenBalance.text = greenBalanceString + " грн."
+        grayBalance.text = grayBalanceString + " грн."
+    }
     
     
     override init(frame: CGRect) {

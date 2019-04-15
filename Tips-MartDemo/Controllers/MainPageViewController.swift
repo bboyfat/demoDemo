@@ -23,7 +23,7 @@ class MainPageViewController: UIViewController {
         
       
        
-        
+        stUpdata()
         print(infoModel.data?.name, "MAINPAGEVIEWCONTROLLER!!!!!!!!!")
        
     }
@@ -36,17 +36,20 @@ class MainPageViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-      
+      stUpdata()
     }
     
    
     
     func stUpdata(){
-        guard let name = self.infoModel.data?.name else { return }
-        guard let surname = self.infoModel.data?.surname  else { return }
-        mainView.nameSurnameLabel.text = ( name + " " + surname)
-        guard let id = self.infoModel.data?.userid else { return }
-        mainView.idLabel.text = "ID" + "\(id)"
+//        guard let name = self.infoModel.data?.name else { return }
+//        guard let surname = self.infoModel.data?.surname  else { return }
+//        if let nameLabel = mainView.nameSurnameLabel, let idLabel = mainView.idLabel {
+//             nameLabel.text = ( name + " " + surname)
+//  
+//        guard let id = self.infoModel.data?.userid else { return }
+//        idLabel.text = "ID" + "\(id)"
+//        }
      
     }
 }

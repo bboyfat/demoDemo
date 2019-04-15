@@ -565,7 +565,6 @@
                                         </state>
                                         <connections>
                                             <action selector="missIntroduction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifE-E1-RpX"/>
-                                            <segue destination="Fr4-DF-w9D" kind="show" identifier="mainPageVC" id="rJQ-66-fHA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -782,10 +781,29 @@
         <!--Profile-->
         <scene sceneID="hpc-fV-Cph">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="Fr4-DF-w9D" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Profile" id="Fr4-DF-w9D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="BwJ-Lq-J1l"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqX-78-D7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333" y="-576"/>
+            <point key="canvasLocation" x="1903" y="-454"/>
+        </scene>
+        <!--Main Tab Bar Controller View Controller-->
+        <scene sceneID="CdY-2A-b3Q">
+            <objects>
+                <tabBarController id="syp-UH-O4Y" customClass="MainTabBarControllerViewController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G6J-wO-EqG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Fr4-DF-w9D" kind="relationship" relationship="viewControllers" id="tO7-Ym-zgc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbZ-hq-2j4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="-454"/>
         </scene>
     </scenes>
     <resources>
