@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cpW-dA-1ef">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="cCK-D2-IwF">
+            <objects>
+                <viewController storyboardIdentifier="webViewVC" id="vti-bi-WeR" customClass="WebViewController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mXb-j7-Qoj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Zd-cGh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-SU-bmJ">
+                                <rect key="frame" x="30" y="772" width="354" height="60"/>
+                                <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4BS-sf-iml"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Завершить!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endReading:" destination="vti-bi-WeR" eventType="touchUpInside" id="kQq-dz-ta2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8XJ-Zd-cGh" firstAttribute="top" secondItem="Ix6-XN-W7H" secondAttribute="top" id="7kB-tu-jfP"/>
+                            <constraint firstAttribute="bottom" secondItem="8XJ-Zd-cGh" secondAttribute="bottom" id="GFi-fI-CQS"/>
+                            <constraint firstItem="Ix6-XN-W7H" firstAttribute="trailing" secondItem="y5O-SU-bmJ" secondAttribute="trailing" constant="30" id="J0b-Zg-mcS"/>
+                            <constraint firstItem="8XJ-Zd-cGh" firstAttribute="leading" secondItem="Ix6-XN-W7H" secondAttribute="leading" id="M9v-hp-mwD"/>
+                            <constraint firstItem="y5O-SU-bmJ" firstAttribute="leading" secondItem="Ix6-XN-W7H" secondAttribute="leading" constant="30" id="X6k-am-VGt"/>
+                            <constraint firstItem="Ix6-XN-W7H" firstAttribute="bottom" secondItem="y5O-SU-bmJ" secondAttribute="bottom" constant="30" id="fwt-S9-tUP"/>
+                            <constraint firstItem="8XJ-Zd-cGh" firstAttribute="trailing" secondItem="Ix6-XN-W7H" secondAttribute="trailing" id="vYH-N9-RXP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ix6-XN-W7H"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dLL-rk-y5X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3V-hh-6rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="273.88392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ziY-Jw-whL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cpW-dA-1ef" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aII-Pk-K9P">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vti-bi-WeR" kind="relationship" relationship="rootViewController" id="WDf-1J-aYq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mv-6c-10W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.97101449275362" y="274.55357142857139"/>
+        </scene>
+    </scenes>
+</document>

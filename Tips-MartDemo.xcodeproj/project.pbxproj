@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FCD2265F4BC00736885 /* WebView.storyboard */; };
+		C2059FD02265F50D00736885 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FCF2265F50D00736885 /* WebView.swift */; };
+		C2059FD22265F53500736885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FD12265F53500736885 /* WebViewController.swift */; };
+		C2059FD42266083C00736885 /* Shops.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FD32266083C00736885 /* Shops.storyboard */; };
 		C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2369BB22265C2DA00FBB386 /* AccountView.swift */; };
 		C2369BB52265C32100FBB386 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2369BB42265C32100FBB386 /* AccountViewController.swift */; };
 		C242835F226469B200750768 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242835E226469B200750768 /* ProfileModel.swift */; };
@@ -18,6 +22,14 @@
 		C242836B2264F38700750768 /* BarCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C242836A2264F38700750768 /* BarCode.storyboard */; };
 		C242836D2264F51F00750768 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836C2264F51F00750768 /* BarCodeView.swift */; };
 		C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836F2264F65200750768 /* BarCodeGenerator.swift */; };
+		C2429B2422660D8200EB7942 /* ShopsMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2429B2322660D8200EB7942 /* ShopsMainController.swift */; };
+		C2429B49226615F600EB7942 /* VisitedShopsTvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2429B48226615F600EB7942 /* VisitedShopsTvc.swift */; };
+		C2429B4B2266161000EB7942 /* NotVisitedShopsTvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2429B4A2266161000EB7942 /* NotVisitedShopsTvc.swift */; };
+		C2429B4D2266162700EB7942 /* SelectedShopsTvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2429B4C2266162700EB7942 /* SelectedShopsTvc.swift */; };
+		C2429B502266166B00EB7942 /* Visited.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2429B4F2266166B00EB7942 /* Visited.storyboard */; };
+		C2429B522266167F00EB7942 /* NotVisited.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2429B512266167F00EB7942 /* NotVisited.storyboard */; };
+		C2429B542266168D00EB7942 /* Selected.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2429B532266168D00EB7942 /* Selected.storyboard */; };
+		C2429B562266171A00EB7942 /* ShopsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */; };
 		C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2492A992260996A007E2037 /* Profile.storyboard */; };
 		C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9B2260A249007E2037 /* MainPageViewController.swift */; };
 		C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9D2260A25E007E2037 /* MainPageView.swift */; };
@@ -36,7 +48,6 @@
 		C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* LaunchViewController.swift */; };
 		C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5962D225DDE87001D09D9 /* APIRegComplete.swift */; };
 		C2E59630225DE2E5001D09D9 /* RegModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5962F225DE2E5001D09D9 /* RegModel.swift */; };
-		C2E59634225E08C8001D09D9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E59633225E08C8001D09D9 /* CoreDataManager.swift */; };
 		C2E59636225E0BBE001D09D9 /* APILogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E59635225E0BBE001D09D9 /* APILogin.swift */; };
 		C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */; };
 		C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */; };
@@ -51,6 +62,10 @@
 /* Begin PBXFileReference section */
 		3EBC54FE841F31A392D6F0C0 /* Pods-Tips-MartDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-MartDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5BD178FC3E760D3DA416BF08 /* Pods-Tips-MartDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tips-MartDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C2059FCD2265F4BC00736885 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		C2059FCF2265F50D00736885 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C2059FD12265F53500736885 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C2059FD32266083C00736885 /* Shops.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shops.storyboard; sourceTree = "<group>"; };
 		C2369BB22265C2DA00FBB386 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		C2369BB42265C32100FBB386 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		C242835E226469B200750768 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -62,6 +77,14 @@
 		C242836A2264F38700750768 /* BarCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarCode.storyboard; sourceTree = "<group>"; };
 		C242836C2264F51F00750768 /* BarCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
 		C242836F2264F65200750768 /* BarCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeGenerator.swift; sourceTree = "<group>"; };
+		C2429B2322660D8200EB7942 /* ShopsMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsMainController.swift; sourceTree = "<group>"; };
+		C2429B48226615F600EB7942 /* VisitedShopsTvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedShopsTvc.swift; sourceTree = "<group>"; };
+		C2429B4A2266161000EB7942 /* NotVisitedShopsTvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotVisitedShopsTvc.swift; sourceTree = "<group>"; };
+		C2429B4C2266162700EB7942 /* SelectedShopsTvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedShopsTvc.swift; sourceTree = "<group>"; };
+		C2429B4F2266166B00EB7942 /* Visited.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Visited.storyboard; sourceTree = "<group>"; };
+		C2429B512266167F00EB7942 /* NotVisited.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotVisited.storyboard; sourceTree = "<group>"; };
+		C2429B532266168D00EB7942 /* Selected.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selected.storyboard; sourceTree = "<group>"; };
+		C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTableViewCell.swift; sourceTree = "<group>"; };
 		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2492A9B2260A249007E2037 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C2492A9D2260A25E007E2037 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
@@ -85,7 +108,6 @@
 		C2C96D202255FC17009F7050 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C2E5962D225DDE87001D09D9 /* APIRegComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRegComplete.swift; sourceTree = "<group>"; };
 		C2E5962F225DE2E5001D09D9 /* RegModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegModel.swift; sourceTree = "<group>"; };
-		C2E59633225E08C8001D09D9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C2E59635225E0BBE001D09D9 /* APILogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILogin.swift; sourceTree = "<group>"; };
 		C2E699F92258B2B0006FDDDB /* gotham_pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro.ttf; sourceTree = "<group>"; };
 		C2E699FB2258B2B8006FDDDB /* gotham_pro_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_pro_bold.ttf; sourceTree = "<group>"; };
@@ -130,13 +152,46 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		C2429B25226610B900EB7942 /* ShopsTableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2429B2322660D8200EB7942 /* ShopsMainController.swift */,
+				C2429B48226615F600EB7942 /* VisitedShopsTvc.swift */,
+				C2429B4A2266161000EB7942 /* NotVisitedShopsTvc.swift */,
+				C2429B4C2266162700EB7942 /* SelectedShopsTvc.swift */,
+				C2429B572266171F00EB7942 /* CellForShopsTV */,
+			);
+			path = ShopsTableViewControllers;
+			sourceTree = "<group>";
+		};
+		C2429B4E2266165600EB7942 /* ShopsStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				C2429B4F2266166B00EB7942 /* Visited.storyboard */,
+				C2429B512266167F00EB7942 /* NotVisited.storyboard */,
+				C2429B532266168D00EB7942 /* Selected.storyboard */,
+			);
+			path = ShopsStoryboards;
+			sourceTree = "<group>";
+		};
+		C2429B572266171F00EB7942 /* CellForShopsTV */ = {
+			isa = PBXGroup;
+			children = (
+				C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */,
+			);
+			path = CellForShopsTV;
+			sourceTree = "<group>";
+		};
 		C2492A982260993A007E2037 /* Strotyboards */ = {
 			isa = PBXGroup;
 			children = (
+				C2429B4E2266165600EB7942 /* ShopsStoryboards */,
 				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
 				C2492A992260996A007E2037 /* Profile.storyboard */,
 				C24283662264D3C200750768 /* Account.storyboard */,
+				C2059FCD2265F4BC00736885 /* WebView.storyboard */,
 				C242836A2264F38700750768 /* BarCode.storyboard */,
+				C2059FD32266083C00736885 /* Shops.storyboard */,
 			);
 			path = Strotyboards;
 			sourceTree = "<group>";
@@ -165,7 +220,6 @@
 				C242836E2264F64100750768 /* Helpers */,
 				C2A8C7712261DCA400F2332F /* Views */,
 				C2492A982260993A007E2037 /* Strotyboards */,
-				C2E59632225E0897001D09D9 /* CoreDataStack */,
 				C29356E2225CAF13004F4510 /* APIManager */,
 				C2BE0BF0225B656A00A0BFCF /* Model */,
 				C2E699F82258B26C006FDDDB /* Fonts */,
@@ -199,6 +253,7 @@
 				C2492A9D2260A25E007E2037 /* MainPageView.swift */,
 				C242836C2264F51F00750768 /* BarCodeView.swift */,
 				C2369BB22265C2DA00FBB386 /* AccountView.swift */,
+				C2059FCF2265F50D00736885 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,16 +287,10 @@
 				C24283642264C8DC00750768 /* ErrorAlerts.swift */,
 				C24283682264F36200750768 /* BorCodeGenViewController.swift */,
 				C2369BB42265C32100FBB386 /* AccountViewController.swift */,
+				C2059FD12265F53500736885 /* WebViewController.swift */,
+				C2429B25226610B900EB7942 /* ShopsTableViewControllers */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		C2E59632225E0897001D09D9 /* CoreDataStack */ = {
-			isa = PBXGroup;
-			children = (
-				C2E59633225E08C8001D09D9 /* CoreDataManager.swift */,
-			);
-			path = CoreDataStack;
 			sourceTree = "<group>";
 		};
 		C2E699F82258B26C006FDDDB /* Fonts */ = {
@@ -329,13 +378,18 @@
 				C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */,
 				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
 				C242836B2264F38700750768 /* BarCode.storyboard in Resources */,
+				C2429B542266168D00EB7942 /* Selected.storyboard in Resources */,
 				C24283672264D3C200750768 /* Account.storyboard in Resources */,
 				C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */,
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
+				C2429B502266166B00EB7942 /* Visited.storyboard in Resources */,
 				C25BBF6E2255E0D2008D78F9 /* Main.storyboard in Resources */,
 				C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */,
 				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
+				C2059FD42266083C00736885 /* Shops.storyboard in Resources */,
+				C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */,
+				C2429B522266167F00EB7942 /* NotVisited.storyboard in Resources */,
 				C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +407,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -361,7 +416,9 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
+				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSUtilitiesSource/iOSUtilitiesSource.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -371,6 +428,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -379,7 +437,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSUtilitiesSource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -421,7 +481,6 @@
 				C29356E6225CAF39004F4510 /* APIManager.swift in Sources */,
 				C24283652264C8DC00750768 /* ErrorAlerts.swift in Sources */,
 				C29356E4225CAF2A004F4510 /* APIGet.swift in Sources */,
-				C2E59634225E08C8001D09D9 /* CoreDataManager.swift in Sources */,
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
 				C242835F226469B200750768 /* ProfileModel.swift in Sources */,
 				C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */,
@@ -431,18 +490,25 @@
 				C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */,
 				C2E59630225DE2E5001D09D9 /* RegModel.swift in Sources */,
 				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
+				C2059FD02265F50D00736885 /* WebView.swift in Sources */,
 				C242836122646A5500750768 /* APIChangeInfo.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
 				C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
+				C2429B4B2266161000EB7942 /* NotVisitedShopsTvc.swift in Sources */,
+				C2429B562266171A00EB7942 /* ShopsTableViewCell.swift in Sources */,
+				C2429B4D2266162700EB7942 /* SelectedShopsTvc.swift in Sources */,
+				C2059FD22265F53500736885 /* WebViewController.swift in Sources */,
+				C2429B49226615F600EB7942 /* VisitedShopsTvc.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
 				C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */,
 				C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */,
 				C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */,
 				C2E59636225E0BBE001D09D9 /* APILogin.swift in Sources */,
 				C293570B225CCF38004F4510 /* AuthModel.swift in Sources */,
+				C2429B2422660D8200EB7942 /* ShopsMainController.swift in Sources */,
 				C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */,
 				C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */,
 			);

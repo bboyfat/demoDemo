@@ -68,13 +68,16 @@
                                         <fragment content="Пользовательское соглашение">
                                             <attributes>
                                                 <color key="NSColor" red="0.38174165593884218" green="0.37989749334976569" blue="0.38358581852791873" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="10" name=".AppleSystemUIFont"/>
+                                                <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 <integer key="NSUnderline" value="1"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="openPrivacy:" destination="Mrc-0j-Hx7" eventType="touchUpInside" id="GvW-Ji-3OI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

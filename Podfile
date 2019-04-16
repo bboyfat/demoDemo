@@ -16,5 +16,6 @@ target 'Tips-MartDemo' do
    pod 'FacebookLogin' 
    pod 'FacebookShare'
    pod 'Alamofire'
+   pod 'RealmSwift'
    
 end
