@@ -25,31 +25,12 @@ class MainPageViewController: UIViewController {
         self.view.isUserInteractionEnabled = true
         tap.addTarget(self, action: #selector(handleTap))
         self.view.addGestureRecognizer(tap)
-
     
-        
-      
-       
-    
-     
-       
     }
     
     
     @objc func handleTap(){
         print("TAP!!!!!!!")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-        
-        
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-     
     }
     
     @IBAction func showMyCodeBtn(_ sender: UIButton) {

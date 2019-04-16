@@ -48,7 +48,7 @@ class MainPageView: UIView {
         banerView.animationDuration = 10
         banerView.startAnimating()
        
-        photoImageView.layer.cornerRadius = 38.5
+        photoImageView.layer.cornerRadius = 25
         photoImageView.layer.borderWidth = 2
         photoImageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1).cgColor
         gradientLayer.frame = navigationView.bounds
