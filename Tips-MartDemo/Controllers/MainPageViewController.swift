@@ -16,40 +16,52 @@ class MainPageViewController: UIViewController {
     let mainView = MainPageView()
     var infoModel: RegModelGet = RegModelGet()
     
+    let tap = UITapGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.frame = self.view.bounds
-      self.view.addSubview(mainView)
+        mainView.isUserInteractionEnabled = true
+        self.view.isUserInteractionEnabled = true
+        tap.addTarget(self, action: #selector(handleTap))
+        self.view.addGestureRecognizer(tap)
+
+    
         
       
        
-        stUpdata()
-        print(infoModel.data?.name, "MAINPAGEVIEWCONTROLLER!!!!!!!!!")
+    
+     
        
     }
+    
+    
+    @objc func handleTap(){
+        print("TAP!!!!!!!")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        stUpdata()
+        
         
         
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-      stUpdata()
+     
+    }
+    
+    @IBAction func showMyCodeBtn(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "BarCode", bundle: nil).instantiateViewController(withIdentifier: "BarCodeVC")
+        print("showMyCodeBtn")
+        self.present(vc, animated: true) {
+            UIView.animate(withDuration: 0.3, animations: {
+                UIScreen.main.brightness = 1.0
+            })
+        }
+        
     }
     
    
-    
-    func stUpdata(){
-//        guard let name = self.infoModel.data?.name else { return }
-//        guard let surname = self.infoModel.data?.surname  else { return }
-//        if let nameLabel = mainView.nameSurnameLabel, let idLabel = mainView.idLabel {
-//             nameLabel.text = ( name + " " + surname)
-//  
-//        guard let id = self.infoModel.data?.userid else { return }
-//        idLabel.text = "ID" + "\(id)"
-//        }
-     
-    }
 }

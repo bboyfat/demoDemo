@@ -11,6 +11,11 @@
 		C242836122646A5500750768 /* APIChangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836022646A5500750768 /* APIChangeInfo.swift */; };
 		C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24283622264C04400750768 /* MainTabBarControllerViewController.swift */; };
 		C24283652264C8DC00750768 /* ErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24283642264C8DC00750768 /* ErrorAlerts.swift */; };
+		C24283672264D3C200750768 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24283662264D3C200750768 /* Account.storyboard */; };
+		C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24283682264F36200750768 /* BorCodeGenViewController.swift */; };
+		C242836B2264F38700750768 /* BarCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C242836A2264F38700750768 /* BarCode.storyboard */; };
+		C242836D2264F51F00750768 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836C2264F51F00750768 /* BarCodeView.swift */; };
+		C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836F2264F65200750768 /* BarCodeGenerator.swift */; };
 		C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2492A992260996A007E2037 /* Profile.storyboard */; };
 		C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9B2260A249007E2037 /* MainPageViewController.swift */; };
 		C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9D2260A25E007E2037 /* MainPageView.swift */; };
@@ -48,6 +53,11 @@
 		C242836022646A5500750768 /* APIChangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIChangeInfo.swift; sourceTree = "<group>"; };
 		C24283622264C04400750768 /* MainTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		C24283642264C8DC00750768 /* ErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlerts.swift; sourceTree = "<group>"; };
+		C24283662264D3C200750768 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		C24283682264F36200750768 /* BorCodeGenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorCodeGenViewController.swift; sourceTree = "<group>"; };
+		C242836A2264F38700750768 /* BarCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarCode.storyboard; sourceTree = "<group>"; };
+		C242836C2264F51F00750768 /* BarCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
+		C242836F2264F65200750768 /* BarCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeGenerator.swift; sourceTree = "<group>"; };
 		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2492A9B2260A249007E2037 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C2492A9D2260A25E007E2037 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
@@ -105,11 +115,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C242836E2264F64100750768 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C242836F2264F65200750768 /* BarCodeGenerator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C2492A982260993A007E2037 /* Strotyboards */ = {
 			isa = PBXGroup;
 			children = (
 				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
 				C2492A992260996A007E2037 /* Profile.storyboard */,
+				C24283662264D3C200750768 /* Account.storyboard */,
+				C242836A2264F38700750768 /* BarCode.storyboard */,
 			);
 			path = Strotyboards;
 			sourceTree = "<group>";
@@ -135,6 +155,7 @@
 		C25BBF672255E0D2008D78F9 /* Tips-MartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C242836E2264F64100750768 /* Helpers */,
 				C2A8C7712261DCA400F2332F /* MainPage */,
 				C2492A982260993A007E2037 /* Strotyboards */,
 				C2E59632225E0897001D09D9 /* CoreDataStack */,
@@ -173,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				C2492A9D2260A25E007E2037 /* MainPageView.swift */,
+				C242836C2264F51F00750768 /* BarCodeView.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -204,6 +226,7 @@
 				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
 				C24283622264C04400750768 /* MainTabBarControllerViewController.swift */,
 				C24283642264C8DC00750768 /* ErrorAlerts.swift */,
+				C24283682264F36200750768 /* BorCodeGenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,6 +322,8 @@
 			files = (
 				C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */,
 				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
+				C242836B2264F38700750768 /* BarCode.storyboard in Resources */,
+				C24283672264D3C200750768 /* Account.storyboard in Resources */,
 				C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */,
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
@@ -394,6 +419,7 @@
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
 				C242835F226469B200750768 /* ProfileModel.swift in Sources */,
 				C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */,
+				C242836D2264F51F00750768 /* BarCodeView.swift in Sources */,
 				C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */,
 				C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */,
 				C2E59630225DE2E5001D09D9 /* RegModel.swift in Sources */,
@@ -402,10 +428,12 @@
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
+				C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
 				C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */,
 				C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */,
+				C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */,
 				C2E59636225E0BBE001D09D9 /* APILogin.swift in Sources */,
 				C293570B225CCF38004F4510 /* AuthModel.swift in Sources */,
 				C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */,

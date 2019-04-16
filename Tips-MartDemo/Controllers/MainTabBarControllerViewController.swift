@@ -16,6 +16,7 @@ class MainTabBarControllerViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mainVc.tabBarItem = UITabBarItem(title: "Main", image: #imageLiteral(resourceName: "Fill 1"), tag: 0)
+        mainVc.view.isUserInteractionEnabled = true
      viewControllers = [mainVc]
        
     }

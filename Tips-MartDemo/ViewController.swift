@@ -715,14 +715,14 @@ extension ViewController: UITextFieldDelegate{
         } else if textField == nameTextField {
             
             self.userInfoModel.name = textField.text ?? " "
-            print(userInfoModel.name)
+            
         } else if textField == seNameTextField {
             
             self.userInfoModel.surname = textField.text ??  " "
-            print(userInfoModel.surname)
             
             
-        } 
+            
+        }
         
         
         
