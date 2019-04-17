@@ -10,23 +10,70 @@ import UIKit
 
 
 class ShopsMainController: UIViewController{
-
+    
+    var shopsArray: [ShopsModel] = []
+    let accessToken = UserDefaults.standard.string(forKey: "accessToken")
+    
+    @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       myTableView.delegate = self
+        myTableView.dataSource = self
+       getShops()
         
         
     }
     
+    
+    
+    func getShops(){
+        if let token  = accessToken{
+            ShopsApiRequest().formRequest(accesToken: token) { (array) in
+                self.shopsArray = array
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                DispatchQueue.main.async {
+                    self.myTableView.reloadData()
+                }
+                
+            }
+        }
     }
-    */
+    
+    
+        
 
+        
+        
+    
+    
+
+   
+
+}
+
+
+extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.shopsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShopsTableViewCell
+        
+        
+        let shop = self.shopsArray[indexPath.row]
+         let valueOfCash = String(shop.extendedData.maxCashback.value)
+        
+        cell.shopName.text = shop.name
+        cell.percentOfCashBack.text = valueOfCash + " " + shop.extendedData.maxCashback.currency
+        
+        return cell
+    }
+    
+    
+    
+    
+    
 }
