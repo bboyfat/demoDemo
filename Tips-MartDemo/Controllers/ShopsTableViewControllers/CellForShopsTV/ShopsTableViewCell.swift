@@ -23,5 +23,11 @@ class ShopsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func prepareForReuse() {
+        shopLogo.image = nil
+        shopName.text = nil
+        percentOfCashBack.text = nil
+    }
 
 }

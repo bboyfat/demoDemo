@@ -11,6 +11,10 @@
 		C2059FD02265F50D00736885 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FCF2265F50D00736885 /* WebView.swift */; };
 		C2059FD22265F53500736885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FD12265F53500736885 /* WebViewController.swift */; };
 		C2059FD42266083C00736885 /* ShopsTestWithScroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */; };
+		C217763C22675E1800D6C97A /* GetLogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217763B22675E1800D6C97A /* GetLogos.swift */; };
+		C22C98782267987600BC2106 /* DetailShopView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22C98772267987600BC2106 /* DetailShopView.storyboard */; };
+		C22C987A226798B800BC2106 /* DetailShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C9879226798B800BC2106 /* DetailShopView.swift */; };
+		C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C987D226798F900BC2106 /* DetailShopViewController.swift */; };
 		C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2369BB22265C2DA00FBB386 /* AccountView.swift */; };
 		C2369BB52265C32100FBB386 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2369BB42265C32100FBB386 /* AccountViewController.swift */; };
 		C23E9F6622670DE0002191E3 /* Shops.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23E9F6522670DDF002191E3 /* Shops.storyboard */; };
@@ -26,9 +30,6 @@
 		C242836D2264F51F00750768 /* BarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836C2264F51F00750768 /* BarCodeView.swift */; };
 		C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836F2264F65200750768 /* BarCodeGenerator.swift */; };
 		C2429B2422660D8200EB7942 /* ShopsMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2429B2322660D8200EB7942 /* ShopsMainController.swift */; };
-		C2429B502266166B00EB7942 /* Visited.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2429B4F2266166B00EB7942 /* Visited.storyboard */; };
-		C2429B522266167F00EB7942 /* NotVisited.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2429B512266167F00EB7942 /* NotVisited.storyboard */; };
-		C2429B542266168D00EB7942 /* Selected.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2429B532266168D00EB7942 /* Selected.storyboard */; };
 		C2429B562266171A00EB7942 /* ShopsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */; };
 		C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2492A992260996A007E2037 /* Profile.storyboard */; };
 		C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9B2260A249007E2037 /* MainPageViewController.swift */; };
@@ -66,6 +67,10 @@
 		C2059FCF2265F50D00736885 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		C2059FD12265F53500736885 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopsTestWithScroll.storyboard; sourceTree = "<group>"; };
+		C217763B22675E1800D6C97A /* GetLogos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLogos.swift; sourceTree = "<group>"; };
+		C22C98772267987600BC2106 /* DetailShopView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailShopView.storyboard; sourceTree = "<group>"; };
+		C22C9879226798B800BC2106 /* DetailShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopView.swift; sourceTree = "<group>"; };
+		C22C987D226798F900BC2106 /* DetailShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopViewController.swift; sourceTree = "<group>"; };
 		C2369BB22265C2DA00FBB386 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		C2369BB42265C32100FBB386 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		C23E9F6522670DDF002191E3 /* Shops.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shops.storyboard; sourceTree = "<group>"; };
@@ -81,9 +86,6 @@
 		C242836C2264F51F00750768 /* BarCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeView.swift; sourceTree = "<group>"; };
 		C242836F2264F65200750768 /* BarCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeGenerator.swift; sourceTree = "<group>"; };
 		C2429B2322660D8200EB7942 /* ShopsMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsMainController.swift; sourceTree = "<group>"; };
-		C2429B4F2266166B00EB7942 /* Visited.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Visited.storyboard; sourceTree = "<group>"; };
-		C2429B512266167F00EB7942 /* NotVisited.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotVisited.storyboard; sourceTree = "<group>"; };
-		C2429B532266168D00EB7942 /* Selected.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selected.storyboard; sourceTree = "<group>"; };
 		C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsTableViewCell.swift; sourceTree = "<group>"; };
 		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2492A9B2260A249007E2037 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C2429B2322660D8200EB7942 /* ShopsMainController.swift */,
+				C22C987D226798F900BC2106 /* DetailShopViewController.swift */,
 				C2429B572266171F00EB7942 /* CellForShopsTV */,
 			);
 			path = ShopsTableViewControllers;
@@ -164,9 +167,8 @@
 		C2429B4E2266165600EB7942 /* ShopsStoryboards */ = {
 			isa = PBXGroup;
 			children = (
-				C2429B4F2266166B00EB7942 /* Visited.storyboard */,
-				C2429B512266167F00EB7942 /* NotVisited.storyboard */,
-				C2429B532266168D00EB7942 /* Selected.storyboard */,
+				C22C98772267987600BC2106 /* DetailShopView.storyboard */,
+				C23E9F6522670DDF002191E3 /* Shops.storyboard */,
 			);
 			path = ShopsStoryboards;
 			sourceTree = "<group>";
@@ -189,7 +191,6 @@
 				C2059FCD2265F4BC00736885 /* WebView.storyboard */,
 				C242836A2264F38700750768 /* BarCode.storyboard */,
 				C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */,
-				C23E9F6522670DDF002191E3 /* Shops.storyboard */,
 			);
 			path = Strotyboards;
 			sourceTree = "<group>";
@@ -242,6 +243,7 @@
 				C2E59635225E0BBE001D09D9 /* APILogin.swift */,
 				C242836022646A5500750768 /* APIChangeInfo.swift */,
 				C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */,
+				C217763B22675E1800D6C97A /* GetLogos.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -253,6 +255,7 @@
 				C242836C2264F51F00750768 /* BarCodeView.swift */,
 				C2369BB22265C2DA00FBB386 /* AccountView.swift */,
 				C2059FCF2265F50D00736885 /* WebView.swift */,
+				C22C9879226798B800BC2106 /* DetailShopView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,18 +382,16 @@
 				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
 				C23E9F6622670DE0002191E3 /* Shops.storyboard in Resources */,
 				C242836B2264F38700750768 /* BarCode.storyboard in Resources */,
-				C2429B542266168D00EB7942 /* Selected.storyboard in Resources */,
 				C24283672264D3C200750768 /* Account.storyboard in Resources */,
 				C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */,
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
+				C22C98782267987600BC2106 /* DetailShopView.storyboard in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
-				C2429B502266166B00EB7942 /* Visited.storyboard in Resources */,
 				C25BBF6E2255E0D2008D78F9 /* Main.storyboard in Resources */,
 				C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */,
 				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
 				C2059FD42266083C00736885 /* ShopsTestWithScroll.storyboard in Resources */,
 				C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */,
-				C2429B522266167F00EB7942 /* NotVisited.storyboard in Resources */,
 				C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +481,7 @@
 				C23E9F6A22671FDF002191E3 /* ShopsAPIRequest.swift in Sources */,
 				C29356E6225CAF39004F4510 /* APIManager.swift in Sources */,
 				C24283652264C8DC00750768 /* ErrorAlerts.swift in Sources */,
+				C22C987A226798B800BC2106 /* DetailShopView.swift in Sources */,
 				C29356E4225CAF2A004F4510 /* APIGet.swift in Sources */,
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
 				C242835F226469B200750768 /* ProfileModel.swift in Sources */,
@@ -492,8 +494,10 @@
 				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
 				C2059FD02265F50D00736885 /* WebView.swift in Sources */,
 				C242836122646A5500750768 /* APIChangeInfo.swift in Sources */,
+				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
+				C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
 				C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */,
 				C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */,
