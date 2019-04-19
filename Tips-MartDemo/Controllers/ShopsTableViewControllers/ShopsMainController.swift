@@ -48,6 +48,13 @@ class ShopsMainController: UIViewController{
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPath = myTableView.indexPathForSelectedRow{
+            myTableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
     
     
     func setUpActivity(){
@@ -96,21 +103,41 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShopsTableViewCell
-        stopAnim()
+        
                       let shop = self.shopsArray[indexPath.row]
             let valueOfCash = String(shop.extendedData.maxCashback.value)
             cell.shopName.text = shop.name
             cell.percentOfCashBack.text = valueOfCash + " " + shop.extendedData.maxCashback.currency
         GetLogos().urlPath(imagePath: shop.pathImage) { (image) in
             if let forcedImage = image{
+                
             cell.shopLogo.image = forcedImage
             } else {
                 cell.shopLogo.image = #imageLiteral(resourceName: "default-avatar")
             }
         }
-        
+          stopAnim()
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "DetailShopView", bundle: nil).instantiateViewController(withIdentifier: "detailShopVC") as! DetailShopViewController
+         vc.shopsModel =  self.shopsArray[indexPath.row]
+        present(vc, animated: true) {
+            
+            }
+            
+        }
+    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
+        myTableView.deselectRow(at: indexPath, animated: false)
+        return myTableView.indexPathForSelectedRow
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        myTableView.deselectRow(at: myTableView.indexPathForSelectedRow!, animated: false)
+        
+    }
+        
+    
     
     func stopAnim(){
         self.activityController.stopAnimating()

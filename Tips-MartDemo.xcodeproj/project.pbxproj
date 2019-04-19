@@ -41,6 +41,10 @@
 		C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF6F2255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld */; };
 		C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF722255E0D3008D78F9 /* Assets.xcassets */; };
 		C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */; };
+		C270FC872269BD750059F161 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270FC862269BD750059F161 /* Refresh.swift */; };
+		C270FC892269C1C80059F161 /* RefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270FC882269C1C80059F161 /* RefreshModel.swift */; };
+		C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */; };
+		C270FC8D2269F5510059F161 /* MoreScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8C2269F5510059F161 /* MoreScreen.storyboard */; };
 		C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */; };
 		C29356E4225CAF2A004F4510 /* APIGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E3225CAF2A004F4510 /* APIGet.swift */; };
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
@@ -99,6 +103,10 @@
 		C25BBF722255E0D3008D78F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C25BBF752255E0D3008D78F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25BBF772255E0D3008D78F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C270FC862269BD750059F161 /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
+		C270FC882269C1C80059F161 /* RefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModel.swift; sourceTree = "<group>"; };
+		C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReferalScreen.storyboard; sourceTree = "<group>"; };
+		C270FC8C2269F5510059F161 /* MoreScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreScreen.storyboard; sourceTree = "<group>"; };
 		C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelAPI.swift; sourceTree = "<group>"; };
 		C29356E3225CAF2A004F4510 /* APIGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGet.swift; sourceTree = "<group>"; };
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -106,7 +114,6 @@
 		C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2BA3C6E2257CEA50016CA9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2BA3C722257D09D0016CA9E /* Tips-MartDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tips-MartDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2C96D202255FC17009F7050 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C2E5962D225DDE87001D09D9 /* APIRegComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRegComplete.swift; sourceTree = "<group>"; };
 		C2E5962F225DE2E5001D09D9 /* RegModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegModel.swift; sourceTree = "<group>"; };
@@ -188,6 +195,8 @@
 				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
 				C2492A992260996A007E2037 /* Profile.storyboard */,
 				C24283662264D3C200750768 /* Account.storyboard */,
+				C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */,
+				C270FC8C2269F5510059F161 /* MoreScreen.storyboard */,
 				C2059FCD2265F4BC00736885 /* WebView.storyboard */,
 				C242836A2264F38700750768 /* BarCode.storyboard */,
 				C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */,
@@ -229,7 +238,6 @@
 				C25BBF772255E0D3008D78F9 /* Info.plist */,
 				C25BBF6F2255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld */,
 				C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */,
-				C2BA3C722257D09D0016CA9E /* Tips-MartDemo-Bridging-Header.h */,
 			);
 			path = "Tips-MartDemo";
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 				C242836022646A5500750768 /* APIChangeInfo.swift */,
 				C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */,
 				C217763B22675E1800D6C97A /* GetLogos.swift */,
+				C270FC862269BD750059F161 /* Refresh.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -265,6 +274,7 @@
 			children = (
 				C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */,
 				C293570A225CCF38004F4510 /* AuthModel.swift */,
+				C270FC882269C1C80059F161 /* RefreshModel.swift */,
 				C2E5962F225DE2E5001D09D9 /* RegModel.swift */,
 				C242835E226469B200750768 /* ProfileModel.swift */,
 				C23E9F6722671DFB002191E3 /* ShopsModel.swift */,
@@ -378,12 +388,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */,
 				C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */,
 				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
 				C23E9F6622670DE0002191E3 /* Shops.storyboard in Resources */,
 				C242836B2264F38700750768 /* BarCode.storyboard in Resources */,
 				C24283672264D3C200750768 /* Account.storyboard in Resources */,
 				C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */,
+				C270FC8D2269F5510059F161 /* MoreScreen.storyboard in Resources */,
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
 				C22C98782267987600BC2106 /* DetailShopView.storyboard in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
@@ -408,18 +420,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSUtilitiesSource/iOSUtilitiesSource.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -428,18 +429,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSUtilitiesSource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -505,6 +495,8 @@
 				C2429B562266171A00EB7942 /* ShopsTableViewCell.swift in Sources */,
 				C2059FD22265F53500736885 /* WebViewController.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
+				C270FC872269BD750059F161 /* Refresh.swift in Sources */,
+				C270FC892269C1C80059F161 /* RefreshModel.swift in Sources */,
 				C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */,
 				C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */,
 				C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */,
@@ -669,7 +661,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andreyP.Tips-MartDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tips-MartDemo/Tips-MartDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -691,7 +682,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andreyP.Tips-MartDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tips-MartDemo/Tips-MartDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -10,12 +10,15 @@ import UIKit
 
 class DetailShopView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var selecctedStar: UIButton!
+    
+    @IBOutlet weak var cashbackValue: UILabel!
+    
+    @IBOutlet weak var progressieveView: UIProgressView!
+    @IBOutlet weak var rateDislike: UILabel!
+    @IBOutlet weak var rateLike: UILabel!
+    @IBOutlet weak var cashbackCurrency: UILabel!
+    @IBOutlet weak var cashbackTimeLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
 }

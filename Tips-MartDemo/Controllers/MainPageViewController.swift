@@ -25,6 +25,7 @@ class MainPageViewController: UIViewController {
         self.view.isUserInteractionEnabled = true
         tap.addTarget(self, action: #selector(handleTap))
         self.view.addGestureRecognizer(tap)
+        
     
     }
     

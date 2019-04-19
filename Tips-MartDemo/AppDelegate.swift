@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
-import FacebookCore
-import FacebookLogin
+
 
 
 @UIApplicationMain

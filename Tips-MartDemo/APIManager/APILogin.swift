@@ -51,6 +51,7 @@ class APILogin{
                 self.userDefaults.set(answer.data?.surname, forKey: "surname")
                 self.userDefaults.set(answer.data?.userid, forKey: "userId")
                 self.userDefaults.set(answer.data?.accessToken.value, forKey: "accessToken")
+                self.userDefaults.set(answer.data?.refreshToken.value, forKey: "refreshToken")
                     self.userDefaults.set(answer.data?.balance.green, forKey: "greenBalance")
                         self.userDefaults.set(answer.data?.balance.gray, forKey: "grayBalance")
                 
