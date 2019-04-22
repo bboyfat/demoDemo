@@ -34,7 +34,7 @@ class APILogin{
     
     
     public func request(params: String, completion: @escaping (RegModelGet) -> Void){
-        guard let url = URL(string: "https://client.tips-mart.com/auth/v1/login") else { return }
+        guard let url = URL(string: URLS.login.rawValue) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = params.data(using: String.Encoding.utf8)

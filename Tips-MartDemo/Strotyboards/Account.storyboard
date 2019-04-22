@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -424,6 +423,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showHistoryButton:" destination="hQo-Eo-y28" eventType="touchUpInside" id="A7K-tN-7BD"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqJ-r8-GTi">
                                 <rect key="frame" x="0.0" y="393.33333333333331" width="375" height="1"/>
@@ -466,6 +468,8 @@
                             <outlet property="idLabel" destination="hSk-zZ-D74" id="SYn-ud-KMy"/>
                             <outlet property="nameSernameLabel" destination="JRe-AI-hp9" id="upD-dV-3oH"/>
                             <outlet property="navigationView" destination="GvH-Gn-7yc" id="HbP-Ff-2yd"/>
+                            <outlet property="referralsIncomeLabel" destination="wIe-kc-95b" id="3iP-3V-rvf"/>
+                            <outlet property="totalCahsbackLabel" destination="n3V-dY-DgG" id="Grp-yE-9cH"/>
                         </connections>
                     </view>
                 </viewController>

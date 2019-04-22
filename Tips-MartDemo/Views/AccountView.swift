@@ -12,6 +12,8 @@ class AccountView: UIView {
 
     @IBOutlet weak var navigationView: UIView!
     
+    @IBOutlet weak var referralsIncomeLabel: UILabel!
+    @IBOutlet weak var totalCahsbackLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameSernameLabel: UILabel!
     @IBOutlet weak var greenBalanceLabel: UILabel!
@@ -21,6 +23,8 @@ class AccountView: UIView {
     let userId = UserDefaults.standard.string(forKey: "userId")
     let balanceGreen = UserDefaults.standard.string(forKey: "greenBalance")
     let balanceGray = UserDefaults.standard.string(forKey: "grayBalance")
+    let totalCashBack = UserDefaults.standard.double(forKey: "totalCasback")
+    let referralsIncome = UserDefaults.standard.double(forKey: "referralsIncome")
     
     let gradientLayer = CAGradientLayer()
     
@@ -47,5 +51,7 @@ class AccountView: UIView {
         idLabel.text = "ID: \(userId)"
         greenBalanceLabel.text = greenBalanceString + " грн."
         balanceGrayLabel.text = grayBalanceString + " грн."
+        totalCahsbackLabel.text = String(totalCashBack)
+        referralsIncomeLabel.text = String(referralsIncome)
     }
 }

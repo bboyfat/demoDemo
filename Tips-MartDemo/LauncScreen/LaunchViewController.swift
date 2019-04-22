@@ -25,7 +25,7 @@ class LaunchViewController: UIViewController {
                 OperationQueue.main.addOperation {
                     self.presentMainTab()
                 }
-                
+
             }
         } else {
             OperationQueue.main.addOperation {

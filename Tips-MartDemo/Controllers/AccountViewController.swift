@@ -19,6 +19,13 @@ class AccountViewController: UIViewController {
     }
     
 
-   
+    @IBAction func showHistoryButton(_ sender: UIButton) {
+        
+        let vc = UIStoryboard(name: "OperationHistory", bundle: nil).instantiateViewController(withIdentifier: "operationVC") as! OperationHistoryController
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
 
 }
+
