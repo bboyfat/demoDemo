@@ -18,12 +18,13 @@ class APILogin{
         
         let phoneNumber = model.phoneNumber
         let password = model.password
-        
+        UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
+        UserDefaults.standard.set(password, forKey: "password")
         
         
         let params = "phoneNumber=\(phoneNumber)&password=\(password)"
         
-        
+        print(phoneNumber)
         print(params)
         request(params: params, completion: completion)
         

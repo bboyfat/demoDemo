@@ -48,7 +48,6 @@
 		C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */; };
 		C270FC8D2269F5510059F161 /* MoreScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8C2269F5510059F161 /* MoreScreen.storyboard */; };
 		C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */; };
-		C29356E4225CAF2A004F4510 /* APIGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E3225CAF2A004F4510 /* APIGet.swift */; };
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
@@ -63,6 +62,7 @@
 		C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A0322596327006FDDDB /* FloatingTextField.swift */; };
 		C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A052259636F006FDDDB /* ValidPhonePass.swift */; };
 		C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A07225975B4006FDDDB /* HideOrNot.swift */; };
+		C2F285F5226DDF42005DC8F8 /* WaitingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F285F4226DDF42005DC8F8 /* WaitingScreen.storyboard */; };
 		C6EEFF074AC8CA70738BF766 /* Pods_Tips_MartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,7 +112,6 @@
 		C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReferalScreen.storyboard; sourceTree = "<group>"; };
 		C270FC8C2269F5510059F161 /* MoreScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreScreen.storyboard; sourceTree = "<group>"; };
 		C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelAPI.swift; sourceTree = "<group>"; };
-		C29356E3225CAF2A004F4510 /* APIGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGet.swift; sourceTree = "<group>"; };
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C293570A225CCF38004F4510 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		C2E69A0322596327006FDDDB /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		C2E69A052259636F006FDDDB /* ValidPhonePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidPhonePass.swift; sourceTree = "<group>"; };
 		C2E69A07225975B4006FDDDB /* HideOrNot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideOrNot.swift; sourceTree = "<group>"; };
+		C2F285F4226DDF42005DC8F8 /* WaitingScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaitingScreen.storyboard; sourceTree = "<group>"; };
 		F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_MartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -204,6 +204,7 @@
 				C2059FCD2265F4BC00736885 /* WebView.storyboard */,
 				C242836A2264F38700750768 /* BarCode.storyboard */,
 				C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */,
+				C2F285F4226DDF42005DC8F8 /* WaitingScreen.storyboard */,
 			);
 			path = Strotyboards;
 			sourceTree = "<group>";
@@ -249,7 +250,6 @@
 		C29356E2225CAF13004F4510 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
-				C29356E3225CAF2A004F4510 /* APIGet.swift */,
 				C29356E5225CAF39004F4510 /* APIManager.swift */,
 				C2E5962D225DDE87001D09D9 /* APIRegComplete.swift */,
 				C2E59635225E0BBE001D09D9 /* APILogin.swift */,
@@ -408,6 +408,7 @@
 				C25BBF6E2255E0D2008D78F9 /* Main.storyboard in Resources */,
 				C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */,
 				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
+				C2F285F5226DDF42005DC8F8 /* WaitingScreen.storyboard in Resources */,
 				C2059FD42266083C00736885 /* ShopsTestWithScroll.storyboard in Resources */,
 				C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */,
 				C2E699FC2258B2B8006FDDDB /* gotham_pro_bold.ttf in Resources */,
@@ -478,7 +479,6 @@
 				C29356E6225CAF39004F4510 /* APIManager.swift in Sources */,
 				C24283652264C8DC00750768 /* ErrorAlerts.swift in Sources */,
 				C22C987A226798B800BC2106 /* DetailShopView.swift in Sources */,
-				C29356E4225CAF2A004F4510 /* APIGet.swift in Sources */,
 				C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */,
 				C242835F226469B200750768 /* ProfileModel.swift in Sources */,
 				C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */,

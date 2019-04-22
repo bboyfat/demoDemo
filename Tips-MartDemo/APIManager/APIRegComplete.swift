@@ -45,10 +45,11 @@ class APIRegComplete {
             guard let data = data else {return}
             guard let resp = response else { return }
             print(resp)
-            print(String(data: data, encoding: String.Encoding.utf8))
+            
             do{
                 let answer = try JSONDecoder().decode(RegModelGet.self, from: data)
                 completion(answer)
+                
                 
             } catch {
                 print("!!!!!!!!!!!!!!!!!!OOPS, we have an error",error)

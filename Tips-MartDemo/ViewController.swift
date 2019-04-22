@@ -17,10 +17,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    
-    
-    
-    
+    //MARK: UserDefaultsInfo
     
     //MARK: NameSenameStack
     
@@ -232,14 +229,33 @@ class ViewController: UIViewController {
         seNameTextField.delegate = self
         
         birthDateTextField.inputView = datePicker
-       
-
+//        if let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber"),
+//            let password = UserDefaults.standard.string(forKey: "password"){
+//            self.registrationModel.phoneNumber = phoneNumber
+//            self.registrationModel.password = password
+//            APILogin().getAuthCode(model: self.registrationModel) { (info) in
+//                self.regAuth = info
+//                OperationQueue.main.addOperation {
+//                    self.presentMainTab()
+//                }
+//                
+//            }
+//        }
+        
+        
         setPlaceHolders()
         setUpButtons()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleEndEdit))
         self.view.addGestureRecognizer(tap)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //    UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
+        //    UserDefaults.standard.set(password, forKey: "password")
+       
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -339,20 +355,23 @@ class ViewController: UIViewController {
     }
     @IBAction func sendDataBtn(_ sender: UIButton) {
        
-        
+        presentMainTab()
+       
+    }
+    func presentMainTab(){
         let tabBarController = MainTabBarControllerViewController()
-       
-       
+        
+        
         guard let regData = self.regAuth else { return }
         if regData.success == true{
-        self.present(tabBarController, animated: true) {
-             
-        }
+            self.present(tabBarController, animated: true) {
+                
+            }
         } else {
             
             ErrorAlerts().loginErrorAlert(controller: self)
         }
-      
+        
     }
     
     @IBAction func createNewRegistration(_ sender: UIButton) {

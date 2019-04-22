@@ -7,10 +7,7 @@
 //
 
 import Foundation
-protocol APIDelegate{
-    func getAuthCode(model: RegistrationModelAPI, completion: @escaping (AuthModel) -> Void)
-    
-}
+
 
 class APIManager {
     
@@ -47,7 +44,9 @@ class APIManager {
                 let answer = try JSONDecoder().decode(AuthModel.self, from: data)
                 
                 completion(answer)
-                print(String(data: data, encoding: String.Encoding.utf8))
+                print(answer.code)
+                
+               print(answer)
                 
             } catch {
                 
