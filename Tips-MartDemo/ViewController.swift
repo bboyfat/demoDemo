@@ -232,7 +232,6 @@ class ViewController: UIViewController {
         seNameTextField.delegate = self
         
         birthDateTextField.inputView = datePicker
-        
        
 
         setPlaceHolders()
