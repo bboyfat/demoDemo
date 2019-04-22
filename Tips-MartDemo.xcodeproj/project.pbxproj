@@ -12,6 +12,8 @@
 		C2059FD22265F53500736885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FD12265F53500736885 /* WebViewController.swift */; };
 		C2059FD42266083C00736885 /* ShopsTestWithScroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */; };
 		C217763C22675E1800D6C97A /* GetLogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217763B22675E1800D6C97A /* GetLogos.swift */; };
+		C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */; };
+		C2184A9A226DB22D00ABE8C3 /* RefreshBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */; };
 		C22C98782267987600BC2106 /* DetailShopView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22C98772267987600BC2106 /* DetailShopView.storyboard */; };
 		C22C987A226798B800BC2106 /* DetailShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C9879226798B800BC2106 /* DetailShopView.swift */; };
 		C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C987D226798F900BC2106 /* DetailShopViewController.swift */; };
@@ -72,6 +74,8 @@
 		C2059FD12265F53500736885 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopsTestWithScroll.storyboard; sourceTree = "<group>"; };
 		C217763B22675E1800D6C97A /* GetLogos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLogos.swift; sourceTree = "<group>"; };
+		C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalance.swift; sourceTree = "<group>"; };
+		C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalanceModel.swift; sourceTree = "<group>"; };
 		C22C98772267987600BC2106 /* DetailShopView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailShopView.storyboard; sourceTree = "<group>"; };
 		C22C9879226798B800BC2106 /* DetailShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopView.swift; sourceTree = "<group>"; };
 		C22C987D226798F900BC2106 /* DetailShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 				C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */,
 				C217763B22675E1800D6C97A /* GetLogos.swift */,
 				C270FC862269BD750059F161 /* Refresh.swift */,
+				C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				C2E5962F225DE2E5001D09D9 /* RegModel.swift */,
 				C242835E226469B200750768 /* ProfileModel.swift */,
 				C23E9F6722671DFB002191E3 /* ShopsModel.swift */,
+				C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,9 +487,11 @@
 				C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */,
 				C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */,
 				C2E59630225DE2E5001D09D9 /* RegModel.swift in Sources */,
+				C2184A9A226DB22D00ABE8C3 /* RefreshBalanceModel.swift in Sources */,
 				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
 				C2059FD02265F50D00736885 /* WebView.swift in Sources */,
 				C242836122646A5500750768 /* APIChangeInfo.swift in Sources */,
+				C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */,
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
@@ -656,6 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SSF7F7A55A;
 				INFOPLIST_FILE = "Tips-MartDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,6 +688,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SSF7F7A55A;
 				INFOPLIST_FILE = "Tips-MartDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

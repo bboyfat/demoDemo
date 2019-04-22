@@ -11,20 +11,28 @@ import UIKit
 class MainPageViewController: UIViewController {
 
     
+    @IBOutlet var mainPageView: MainPageView!
+    var refreshControl: UIRefreshControl!
   
-    
-    let mainView = MainPageView()
+    let accesToken = UserDefaults.standard.string(forKey: "accessToken")
+
     var infoModel: RegModelGet = RegModelGet()
     
     let tap = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.frame = self.view.bounds
-        mainView.isUserInteractionEnabled = true
-        self.view.isUserInteractionEnabled = true
+     
+        
+       RefreshToken().getBalance(header: accesToken!)
+        
         tap.addTarget(self, action: #selector(handleTap))
         self.view.addGestureRecognizer(tap)
+        mainPageView.scrollView.alwaysBounceVertical = true
+        mainPageView.scrollView.bounces  = true
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+        mainPageView.scrollView.addSubview(refreshControl)
         
     
     }
@@ -32,6 +40,17 @@ class MainPageViewController: UIViewController {
     
     @objc func handleTap(){
         print("TAP!!!!!!!")
+    }
+    @objc func didPullToRefresh() {
+        
+        RefreshToken().getBalance(header: accesToken!)
+        guard let greenBalance = UserDefaults.standard.string(forKey: "greenBalance"),
+            let grayBalance = UserDefaults.standard.string(forKey: "grayBalance") else {return}
+        self.mainPageView.greenBalance.text = greenBalance + " грн."
+        self.mainPageView.grayBalance.text = grayBalance + " грн."
+        refreshControl?.endRefreshing()
+        
+        
     }
     
     @IBAction func showMyCodeBtn(_ sender: UIButton) {

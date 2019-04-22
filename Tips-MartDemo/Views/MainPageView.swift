@@ -10,6 +10,7 @@ import UIKit
 
 class MainPageView: UIView {
     //NavigationView
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var navigationView: UIView!
     // Mark: ImageViews
