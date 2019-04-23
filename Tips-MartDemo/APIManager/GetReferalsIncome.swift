@@ -11,10 +11,10 @@ import Foundation
 
 class GetReferalsInfo{
     
-    func getInf(header: String){
+    func getInf(header: String, urlString: String){
         
         
-        let urlString = "https://client.tips-mart.com/profile/v1/user"
+       
         guard let url = URL(string: urlString) else { return}
         
         

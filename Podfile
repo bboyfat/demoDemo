@@ -11,6 +11,7 @@ target 'Tips-MartDemo' do
   
    pod 'Firebase/Core'
    pod 'Firebase/Database'
+   pod 'SwiftSoup'
    
      
 end

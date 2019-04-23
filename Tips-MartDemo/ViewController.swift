@@ -229,19 +229,7 @@ class ViewController: UIViewController {
         seNameTextField.delegate = self
         
         birthDateTextField.inputView = datePicker
-//        if let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber"),
-//            let password = UserDefaults.standard.string(forKey: "password"){
-//            self.registrationModel.phoneNumber = phoneNumber
-//            self.registrationModel.password = password
-//            APILogin().getAuthCode(model: self.registrationModel) { (info) in
-//                self.regAuth = info
-//                OperationQueue.main.addOperation {
-//                    self.presentMainTab()
-//                }
-//                
-//            }
-//        }
-        
+
         
         setPlaceHolders()
         setUpButtons()
@@ -251,12 +239,7 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //    UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
-        //    UserDefaults.standard.set(password, forKey: "password")
-       
-    }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
@@ -674,7 +657,7 @@ extension ViewController: UITextFieldDelegate{
             }
         } else {
             if textField == passwordTetField{
-                if textField.text!.count <= 8{
+                if textField.text!.count < 8{
                     floatingDelegate?.moveDown(view: passPlaceHolder, text: "Пароль должен быть не менее 8 символов")
                 } else{
                     self.registrationModel.password = textField.text ?? ""

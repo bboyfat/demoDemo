@@ -56,11 +56,13 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - iOSUtilitiesSource (from `https://github.com/hasnine/iOSUtilitiesSource.git`)
+  - SwiftSoup
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -73,6 +75,7 @@ SPEC REPOS:
     - GoogleUtilities
     - leveldb-library
     - nanopb
+    - SwiftSoup
 
 EXTERNAL SOURCES:
   iOSUtilitiesSource:
@@ -94,7 +97,8 @@ SPEC CHECKSUMS:
   iOSUtilitiesSource: bd69d00b8fdf29d8d99303410ce44e9df3c6ec20
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: e49c879c07758e250d512f8de04b0702714f17e5
+PODFILE CHECKSUM: 0ee3f9df4e07d63be023a1ba9dc015f45c06dfe5
 
 COCOAPODS: 1.5.3

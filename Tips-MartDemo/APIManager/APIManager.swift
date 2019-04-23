@@ -12,10 +12,6 @@ import Foundation
 class APIManager {
     
     
-    
-    
-
-   
     func getAuthCode(model: RegistrationModelAPI, completion: @escaping (AuthModel) -> Void){
         let params: NSMutableDictionary = NSMutableDictionary()
         params.setValue(model.phoneNumber, forKey: "phoneNumber")

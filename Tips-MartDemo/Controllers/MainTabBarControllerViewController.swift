@@ -20,7 +20,7 @@ class MainTabBarControllerViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GetReferalsInfo().getInf(header: accessToken!)
+        GetReferalsInfo().getInf(header: accessToken!, urlString: URLS.referalsIncome.rawValue)
         mainVc.tabBarItem = UITabBarItem(title: "Main", image: #imageLiteral(resourceName: "mainScreenTab"), tag: 0)
         profileVc.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "Fill 1"), tag: 1)
         shopsVc.tabBarItem = UITabBarItem(title: "Shops", image: #imageLiteral(resourceName: "shopsTabs"), tag: 2)

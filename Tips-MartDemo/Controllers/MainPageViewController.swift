@@ -37,6 +37,9 @@ class MainPageViewController: UIViewController {
     
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
     
     @objc func handleTap(){
         print("TAP!!!!!!!")

@@ -10,7 +10,7 @@ import Foundation
 
 
 enum URLS: String{
-    case ragistrationComplete = "https://client.tips-mart.com/auth/v1/registration"
+    case registrationComplete = "https://client.tips-mart.com/auth/v1/registration"
     case login = "https://client.tips-mart.com/auth/v1/login"
     case changeInfo = "https://client.tips-mart.com/profile/v1/change-data"
     
@@ -18,4 +18,5 @@ enum URLS: String{
     case refreshToken = "https://client.tips-mart.com/auth/v1/refresh-token"
     case refreshBalance = "https://client.tips-mart.com/home/v1/load-page"
     case referalsIncome = "https://client.tips-mart.com/profile/v1/user"
+    case purchasesInfo = "https://client.tips-mart.com/profile/v1/purchases"
 }

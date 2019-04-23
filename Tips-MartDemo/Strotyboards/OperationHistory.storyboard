@@ -68,49 +68,62 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.06.18 22:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr6-a1-MQI">
-                                                    <rect key="frame" x="70" y="41" width="116" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="70" y="41" width="91.5" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.2705873251" green="0.27058252690000001" blue="0.27058848740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заказ в Rozetla   Номер заказа: 14 Сумма заказа: 50 грн." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2U-n5-f5b">
-                                                    <rect key="frame" x="50" y="72" width="178.5" height="81.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заказ в Rozetla   Номер заказа: 14 Сумма заказа: 50 грн." textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2U-n5-f5b">
+                                                    <rect key="frame" x="50" y="89.5" width="120" height="81.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="fLn-Db-NKK"/>
+                                                        <constraint firstAttribute="height" constant="81.5" id="tdU-N2-Nrm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="кэшбэк" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjP-eP-486">
-                                                    <rect key="frame" x="334" y="60" width="60" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.51 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYE-8L-zYV">
-                                                    <rect key="frame" x="335" y="96" width="64" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В ожидании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39F-Df-e7t">
-                                                    <rect key="frame" x="312" y="132" width="97" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1os-PR-ygn">
+                                                    <rect key="frame" x="292.5" y="60" width="96.5" height="92"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="кэшбэк" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjP-eP-486">
+                                                            <rect key="frame" x="18.5" y="0.0" width="59.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.2705873251" green="0.27058252690000001" blue="0.27058848740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.51 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYE-8L-zYV">
+                                                            <rect key="frame" x="16.5" y="36" width="63.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В ожидании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39F-Df-e7t">
+                                                            <rect key="frame" x="0.0" y="71.5" width="96.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="39F-Df-e7t" firstAttribute="top" secondItem="qYE-8L-zYV" secondAttribute="bottom" constant="15" id="00z-LE-RSv"/>
-                                                <constraint firstItem="BjP-eP-486" firstAttribute="top" secondItem="y5B-ck-HFw" secondAttribute="top" constant="60" id="RHZ-BO-We2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1os-PR-ygn" secondAttribute="trailing" constant="5" id="C3m-JZ-q9T"/>
                                                 <constraint firstItem="tr6-a1-MQI" firstAttribute="leading" secondItem="y5B-ck-HFw" secondAttribute="leadingMargin" constant="50" id="T11-VP-prf"/>
                                                 <constraint firstItem="N2U-n5-f5b" firstAttribute="leading" secondItem="y5B-ck-HFw" secondAttribute="leadingMargin" constant="30" id="WKU-Ju-gAQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="qYE-8L-zYV" secondAttribute="trailing" constant="15" id="bOa-SU-Qzh"/>
+                                                <constraint firstItem="1os-PR-ygn" firstAttribute="top" secondItem="y5B-ck-HFw" secondAttribute="topMargin" constant="49" id="baz-1k-9Bz"/>
                                                 <constraint firstItem="tr6-a1-MQI" firstAttribute="top" secondItem="y5B-ck-HFw" secondAttribute="topMargin" constant="30" id="gth-1V-KWO"/>
-                                                <constraint firstAttribute="trailing" secondItem="39F-Df-e7t" secondAttribute="trailing" constant="5" id="mjv-8Y-Zqs"/>
-                                                <constraint firstItem="qYE-8L-zYV" firstAttribute="top" secondItem="BjP-eP-486" secondAttribute="bottom" constant="15" id="piT-sY-54O"/>
                                                 <constraint firstItem="N2U-n5-f5b" firstAttribute="top" secondItem="tr6-a1-MQI" secondAttribute="bottom" constant="10" id="sI5-YV-cNi"/>
-                                                <constraint firstAttribute="trailing" secondItem="BjP-eP-486" secondAttribute="trailing" constant="20" id="wE2-Mt-Fzp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1os-PR-ygn" secondAttribute="bottom" constant="49" id="weP-Fh-kGE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="N2U-n5-f5b" secondAttribute="bottom" constant="30" id="xSL-db-R9m"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cahsbackStatusLabel" destination="39F-Df-e7t" id="Fjc-PC-Z4V"/>
+                                            <outlet property="dateLabel" destination="tr6-a1-MQI" id="ZaJ-VY-h4H"/>
+                                            <outlet property="orderInfoLabel" destination="N2U-n5-f5b" id="CUW-LY-GTm"/>
+                                            <outlet property="totalCashbackLabel" destination="qYE-8L-zYV" id="9zQ-xj-cTy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

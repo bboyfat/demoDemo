@@ -18,6 +18,10 @@ class AccountViewController: UIViewController {
        
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
 
     @IBAction func showHistoryButton(_ sender: UIButton) {
         

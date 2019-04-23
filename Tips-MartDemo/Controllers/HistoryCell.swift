@@ -10,6 +10,10 @@ import UIKit
 
 class HistoryCell: UITableViewCell {
 
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var orderInfoLabel: UILabel!
+    @IBOutlet weak var totalCashbackLabel: UILabel!
+    @IBOutlet weak var cahsbackStatusLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
