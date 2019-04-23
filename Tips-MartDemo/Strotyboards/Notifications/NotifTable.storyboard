@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bb8-VU-t4a">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Not Table View Controller-->
+        <scene sceneID="2zf-8y-wsk">
+            <objects>
+                <viewController storyboardIdentifier="notTableVc" id="Bb8-VU-t4a" customClass="NotTableViewController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z6u-KJ-8pL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atM-YR-Dpc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Новости" id="I08-aN-qcL">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="d4M-sl-skn">
+                                            <connections>
+                                                <action selector="disVc:" destination="Bb8-VU-t4a" id="I82-K0-IGW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="bottom" semanticContentAttribute="spatial" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="always" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fk9-Fp-9Sp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="18" id="pOP-MD-ICq">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pOP-MD-ICq" id="Hyf-AT-z2c">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="17.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05.04.2018 22:33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-vU-wLG">
+                                                    <rect key="frame" x="20" y="5.5" width="86" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="9NM-vU-wLG" secondAttribute="bottom" id="HHi-IV-uTe"/>
+                                                <constraint firstItem="9NM-vU-wLG" firstAttribute="leading" secondItem="Hyf-AT-z2c" secondAttribute="leading" constant="20" id="uuW-3j-fi4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notCell" rowHeight="122" id="JvN-M0-ppT">
+                                        <rect key="frame" x="0.0" y="46" width="414" height="122"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JvN-M0-ppT" id="mKG-uH-8vk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="121.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvX-Cx-t1V">
+                                                    <rect key="frame" x="30" y="5" width="247" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Добро пожаловать в">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Tips Mart!">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.30588235294117649" green="0.27058823529411763" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-PU-DsH">
+                                                    <rect key="frame" x="30" y="31" width="334" height="48"/>
+                                                    <string key="text">Владислав Кульчицкий, подтверждённые аккаунты дают доступ к ещё большим возможностям Tips Mart.
+Нажмите на кнопку ниже и присоединитесь к всемирному сообществу учащихся!</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Детальнее:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyg-Q6-6L0">
+                                                    <rect key="frame" x="15" y="94" width="66" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40y-xK-OkA">
+                                                    <rect key="frame" x="96" y="94" width="156" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="156" id="Jh5-Du-Q3x"/>
+                                                        <constraint firstAttribute="height" constant="15" id="LSf-dU-YcL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <state key="normal" title=" https://www.tips-mart.com">
+                                                        <color key="titleColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wbx-PU-DsH" secondAttribute="trailing" constant="50" id="4sQ-h5-tbu"/>
+                                                <constraint firstItem="40y-xK-OkA" firstAttribute="top" secondItem="wbx-PU-DsH" secondAttribute="bottom" constant="15" id="GZK-7l-NkJ"/>
+                                                <constraint firstItem="Qyg-Q6-6L0" firstAttribute="leading" secondItem="mKG-uH-8vk" secondAttribute="leading" constant="15" id="LxT-f5-nGY"/>
+                                                <constraint firstItem="Qyg-Q6-6L0" firstAttribute="top" secondItem="wbx-PU-DsH" secondAttribute="bottom" constant="15" id="Uf3-PO-0OT"/>
+                                                <constraint firstItem="40y-xK-OkA" firstAttribute="leading" secondItem="Qyg-Q6-6L0" secondAttribute="trailing" constant="15" id="VaT-3u-1ey"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="40y-xK-OkA" secondAttribute="bottom" constant="2" id="W1M-et-3Nm"/>
+                                                <constraint firstItem="wbx-PU-DsH" firstAttribute="top" secondItem="uvX-Cx-t1V" secondAttribute="bottom" constant="5" id="gGR-th-bFE"/>
+                                                <constraint firstItem="uvX-Cx-t1V" firstAttribute="leading" secondItem="mKG-uH-8vk" secondAttribute="leading" constant="30" id="vxI-tC-JzJ"/>
+                                                <constraint firstItem="uvX-Cx-t1V" firstAttribute="top" secondItem="mKG-uH-8vk" secondAttribute="top" constant="5" id="zX5-Tm-LEp"/>
+                                                <constraint firstItem="wbx-PU-DsH" firstAttribute="leading" secondItem="mKG-uH-8vk" secondAttribute="leadingMargin" constant="10" id="zbD-8m-tAB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9844160676" green="0.9841613173" blue="0.99215894940000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bb8-VU-t4a" id="YVi-P2-3rv"/>
+                                    <outlet property="delegate" destination="Bb8-VU-t4a" id="OmC-HU-Cfd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="atM-YR-Dpc" firstAttribute="leading" secondItem="1yk-ca-vZ3" secondAttribute="leading" id="9cD-n6-lIT"/>
+                            <constraint firstAttribute="trailing" secondItem="atM-YR-Dpc" secondAttribute="trailing" id="EtG-VR-XjL"/>
+                            <constraint firstItem="fk9-Fp-9Sp" firstAttribute="top" secondItem="atM-YR-Dpc" secondAttribute="bottom" id="K9i-t9-yw6"/>
+                            <constraint firstItem="1yk-ca-vZ3" firstAttribute="bottom" secondItem="fk9-Fp-9Sp" secondAttribute="bottom" id="QZs-99-tFU"/>
+                            <constraint firstItem="1yk-ca-vZ3" firstAttribute="trailing" secondItem="fk9-Fp-9Sp" secondAttribute="trailing" id="cBZ-WH-547"/>
+                            <constraint firstItem="atM-YR-Dpc" firstAttribute="top" secondItem="1yk-ca-vZ3" secondAttribute="top" id="jH1-hk-uR2"/>
+                            <constraint firstItem="fk9-Fp-9Sp" firstAttribute="leading" secondItem="1yk-ca-vZ3" secondAttribute="leading" id="kNI-A3-Tl8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1yk-ca-vZ3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKZ-9c-AkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286.95652173913044" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>

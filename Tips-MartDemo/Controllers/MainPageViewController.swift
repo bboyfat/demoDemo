@@ -67,5 +67,11 @@ class MainPageViewController: UIViewController {
         
     }
     
-   
+    @IBAction func notificationsBtn(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "NotificationsMain", bundle: nil).instantiateViewController(withIdentifier: "notificationsVC") as! MainNotificationsController
+        
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
 }

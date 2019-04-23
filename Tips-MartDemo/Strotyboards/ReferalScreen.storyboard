@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +14,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Referals View Controller-->
         <scene sceneID="saP-8Y-Lsp">
             <objects>
-                <viewController storyboardIdentifier="referalVC" id="83j-iJ-P4O" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ghm-sE-TWj">
+                <viewController storyboardIdentifier="referalVC" id="83j-iJ-P4O" customClass="ReferalsViewController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghm-sE-TWj" customClass="ReferalView" customModule="Tips_MartDemo" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -362,6 +361,9 @@
                             <constraint firstItem="Pf5-R8-P4I" firstAttribute="trailing" secondItem="aiX-ll-8hy" secondAttribute="trailing" constant="25" id="zjF-pw-xOc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pf5-R8-P4I"/>
+                        <connections>
+                            <outlet property="navigationView" destination="HB3-ci-GTT" id="pxo-w5-IDd"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAB-vT-dbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
