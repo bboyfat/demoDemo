@@ -215,6 +215,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="withdrawalBtn:" destination="hQo-Eo-y28" eventType="touchUpInside" id="lU3-Ou-kCr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mow-Mz-3dh">
                                         <rect key="frame" x="204" y="73.000000000000028" width="161" height="30"/>

@@ -11,6 +11,7 @@ import UIKit
 class MainTabBarControllerViewController: UITabBarController {
     
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
+//    let notifications = UserDefaults.standard.dictionary(forKey: "notifications")
     
     let mainVc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "mainScreenVc") as! MainPageViewController
     let profileVc = UIStoryboard(name: "Account", bundle: nil).instantiateViewController(withIdentifier: "acccountVC") as! AccountViewController
@@ -20,13 +21,21 @@ class MainTabBarControllerViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GetReferalsInfo().getInf(header: accessToken!, urlString: URLS.referalsIncome.rawValue)
+        
         mainVc.tabBarItem = UITabBarItem(title: "Main", image: #imageLiteral(resourceName: "mainScreenTab"), tag: 0)
         profileVc.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "Fill 1"), tag: 1)
         shopsVc.tabBarItem = UITabBarItem(title: "Shops", image: #imageLiteral(resourceName: "shopsTabs"), tag: 2)
         referVc.tabBarItem = UITabBarItem(title: "Refer", image: #imageLiteral(resourceName: "Group 8-1"), tag: 3)
         moreVc.tabBarItem = UITabBarItem(title: "More", image: #imageLiteral(resourceName: "moreIcon"), tag: 4)
         mainVc.view.isUserInteractionEnabled = true
+        
+        if let accessToken = accessToken{
+            GetReferalsInfo().getInf(header: accessToken, urlString: URLS.referalsIncome.rawValue)
+            RefreshToken().getBalance(header: accessToken) { (notifications) in }
+        }
+        
+        
+       
      viewControllers = [mainVc, profileVc, shopsVc, referVc, moreVc]
        
     }

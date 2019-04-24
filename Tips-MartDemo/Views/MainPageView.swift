@@ -11,13 +11,14 @@ import UIKit
 class MainPageView: UIView {
     //NavigationView
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var mapImageView: UIImageView!
     
     @IBOutlet weak var navigationView: UIView!
     // Mark: ImageViews
     @IBOutlet weak var banerView: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     //MARK: Name ID
-    @IBOutlet weak var myCardBtnOutlet: UIButton!
+  
     @IBOutlet var nameSurnameLabel: UILabel!
     
     @IBOutlet var idLabel: UILabel!

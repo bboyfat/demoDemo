@@ -19,26 +19,42 @@ class MainPageViewController: UIViewController {
     var infoModel: RegModelGet = RegModelGet()
     
     let tap = UITapGestureRecognizer()
+    let swipeGest = UISwipeGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
         
-       RefreshToken().getBalance(header: accesToken!)
         
-        tap.addTarget(self, action: #selector(handleTap))
-        self.view.addGestureRecognizer(tap)
+        tap.addTarget(self, action: #selector(presentMap))
+
         mainPageView.scrollView.alwaysBounceVertical = true
         mainPageView.scrollView.bounces  = true
+        swipeGest.addTarget(self, action: #selector(presentMap))
+        swipeGest.direction = .up
+        
+        self.view.addGestureRecognizer(swipeGest)
+        mainPageView.mapImageView.addGestureRecognizer(tap)
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         mainPageView.scrollView.addSubview(refreshControl)
         
     
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        refreshControl.endRefreshing()
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
+    }
+    
+    @objc func presentMap(){
+        let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(withIdentifier: "mapVc") as! MapViewController
+        present(vc, animated: true, completion: nil)
+        
     }
     
     @objc func handleTap(){
@@ -46,7 +62,9 @@ class MainPageViewController: UIViewController {
     }
     @objc func didPullToRefresh() {
         
-        RefreshToken().getBalance(header: accesToken!)
+        RefreshToken().getBalance(header: accesToken!) { (notif) in
+           
+        }
         guard let greenBalance = UserDefaults.standard.string(forKey: "greenBalance"),
             let grayBalance = UserDefaults.standard.string(forKey: "grayBalance") else {return}
         self.mainPageView.greenBalance.text = greenBalance + " грн."

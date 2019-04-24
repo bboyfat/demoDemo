@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4qp-1m-VJp">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History Controller-->
+        <scene sceneID="lZS-rr-0h3">
+            <objects>
+                <viewController storyboardIdentifier="wdHistoryVc" id="4qp-1m-VJp" customClass="WDHistoryController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="26b-te-teV" customClass="WDHistoryView" customModule="Tips_MartDemo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsQ-Tl-qdf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="История выводов" id="kMC-9X-ELQ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="pOb-ON-QPz">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="disVC:" destination="4qp-1m-VJp" id="0xO-gq-0hV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYR-g6-iS1">
+                                <rect key="frame" x="20" y="138" width="374" height="704"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clearHistory" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-L4-wVK">
+                                        <rect key="frame" x="10" y="45" width="356" height="416"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ccl-L4-wVK" secondAttribute="height" multiplier="2:1" constant="-476" id="FPV-bb-0Dw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У Вас еще нет выводов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjt-7V-eVa">
+                                        <rect key="frame" x="108.5" y="8" width="157" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wjt-7V-eVa" firstAttribute="top" secondItem="RYR-g6-iS1" secondAttribute="topMargin" id="8il-zg-Co3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ccl-L4-wVK" secondAttribute="trailing" constant="8" id="AYg-pY-RXS"/>
+                                    <constraint firstItem="wjt-7V-eVa" firstAttribute="centerX" secondItem="RYR-g6-iS1" secondAttribute="centerX" id="POH-iH-EPp"/>
+                                    <constraint firstItem="Ccl-L4-wVK" firstAttribute="leading" secondItem="RYR-g6-iS1" secondAttribute="leading" constant="10" id="QeL-zk-1qm"/>
+                                    <constraint firstItem="Ccl-L4-wVK" firstAttribute="top" secondItem="wjt-7V-eVa" secondAttribute="bottom" constant="20" id="aoQ-OQ-IRg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zsQ-Tl-qdf" firstAttribute="top" secondItem="aJZ-51-cVl" secondAttribute="top" id="6tT-uc-hQ5"/>
+                            <constraint firstItem="aJZ-51-cVl" firstAttribute="bottom" secondItem="RYR-g6-iS1" secondAttribute="bottom" constant="20" id="JRe-ag-PX2"/>
+                            <constraint firstItem="RYR-g6-iS1" firstAttribute="leading" secondItem="aJZ-51-cVl" secondAttribute="leading" constant="20" id="M8Z-hm-Vy8"/>
+                            <constraint firstItem="aJZ-51-cVl" firstAttribute="trailing" secondItem="RYR-g6-iS1" secondAttribute="trailing" constant="20" id="VUU-S8-J7L"/>
+                            <constraint firstItem="zsQ-Tl-qdf" firstAttribute="leading" secondItem="26b-te-teV" secondAttribute="leading" id="YtX-Lv-4TQ"/>
+                            <constraint firstItem="RYR-g6-iS1" firstAttribute="top" secondItem="zsQ-Tl-qdf" secondAttribute="bottom" constant="50" id="oxZ-c1-VGM"/>
+                            <constraint firstItem="aJZ-51-cVl" firstAttribute="trailing" secondItem="zsQ-Tl-qdf" secondAttribute="trailing" id="y65-ln-tQ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aJZ-51-cVl"/>
+                    </view>
+                    <connections>
+                        <outlet property="wdHistoryView" destination="26b-te-teV" id="EVW-ax-fGf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1k-o5-Ye4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="46.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clearHistory" width="275" height="316"/>
+    </resources>
+</document>

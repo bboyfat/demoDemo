@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ShopsMainController: UIViewController{
+class ShopsMainController: UIViewController, UISearchBarDelegate{
     
     var shopsArray: [ShopsModel] = []
     
@@ -32,6 +32,8 @@ class ShopsMainController: UIViewController{
     
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
     
+    let tap = UITapGestureRecognizer()
+    
     
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
@@ -41,9 +43,11 @@ class ShopsMainController: UIViewController{
        myTableView.delegate = self
         myTableView.dataSource = self
         
-        
+        tap.addTarget(self, action: #selector(handleEndEdit))
        getShops()
        setUpActivity()
+        
+        
         
         
     }
@@ -53,6 +57,10 @@ class ShopsMainController: UIViewController{
         if let indexPath = myTableView.indexPathForSelectedRow{
             myTableView.deselectRow(at: indexPath, animated: false)
         }
+    }
+    
+    @objc func handleEndEdit(){
+        view.endEditing(true)
     }
     
     

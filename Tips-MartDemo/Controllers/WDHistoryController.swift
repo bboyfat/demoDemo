@@ -1,31 +1,26 @@
 //
-//  MainNotificationsController.swift
+//  WDHistoryControllerViewController.swift
 //  Tips-MartDemo
 //
-//  Created by Andrey Petrovskiy on 4/23/19.
+//  Created by Andrey Petrovskiy on 4/24/19.
 //  Copyright © 2019 Andrey Petrovskiy. All rights reserved.
 //
 
 import UIKit
 
-class MainNotificationsController: UIViewController {
+class WDHistoryController: UIViewController {
+    @IBOutlet var wdHistoryView: WDHistoryView!
     
-    var notifications: [NotificationModel]?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func disVc(_ sender: UIBarButtonItem) {
+    
+
+    @IBAction func disVC(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func presentTableView(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
-        present(vc, animated: true, completion: nil)
-    }
-    
     /*
     // MARK: - Navigation
 

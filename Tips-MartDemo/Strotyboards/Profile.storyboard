@@ -223,8 +223,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbe-vD-cCZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="daF-IC-UeI">
-                                                        <rect key="frame" x="232.00000000000003" y="9" width="87.333333333333343" height="39.333333333333336"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="daF-IC-UeI">
+                                                        <rect key="frame" x="232.00000000000003" y="9" width="87.333333333333343" height="41.333333333333336"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В ожидании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8HF-2O-Md8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="18"/>
@@ -236,7 +236,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44,95 грн" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="K8P-db-hQk">
-                                                                <rect key="frame" x="0.0" y="19" width="87.333333333333329" height="20.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="21" width="87.333333333333329" height="20.333333333333329"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="K8P-db-hQk" secondAttribute="height" multiplier="43:10" id="D9i-xm-TQm"/>
                                                                 </constraints>
@@ -326,7 +326,7 @@
                                                     <constraint firstItem="2Hh-RF-xWD" firstAttribute="centerX" secondItem="Xbe-vD-cCZ" secondAttribute="centerX" id="stq-ih-dTr"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapPicture" translatesAutoresizingMaskIntoConstraints="NO" id="7o4-Pf-qed">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapPicture" translatesAutoresizingMaskIntoConstraints="NO" id="7o4-Pf-qed">
                                                 <rect key="frame" x="0.0" y="411.33333333333337" width="375" height="211"/>
                                             </imageView>
                                         </subviews>
@@ -383,6 +383,7 @@
                             <outlet property="grayBalance" destination="K8P-db-hQk" id="QzU-Sp-Z12"/>
                             <outlet property="greenBalance" destination="TGD-1M-uWH" id="U6n-By-9fw"/>
                             <outlet property="idLabel" destination="TQq-Q2-fVE" id="vBN-Gh-qYO"/>
+                            <outlet property="mapImageView" destination="7o4-Pf-qed" id="Umn-ES-hTW"/>
                             <outlet property="nameSurnameLabel" destination="Fnb-Xq-rYB" id="Z6v-fd-f7V"/>
                             <outlet property="navigationView" destination="D21-LZ-MhO" id="TZL-Ez-fUV"/>
                             <outlet property="photoImageView" destination="M5B-H4-rse" id="zNq-QB-P3C"/>

@@ -10,8 +10,8 @@ import Foundation
 
 
 class OperationHistoryAPI{
-    
-    func getHistory(header: String, urlString: String, completion: @escaping (OperationHistoryModel) -> Void){
+    typealias returnedParametr =  (OperationHistoryModel) -> Void
+    func getHistory(header: String, urlString: String, completion: @escaping returnedParametr){
         
         
         
@@ -26,7 +26,7 @@ class OperationHistoryAPI{
     }
     
     
-    func historySession(request: URLRequest, completion: @escaping (OperationHistoryModel) -> Void){
+    func historySession(request: URLRequest, completion: @escaping returnedParametr){
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {

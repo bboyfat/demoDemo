@@ -34,6 +34,10 @@ class AccountViewController: UIViewController {
         
         present(vc, animated: true, completion: nil)
     }
-
+    @IBAction func withdrawalBtn(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "WithDrawal", bundle: nil).instantiateViewController(withIdentifier: "withdrawalVc") as! WDViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
 }
 
