@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 class ShopsApiRequest{
@@ -44,6 +45,9 @@ class ShopsApiRequest{
                     
                      completion(answer)
                     
+                    if self.checkDataRealm(answer: answer){
+                    self.saveRealmData(answer: answer)
+                    }
                     } catch let APIerr {
                     
                     print("Can't decode shops data", APIerr)
@@ -54,6 +58,60 @@ class ShopsApiRequest{
             
             
         }.resume()
+    }
+    func checkDataRealm(answer: [ShopsModel]) -> Bool{
+       
+        var shopsModelArray: [ShopsModels] = []
+        do{
+            let realm = try Realm()
+            
+            shopsModelArray = Array(realm.objects(ShopsModels.self))
+            
+            
+        } catch {
+            print("Can't FETCH!!")
+        }
+        if shopsModelArray.count != answer.count{
+            return true
+        } else {
+            return false
+        }
+        
+        
+    }
+    
+    func saveRealmData(answer: [ShopsModel]){
+        
+        answer.forEach({ (shop) in
+            let shopsRealmData = ShopsModels()
+            shopsRealmData.setValue(shop.url, forKey: "url")
+            shopsRealmData.setValue(shop.type, forKey: "type")
+            shopsRealmData.setValue(shop.shopID, forKey: "shopID")
+            shopsRealmData.setValue(shop.pathImage, forKey: "pathImage")
+            shopsRealmData.setValue(shop.name, forKey: "name")
+           
+            shop.extendedData.categories.forEach({ (each) in
+                shopsRealmData.setValue(each, forKey: "categories")
+            })
+            shopsRealmData.setValue(shop.extendedData.maxCashback.currency, forKey: "currency")
+            shopsRealmData.setValue(shop.extendedData.maxCashback.value, forKey: "value")
+            
+            OperationQueue.main.addOperation {
+                let realm = try! Realm()
+                
+                do{
+                    try realm.write {
+                        realm.add(shopsRealmData)
+                    }
+                } catch {
+                    print("realm.write is not working")
+                }
+            }
+            
+            
+            
+        })
+        
     }
    
         

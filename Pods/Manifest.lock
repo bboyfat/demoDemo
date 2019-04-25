@@ -56,12 +56,18 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
   - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - iOSUtilitiesSource (from `https://github.com/hasnine/iOSUtilitiesSource.git`)
+  - RealmSwift
   - SwiftSoup
 
 SPEC REPOS:
@@ -75,6 +81,8 @@ SPEC REPOS:
     - GoogleUtilities
     - leveldb-library
     - nanopb
+    - Realm
+    - RealmSwift
     - SwiftSoup
 
 EXTERNAL SOURCES:
@@ -97,8 +105,10 @@ SPEC CHECKSUMS:
   iOSUtilitiesSource: bd69d00b8fdf29d8d99303410ce44e9df3c6ec20
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: 0ee3f9df4e07d63be023a1ba9dc015f45c06dfe5
+PODFILE CHECKSUM: 34d4619a1f1ea611c26e7dc6da8f0f72089178c7
 
 COCOAPODS: 1.5.3

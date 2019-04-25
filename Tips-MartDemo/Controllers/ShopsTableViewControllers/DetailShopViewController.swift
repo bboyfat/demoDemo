@@ -12,7 +12,7 @@ class DetailShopViewController: UIViewController {
     
     
     @IBOutlet var detailView: DetailShopView!
-    var shopsModel: ShopsModel?
+    var shopsModel: ShopsModels?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,9 @@ class DetailShopViewController: UIViewController {
         if let path = shopsModel{
              GetLogos().urlPath(imagePath: path.pathImage , completion: { (image) in
                 self.detailView.logoImageView.image = image
-                guard let value = self.shopsModel?.extendedData.maxCashback.value else { return}
+                guard let value = self.shopsModel?.value else { return}
                 self.detailView.cashbackValue.text = "\(value)"
-                self.detailView.cashbackCurrency.text = self.shopsModel?.extendedData.maxCashback.currency
+                self.detailView.cashbackCurrency.text = self.shopsModel?.currency
             })
         }
     }

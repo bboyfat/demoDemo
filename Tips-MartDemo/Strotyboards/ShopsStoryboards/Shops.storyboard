@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -125,7 +124,7 @@
                                                         <constraint firstAttribute="width" constant="1" id="7Rz-YY-oJ8"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 26" translatesAutoresizingMaskIntoConstraints="NO" id="oQd-n4-ser">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clearHistory" translatesAutoresizingMaskIntoConstraints="NO" id="oQd-n4-ser">
                                                     <rect key="frame" x="40" y="23" width="215" height="57"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="oQd-n4-ser" secondAttribute="height" multiplier="4:1" constant="-13" id="W1P-cL-cX4"/>
@@ -206,7 +205,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 26" width="134" height="31"/>
         <image name="Group 8" width="35" height="35"/>
+        <image name="clearHistory" width="275" height="316"/>
     </resources>
 </document>

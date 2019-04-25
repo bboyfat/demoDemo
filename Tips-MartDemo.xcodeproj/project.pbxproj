@@ -60,6 +60,7 @@
 		C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */; };
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
+		C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299E5342271C9B100D6CC05 /* RealmModel.swift */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
 		C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* LaunchViewController.swift */; };
 		C2D8BC28226E014100001C99 /* OperationHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D8BC27226E014100001C99 /* OperationHistory.storyboard */; };
@@ -152,6 +153,7 @@
 		C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelAPI.swift; sourceTree = "<group>"; };
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C293570A225CCF38004F4510 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		C299E5342271C9B100D6CC05 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2BA3C6E2257CEA50016CA9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +294,7 @@
 		C25BBF672255E0D2008D78F9 /* Tips-MartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C299E5332271C9A300D6CC05 /* Realm */,
 				C242836E2264F64100750768 /* Helpers */,
 				C2A8C7712261DCA400F2332F /* Views */,
 				C2492A982260993A007E2037 /* Strotyboards */,
@@ -325,6 +328,14 @@
 				C2D8BC56226F198800001C99 /* OperationHistoryAPI.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		C299E5332271C9A300D6CC05 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				C299E5342271C9B100D6CC05 /* RealmModel.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		C2A8C7712261DCA400F2332F /* Views */ = {
@@ -534,6 +545,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSUtilitiesSource/iOSUtilitiesSource.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -544,6 +557,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSUtilitiesSource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -613,6 +628,7 @@
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
+				C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */,
 				C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
 				C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */,

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIChangeInfo.swift"
-            timestampString = "577200786.619321"
+            timestampString = "577893473.66517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIChangeInfo.swift"
-            timestampString = "577200786.619405"
+            timestampString = "577893473.6652319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIChangeInfo.swift"
-            timestampString = "577200786.619467"
+            timestampString = "577893473.6652761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIChangeInfo.swift"
-            timestampString = "577200786.619523"
+            timestampString = "577893473.6653171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/ViewController.swift"
-            timestampString = "577735091.061252"
+            timestampString = "577892617.566613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "723"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIChangeInfo.swift"
-            timestampString = "577200786.619608"
+            timestampString = "577893473.665377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/ViewController.swift"
-            timestampString = "577735091.0619431"
+            timestampString = "577892617.566676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "720"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/ViewController.swift"
-            timestampString = "577735091.062299"
+            timestampString = "577892617.566716"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "656"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Controllers/ShopsTableViewControllers/DetailShopViewController.swift"
-            timestampString = "577351460.292105"
+            timestampString = "577897410.154016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Controllers/ShopsTableViewControllers/DetailShopViewController.swift"
-            timestampString = "577351460.2922159"
+            timestampString = "577897410.154076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -442,7 +442,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIManager.swift"
-                  timestampString = "577806984.351101"
+                  timestampString = "577896570.574877"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -457,7 +457,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIManager.swift"
-                  timestampString = "577806984.3536071"
+                  timestampString = "577896570.576432"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -472,7 +472,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIManager.swift"
-                  timestampString = "577806984.356133"
+                  timestampString = "577896570.577966"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -489,7 +489,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/LauncScreen/LaunchViewController.swift"
-            timestampString = "577783787.5749201"
+            timestampString = "577893717.9608099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -504,13 +504,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/APIManager/RefreshBalance.swift"
-            timestampString = "577806438.890974"
+            filePath = "Tips-MartDemo/Controllers/Notifications/NotTableViewController.swift"
+            timestampString = "577897410.1543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "requestForBalance(request:completion:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -520,13 +520,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/APIManager/RefreshBalance.swift"
-            timestampString = "577806438.891052"
+            filePath = "Tips-MartDemo/Controllers/Notifications/NotTableViewController.swift"
+            timestampString = "577897410.15435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "requestForBalance(request:completion:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -536,107 +536,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/APIManager/RefreshBalance.swift"
-            timestampString = "577806438.891114"
+            filePath = "Tips-MartDemo/Controllers/ShopsTableViewControllers/ShopsMainController.swift"
+            timestampString = "577897410.154395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "requestForBalance(request:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Controllers/MainTabBarControllerViewController.swift"
-            timestampString = "577807217.935092"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Controllers/MainTabBarControllerViewController.swift"
-            timestampString = "577807217.93516"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/APIManager/RefreshBalance.swift"
-            timestampString = "577806438.891553"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "requestForBalance(request:completion:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "fetchDataFromRealm()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_MartDemo.RefreshToken.requestForBalance(request: Foundation.URLRequest, completion: (Swift.Array&lt;Tips_MartDemo.NotificationModel&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Tips_MartDemo.ShopsMainController.fetchDataFromRealm() -&gt; ()"
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/RefreshBalance.swift"
-                  timestampString = "577806984.387675"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Controllers/ShopsTableViewControllers/ShopsMainController.swift"
+                  timestampString = "577896570.5921299"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "780">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "252">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_MartDemo.RefreshToken.requestForBalance(request: Foundation.URLRequest, completion: (Swift.Array&lt;Tips_MartDemo.NotificationModel&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in Tips_MartDemo.ShopsMainController.fetchDataFromRealm() -&gt; ()"
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/RefreshBalance.swift"
-                  timestampString = "577806984.3900779"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Controllers/ShopsTableViewControllers/ShopsMainController.swift"
+                  timestampString = "577896570.593685"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1840">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_MartDemo.RefreshToken.requestForBalance(request: Foundation.URLRequest, completion: (Swift.Array&lt;Tips_MartDemo.NotificationModel&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/RefreshBalance.swift"
-                  timestampString = "577806984.392089"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1948">
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "64">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -647,61 +584,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Controllers/Notifications/NotTableViewController.swift"
-            timestampString = "577807217.935223"
+            filePath = "Tips-MartDemo/APIManager/RefreshBalance.swift"
+            timestampString = "577897410.154741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Controllers/Notifications/NotTableViewController.swift"
-            timestampString = "577807217.935657"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Controllers/Notifications/NotTableViewController.swift"
-            timestampString = "577807217.936092"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Controllers/Notifications/NotTableViewController.swift"
-            timestampString = "577807217.9363739"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "requestForBalance(request:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

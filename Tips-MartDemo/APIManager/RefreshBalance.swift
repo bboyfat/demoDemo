@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class RefreshToken{
     
@@ -41,17 +41,79 @@ class RefreshToken{
                     print(answer)
     
                     completion(answer.data.notifications)
+                    
+                    
+                    if self.checkDataRealm(answer: answer.data.notifications){
+                        self.saveData(answer: answer.data.notifications)
+                    }
+                    print(self.checkDataRealm(answer: answer.data.notifications), "!!!!!!!!!!!!!q3wrghjelifuvivpwqehpoasjdvcosdv;asjdv;oaskndvalskdv9238y102963501293560192835019283501283560123650129365012356109236501923650192365")
+                    
+                    
 
                     UserDefaults.standard.set(answer.data.balance.green, forKey: "greenBalance")
                     UserDefaults.standard.set(answer.data.balance.gray, forKey: "grayBalance")
                     
-                    print("\(answer.data.notifications.count)!!!!!!!!!!!!!!!!")
+                  
                     
                 } catch let refrErr{
                     print("problem with data", refrErr)
                 }
             }
         }.resume()
+        
+        
+        
+    }
+    
+    func saveData(answer: [NotificationModel]){
+        
+       
+        answer.forEach({ (notification) in
+            let notifRealmData = NotificationModelRealm()
+            notifRealmData.setValue(notification.created, forKey: "created")
+            notifRealmData.setValue(notification.isReaded, forKey: "isReaded")
+            notifRealmData.setValue(notification.kind, forKey: "kind")
+            notifRealmData.setValue(notification.notificationID, forKey: "notificationID")
+            notifRealmData.setValue(notification.text, forKey: "text")
+            
+          
+           
+            
+            OperationQueue.main.addOperation {
+                let realm = try! Realm()
+                
+                do{
+                    try realm.write {
+                        realm.add(notifRealmData)
+                    }
+                } catch {
+                    print("realm.write is not working")
+                }
+            }
+            
+            
+            
+        })
+        
+    }
+    func checkDataRealm(answer: [NotificationModel]) -> Bool{
+        
+        var shopsModelArray: [NotificationModelRealm] = []
+        do{
+            let realm = try Realm()
+            
+            shopsModelArray = Array(realm.objects(NotificationModelRealm.self))
+            
+            
+        } catch {
+            print("Can't FETCH!!")
+        }
+        if shopsModelArray.count != answer.count || shopsModelArray.count == 0{
+            return true
+        } else {
+         return false
+        }
+        
         
         
         

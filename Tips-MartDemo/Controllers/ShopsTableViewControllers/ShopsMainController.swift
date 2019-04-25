@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class ShopsMainController: UIViewController, UISearchBarDelegate{
     
     var shopsArray: [ShopsModel] = []
+    var shopsModelArray: [ShopsModels] = []
     
     
     let activityController: UIActivityIndicatorView = {
@@ -44,6 +45,7 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
         myTableView.dataSource = self
         
         tap.addTarget(self, action: #selector(handleEndEdit))
+        fetchDataFromRealm()
        getShops()
        setUpActivity()
         
@@ -79,11 +81,11 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
     func getShops(){
         if let token  = accessToken{
             ShopsApiRequest().formRequest(accesToken: token) { (array) in
-                self.shopsArray = array
-                
-                DispatchQueue.main.async {
-                    self.myTableView.reloadData()
-                }
+//                self.shopsArray = array
+//
+//                DispatchQueue.main.async {
+//                    self.myTableView.reloadData()
+//                }
                 
             }
         }
@@ -91,7 +93,19 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
     
     
         
-
+    func fetchDataFromRealm(){
+        do{
+        let realm = try Realm()
+        
+        self.shopsModelArray = Array(realm.objects(ShopsModels.self))
+//        print(shopsModelArray[0].currency)
+        OperationQueue.main.addOperation {
+            self.myTableView.reloadData()
+        }
+        } catch {
+            print("Can't FETCH!!")
+        }
+    }
         
         
     
@@ -106,31 +120,34 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.shopsArray.count
+        return self.shopsModelArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShopsTableViewCell
-        
-                      let shop = self.shopsArray[indexPath.row]
-            let valueOfCash = String(shop.extendedData.maxCashback.value)
+        stopAnim()
+                      let shop = self.shopsModelArray[indexPath.row]
+        let double = shop.value
+        let valueOfCash = String(double)
             cell.shopName.text = shop.name
-            cell.percentOfCashBack.text = valueOfCash + " " + shop.extendedData.maxCashback.currency
+        let currency = shop.currency
+        cell.percentOfCashBack.text = valueOfCash + " " + currency
         GetLogos().urlPath(imagePath: shop.pathImage) { (image) in
+            self.stopAnim()
             if let forcedImage = image{
-                
+
             cell.shopLogo.image = forcedImage
             } else {
-                cell.shopLogo.image = #imageLiteral(resourceName: "default-avatar")
+                cell.shopLogo.image = #imageLiteral(resourceName: "clearHistory")
             }
         }
-          stopAnim()
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "DetailShopView", bundle: nil).instantiateViewController(withIdentifier: "detailShopVC") as! DetailShopViewController
-         vc.shopsModel =  self.shopsArray[indexPath.row]
+         vc.shopsModel =  self.shopsModelArray[indexPath.row]
         present(vc, animated: true) {
             
             }
