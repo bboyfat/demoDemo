@@ -18,13 +18,14 @@ class NotTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let accessToken = accessToken{
             
             RefreshToken().getBalance(header: accessToken) { (notifications) in
                 
         }
         }
-        fetchDataFromRealm()
+
     }
 
        
@@ -33,19 +34,7 @@ class NotTableViewController: UIViewController {
     @IBAction func disVc(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    func fetchDataFromRealm(){
-        do{
-            let realm = try Realm()
-            
-            self.notifications = Array(realm.objects(NotificationModelRealm.self))
-            //        print(shopsModelArray[0].currency)
-            OperationQueue.main.addOperation {
-                self.myTableView.reloadData()
-            }
-        } catch {
-            print("Can't FETCH!!")
-        }
-    }
+   
     
     
     

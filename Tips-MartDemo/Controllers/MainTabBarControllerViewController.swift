@@ -32,6 +32,8 @@ class MainTabBarControllerViewController: UITabBarController {
         if let accessToken = accessToken{
             GetReferalsInfo().getInf(header: accessToken, urlString: URLS.referalsIncome.rawValue)
             RefreshToken().getBalance(header: accessToken) { (notifications) in }
+            ShopsApiRequest().formRequest(accesToken: accessToken) { (model) in }
+            TimerForRefresh().refreshInfo()
         }
         
         

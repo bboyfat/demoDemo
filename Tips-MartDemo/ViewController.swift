@@ -637,7 +637,7 @@ extension ViewController: UITextFieldDelegate{
             } else if textField == seNameTextField {
                
                 self.userInfoModel.surname = textField.text ??  " "
-                print(userInfoModel.surname)
+                
                 floatingDelegate?.moveBack(view: senamePlaceHolder)
                 return true
             } else if textField == birthDateTextField {

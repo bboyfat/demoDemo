@@ -10,11 +10,11 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
-    let accountView = AccountView()
-
+//    let accountView = AccountView()
+    @IBOutlet weak var accountView: AccountView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        accountView.frame = self.view.bounds
+       
        
     }
     

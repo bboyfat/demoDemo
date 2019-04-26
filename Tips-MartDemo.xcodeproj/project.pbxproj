@@ -57,6 +57,9 @@
 		C270FC892269C1C80059F161 /* RefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270FC882269C1C80059F161 /* RefreshModel.swift */; };
 		C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */; };
 		C270FC8D2269F5510059F161 /* MoreScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8C2269F5510059F161 /* MoreScreen.storyboard */; };
+		C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */; };
+		C27A02172272F6F20005BE33 /* MainNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A02162272F6F20005BE33 /* MainNotificationView.swift */; };
+		C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A021822731C390005BE33 /* TimerForRefresh.swift */; };
 		C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */; };
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
@@ -150,6 +153,9 @@
 		C270FC882269C1C80059F161 /* RefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModel.swift; sourceTree = "<group>"; };
 		C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReferalScreen.storyboard; sourceTree = "<group>"; };
 		C270FC8C2269F5510059F161 /* MoreScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreScreen.storyboard; sourceTree = "<group>"; };
+		C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiTextField.swift; sourceTree = "<group>"; };
+		C27A02162272F6F20005BE33 /* MainNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNotificationView.swift; sourceTree = "<group>"; };
+		C27A021822731C390005BE33 /* TimerForRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerForRefresh.swift; sourceTree = "<group>"; };
 		C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelAPI.swift; sourceTree = "<group>"; };
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C293570A225CCF38004F4510 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -216,10 +222,12 @@
 			isa = PBXGroup;
 			children = (
 				C2D8BC33226F0BED00001C99 /* HTMLParser.swift */,
+				C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */,
 				C242836F2264F65200750768 /* BarCodeGenerator.swift */,
 				C2E69A0322596327006FDDDB /* FloatingTextField.swift */,
 				C2E69A07225975B4006FDDDB /* HideOrNot.swift */,
 				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
+				C27A021822731C390005BE33 /* TimerForRefresh.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -352,6 +360,7 @@
 				C242C48D2270748F008B359A /* WDView.swift */,
 				C242C493227077A6008B359A /* WDHistoryView.swift */,
 				C242C49D2270A127008B359A /* NotoficationCell.swift */,
+				C27A02162272F6F20005BE33 /* MainNotificationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -545,6 +554,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
@@ -557,6 +567,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
@@ -601,6 +612,7 @@
 				C23E9F6A22671FDF002191E3 /* ShopsAPIRequest.swift in Sources */,
 				C2D8BC69226F5D0300001C99 /* MoreViewController.swift in Sources */,
 				C242C49E2270A127008B359A /* NotoficationCell.swift in Sources */,
+				C27A02172272F6F20005BE33 /* MainNotificationView.swift in Sources */,
 				C29356E6225CAF39004F4510 /* APIManager.swift in Sources */,
 				C24283652264C8DC00750768 /* ErrorAlerts.swift in Sources */,
 				C2D8BC2E226E07A500001C99 /* OperationHistoryView.swift in Sources */,
@@ -627,6 +639,7 @@
 				C2D8BC34226F0BED00001C99 /* HTMLParser.swift in Sources */,
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
+				C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */,
 				C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */,
@@ -635,6 +648,7 @@
 				C2D8BC67226F5B0100001C99 /* ReferalView.swift in Sources */,
 				C2D8BC5D226F3E9100001C99 /* MainNotificationsController.swift in Sources */,
 				C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */,
+				C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C2429B562266171A00EB7942 /* ShopsTableViewCell.swift in Sources */,
 				C2059FD22265F53500736885 /* WebViewController.swift in Sources */,

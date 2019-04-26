@@ -71,7 +71,7 @@ class ShopsApiRequest{
         } catch {
             print("Can't FETCH!!")
         }
-        if shopsModelArray.count != answer.count{
+        if shopsModelArray.count != answer.count || shopsModelArray.count == 0{
             return true
         } else {
             return false

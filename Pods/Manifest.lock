@@ -56,6 +56,9 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
   - Realm (3.12.0):
     - Realm/Headers (= 3.12.0)
   - Realm/Headers (3.12.0)
@@ -67,6 +70,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - iOSUtilitiesSource (from `https://github.com/hasnine/iOSUtilitiesSource.git`)
+  - NVActivityIndicatorView
   - RealmSwift
   - SwiftSoup
 
@@ -81,6 +85,7 @@ SPEC REPOS:
     - GoogleUtilities
     - leveldb-library
     - nanopb
+    - NVActivityIndicatorView
     - Realm
     - RealmSwift
     - SwiftSoup
@@ -105,10 +110,11 @@ SPEC CHECKSUMS:
   iOSUtilitiesSource: bd69d00b8fdf29d8d99303410ce44e9df3c6ec20
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
   RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: 34d4619a1f1ea611c26e7dc6da8f0f72089178c7
+PODFILE CHECKSUM: 1757e96e8c8878300bfe004cd8fb36c3200082d1
 
 COCOAPODS: 1.5.3

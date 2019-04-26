@@ -39,4 +39,8 @@ class BarCodeView: UIView {
         self.idLabel.text = id
     }
     
+    override func layoutSubviews() {
+        
+    }
+    
 }

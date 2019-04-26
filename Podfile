@@ -13,6 +13,7 @@ target 'Tips-MartDemo' do
    pod 'Firebase/Database'
    pod 'SwiftSoup'
    pod 'RealmSwift'
+   pod 'NVActivityIndicatorView'
    
      
 end

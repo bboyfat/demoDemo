@@ -36,22 +36,22 @@ extension OperationHistoryController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemsForRows.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = operatinHistoryView.myTableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryCell
         let item = itemsForRows[indexPath.row]
         let info = HTMLParser().parseHTML(htmlContent: item.description)
-        var Msg_Date_ = item.created
+        var stringDate = item.created
         
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "dd.MM.yyyy HH:mm:ss"  
-        let datee = dateFormatterGet.date(from: Msg_Date_)
-        Msg_Date_ =  dateFormatterPrint.string(from: datee ?? Date())
-        print(Msg_Date_)
+        let datee = dateFormatterGet.date(from: stringDate)
+        stringDate =  dateFormatterPrint.string(from: datee ?? Date())
+        print(stringDate)
        
-        cell.dateLabel.text = Msg_Date_
+        cell.dateLabel.text = stringDate
         cell.orderInfoLabel.text = info
         if item.status == 0{
             cell.totalCashbackLabel.textColor = .orange

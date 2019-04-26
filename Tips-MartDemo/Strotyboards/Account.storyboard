@@ -478,6 +478,9 @@
                             <outlet property="totalCahsbackLabel" destination="n3V-dY-DgG" id="Grp-yE-9cH"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="accountView" destination="3Xp-1L-N4U" id="xnu-m6-HCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYf-qM-0hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

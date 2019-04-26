@@ -11,7 +11,7 @@ import RealmSwift
 
 class ShopsMainController: UIViewController, UISearchBarDelegate{
     
-    var shopsArray: [ShopsModel] = []
+   
     var shopsModelArray: [ShopsModels] = []
     
     
@@ -45,9 +45,19 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
         myTableView.dataSource = self
         
         tap.addTarget(self, action: #selector(handleEndEdit))
+        
+        
+//        setUpActivity()
+        if let token  = accessToken{
+            ShopsApiRequest().formRequest(accesToken: token) { (array) in
+                
+            }
+        }
+        
+        //getShops()
+        
         fetchDataFromRealm()
-       getShops()
-       setUpActivity()
+       
         
         
         
@@ -81,12 +91,7 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
     func getShops(){
         if let token  = accessToken{
             ShopsApiRequest().formRequest(accesToken: token) { (array) in
-//                self.shopsArray = array
-//
-//                DispatchQueue.main.async {
-//                    self.myTableView.reloadData()
-//                }
-                
+               
             }
         }
     }
@@ -98,9 +103,11 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
         let realm = try Realm()
         
         self.shopsModelArray = Array(realm.objects(ShopsModels.self))
-//        print(shopsModelArray[0].currency)
+
         OperationQueue.main.addOperation {
+           
             self.myTableView.reloadData()
+             
         }
         } catch {
             print("Can't FETCH!!")
@@ -125,7 +132,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShopsTableViewCell
-        stopAnim()
+        
                       let shop = self.shopsModelArray[indexPath.row]
         let double = shop.value
         let valueOfCash = String(double)
@@ -133,7 +140,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
         let currency = shop.currency
         cell.percentOfCashBack.text = valueOfCash + " " + currency
         GetLogos().urlPath(imagePath: shop.pathImage) { (image) in
-            self.stopAnim()
+            
             if let forcedImage = image{
 
             cell.shopLogo.image = forcedImage
@@ -141,7 +148,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
                 cell.shopLogo.image = #imageLiteral(resourceName: "clearHistory")
             }
         }
-        
+       
         return cell
     }
     
