@@ -27,7 +27,11 @@ class MainPageView: UIView {
     @IBOutlet weak var greenBalance: UILabel!
     
     @IBOutlet weak var grayBalance: UILabel!
+      @IBOutlet weak var badgeLabel: UIButton!
+    //MARK: Settings and Notif buttons outlet
+    @IBOutlet weak var notificationBtn: UIButton!
     
+    //MARK: Get data from user defaults
     
     let name = UserDefaults.standard.string(forKey: "name")
     let surname = UserDefaults.standard.string(forKey: "surname")
@@ -42,14 +46,14 @@ class MainPageView: UIView {
     
     let swipe = UISwipeGestureRecognizer()
     let color = #colorLiteral(red: 0.3211668134, green: 0.2594678998, blue: 0.5882466435, alpha: 1)
-    
+   
     override func awakeFromNib() {
         
         banerView.animationImages = [UIImage(named: "banerBrowser"), UIImage(named: "BanerInvite"), UIImage(named: "BanerDownload")] as! [UIImage]
         
         banerView.animationDuration = 10
         banerView.startAnimating()
-       
+      
         photoImageView.layer.cornerRadius = 25
         photoImageView.layer.borderWidth = 2
         photoImageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1).cgColor
@@ -63,8 +67,12 @@ class MainPageView: UIView {
     navigationView.layer.insertSublayer(gradientLayer, at: 0)
         self.addGestureRecognizer(swipe)
         
+
+        
        setText()
     }
+   
+   
     
     @objc func returnHandle(){
         

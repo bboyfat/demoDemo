@@ -8,8 +8,12 @@
 
 import UIKit
 
+
 class MainPageViewController: UIViewController {
 
+    
+    
+    
     
     @IBOutlet var mainPageView: MainPageView!
     var refreshControl: UIRefreshControl!
@@ -39,9 +43,13 @@ class MainPageViewController: UIViewController {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         mainPageView.scrollView.addSubview(refreshControl)
+
         
     
     }
+   
+    
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         refreshControl.endRefreshing()

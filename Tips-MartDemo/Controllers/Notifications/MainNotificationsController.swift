@@ -16,6 +16,8 @@ class MainNotificationsController: UIViewController {
     var operationArray: [NotificationModelRealm] = []
     var newsArray: [NotificationModelRealm] = []
     var specialsArray: [NotificationModelRealm] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
@@ -65,23 +67,27 @@ class MainNotificationsController: UIViewController {
     
     @IBAction func presentSpecTableView(_ sender: UIButton) {
         let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
+        vc.navigationController?.title = "Специальные предложения"
         vc.notifications = specialsArray
         present(vc, animated: true, completion: nil)
     }
     
     @IBAction func presentNewsTable(_ sender: UIButton) {
         let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
+         vc.navigationController?.title = "Новости"
         vc.notifications = newsArray
         present(vc, animated: true, completion: nil)
     }
     
     @IBAction func presentNotifTableView(_ sender: UIButton) {
         let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
+         vc.navigationController?.title = "Уведомления"
         vc.notifications = notificationArray
         present(vc, animated: true, completion: nil)
     }
     @IBAction func presentoperationsTable(_ sender: UIButton) {
         let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
+        
         vc.notifications = operationArray
         present(vc, animated: true, completion: nil)
     }
@@ -91,7 +97,8 @@ class MainNotificationsController: UIViewController {
             self.notifications = Array(realm.objects(NotificationModelRealm.self))
             //        print(shopsModelArray[0].currency)
             OperationQueue.main.addOperation {
-               self.view.reloadInputViews()
+//               self.view.reloadInputViews()
+                self.checkBadges()
             }
             
         } catch {
@@ -119,28 +126,34 @@ class MainNotificationsController: UIViewController {
     
     func checkBadges(){
         if notifications.count > 0{
-            self.notificationView.allNotifBadge.isHidden = false
-            self.notificationView.allNotifBadge.text = "\(notificationArray.count)"
+            self.notificationView.allBadge.setTitle(String(notifications.count), for: .normal)
+            self.notificationView.allBadge.isHidden = false
         } else {
-            self.notificationView.allNotifBadge.isHidden = true
+            self.notificationView.allBadge.isHidden = true
         }
         if notificationArray.count > 0{
-            self.notificationView.notifBadge.isHidden = false
-            self.notificationView.notifBadge.text = "\(notificationArray.count)"
-        } else if operationArray.count > 0{
-            self.notificationView.operationBadge.isHidden = false
-            self.notificationView.operationBadge.text = "\(operationArray.count)"
-        } else if specialsArray.count > 0{
-            self.notificationView.specialBadge.isHidden = false
-            self.notificationView.specialBadge.text = "\(specialsArray.count)"
-        } else if newsArray.count > 0{
-            self.notificationView.newsBadge.isHidden = false
-            self.notificationView.newsBadge.text = "\(newsArray.count)"
+            self.notificationView.notificationsBadge.setTitle(String(notificationArray.count), for: .normal)
+            self.notificationView.notificationsBadge.isHidden = false
         } else {
-            self.notificationView.notifBadge.isHidden = true
-            self.notificationView.operationBadge.isHidden = true
-            self.notificationView.specialBadge.isHidden = true
+            self.notificationView.notificationsBadge.isHidden = true
+        }
+        if operationArray.count > 0{
+            self.notificationView.operationsBadge.setTitle(String(operationArray.count), for: .normal)
+            self.notificationView.operationsBadge.isHidden = false
+        } else {
+            self.notificationView.operationsBadge.isHidden = true
+        }
+        if newsArray.count > 0{
+            self.notificationView.newsBadge.setTitle(String(newsArray.count), for: .normal)
+            self.notificationView.newsBadge.isHidden = false
+        } else {
             self.notificationView.newsBadge.isHidden = true
+        }
+        if specialsArray.count > 0{
+            self.notificationView.specialBadge.setTitle(String(specialsArray.count), for: .normal)
+            self.notificationView.specialBadge.isHidden = false
+        } else {
+            self.notificationView.specialBadge.isHidden = true
         }
         
         

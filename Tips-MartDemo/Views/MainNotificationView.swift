@@ -16,15 +16,16 @@ class MainNotificationView: UIView {
     
     @IBOutlet weak var specialProposeMessage: UILabel!
     
+    @IBOutlet weak var allBadge: UIButton!
     @IBOutlet weak var operatinsDate: UILabel!
     @IBOutlet weak var operationMessage: UILabel!
     @IBOutlet weak var notificationsDate: UILabel!
     @IBOutlet weak var natificationsMessage: UILabel!
-    @IBOutlet weak var allNotifBadge: UILabel!
-    @IBOutlet weak var specialBadge: UILabel!
-    @IBOutlet weak var newsBadge: UILabel!
+ 
+    @IBOutlet weak var specialBadge: UIButton!
+    @IBOutlet weak var operationsBadge: UIButton!
     
-    @IBOutlet weak var notifBadge: UILabel!
-    @IBOutlet weak var operationBadge: UILabel!
+    @IBOutlet weak var newsBadge: UIButton!
+    @IBOutlet weak var notificationsBadge: UIButton!
     
 }

@@ -8,9 +8,11 @@
 
 import UIKit
 
+
 class MainTabBarControllerViewController: UITabBarController {
     
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
+     var countNotif = 0
 //    let notifications = UserDefaults.standard.dictionary(forKey: "notifications")
     
     let mainVc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "mainScreenVc") as! MainPageViewController
@@ -31,10 +33,19 @@ class MainTabBarControllerViewController: UITabBarController {
         
         if let accessToken = accessToken{
             GetReferalsInfo().getInf(header: accessToken, urlString: URLS.referalsIncome.rawValue)
-            RefreshToken().getBalance(header: accessToken) { (notifications) in }
+            RefreshToken().getBalance(header: accessToken) { (notifications) in
+                self.countNotif = notifications.count
+                print(self.countNotif, "adsfsagsdfgsdfhsd!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                OperationQueue.main.addOperation {
+                     self.setUpBadge()
+                }
+               
+            }
             ShopsApiRequest().formRequest(accesToken: accessToken) { (model) in }
             TimerForRefresh().refreshInfo()
         }
+        
+        
         
         
        
@@ -46,6 +57,20 @@ class MainTabBarControllerViewController: UITabBarController {
         return .lightContent
     }
     
+    
+    func setUpBadge(){
+        let stringCount = String(countNotif)
+        
+        if countNotif > 0{
+        self.mainVc.mainPageView.badgeLabel.setTitle(stringCount, for: .normal)
+             self.mainVc.mainPageView.badgeLabel.isHidden = false
+        } else {
+            self.mainVc.mainPageView.badgeLabel.isHidden = true
+        }
+        
+    }
+    
+   
 
     
 

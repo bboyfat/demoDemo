@@ -125,13 +125,13 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clearHistory" translatesAutoresizingMaskIntoConstraints="NO" id="oQd-n4-ser">
-                                                    <rect key="frame" x="40" y="23" width="215" height="57"/>
+                                                    <rect key="frame" x="40" y="23" width="138" height="57"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="oQd-n4-ser" secondAttribute="height" multiplier="4:1" constant="-13" id="W1P-cL-cX4"/>
+                                                        <constraint firstAttribute="width" secondItem="oQd-n4-ser" secondAttribute="height" multiplier="4:1" constant="-90" id="W1P-cL-cX4"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtd-Wx-e5G">
-                                                    <rect key="frame" x="50" y="100" width="195" height="20"/>
+                                                    <rect key="frame" x="50" y="100" width="118" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -148,23 +148,36 @@
                                                     <color key="textColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94W-go-3Lm">
+                                                    <rect key="frame" x="231" y="14" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="BWb-dk-NiN"/>
+                                                        <constraint firstAttribute="width" constant="24" id="gTk-Nw-asU"/>
+                                                    </constraints>
+                                                    <state key="normal" image="nonSelectedStar"/>
+                                                    <connections>
+                                                        <action selector="selectShop:" destination="rYV-db-SRy" eventType="touchUpInside" id="LPx-4d-gNg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Wwj-O2-v78" firstAttribute="leading" secondItem="Gtd-Wx-e5G" secondAttribute="trailing" constant="30" id="4bs-r6-3hG"/>
                                                 <constraint firstItem="oQd-n4-ser" firstAttribute="top" secondItem="0R1-kJ-aKl" secondAttribute="topMargin" constant="12" id="4kK-K3-Udl"/>
                                                 <constraint firstItem="fhl-CB-fAP" firstAttribute="top" secondItem="95C-mr-dUU" secondAttribute="bottom" constant="16" id="6GZ-4a-qbB"/>
-                                                <constraint firstItem="Wwj-O2-v78" firstAttribute="leading" secondItem="oQd-n4-ser" secondAttribute="trailing" constant="20" id="AnZ-vU-3mr"/>
+                                                <constraint firstItem="Wwj-O2-v78" firstAttribute="leading" secondItem="oQd-n4-ser" secondAttribute="trailing" constant="97" id="AnZ-vU-3mr"/>
                                                 <constraint firstItem="Wwj-O2-v78" firstAttribute="top" secondItem="0R1-kJ-aKl" secondAttribute="top" id="I3b-RJ-1z5"/>
                                                 <constraint firstItem="95C-mr-dUU" firstAttribute="top" secondItem="0R1-kJ-aKl" secondAttribute="top" constant="51" id="IWC-v4-epw"/>
                                                 <constraint firstAttribute="trailing" secondItem="Wwj-O2-v78" secondAttribute="trailing" constant="138" id="K3v-QV-C1J"/>
                                                 <constraint firstItem="fhl-CB-fAP" firstAttribute="centerX" secondItem="95C-mr-dUU" secondAttribute="centerX" id="Pjd-5c-1FV"/>
                                                 <constraint firstItem="Gtd-Wx-e5G" firstAttribute="top" secondItem="oQd-n4-ser" secondAttribute="bottom" constant="20" id="Uiz-Oi-nO2"/>
+                                                <constraint firstItem="Gtd-Wx-e5G" firstAttribute="centerX" secondItem="oQd-n4-ser" secondAttribute="centerX" id="Usp-kg-pvy"/>
+                                                <constraint firstItem="94W-go-3Lm" firstAttribute="top" secondItem="0R1-kJ-aKl" secondAttribute="topMargin" constant="3" id="Zf0-3p-gaF"/>
                                                 <constraint firstItem="Gtd-Wx-e5G" firstAttribute="leading" secondItem="0R1-kJ-aKl" secondAttribute="leadingMargin" constant="30" id="b5f-AL-wmq"/>
                                                 <constraint firstAttribute="trailing" secondItem="fhl-CB-fAP" secondAttribute="trailing" constant="37" id="d8n-gi-WAV"/>
                                                 <constraint firstAttribute="bottom" secondItem="Wwj-O2-v78" secondAttribute="bottom" id="gxS-iD-c3Q"/>
                                                 <constraint firstItem="95C-mr-dUU" firstAttribute="leading" secondItem="Wwj-O2-v78" secondAttribute="trailing" constant="20" id="pgw-3z-XSp"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Gtd-Wx-e5G" secondAttribute="bottom" constant="10" id="xjd-dk-d8R"/>
                                                 <constraint firstItem="oQd-n4-ser" firstAttribute="leading" secondItem="0R1-kJ-aKl" secondAttribute="leadingMargin" constant="20" id="y9z-WZ-m72"/>
+                                                <constraint firstItem="Wwj-O2-v78" firstAttribute="leading" secondItem="94W-go-3Lm" secondAttribute="trailing" constant="20" id="zD0-EJ-bR9"/>
                                                 <constraint firstAttribute="trailing" secondItem="95C-mr-dUU" secondAttribute="trailing" constant="25" id="zmA-nw-tQh"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -172,6 +185,7 @@
                                             <outlet property="percentOfCashBack" destination="fhl-CB-fAP" id="UEx-6p-dX5"/>
                                             <outlet property="shopLogo" destination="oQd-n4-ser" id="DTJ-QG-rLv"/>
                                             <outlet property="shopName" destination="Gtd-Wx-e5G" id="WzL-Wd-GSb"/>
+                                            <outlet property="starSelect" destination="94W-go-3Lm" id="c8t-V1-gli"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -207,5 +221,6 @@
     <resources>
         <image name="Group 8" width="35" height="35"/>
         <image name="clearHistory" width="275" height="316"/>
+        <image name="nonSelectedStar" width="24" height="24"/>
     </resources>
 </document>

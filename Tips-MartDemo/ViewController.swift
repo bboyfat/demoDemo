@@ -8,6 +8,7 @@
 
 import UIKit
 import iOSUtilitiesSource
+import SwiftPhoneNumberFormatter
 
 import Firebase
 import CoreData
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var haveNoFriends: UIStackView!
     // MARK: TextFieldOutlets
-    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var phoneTextField: PhoneFormattedTextField!
     @IBOutlet weak var passwordTetField: UITextField!
     @IBOutlet weak var repeatPass: UITextField!
     @IBOutlet weak var friendId: UITextField!
@@ -238,6 +239,20 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(tap)
         
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
+    
+    // setup phone formatted textField
+    private func setUpPhoneFormat(){
+        self.phoneTextField.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: " (###) ###-##-##")
+        phoneTextField.prefix = "+38"
+        
+        
+    }
+    
     
     
     
@@ -497,26 +512,26 @@ class ViewController: UIViewController {
        
     }
     
-    private func formattedNumber(number: String) -> String {
-        let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "+XX (XXX) XXX XX XX"
-        
-        var result = ""
-        var index = cleanPhoneNumber.startIndex
-        for ch in mask {
-            if index == cleanPhoneNumber.endIndex {
-                break
-            }
-            if ch == "X" {
-                result.append(cleanPhoneNumber[index])
-                index = cleanPhoneNumber.index(after: index)
-            } else {
-                result.append(ch)
-            }
-        }
-       
-        return result
-    }
+//    private func formattedNumber(number: String) -> String {
+//        let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+//        let mask = "+XX (XXX) XXX XX XX"
+//
+//        var result = ""
+//        var index = cleanPhoneNumber.startIndex
+//        for ch in mask {
+//            if index == cleanPhoneNumber.endIndex {
+//                break
+//            }
+//            if ch == "X" {
+//                result.append(cleanPhoneNumber[index])
+//                index = cleanPhoneNumber.index(after: index)
+//            } else {
+//                result.append(ch)
+//            }
+//        }
+//
+//        return result
+//    }
     
     //MARK: SetUP TexField'sPlaceholders
     func setPlaceHolders(){
@@ -567,9 +582,9 @@ extension ViewController: UITextFieldDelegate{
     // MARK: TextFieldDelegate Stack
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == phoneTextField{
-            textField.text = formattedNumber(number: textField.text!)
-        }
+//        if textField == phoneTextField{
+//            textField.text = formattedNumber(number: textField.text!)
+//        }
         
         
         return maxCount(textField, range: range, string: string)
@@ -592,6 +607,7 @@ extension ViewController: UITextFieldDelegate{
         textField.becomeFirstResponder()
         
         if phoneTextField.isFirstResponder{
+            setUpPhoneFormat()
             floatingDelegate?.moveUp(view: phonePlaceHolder, text: "Номер телефона")
         } else if passwordTetField.isFirstResponder {
             floatingDelegate?.moveUp(view: passPlaceHolder, text: "Пароль")

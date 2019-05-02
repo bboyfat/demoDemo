@@ -60,6 +60,8 @@
 		C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */; };
 		C27A02172272F6F20005BE33 /* MainNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A02162272F6F20005BE33 /* MainNotificationView.swift */; };
 		C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A021822731C390005BE33 /* TimerForRefresh.swift */; };
+		C27FF739227AF96A00E04B0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27FF738227AF96A00E04B0F /* Images.xcassets */; };
+		C27FF73B227B022100E04B0F /* NotifTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27FF73A227B022100E04B0F /* NotifTableView.swift */; };
 		C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */; };
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
@@ -156,6 +158,8 @@
 		C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiTextField.swift; sourceTree = "<group>"; };
 		C27A02162272F6F20005BE33 /* MainNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNotificationView.swift; sourceTree = "<group>"; };
 		C27A021822731C390005BE33 /* TimerForRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerForRefresh.swift; sourceTree = "<group>"; };
+		C27FF738227AF96A00E04B0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C27FF73A227B022100E04B0F /* NotifTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifTableView.swift; sourceTree = "<group>"; };
 		C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelAPI.swift; sourceTree = "<group>"; };
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C293570A225CCF38004F4510 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -317,6 +321,7 @@
 				C2F285FA226DF5F6005DC8F8 /* URLS.swift */,
 				C25BBF6F2255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld */,
 				C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */,
+				C27FF738227AF96A00E04B0F /* Images.xcassets */,
 			);
 			path = "Tips-MartDemo";
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				C242C493227077A6008B359A /* WDHistoryView.swift */,
 				C242C49D2270A127008B359A /* NotoficationCell.swift */,
 				C27A02162272F6F20005BE33 /* MainNotificationView.swift */,
+				C27FF73A227B022100E04B0F /* NotifTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -515,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */,
+				C27FF739227AF96A00E04B0F /* Images.xcassets in Resources */,
 				C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */,
 				C2D8BC61226F4C0500001C99 /* NotifTable.storyboard in Resources */,
 				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
@@ -553,10 +560,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tips-MartDemo/Pods-Tips-MartDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BadgeSwift/BadgeSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSUtilitiesSource/iOSUtilitiesSource.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -566,10 +574,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSUtilitiesSource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -661,6 +670,7 @@
 				C242C49822707A16008B359A /* MapView.swift in Sources */,
 				C2D8BC65226F5A6E00001C99 /* MoreScreenView.swift in Sources */,
 				C270FC892269C1C80059F161 /* RefreshModel.swift in Sources */,
+				C27FF73B227B022100E04B0F /* NotifTableView.swift in Sources */,
 				C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */,
 				C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */,
 				C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */,

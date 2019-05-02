@@ -10,9 +10,11 @@ import UIKit
 
 class ShopsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var starSelect: UIButton!
     @IBOutlet weak var shopLogo: UIImageView!
     @IBOutlet weak var shopName: UILabel!
     @IBOutlet weak var percentOfCashBack: UILabel!
+    var isSelectedShop = false
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

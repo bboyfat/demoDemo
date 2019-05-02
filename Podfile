@@ -14,6 +14,10 @@ target 'Tips-MartDemo' do
    pod 'SwiftSoup'
    pod 'RealmSwift'
    pod 'NVActivityIndicatorView'
+   pod 'SwiftPhoneNumberFormatter'
+   pod 'ReachabilitySwift'
+   pod 'BadgeSwift'
+
    
      
 end

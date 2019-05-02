@@ -8,7 +8,10 @@
 
 import UIKit
 
+
 class LaunchViewController: UIViewController {
+    
+    
     
     
     var registrationModel: RegistrationModelAPI  = RegistrationModelAPI()
@@ -16,6 +19,7 @@ class LaunchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         if let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber"),
             let password = UserDefaults.standard.string(forKey: "password"){
             self.registrationModel.phoneNumber = phoneNumber
@@ -33,7 +37,16 @@ class LaunchViewController: UIViewController {
             }
         }
         
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
+        
+    }
+    
+   
     
     
     func presentMainTab(){
@@ -54,6 +67,8 @@ class LaunchViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC") as! ViewController
         self.present(vc, animated: true, completion: nil)
     }
+    
+    
 
    
 

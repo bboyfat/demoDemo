@@ -13,7 +13,7 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
     
    
     var shopsModelArray: [ShopsModels] = []
-    
+    var isSelected = false
     
     let activityController: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
@@ -47,15 +47,14 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
         tap.addTarget(self, action: #selector(handleEndEdit))
         
         
-//        setUpActivity()
+
         if let token  = accessToken{
             ShopsApiRequest().formRequest(accesToken: token) { (array) in
                 
             }
         }
         
-        //getShops()
-        
+       
         fetchDataFromRealm()
        
         
@@ -76,6 +75,9 @@ class ShopsMainController: UIViewController, UISearchBarDelegate{
     }
     
     
+    @IBAction func selectShop(_ sender: UIButton) {
+        sender.setImage(#imageLiteral(resourceName: "selectedStar"), for: .normal)
+    }
     
     func setUpActivity(){
         blurView.frame = self.myTableView.bounds
