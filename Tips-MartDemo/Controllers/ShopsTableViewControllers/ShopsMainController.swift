@@ -88,6 +88,7 @@ class ShopsMainController: UIViewController{
         do{
             try realm.write {
                 shop.isSelected = true
+                self.selectedShopsArray.append(shop)
               print(shop.name, shop.isSelected)
             }
         } catch {
@@ -95,6 +96,13 @@ class ShopsMainController: UIViewController{
         }
     }
     
+    @IBAction func selectedTable(_ sender: UIButton) {
+        self.shopsModelArray = self.selectedShopsArray
+        reloadData(myTableView: self.myTableView)
+    }
+    @IBAction func allShops(_ sender: Any) {
+        fetchDataFromRealm()
+    }
     func setUpActivity(cell: ShopsTableViewCell){
         blurView.frame = cell.shopLogo.bounds
         activityController.frame.origin.x = cell.shopLogo.center.x

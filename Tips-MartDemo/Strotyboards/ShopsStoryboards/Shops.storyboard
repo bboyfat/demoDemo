@@ -60,12 +60,18 @@
                                         <state key="normal" title="Все магазины">
                                             <color key="titleColor" red="0.38174165589999998" green="0.3798974933" blue="0.38358581850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="allShops:" destination="rYV-db-SRy" eventType="touchUpInside" id="nQ9-We-d0k"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fp-Jt-aVU">
                                         <rect key="frame" x="138" y="0.0" width="138" height="46"/>
                                         <state key="normal" title="Избранные">
                                             <color key="titleColor" red="0.38174165589999998" green="0.3798974933" blue="0.38358581850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectedTable:" destination="rYV-db-SRy" eventType="touchUpInside" id="6IU-6S-zwm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95D-wz-pJd">
                                         <rect key="frame" x="276" y="0.0" width="138" height="46"/>

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Controllers/ShopsTableViewControllers/ShopsMainController.swift"
-            timestampString = "578586170.229838"
+            timestampString = "578586543.258402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "tableView(_:indentationLevelForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
