@@ -21,6 +21,7 @@ class ShopsModels: Object{
      @objc dynamic var categories: Int = 0
     @objc dynamic var currency = ""
      @objc dynamic var value = 0.0
+    @objc dynamic var isSelected = false
     
 }
 

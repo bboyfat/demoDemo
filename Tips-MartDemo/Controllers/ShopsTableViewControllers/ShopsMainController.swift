@@ -13,7 +13,10 @@ class ShopsMainController: UIViewController{
     
    
     var shopsModelArray: [ShopsModels] = []
+    var selectedShopsArray: [ShopsModels] = []
     var isSelected = false
+    
+    
     
     let activityController: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
@@ -41,27 +44,19 @@ class ShopsMainController: UIViewController{
         super.viewDidLoad()
         
         
-       myTableView.delegate = self
+        myTableView.delegate = self
         myTableView.dataSource = self
         
         tap.addTarget(self, action: #selector(handleEndEdit))
         
-        
-
         if let token  = accessToken{
             ShopsApiRequest().formRequest(accesToken: token) { (array) in
                 
             }
         }
         
-       
         fetchDataFromRealm()
-       
-        
-        
-        
-        
-    }
+     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -76,15 +71,35 @@ class ShopsMainController: UIViewController{
     
     
     @IBAction func selectShop(_ sender: UIButton) {
-        sender.setImage(#imageLiteral(resourceName: "selectedStar"), for: .normal)
+       // convertPoint(CGPointZero, to: self.myTableView)
+        var buttonPosition = sender.convert(CGPoint.zero, to: self.myTableView)
+        var indexPath = self.myTableView.indexPathForRow(at: buttonPosition)!
+        selectedShop(row: indexPath.row, button: sender)
+        print(indexPath.row)
+        
+    
     }
     
-    func setUpActivity(){
-        blurView.frame = self.myTableView.bounds
-        activityController.frame.origin.x = view.center.x
-        activityController.frame.origin.y = 200
+    
+    func selectedShop(row: Int, button: UIButton){
+        
+        let shop = shopsModelArray[row]
+        let realm = try! Realm()
+        do{
+            try realm.write {
+                shop.isSelected = true
+              print(shop.name, shop.isSelected)
+            }
+        } catch {
+            print("can't update")
+        }
+    }
+    
+    func setUpActivity(cell: ShopsTableViewCell){
+        blurView.frame = cell.shopLogo.bounds
+        activityController.frame.origin.x = cell.shopLogo.center.x
         blurView.addSubview(activityController)
-        myTableView.addSubview(blurView)
+        cell.shopLogo.addSubview(blurView)
         activityController.startAnimating()
     }
     
@@ -106,11 +121,7 @@ class ShopsMainController: UIViewController{
         
         self.shopsModelArray = Array(realm.objects(ShopsModels.self))
 
-        OperationQueue.main.addOperation {
-           
-            self.myTableView.reloadData()
-             
-        }
+        self.reloadData(myTableView: self.myTableView)
         } catch {
             print("Can't FETCH!!")
         }
@@ -134,21 +145,22 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShopsTableViewCell
-        
-                      let shop = self.shopsModelArray[indexPath.row]
+       
+        let shop = self.shopsModelArray[indexPath.row]
         let double = shop.value
         let valueOfCash = String(double)
             cell.shopName.text = shop.name
         let currency = shop.currency
         cell.percentOfCashBack.text = valueOfCash + " " + currency
         GetLogos().urlPath(imagePath: shop.pathImage) { (image) in
-            
-            if let forcedImage = image{
-
+           if let forcedImage = image{
             cell.shopLogo.image = forcedImage
-            } else {
-                cell.shopLogo.image = #imageLiteral(resourceName: "clearHistory")
-            }
+             }
+        }
+        if shop.isSelected == true{
+        cell.starSelect.setImage(#imageLiteral(resourceName: "selectedStar"), for: .normal)
+        } else {
+            cell.starSelect.setImage(#imageLiteral(resourceName: "starDeselected"), for: .normal)
         }
        
         return cell
@@ -156,23 +168,24 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "DetailShopView", bundle: nil).instantiateViewController(withIdentifier: "detailShopVC") as! DetailShopViewController
+       
          vc.shopsModel =  self.shopsModelArray[indexPath.row]
         present(vc, animated: true) {
             
             }
             
         }
-    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
-        myTableView.deselectRow(at: indexPath, animated: false)
-        return myTableView.indexPathForSelectedRow
-    }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        myTableView.deselectRow(at: myTableView.indexPathForSelectedRow!, animated: false)
-        
-    }
-        
     
+    func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+      
     
+        return indexPath.row
+    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        print(indexPath.row)
+        return true
+    }
+   
     func stopAnim(){
         self.activityController.stopAnimating()
         self.activityController.removeFromSuperview()
@@ -213,21 +226,23 @@ extension ShopsMainController: UISearchBarDelegate{
                 print(shop.name)
             }
             shopsModelArray = findedShopsArray
-            OperationQueue.main.addOperation {
-                myTableView.reloadData()
-            }
+            reloadData(myTableView: myTableView)
             
         } else if searchText.count == 0 {
             self.fetchDataFromRealm()
         } else {
             
             shopsModelArray = findedShopsArray
-            OperationQueue.main.addOperation {
-                myTableView.reloadData()
-            }
+           reloadData(myTableView: myTableView)
             
         }
         
+    }
+    
+    func reloadData(myTableView: UITableView){
+        OperationQueue.main.addOperation {
+            myTableView.reloadData()
+        }
     }
     
     

@@ -134,7 +134,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtd-Wx-e5G">
-                                                    <rect key="frame" x="50" y="100" width="118" height="20"/>
+                                                    <rect key="frame" x="88" y="100" width="42" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -171,15 +171,14 @@
                                                 <constraint firstItem="95C-mr-dUU" firstAttribute="top" secondItem="0R1-kJ-aKl" secondAttribute="top" constant="51" id="IWC-v4-epw"/>
                                                 <constraint firstAttribute="trailing" secondItem="Wwj-O2-v78" secondAttribute="trailing" constant="138" id="K3v-QV-C1J"/>
                                                 <constraint firstItem="fhl-CB-fAP" firstAttribute="centerX" secondItem="95C-mr-dUU" secondAttribute="centerX" id="Pjd-5c-1FV"/>
-                                                <constraint firstItem="Gtd-Wx-e5G" firstAttribute="top" secondItem="oQd-n4-ser" secondAttribute="bottom" constant="20" id="Uiz-Oi-nO2"/>
-                                                <constraint firstItem="Gtd-Wx-e5G" firstAttribute="centerX" secondItem="oQd-n4-ser" secondAttribute="centerX" id="Usp-kg-pvy"/>
                                                 <constraint firstItem="94W-go-3Lm" firstAttribute="top" secondItem="0R1-kJ-aKl" secondAttribute="topMargin" constant="3" id="Zf0-3p-gaF"/>
-                                                <constraint firstItem="Gtd-Wx-e5G" firstAttribute="leading" secondItem="0R1-kJ-aKl" secondAttribute="leadingMargin" constant="30" id="b5f-AL-wmq"/>
+                                                <constraint firstItem="Gtd-Wx-e5G" firstAttribute="centerX" secondItem="oQd-n4-ser" secondAttribute="centerX" id="b8C-rH-xUg"/>
                                                 <constraint firstAttribute="trailing" secondItem="fhl-CB-fAP" secondAttribute="trailing" constant="37" id="d8n-gi-WAV"/>
                                                 <constraint firstAttribute="bottom" secondItem="Wwj-O2-v78" secondAttribute="bottom" id="gxS-iD-c3Q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Gtd-Wx-e5G" secondAttribute="bottom" constant="10" id="nqI-Mw-aVA"/>
                                                 <constraint firstItem="95C-mr-dUU" firstAttribute="leading" secondItem="Wwj-O2-v78" secondAttribute="trailing" constant="20" id="pgw-3z-XSp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Gtd-Wx-e5G" secondAttribute="bottom" constant="10" id="xjd-dk-d8R"/>
                                                 <constraint firstItem="oQd-n4-ser" firstAttribute="leading" secondItem="0R1-kJ-aKl" secondAttribute="leadingMargin" constant="20" id="y9z-WZ-m72"/>
+                                                <constraint firstItem="Gtd-Wx-e5G" firstAttribute="top" secondItem="oQd-n4-ser" secondAttribute="bottom" constant="20" id="yNA-rN-UI0"/>
                                                 <constraint firstItem="Wwj-O2-v78" firstAttribute="leading" secondItem="94W-go-3Lm" secondAttribute="trailing" constant="20" id="zD0-EJ-bR9"/>
                                                 <constraint firstAttribute="trailing" secondItem="95C-mr-dUU" secondAttribute="trailing" constant="25" id="zmA-nw-tQh"/>
                                             </constraints>
