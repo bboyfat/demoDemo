@@ -60,6 +60,7 @@
 		C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */; };
 		C27A02172272F6F20005BE33 /* MainNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A02162272F6F20005BE33 /* MainNotificationView.swift */; };
 		C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A021822731C390005BE33 /* TimerForRefresh.swift */; };
+		C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E331B227C291000F4BF56 /* SearchShopRealm.swift */; };
 		C27FF739227AF96A00E04B0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27FF738227AF96A00E04B0F /* Images.xcassets */; };
 		C27FF73B227B022100E04B0F /* NotifTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27FF73A227B022100E04B0F /* NotifTableView.swift */; };
 		C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */; };
@@ -158,6 +159,7 @@
 		C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUiTextField.swift; sourceTree = "<group>"; };
 		C27A02162272F6F20005BE33 /* MainNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNotificationView.swift; sourceTree = "<group>"; };
 		C27A021822731C390005BE33 /* TimerForRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerForRefresh.swift; sourceTree = "<group>"; };
+		C27E331B227C291000F4BF56 /* SearchShopRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchShopRealm.swift; sourceTree = "<group>"; };
 		C27FF738227AF96A00E04B0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C27FF73A227B022100E04B0F /* NotifTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifTableView.swift; sourceTree = "<group>"; };
 		C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelAPI.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				C2E69A07225975B4006FDDDB /* HideOrNot.swift */,
 				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
 				C27A021822731C390005BE33 /* TimerForRefresh.swift */,
+				C27E331B227C291000F4BF56 /* SearchShopRealm.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */,
 				C2D8BC34226F0BED00001C99 /* HTMLParser.swift in Sources */,
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
+				C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,

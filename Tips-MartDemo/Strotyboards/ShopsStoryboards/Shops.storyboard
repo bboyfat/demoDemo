@@ -31,6 +31,9 @@
                                             <constraint firstAttribute="width" secondItem="dvv-XX-V92" secondAttribute="height" multiplier="7:1" id="IrX-hk-aLT"/>
                                         </constraints>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="rYV-db-SRy" id="RiX-K1-4jY"/>
+                                        </connections>
                                     </searchBar>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1r-67-UMf">
                                         <rect key="frame" x="349" y="5" width="35" height="35"/>

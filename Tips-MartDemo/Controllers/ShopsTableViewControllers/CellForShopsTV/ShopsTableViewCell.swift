@@ -30,6 +30,9 @@ class ShopsTableViewCell: UITableViewCell {
         shopLogo.image = nil
         shopName.text = nil
         percentOfCashBack.text = nil
+        if isSelectedShop == false{
+        starSelect.setImage(#imageLiteral(resourceName: "nonSelectedStar"), for: .normal)
+        }
     }
 
 }

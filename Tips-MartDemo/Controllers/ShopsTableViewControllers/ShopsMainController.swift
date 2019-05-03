@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ShopsMainController: UIViewController, UISearchBarDelegate{
+class ShopsMainController: UIViewController{
     
    
     var shopsModelArray: [ShopsModels] = []
@@ -179,7 +179,56 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
         self.blurView.removeFromSuperview()
     }
     
+}
+
+extension ShopsMainController: UISearchBarDelegate{
     
+  
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.handleEndEdit()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchShop(searchText: searchText, myTableView: self.myTableView)
+       
+    
+    }
+    
+    func searchShop(searchText: String, myTableView: UITableView){
+        
+        let searchString = searchText
+        var findedShopsArray: [ShopsModels] = []
+        let realm = try! Realm()
+        
+        
+        
+        let predicate = NSPredicate(format: "name contains[c] %@", searchString)
+        let result = realm.objects(ShopsModels.self).filter(predicate)
+        
+        if result.count > 0{
+            for shop in result{
+                findedShopsArray.append(shop)
+                print(shop.name)
+            }
+            shopsModelArray = findedShopsArray
+            OperationQueue.main.addOperation {
+                myTableView.reloadData()
+            }
+            
+        } else if searchText.count == 0 {
+            self.fetchDataFromRealm()
+        } else {
+            
+            shopsModelArray = findedShopsArray
+            OperationQueue.main.addOperation {
+                myTableView.reloadData()
+            }
+            
+        }
+        
+    }
     
     
     
