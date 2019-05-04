@@ -9,12 +9,22 @@
 import UIKit
 import RealmSwift
 
+enum ContentType{
+    case allShops
+    case selectedShops
+    case visitedShops
+}
+
 class ShopsMainController: UIViewController{
     
    
     var shopsModelArray: [ShopsModels] = []
     var selectedShopsArray: [ShopsModels] = []
-    var isSelected = false
+    var contentType: ContentType = .allShops {
+        didSet{
+            reloadData(myTableView: myTableView)
+        }
+    }
     
     
     
@@ -46,16 +56,21 @@ class ShopsMainController: UIViewController{
         
         myTableView.delegate = self
         myTableView.dataSource = self
-        
+         fetchDataFromRealm()
         tap.addTarget(self, action: #selector(handleEndEdit))
-        
+        self.shopsModelArray.forEach { (shop) in
+            print(shop.name, shop.isSelected)
+            if shop.isSelected{
+                self.selectedShopsArray.append(shop)
+            }
+        }
         if let token  = accessToken{
             ShopsApiRequest().formRequest(accesToken: token) { (array) in
                 
             }
         }
         
-        fetchDataFromRealm()
+       
      }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,37 +86,68 @@ class ShopsMainController: UIViewController{
     
     
     @IBAction func selectShop(_ sender: UIButton) {
-       // convertPoint(CGPointZero, to: self.myTableView)
-        var buttonPosition = sender.convert(CGPoint.zero, to: self.myTableView)
-        var indexPath = self.myTableView.indexPathForRow(at: buttonPosition)!
-        selectedShop(row: indexPath.row, button: sender)
-        print(indexPath.row)
+       print(sender.tag)
+//        let indexPath = IndexPath(row: sender.tag, section: 0)
+        selectedShop(row: sender.tag, button: sender)
+//      myTableView.reloadRows(at: [indexPath], with: .none)
+        if let cell = sender.superview?.superview as? ShopsTableViewCell{
+            cell.isSelectedShop = !cell.isSelectedShop
+        }
         
+        
+      
+       
     
     }
     
     
     func selectedShop(row: Int, button: UIButton){
         
-        let shop = shopsModelArray[row]
+        
+        var shop: ShopsModels?
+        switch contentType{
+        case .allShops: shop = shopsModelArray[row]
+        case .selectedShops: shop = selectedShopsArray[row]
+        default:
+            break
+        }
+        if let shop = shop{
+       
         let realm = try! Realm()
+        
         do{
+            if !shop.isSelected{
             try realm.write {
-                shop.isSelected = true
+                shop.isSelected = !shop.isSelected
+                
                 self.selectedShopsArray.append(shop)
               print(shop.name, shop.isSelected)
+            }
+            } else {
+                try realm.write {
+                    shop.isSelected = false
+                    
+                    if  let index = selectedShopsArray.firstIndex(of: shop){
+                 self.selectedShopsArray.remove(at: index)
+                        reloadData(myTableView: myTableView)
+                        print(shop.name, shop.isSelected)}
+                }
+                
             }
         } catch {
             print("can't update")
         }
+        }
     }
     
     @IBAction func selectedTable(_ sender: UIButton) {
-        self.shopsModelArray = self.selectedShopsArray
-        reloadData(myTableView: self.myTableView)
+//        self.shopsModelArray = self.selectedShopsArray
+//        reloadData(myTableView: self.myTableView)
+        contentType = .selectedShops
     }
     @IBAction func allShops(_ sender: Any) {
         fetchDataFromRealm()
+        contentType = .allShops
     }
     func setUpActivity(cell: ShopsTableViewCell){
         blurView.frame = cell.shopLogo.bounds
@@ -128,7 +174,7 @@ class ShopsMainController: UIViewController{
         let realm = try Realm()
         
         self.shopsModelArray = Array(realm.objects(ShopsModels.self))
-
+//        self.shopsModelArray
         self.reloadData(myTableView: self.myTableView)
         } catch {
             print("Can't FETCH!!")
@@ -148,13 +194,29 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.shopsModelArray.count
+//        return self.shopsModelArray.count
+        switch contentType{
+        case .allShops: return self.shopsModelArray.count
+        case .selectedShops: return self.selectedShopsArray.count
+        case .visitedShops: return 0
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShopsTableViewCell
-       
-        let shop = self.shopsModelArray[indexPath.row]
+        
+        var shop: ShopsModels?
+        switch contentType{
+        case .allShops: shop = shopsModelArray[indexPath.row]
+        case .selectedShops: shop = selectedShopsArray[indexPath.row]
+        default:
+            break
+        }
+
+        if let shop = shop {
+            cell.isSelectedShop = shop.isSelected
         let double = shop.value
         let valueOfCash = String(double)
             cell.shopName.text = shop.name
@@ -165,12 +227,9 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
             cell.shopLogo.image = forcedImage
              }
         }
-        if shop.isSelected == true{
-        cell.starSelect.setImage(#imageLiteral(resourceName: "selectedStar"), for: .normal)
-        } else {
-            cell.starSelect.setImage(#imageLiteral(resourceName: "starDeselected"), for: .normal)
-        }
+         cell.starSelect.tag = indexPath.row
        
+        }
         return cell
     }
     
@@ -184,15 +243,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
             
         }
     
-    func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
-      
     
-        return indexPath.row
-    }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        print(indexPath.row)
-        return true
-    }
    
     func stopAnim(){
         self.activityController.stopAnimating()

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MainPageViewController: UIViewController {
+class MainPageViewController: UIViewController, UIScrollViewDelegate {
 
     
     
@@ -29,7 +29,7 @@ class MainPageViewController: UIViewController {
         super.viewDidLoad()
      
         
-        
+        mainPageView.scrollView.delegate = self
         tap.addTarget(self, action: #selector(presentMap))
 
         mainPageView.scrollView.alwaysBounceVertical = true
@@ -91,6 +91,16 @@ class MainPageViewController: UIViewController {
             })
         }
         
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.panGestureRecognizer.translation(in: scrollView.superview).y < 0{
+        let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(withIdentifier: "mapVc") as! MapViewController
+           scrollView.bounces = true
+        present(vc, animated: true, completion: nil)
+        }
+        scrollView.bounces = true
+        
+       
     }
     
     @IBAction func notificationsBtn(_ sender: UIButton) {

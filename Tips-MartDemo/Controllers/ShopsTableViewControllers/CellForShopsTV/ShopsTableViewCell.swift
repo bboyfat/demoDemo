@@ -14,7 +14,15 @@ class ShopsTableViewCell: UITableViewCell {
     @IBOutlet weak var shopLogo: UIImageView!
     @IBOutlet weak var shopName: UILabel!
     @IBOutlet weak var percentOfCashBack: UILabel!
-    var isSelectedShop = false
+    var isSelectedShop = false {
+        didSet{
+            if isSelectedShop {
+                starSelect.setImage(#imageLiteral(resourceName: "selectedStar"), for: .normal)
+            } else {
+                starSelect.setImage(#imageLiteral(resourceName: "starDeselected"), for: .normal)
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,9 +38,10 @@ class ShopsTableViewCell: UITableViewCell {
         shopLogo.image = nil
         shopName.text = nil
         percentOfCashBack.text = nil
-        if isSelectedShop == false{
-        starSelect.setImage(#imageLiteral(resourceName: "nonSelectedStar"), for: .normal)
-        }
+        isSelectedShop = false
+//        if isSelectedShop {
+//        starSelect.setImage(#imageLiteral(resourceName: "nonSelectedStar"), for: .normal)
+//        }
     }
 
 }

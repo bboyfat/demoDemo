@@ -30,6 +30,8 @@ class MainPageView: UIView {
       @IBOutlet weak var badgeLabel: UIButton!
     //MARK: Settings and Notif buttons outlet
     @IBOutlet weak var notificationBtn: UIButton!
+    @IBOutlet weak var anotherCardsBtn: UIButton!
+    @IBOutlet weak var myCardBtn: UIButton!
     
     //MARK: Get data from user defaults
     
@@ -67,9 +69,20 @@ class MainPageView: UIView {
     navigationView.layer.insertSublayer(gradientLayer, at: 0)
         self.addGestureRecognizer(swipe)
         
-
+     setCornerForTopAndBottom()
         
        setText()
+    }
+    
+    func setCornerForTopAndBottom(){
+        // settings for bottom
+        anotherCardsBtn.clipsToBounds = true
+        anotherCardsBtn.layer.cornerRadius = 5
+        anotherCardsBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        // settings for top
+        myCardBtn.clipsToBounds = true
+        myCardBtn.layer.cornerRadius = 5
+        myCardBtn.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
    
    
