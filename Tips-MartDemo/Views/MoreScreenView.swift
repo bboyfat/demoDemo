@@ -18,7 +18,7 @@ class MoreScreenView: UIView {
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
     
     override func awakeFromNib() {
-        gradientLayer.frame = navigationView.frame
+       
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         
@@ -27,5 +27,7 @@ class MoreScreenView: UIView {
         
     }
     
-    
+    override func layoutSubviews() {
+         gradientLayer.frame = self.navigationView.bounds
+    }
 }

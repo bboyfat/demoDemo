@@ -129,6 +129,8 @@ class ShopsMainController: UIViewController{
                     
                     if  let index = selectedShopsArray.firstIndex(of: shop){
                  self.selectedShopsArray.remove(at: index)
+                        let indexPath = IndexPath(row: index, section: 0)
+                        myTableView.deleteRows(at: [indexPath], with: .fade)
                         reloadData(myTableView: myTableView)
                         print(shop.name, shop.isSelected)}
                 }

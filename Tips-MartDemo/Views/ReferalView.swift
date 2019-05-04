@@ -18,13 +18,17 @@ class ReferalView: UIView {
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
     
     override func awakeFromNib() {
-        gradientLayer.frame = navigationView.bounds
+       
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         
         gradientLayer.colors = [purpleColor, finishColor]
         navigationView.layer.insertSublayer(gradientLayer, at: 0)
         
+    }
+    
+    override func layoutSubviews() {
+         gradientLayer.frame = self.navigationView.bounds
     }
 
 }

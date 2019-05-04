@@ -41,13 +41,15 @@ class MainPageView: UIView {
     let balanceGreen = UserDefaults.standard.string(forKey: "greenBalance")
     let balanceGray = UserDefaults.standard.string(forKey: "grayBalance")
     
+    
+    
+    
+    let color = #colorLiteral(red: 0.3211668134, green: 0.2594678998, blue: 0.5882466435, alpha: 1)
+    
     let gradientLayer = CAGradientLayer()
     
     let purpleColor = UIColor(red: 79/255, green: 67/255, blue: 145/255, alpha: 1).cgColor
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
-    
-    let swipe = UISwipeGestureRecognizer()
-    let color = #colorLiteral(red: 0.3211668134, green: 0.2594678998, blue: 0.5882466435, alpha: 1)
    
     override func awakeFromNib() {
         
@@ -59,15 +61,9 @@ class MainPageView: UIView {
         photoImageView.layer.cornerRadius = 25
         photoImageView.layer.borderWidth = 2
         photoImageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1).cgColor
-        gradientLayer.frame = navigationView.bounds
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
-        
-        gradientLayer.colors = [purpleColor, finishColor]
-        swipe.addTarget(self, action: #selector(returnHandle))
-        swipe.direction = .down
-    navigationView.layer.insertSublayer(gradientLayer, at: 0)
-        self.addGestureRecognizer(swipe)
+       
+    
+       
         
      setCornerForTopAndBottom()
         
@@ -83,6 +79,8 @@ class MainPageView: UIView {
         myCardBtn.clipsToBounds = true
         myCardBtn.layer.cornerRadius = 5
         myCardBtn.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        addGradient()
     }
    
    
@@ -90,9 +88,27 @@ class MainPageView: UIView {
     @objc func returnHandle(){
         
         self.reloadInputViews()
+        
     }
-
     
+    func addGradient(){
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        
+         gradientLayer.colors = [purpleColor, finishColor]
+        //         navigationView.layer.insertSublayer(gradientLayer, at: 0)
+        navigationView.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+
+    override func layoutSubviews() {
+      
+        gradientLayer.frame = self.navigationView.bounds
+       
+       
+//        navigationView.layer.addSublayer(gradientLayer)
+       
+    }
     func setText(){
         guard let name = self.name, let surname = self.surname, let userId = self.userId, let greenBalanceString = balanceGreen, let grayBalanceString = balanceGray else { return }
         

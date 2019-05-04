@@ -22,23 +22,21 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 
     var infoModel: RegModelGet = RegModelGet()
     
-    let tap = UITapGestureRecognizer()
-    let swipeGest = UISwipeGestureRecognizer()
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
         
         mainPageView.scrollView.delegate = self
-        tap.addTarget(self, action: #selector(presentMap))
+      
 
         mainPageView.scrollView.alwaysBounceVertical = true
         mainPageView.scrollView.bounces  = true
-        swipeGest.addTarget(self, action: #selector(presentMap))
-        swipeGest.direction = .up
+     
         
-        self.view.addGestureRecognizer(swipeGest)
-        mainPageView.mapImageView.addGestureRecognizer(tap)
+       
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
@@ -59,15 +57,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         return .lightContent
     }
     
-    @objc func presentMap(){
-        let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(withIdentifier: "mapVc") as! MapViewController
-        present(vc, animated: true, completion: nil)
-        
-    }
-    
-    @objc func handleTap(){
-        print("TAP!!!!!!!")
-    }
+   
     @objc func didPullToRefresh() {
         
         RefreshToken().getBalance(header: accesToken!) { (notif) in
@@ -95,10 +85,9 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if scrollView.panGestureRecognizer.translation(in: scrollView.superview).y < 0{
         let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(withIdentifier: "mapVc") as! MapViewController
-           scrollView.bounces = true
+          
         present(vc, animated: true, completion: nil)
         }
-        scrollView.bounces = true
         
        
     }

@@ -24,7 +24,7 @@ class BarCodeView: UIView {
         guard let id = userId else {
             return
         }
-        gradient.frame = navigationView.bounds
+        
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 0)
         gradient.colors = [purpleColor, finishColor]
@@ -40,6 +40,7 @@ class BarCodeView: UIView {
     }
     
     override func layoutSubviews() {
+        gradient.frame = navigationView.bounds
         
     }
     
