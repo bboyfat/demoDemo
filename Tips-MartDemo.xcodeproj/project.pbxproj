@@ -68,7 +68,7 @@
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
 		C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299E5342271C9B100D6CC05 /* RealmModel.swift */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
-		C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* LaunchViewController.swift */; };
+		C2C96D212255FC17009F7050 /* WaitingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* WaitingScreenController.swift */; };
 		C2D8BC28226E014100001C99 /* OperationHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D8BC27226E014100001C99 /* OperationHistory.storyboard */; };
 		C2D8BC2A226E069000001C99 /* OperationHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8BC29226E069000001C99 /* OperationHistoryController.swift */; };
 		C2D8BC2C226E071800001C99 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8BC2B226E071700001C99 /* HistoryCell.swift */; };
@@ -169,7 +169,7 @@
 		C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2BA3C6E2257CEA50016CA9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2C96D202255FC17009F7050 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		C2C96D202255FC17009F7050 /* WaitingScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenController.swift; sourceTree = "<group>"; };
 		C2D8BC27226E014100001C99 /* OperationHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OperationHistory.storyboard; sourceTree = "<group>"; };
 		C2D8BC29226E069000001C99 /* OperationHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryController.swift; sourceTree = "<group>"; };
 		C2D8BC2B226E071700001C99 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
@@ -393,7 +393,7 @@
 		C2C96D222255FC1C009F7050 /* LauncScreen */ = {
 			isa = PBXGroup;
 			children = (
-				C2C96D202255FC17009F7050 /* LaunchViewController.swift */,
+				C2C96D202255FC17009F7050 /* WaitingScreenController.swift */,
 				C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */,
 			);
 			path = LauncScreen;
@@ -685,7 +685,7 @@
 				C2429B2422660D8200EB7942 /* ShopsMainController.swift in Sources */,
 				C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */,
 				C2F285FB226DF5F6005DC8F8 /* URLS.swift in Sources */,
-				C2C96D212255FC17009F7050 /* LaunchViewController.swift in Sources */,
+				C2C96D212255FC17009F7050 /* WaitingScreenController.swift in Sources */,
 				C2D8BC63226F50F700001C99 /* NotTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

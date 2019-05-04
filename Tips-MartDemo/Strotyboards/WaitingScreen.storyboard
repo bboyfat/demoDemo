@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Launch View Controller-->
+        <!--Waiting Screen Controller-->
         <scene sceneID="ZY4-Qh-cRS">
             <objects>
-                <viewController id="DtH-Jy-Ya4" customClass="LaunchViewController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DtH-Jy-Ya4" customClass="WaitingScreenController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8w0-0r-BpM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

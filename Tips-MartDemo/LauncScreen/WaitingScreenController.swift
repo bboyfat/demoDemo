@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import Reachability
 
-
-class LaunchViewController: UIViewController {
+class WaitingScreenController: UIViewController {
     
     
     
@@ -22,13 +22,13 @@ class LaunchViewController: UIViewController {
        
         if let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber"),
             let password = UserDefaults.standard.string(forKey: "password"){
-            self.registrationModel.phoneNumber = phoneNumber
-            self.registrationModel.password = password
-            APILogin().getAuthCode(model: self.registrationModel) { (info) in
-                self.regAuth = info
+//            self.registrationModel.phoneNumber = phoneNumber
+//            self.registrationModel.password = password
+//            APILogin().getAuthCode(model: self.registrationModel) { (info) in
+//                self.regAuth = info
                 OperationQueue.main.addOperation {
                     self.presentMainTab()
-                }
+//                }
 
             }
         } else {
@@ -53,15 +53,15 @@ class LaunchViewController: UIViewController {
         let tabBarController = MainTabBarControllerViewController()
         
         
-        guard let regData = self.regAuth else { return }
-        if regData.success == true{
+//        guard let regData = self.regAuth else { return }
+//        if regData.success == true{
             self.present(tabBarController, animated: true) {
                 
             }
-        } else {
-            
-            ErrorAlerts().loginErrorAlert(controller: self)
-        }
+//        } else {
+//
+//            ErrorAlerts().loginErrorAlert(controller: self)
+//        }
     }
     func presentloginController(){
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC") as! ViewController
