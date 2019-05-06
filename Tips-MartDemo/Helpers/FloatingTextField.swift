@@ -11,43 +11,53 @@ import Foundation
 
 
 import UIKit
-protocol FloatingTextDelegate {
-    func moveUp(view: UILabel, text: String)
-    func moveDown(view: UILabel, text: String)
-    func moveBack(view: UILabel)
-    
-}
 
-class FloatingTextField: FloatingTextDelegate {
+@IBDesignable
+
+class FloatingTextField: UITextField, UITextFieldDelegate {
     
+    var didEndEditing: (FloatingTextField) -> () = { _ in}
+    var didBeginEditing: (FloatingTextField) -> () = { _ in}
     
-    
-    
-    func moveUp(view: UILabel, text: String){
+    open var floattingPlaceholder: UILabel = {
+        let label = UILabel()
         
-        UIView.animate(withDuration: 0.25, animations: {
-            view.frame.origin.y = -20
-            view.textColor = .lightGray
-            view.text = text
-            view.font = view.font.withSize(10)
-        }, completion: nil)
         
+        return label
+    }()
+    
+    
+    func setup() {
+        
+        floattingPlaceholder.text = "HELOOOOO WORLD"
+        floattingPlaceholder.font = floattingPlaceholder.font.withSize(10)
+        floattingPlaceholder.textColor = .lightGray
+        floattingPlaceholder.frame = self.bounds
+        self.addSubview(floattingPlaceholder)
+       
     }
-    func moveBack(view: UILabel){
-        UIView.animate(withDuration: 0.2) {
-            view.frame.origin.y = 0
-            view.textColor = .lightGray
-            view.font = view.font.withSize(15)
-        }
+    
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        AnimateView().movePlaceHolderUp(view: floattingPlaceholder)
+        didBeginEditing(self)
     }
-    func moveDown(view: UILabel, text: String){
-        UIView.animate(withDuration: 0.25, animations: {
-            view.frame.origin.y = 25
-            view.textColor = .red
-            view.text = text
-            view.font = view.font.withSize(10)
-            
-        }, completion: nil)
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        AnimateView().movePlaceHolderZero(view: floattingPlaceholder)
+        didEndEditing(self)
     }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        
+        setup()
+    }
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.delegate = self
+        setup()
+    }
+    
+    
+    
     
  }

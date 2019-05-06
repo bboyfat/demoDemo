@@ -16,6 +16,7 @@ import CoreData
 
 
 
+
 class ViewController: UIViewController {
     
     //MARK: UserDefaultsInfo
@@ -92,7 +93,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var regUnderscore: UIView!
     
     //MARK: Refferences on delegates
-    var floatingDelegate: FloatingTextDelegate?
+//    var floatingDelegate: FloatingTextDelegate?
     var validateDelegate: ValidationDelegate?
     var hideAndShowDelegate: HideShowDelegate?
     
@@ -104,67 +105,6 @@ class ViewController: UIViewController {
     
     //MARK: RegistrationModel
     
-    var registrationModel: RegistrationModelAPI  = RegistrationModelAPI()
-    var regAuth: RegModelGet?
-    var authModel: AuthModel?
-    var userInfoChanges: Changes = Changes()
-    var userInfoModel: ProfileModel = ProfileModel()
-    
-    //MARK: PLaceHOlders
-    let phonePlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "PhoneNumber"
-        label.textColor = .lightGray
-        return label
-    }()
-    let passPlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "Password"
-        label.textColor = .lightGray
-        return label
-    }()
-    let repeatPlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "Repeat"
-        label.textColor = .lightGray
-        return label
-    }()
-
-    let massegePlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "Пароль из СМС"
-        label.textColor = .lightGray
-        return label
-    }()
-
-    let frindsPlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "ID или моб. номер пригласившего"
-        label.textColor = .lightGray
-        label.font = label.font.withSize(10)
-        return label
-    }()
-    let namePlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "Имя"
-        label.textColor = .lightGray
-        label.font = label.font.withSize(10)
-        return label
-    }()
-    let senamePlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "Фамилия"
-        label.textColor = .lightGray
-        label.font = label.font.withSize(10)
-        return label
-    }()
-    let birthDatePlaceHolder: UILabel = {
-        let label = UILabel()
-        label.text = "Дата рождения"
-        label.textColor = .lightGray
-        label.font = label.font.withSize(10)
-        return label
-    }()
     
     // MARK: Show Hide password buttons
     let eyeButton: UIButton = {
@@ -185,21 +125,6 @@ class ViewController: UIViewController {
         button.imageView?.contentMode = .scaleAspectFill
         return button
     }()
-    //MARK: Custom DatePicker
-    let datePicker: UIDatePicker = {
-        let picker = UIDatePicker()
-        
-        
-        
-        
-        picker.backgroundColor = UIColor(red: 78/255, green: 67/255, blue: 145/255, alpha: 0.9)
-        picker.setValue(UIColor.white, forKey: "textColor")
-        picker.tintColor = .white
-        
-        
-        picker.datePickerMode = .date
-        return picker
-    }()
     
     
     
@@ -215,24 +140,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
        
-        floatingDelegate = FloatingTextField()
+      
         validateDelegate = ValidPhonePass()
         hideAndShowDelegate = HideOrNot()
         
         
-        phoneTextField.delegate = self
-        passwordTetField.delegate = self
-        repeatPass.delegate = self
-        friendId.delegate = self
-        messagePassLabel.delegate = self
-        birthDateTextField.delegate = self
-        nameTextField.delegate = self
-        seNameTextField.delegate = self
+      
         
-        birthDateTextField.inputView = datePicker
+        
 
-        
-        setPlaceHolders()
+        setUpPhoneFormat()
+      
         setUpButtons()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleEndEdit))
@@ -255,7 +173,7 @@ class ViewController: UIViewController {
     
     
     
-    
+    // customized status bar
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
@@ -294,175 +212,62 @@ class ViewController: UIViewController {
     }
     
     //MARK: IBAction stack
-    @IBAction func enterBtn(_ sender: UIButton) {
-        if let showOrHide = self.hideAndShowDelegate{
-        let viewsToHide:[UIView] = [self.repeatPasswordStack, self.massegePasswordStack, self.friendsIdStack, self.regUnderscore, self.checkBoxStack, self.haveNoFriends, self.resendPassword, self.createRegistrationBtnOutlet, self.backButtonStack, self.nameSenameStack, regNameStack, senameStack, birthDateStack, acceptPasswordBtn, genderStack, missBtnOutlet ]
-        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.faceBookStack, self.enterUnderscore, self.forgetPass, self.getStartedBtn, self.faceBookStack, stackTextField]
-            showOrHide.hide(views: viewsToHide)
-            showOrHide.show(views: viewsToShow)
-          
-            getStartedBtn.isEnabled = true
-            signUpLabel.titleLabel?.font = UIFont(name: fonts.lihgtGotham, size: 20)
-            signInLabel.titleLabel?.font = UIFont(name: fonts.mediumGotham, size: 20)
-            
-               animateShowAndHide()
-        }
-      
-        
-    }
+    @IBAction func enterBtn(_ sender: UIButton) { }
     
-    @IBAction func registrationBtn(_ sender: UIButton) {
-       sender.setTitleColor(.white, for: .normal)
-        if let showOrHide = self.hideAndShowDelegate{
-        let viewsToHide:[UIView] = [ self.massegePasswordStack, self.faceBookStack, self.enterUnderscore, self.forgetPass, self.haveNoFriends, self.getStartedBtn, self.resendPassword, self.nameSenameStack, regNameStack, senameStack, birthDateStack, acceptPasswordBtn, dearUserLabel, genderStack, missBtnOutlet ]
-        let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.checkBoxStack, self.createRegistrationBtnOutlet, stackTextField]
-            showOrHide.hide(views: viewsToHide)
-            showOrHide.show(views: viewsToShow)
-
-           signUpLabel.titleLabel?.font = UIFont(name: fonts.mediumGotham, size: 20)
-            signInLabel.titleLabel?.font = UIFont(name: fonts.lihgtGotham, size: 20)
-            
-            
-            
-            
-            animateShowAndHide()
-        }
-        
-    }
+    @IBAction func registrationBtn(_ sender: UIButton) { }
     
     @IBAction func checkBoxBtn(_ sender: UIButton) {
          isAgreed = !isAgreed
-        
         if (isAgreed == true) {
             sender.setImage(#imageLiteral(resourceName: "checkActive"), for: .normal)
-            
-            
-        } else {
-           
-            sender.setImage(#imageLiteral(resourceName: "checkNonActive"), for: .normal)
-            
-        }
-       
-        print(isAgreed)
-        
+         } else {
+           sender.setImage(#imageLiteral(resourceName: "checkNonActive"), for: .normal)
+         }
     }
     
-    @IBAction func forgetPassBtn(_ sender: UIButton) {
-      
-        
-    }
+    @IBAction func forgetPassBtn(_ sender: UIButton) {}
+    
     @IBAction func sendDataBtn(_ sender: UIButton) {
-       
         presentMainTab()
-       
-    }
+      }
     func presentMainTab(){
         let tabBarController = MainTabBarControllerViewController()
-        
-        
-        guard let regData = self.regAuth else { return }
-        if regData.success == true{
-            self.present(tabBarController, animated: true) {
-                
-            }
-        } else {
-            
-            ErrorAlerts().loginErrorAlert(controller: self)
+          self.present(tabBarController, animated: true)
         }
-        
-    }
     
     @IBAction func createNewRegistration(_ sender: UIButton) {
-       
-        if isAgreed == true  && registrationModel.phoneNumber.count > 18 {
-            
-            
-            if let showOrHide = self.hideAndShowDelegate{
-                let viewsToShow:[UIView] = [ self.massegePasswordStack, self.backButtonStack, self.regUnderscore, self.resendPassword, self.acceptPasswordBtn, self.acceptPasswordBtn, stackTextField]
-                let viewsToHide:[UIView] = [self.phonNumberStack, self.passwordStack,  self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.enterUnderscore, self.checkBoxStack, self.haveNoFriends, self.faceBookStack, self.forgetPass, self.createRegistrationBtnOutlet, dearUserLabel, genderStack, missBtnOutlet ]
-                
-                APIManager().getAuthCode(model: self.registrationModel) { (auth) in
-                    self.authModel = auth
-                }
-               
-                showOrHide.hide(views: viewsToHide)
-                showOrHide.show(views: viewsToShow)
-                animateShowAndHide()
+             animateShowAndHide()
             }
             
             
-        } else {
-            let ac = UIAlertController(title: "Политика конфиденциальности", message: "Для того, чтобы продолжить подтвердите, что Вы принимаете пользовательское сглашение", preferredStyle: .actionSheet)
-            let action = UIAlertAction(title: "Принимаю", style: .default) { (_) in
-                self.isAgreed = true
-                self.checkBoxBtnOutlet.setImage(#imageLiteral(resourceName: "checkActive"), for: .normal)
-            }
-            let cancel = UIAlertAction(title: "Не принимаю", style: .destructive, handler: nil)
-            ac.addAction(action)
-            ac.addAction(cancel)
-            
-            self.present(ac, animated: true, completion: nil)
-        }
-    }
+    
+    
     @IBAction func returnToRegistrationBtn(_ sender: UIButton) {
-        if let showOrHide = self.hideAndShowDelegate{
-            let viewsToHide:[UIView] = [ self.massegePasswordStack, self.faceBookStack, self.enterUnderscore, self.forgetPass,  self.haveNoFriends, self.backButtonStack, self.getStartedBtn, self.resendPassword, self.nameSenameStack, regNameStack, senameStack, birthDateStack, dearUserLabel, genderStack, missBtnOutlet ]
-            let viewsToShow:[UIView] = [self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack,  self.regUnderscore, self.checkBoxStack, self.createRegistrationBtnOutlet, stackTextField]
-            showOrHide.hide(views: viewsToHide)
-            showOrHide.show(views: viewsToShow)
-            
-            signUpLabel.titleLabel?.font = UIFont(name: fonts.mediumGotham, size: 20)
-            signInLabel.titleLabel?.font = UIFont(name: fonts.lihgtGotham, size: 20)
-           
-            
-            
-            
-            animateShowAndHide()
+       }
+    
+    func presentPolicyAlert(){
+        let ac = UIAlertController(title: "Политика конфиденциальности", message: "Для того, чтобы продолжить подтвердите, что Вы принимаете пользовательское сглашение", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Принимаю", style: .default) { (_) in
+            self.isAgreed = true
+            self.checkBoxBtnOutlet.setImage(#imageLiteral(resourceName: "checkActive"), for: .normal)
         }
+        let cancel = UIAlertAction(title: "Не принимаю", style: .destructive, handler: nil)
+        ac.addAction(action)
+        ac.addAction(cancel)
+        
+        self.present(ac, animated: true, completion: nil)
     }
     
     @IBAction func acceptBtnAction(_ sender: UIButton) {
-        if let showHide = self.hideAndShowDelegate{
-        let viewsToSow = [self.nameSenameStack, regNameStack, senameStack, birthDateStack, regUnderscore, dearUserLabel, genderStack, missBtnOutlet, continueFinishButton ]
-        let viewsToHide = [self.stackTextField, self.phonNumberStack, self.passwordStack, self.repeatPasswordStack, self.friendsIdStack, self.regUnderscore, self.checkBoxStack, backButtonStack, haveNoFriends, faceBookStack, resendPassword, acceptPasswordBtn]
-            showHide.hide(views: viewsToHide as! [UIView])
-            showHide.show(views: viewsToSow as! [UIView])
-            if isMale == true{
-                self.userInfoModel.gender = "male"
-            }else if isFemale == true{
-                self.userInfoModel.gender = "female"
-            } else {
-                self.userInfoModel.gender = " "
-            }
-            
-           
-            animateShowAndHide()
-        }
-        
-    }
+      
+           }
     
     @IBAction func sendUsersDataBtn(_ sender: UIButton) {
-        print(registrationModel.authCode)
-        
-        guard let accesToken = self.regAuth?.data?.accessToken.value else { return }
-        print(accesToken, "in sendUsersDataBtn")
-            self.userInfoChanges.objChanges = self.userInfoModel
-            APIChangeInfo().getAuthCode(model: userInfoModel, accessToken: accesToken) { (user) in
-                
-            }
-        
-        print("Data in sendUsersDataBtn", userInfoModel)
+       
     }
     
     @IBAction func missIntroduction(_ sender: UIButton) {
-        
-//        apiDelegate = APIRegComplete()
-//         APIRegComplete().getAuthCode(model: self.registrationModel)
-        APIRegComplete().getAuthCode(model: self.registrationModel) { (data) in
-            self.regAuth = data
         }
-        
-    }
     func checkDataAlert(){
         let ac = UIAlertController(title: "ВНИМАНИЕ!", message: "Проверьте правильность введенных данных", preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "Хорошо", style: .default , handler: nil)
@@ -486,7 +291,7 @@ class ViewController: UIViewController {
             maleBtnOutlet.setImage(#imageLiteral(resourceName: "radiOn"), for: .normal)
             femaleBtnOutlet.setImage(#imageLiteral(resourceName: "radioOff"), for: .normal)
             isFemale = false
-            self.userInfoModel.gender = "male"
+//            self.userInfoModel.gender = "male"
             
         } else {
              maleBtnOutlet.setImage(#imageLiteral(resourceName: "radioOff"), for: .normal)
@@ -501,7 +306,7 @@ class ViewController: UIViewController {
         if isFemale == true{
             femaleBtnOutlet.setImage(#imageLiteral(resourceName: "radiOn"), for: .normal)
             maleBtnOutlet.setImage(#imageLiteral(resourceName: "radioOff"), for: .normal)
-            self.userInfoModel.gender = "female"
+//            self.userInfoModel.gender = "female"
              isMale = false
             
             
@@ -511,48 +316,8 @@ class ViewController: UIViewController {
         print("male is", isMale)
        
     }
+
     
-//    private func formattedNumber(number: String) -> String {
-//        let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-//        let mask = "+XX (XXX) XXX XX XX"
-//
-//        var result = ""
-//        var index = cleanPhoneNumber.startIndex
-//        for ch in mask {
-//            if index == cleanPhoneNumber.endIndex {
-//                break
-//            }
-//            if ch == "X" {
-//                result.append(cleanPhoneNumber[index])
-//                index = cleanPhoneNumber.index(after: index)
-//            } else {
-//                result.append(ch)
-//            }
-//        }
-//
-//        return result
-//    }
-    
-    //MARK: SetUP TexField'sPlaceholders
-    func setPlaceHolders(){
-        phonePlaceHolder.frame = phoneTextField.bounds
-        self.phoneTextField.addSubview(phonePlaceHolder)
-        passPlaceHolder.frame = passwordTetField.bounds
-        self.passwordTetField.addSubview(passPlaceHolder)
-        repeatPlaceHolder.frame = repeatPass.bounds
-        self.repeatPass.addSubview(repeatPlaceHolder)
-        massegePlaceHolder.frame = messagePassLabel.bounds
-        self.messagePassLabel.addSubview(massegePlaceHolder)
-        frindsPlaceHolder.frame = friendId.bounds
-        self.friendId.addSubview(frindsPlaceHolder)
-        namePlaceHolder.frame = nameTextField.bounds
-        self.nameTextField.addSubview(namePlaceHolder)
-        senamePlaceHolder.frame = seNameTextField.bounds
-        self.seNameTextField.addSubview(senamePlaceHolder)
-        birthDatePlaceHolder.frame = birthDateTextField.bounds
-        self.birthDateTextField.addSubview(birthDatePlaceHolder)
-        
-    }
     
     func setUpButtons(){
         
@@ -568,192 +333,6 @@ class ViewController: UIViewController {
 
 
 
-extension ViewController{
-   
-}
 
 
-extension ViewController: UITextFieldDelegate{
-    
-    
-   
-    
-    
-    // MARK: TextFieldDelegate Stack
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        if textField == phoneTextField{
-//            textField.text = formattedNumber(number: textField.text!)
-//        }
-        
-        
-        return maxCount(textField, range: range, string: string)
-    }
-    
-    func maxCount(_ textField: UITextField, range: NSRange, string: String) -> Bool{
-        let currentText = textField.text ?? ""
-        
-        guard let stringRange = Range(range, in: currentText) else { return false}
-        
-        let updateText = currentText.replacingCharacters(in: stringRange, with: string)
-        return updateText.count <= 19
-    }
-    
-    
-    
-    
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.becomeFirstResponder()
-        
-        if phoneTextField.isFirstResponder{
-            setUpPhoneFormat()
-            floatingDelegate?.moveUp(view: phonePlaceHolder, text: "Номер телефона")
-        } else if passwordTetField.isFirstResponder {
-            floatingDelegate?.moveUp(view: passPlaceHolder, text: "Пароль")
-        } else if repeatPass.isFirstResponder {
-            floatingDelegate?.moveUp(view: repeatPlaceHolder, text: "Повторите пароль")
-        } else if messagePassLabel.isFirstResponder {
-            floatingDelegate?.moveUp(view: massegePlaceHolder, text: "Пароль")
-        } else if friendId.isFirstResponder {
-            floatingDelegate?.moveUp(view: frindsPlaceHolder, text: "ID или моб. номер пригласившего")
-        } else if nameTextField.isFirstResponder{
-            floatingDelegate?.moveUp(view: namePlaceHolder, text: "Имя")
-        } else if seNameTextField.isFirstResponder{
-            floatingDelegate?.moveUp(view: senamePlaceHolder, text: "Фамилия")
-        } else if birthDateTextField.isFirstResponder{
-            floatingDelegate?.moveUp(view: birthDatePlaceHolder, text: "Дата рождения")
-        }
-        
-        
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text?.count == 0{
-            if textField == phoneTextField{
-                floatingDelegate?.moveBack(view: phonePlaceHolder)
-                
-                return true
-            } else if textField == passwordTetField {
-                floatingDelegate?.moveBack(view: passPlaceHolder)
-                return true
-            } else if textField == repeatPass {
-                floatingDelegate?.moveBack(view: repeatPlaceHolder)
-                return true
-            } else if textField == friendId {
-                floatingDelegate?.moveBack(view: frindsPlaceHolder)
-                return true
-            } else if textField == messagePassLabel {
-                floatingDelegate?.moveBack(view: massegePlaceHolder)
-                return true
-            } else if textField == namePlaceHolder {
-                floatingDelegate?.moveBack(view: namePlaceHolder)
-                self.userInfoModel.name = textField.text ?? " "
-                return true
-            } else if textField == seNameTextField {
-               
-                self.userInfoModel.surname = textField.text ??  " "
-                
-                floatingDelegate?.moveBack(view: senamePlaceHolder)
-                return true
-            } else if textField == birthDateTextField {
-                
-                
-                let date = self.datePicker.date
-                let dateFormater = DateFormatter()
-
-                dateFormater.dateFormat = "dd.MM.yyyy"
-                let birthDate = dateFormater.string(from: date)
-                
-                textField.text = birthDate
-                let todayDate = date.timeIntervalSince1970
-               self.userInfoModel.birthday = todayDate
-                print(todayDate)
-                return true
-            }
-        } else {
-            if textField == passwordTetField{
-                if textField.text!.count < 8{
-                    floatingDelegate?.moveDown(view: passPlaceHolder, text: "Пароль должен быть не менее 8 символов")
-                } else{
-                    self.registrationModel.password = textField.text ?? ""
-                    APILogin().getAuthCode(model: self.registrationModel) { (info) in
-                        self.regAuth = info
-                        
-                    }
-                }
-            } else if textField == phoneTextField{
-                self.registrationModel.phoneNumber = textField.text ?? ""
-            } else if textField == friendId {
-                
-                self.registrationModel.inviter = textField.text ?? ""
-            } else if textField == messagePassLabel{
-                
-                guard let code = Int(textField.text ?? "0") else {return true}
-                
-                self.registrationModel.authCode = code
-                print(registrationModel.authCode)
-            }
-        }
-       
-        return true
-    }
-    
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        
-        if textField == friendId {
-            
-            if textField.text?.count == 0{
-                
-                self.haveNoFriends.isHidden = false
-                self.createRegistrationBtnOutlet.titleLabel?.numberOfLines = 0
-                self.createRegistrationBtnOutlet.titleLabel?.textAlignment = .center
-                self.createRegistrationBtnOutlet.setTitle("Меня никто не приглашал", for: .normal)
-                
-            }
-        } else if textField == repeatPass {
-           
-                if textField.text != self.registrationModel.password{
-                    self.floatingDelegate?.moveDown(view: repeatPlaceHolder, text: "Пароли не совпадают")
-                    self.createRegistrationBtnOutlet.isEnabled = false
-                } else {
-                    self.createRegistrationBtnOutlet.isEnabled = true
-                }
-            
-        } else if textField == birthDateTextField{
-            
-            guard let count = textField.text?.count else {return}
-            if count == 0{
-                self.floatingDelegate?.moveBack(view: birthDatePlaceHolder)
-            }
-            
-        } else if textField == nameTextField {
-            
-            self.userInfoModel.name = textField.text ?? " "
-            
-        } else if textField == seNameTextField {
-            
-            self.userInfoModel.surname = textField.text ??  " "
-            
-            
-            
-        }
-        
-        
-        
-        
-    }
-    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    
-    
-    
-}
 

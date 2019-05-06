@@ -63,6 +63,8 @@
 		C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E331B227C291000F4BF56 /* SearchShopRealm.swift */; };
 		C27FF739227AF96A00E04B0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27FF738227AF96A00E04B0F /* Images.xcassets */; };
 		C27FF73B227B022100E04B0F /* NotifTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27FF73A227B022100E04B0F /* NotifTableView.swift */; };
+		C283C843228034BD00714B98 /* AnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C842228034BD00714B98 /* AnimateView.swift */; };
+		C283C8492280380A00714B98 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C283C8482280380A00714B98 /* LoginScreen.storyboard */; };
 		C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */; };
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
@@ -98,6 +100,8 @@
 		C2F285F7226DF086005DC8F8 /* GetReferalsIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F285F6226DF086005DC8F8 /* GetReferalsIncome.swift */; };
 		C2F285F9226DF0EA005DC8F8 /* GetInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F285F8226DF0EA005DC8F8 /* GetInfoModel.swift */; };
 		C2F285FB226DF5F6005DC8F8 /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F285FA226DF5F6005DC8F8 /* URLS.swift */; };
+		C2FC25E122805C7C00395247 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC25E022805C7C00395247 /* LoginViewController.swift */; };
+		C2FC25E322805FA100395247 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC25E222805FA100395247 /* LoginView.swift */; };
 		C6EEFF074AC8CA70738BF766 /* Pods_Tips_MartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +166,8 @@
 		C27E331B227C291000F4BF56 /* SearchShopRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchShopRealm.swift; sourceTree = "<group>"; };
 		C27FF738227AF96A00E04B0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C27FF73A227B022100E04B0F /* NotifTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifTableView.swift; sourceTree = "<group>"; };
+		C283C842228034BD00714B98 /* AnimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateView.swift; sourceTree = "<group>"; };
+		C283C8482280380A00714B98 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelAPI.swift; sourceTree = "<group>"; };
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C293570A225CCF38004F4510 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 		C2F285F6226DF086005DC8F8 /* GetReferalsIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReferalsIncome.swift; sourceTree = "<group>"; };
 		C2F285F8226DF0EA005DC8F8 /* GetInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoModel.swift; sourceTree = "<group>"; };
 		C2F285FA226DF5F6005DC8F8 /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
+		C2FC25E022805C7C00395247 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2FC25E222805FA100395247 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_MartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -235,6 +243,7 @@
 				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
 				C27A021822731C390005BE33 /* TimerForRefresh.swift */,
 				C27E331B227C291000F4BF56 /* SearchShopRealm.swift */,
+				C283C842228034BD00714B98 /* AnimateView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 				C242C48F2270750A008B359A /* WDHistory.storyboard */,
 				C2D8BC5A226F3A2600001C99 /* Notifications */,
 				C242C49522707971008B359A /* Map.storyboard */,
+				C283C8482280380A00714B98 /* LoginScreen.storyboard */,
 			);
 			path = Strotyboards;
 			sourceTree = "<group>";
@@ -370,6 +380,7 @@
 				C242C49D2270A127008B359A /* NotoficationCell.swift */,
 				C27A02162272F6F20005BE33 /* MainNotificationView.swift */,
 				C27FF73A227B022100E04B0F /* NotifTableView.swift */,
+				C2FC25E222805FA100395247 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,6 +448,7 @@
 				C242C4912270770F008B359A /* WDHistoryController.swift */,
 				C242C49722707A16008B359A /* MapView.swift */,
 				C242C49922707A2A008B359A /* MapViewController.swift */,
+				C2FC25E022805C7C00395247 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -533,6 +545,7 @@
 				C24283672264D3C200750768 /* Account.storyboard in Resources */,
 				C242C48A227067AC008B359A /* WithDrawal.storyboard in Resources */,
 				C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */,
+				C283C8492280380A00714B98 /* LoginScreen.storyboard in Resources */,
 				C270FC8D2269F5510059F161 /* MoreScreen.storyboard in Resources */,
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
 				C242C49622707971008B359A /* Map.storyboard in Resources */,
@@ -648,6 +661,7 @@
 				C2059FD02265F50D00736885 /* WebView.swift in Sources */,
 				C242836122646A5500750768 /* APIChangeInfo.swift in Sources */,
 				C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */,
+				C2FC25E322805FA100395247 /* LoginView.swift in Sources */,
 				C2D8BC34226F0BED00001C99 /* HTMLParser.swift in Sources */,
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */,
@@ -660,6 +674,7 @@
 				C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */,
 				C2D8BC67226F5B0100001C99 /* ReferalView.swift in Sources */,
 				C2D8BC5D226F3E9100001C99 /* MainNotificationsController.swift in Sources */,
+				C283C843228034BD00714B98 /* AnimateView.swift in Sources */,
 				C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */,
 				C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
@@ -684,6 +699,7 @@
 				C293570B225CCF38004F4510 /* AuthModel.swift in Sources */,
 				C2429B2422660D8200EB7942 /* ShopsMainController.swift in Sources */,
 				C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */,
+				C2FC25E122805C7C00395247 /* LoginViewController.swift in Sources */,
 				C2F285FB226DF5F6005DC8F8 /* URLS.swift in Sources */,
 				C2C96D212255FC17009F7050 /* WaitingScreenController.swift in Sources */,
 				C2D8BC63226F50F700001C99 /* NotTableViewController.swift in Sources */,
