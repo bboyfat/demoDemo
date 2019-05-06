@@ -17,7 +17,7 @@ enum ContentType{
 
 class ShopsMainController: UIViewController{
     
-   
+    
     var shopsModelArray: [ShopsModels] = []
     var selectedShopsArray: [ShopsModels] = []
     var contentType: ContentType = .allShops {
@@ -56,7 +56,7 @@ class ShopsMainController: UIViewController{
         
         myTableView.delegate = self
         myTableView.dataSource = self
-         fetchDataFromRealm()
+        fetchDataFromRealm()
         tap.addTarget(self, action: #selector(handleEndEdit))
         self.shopsModelArray.forEach { (shop) in
             print(shop.name, shop.isSelected)
@@ -70,8 +70,8 @@ class ShopsMainController: UIViewController{
             }
         }
         
-       
-     }
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -86,18 +86,18 @@ class ShopsMainController: UIViewController{
     
     
     @IBAction func selectShop(_ sender: UIButton) {
-       print(sender.tag)
-//        let indexPath = IndexPath(row: sender.tag, section: 0)
+        print(sender.tag)
+        //        let indexPath = IndexPath(row: sender.tag, section: 0)
         selectedShop(row: sender.tag, button: sender)
-//      myTableView.reloadRows(at: [indexPath], with: .none)
+        //      myTableView.reloadRows(at: [indexPath], with: .none)
         if let cell = sender.superview?.superview as? ShopsTableViewCell{
             cell.isSelectedShop = !cell.isSelectedShop
         }
         
         
-      
-       
-    
+        
+        
+        
     }
     
     
@@ -112,39 +112,44 @@ class ShopsMainController: UIViewController{
             break
         }
         if let shop = shop{
-       
-        let realm = try! Realm()
-        
-        do{
-            if !shop.isSelected{
-            try realm.write {
-                shop.isSelected = !shop.isSelected
-                
-                self.selectedShopsArray.append(shop)
-              print(shop.name, shop.isSelected)
-            }
-            } else {
-                try realm.write {
-                    shop.isSelected = false
+            
+            let realm = try! Realm()
+            
+            do{
+                if !shop.isSelected{
+                    try realm.write {
+                        shop.isSelected = !shop.isSelected
+                        
+                        self.selectedShopsArray.append(shop)
+                        print(shop.name, shop.isSelected)
+                    }
+                } else {
+                    try realm.write {
+                        shop.isSelected = false
+                        
+                        if  let index = selectedShopsArray.firstIndex(of: shop){
+                            self.selectedShopsArray.remove(at: index)
+//                             reloadData(myTableView: myTableView)
+//                            if shop == self.selectedShopsArray[row]{
+                            let indexPath = IndexPath(row: index, section: 0)
+                            myTableView.deleteRows(at: [indexPath], with: .fade)
+//
+//                            print(shop.name, shop.isSelected)
+//                            }
+                            
+                        }
+                    }
                     
-                    if  let index = selectedShopsArray.firstIndex(of: shop){
-                 self.selectedShopsArray.remove(at: index)
-                        let indexPath = IndexPath(row: index, section: 0)
-                        myTableView.deleteRows(at: [indexPath], with: .fade)
-                        reloadData(myTableView: myTableView)
-                        print(shop.name, shop.isSelected)}
                 }
-                
+            } catch {
+                print("can't update")
             }
-        } catch {
-            print("can't update")
-        }
         }
     }
     
     @IBAction func selectedTable(_ sender: UIButton) {
-//        self.shopsModelArray = self.selectedShopsArray
-//        reloadData(myTableView: self.myTableView)
+        //        self.shopsModelArray = self.selectedShopsArray
+        //        reloadData(myTableView: self.myTableView)
         contentType = .selectedShops
     }
     @IBAction func allShops(_ sender: Any) {
@@ -164,31 +169,31 @@ class ShopsMainController: UIViewController{
     func getShops(){
         if let token  = accessToken{
             ShopsApiRequest().formRequest(accesToken: token) { (array) in
-               
+                
             }
         }
     }
     
     
-        
+    
     func fetchDataFromRealm(){
         do{
-        let realm = try Realm()
-        
-        self.shopsModelArray = Array(realm.objects(ShopsModels.self))
-//        self.shopsModelArray
-        self.reloadData(myTableView: self.myTableView)
+            let realm = try Realm()
+            
+            self.shopsModelArray = Array(realm.objects(ShopsModels.self))
+            //        self.shopsModelArray
+            self.reloadData(myTableView: self.myTableView)
         } catch {
             print("Can't FETCH!!")
         }
     }
-        
-        
     
     
-
-   
-
+    
+    
+    
+    
+    
 }
 
 
@@ -196,7 +201,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.shopsModelArray.count
+        //        return self.shopsModelArray.count
         switch contentType{
         case .allShops: return self.shopsModelArray.count
         case .selectedShops: return self.selectedShopsArray.count
@@ -216,37 +221,37 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
         default:
             break
         }
-
+        
         if let shop = shop {
             cell.isSelectedShop = shop.isSelected
-        let double = shop.value
-        let valueOfCash = String(double)
+            let double = shop.value
+            let valueOfCash = String(double)
             cell.shopName.text = shop.name
-        let currency = shop.currency
-        cell.percentOfCashBack.text = valueOfCash + " " + currency
-        GetLogos().urlPath(imagePath: shop.pathImage) { (image) in
-           if let forcedImage = image{
-            cell.shopLogo.image = forcedImage
-             }
-        }
-         cell.starSelect.tag = indexPath.row
-       
+            let currency = shop.currency
+            cell.percentOfCashBack.text = valueOfCash + " " + currency
+            GetLogos().urlPath(imagePath: shop.pathImage) { (image) in
+                if let forcedImage = image{
+                    cell.shopLogo.image = forcedImage
+                }
+            }
+            cell.starSelect.tag = indexPath.row
+            
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "DetailShopView", bundle: nil).instantiateViewController(withIdentifier: "detailShopVC") as! DetailShopViewController
-       
-         vc.shopsModel =  self.shopsModelArray[indexPath.row]
+        
+        vc.shopsModel =  self.shopsModelArray[indexPath.row]
         present(vc, animated: true) {
             
-            }
-            
         }
+        
+    }
     
     
-   
+    
     func stopAnim(){
         self.activityController.stopAnimating()
         self.activityController.removeFromSuperview()
@@ -257,7 +262,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
 
 extension ShopsMainController: UISearchBarDelegate{
     
-  
+    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.handleEndEdit()
@@ -266,8 +271,8 @@ extension ShopsMainController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         searchShop(searchText: searchText, myTableView: self.myTableView)
-       
-    
+        
+        
     }
     
     func searchShop(searchText: String, myTableView: UITableView){
@@ -294,7 +299,7 @@ extension ShopsMainController: UISearchBarDelegate{
         } else {
             
             shopsModelArray = findedShopsArray
-           reloadData(myTableView: myTableView)
+            reloadData(myTableView: myTableView)
             
         }
         

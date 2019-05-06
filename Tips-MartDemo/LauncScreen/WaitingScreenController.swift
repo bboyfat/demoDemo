@@ -22,13 +22,13 @@ class WaitingScreenController: UIViewController {
        
         if let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber"),
             let password = UserDefaults.standard.string(forKey: "password"){
-//            self.registrationModel.phoneNumber = phoneNumber
-//            self.registrationModel.password = password
-//            APILogin().getAuthCode(model: self.registrationModel) { (info) in
-//                self.regAuth = info
+            self.registrationModel.phoneNumber = phoneNumber
+            self.registrationModel.password = password
+            APILogin().getAuthCode(model: self.registrationModel) { (info) in
+                self.regAuth = info
                 OperationQueue.main.addOperation {
                     self.presentMainTab()
-//                }
+                }
 
             }
         } else {
