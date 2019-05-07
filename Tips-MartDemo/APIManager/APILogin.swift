@@ -11,18 +11,15 @@ import CoreData
 
 class APILogin{
     
-    let userDefaults = UserDefaults()
+    let userDefaults = UserDefaults.standard
     
     
-    func getAuthCode(model: RegistrationModelAPI, completion:  @escaping (RegModelGet) -> Void) {
+    func getAuthCode(completion:  @escaping (RegModelGet) -> Void) {
         
-        let phoneNumber = model.phoneNumber
-        let password = model.password
-        UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
-        UserDefaults.standard.set(password, forKey: "password")
+        let phoneNumber = userDefaults.string(forKey: "phoneNumber")
+        let password = userDefaults.string(forKey: "password")
         
-        
-        let params = "phoneNumber=\(phoneNumber)&password=\(password)"
+         let params = "phoneNumber=\(phoneNumber)&password=\(password)"
         
         print(phoneNumber)
         print(params)
@@ -48,6 +45,7 @@ class APILogin{
             do{
                 let answer = try JSONDecoder().decode(RegModelGet.self, from: data)
                completion(answer)
+                
                 self.userDefaults.set(answer.data?.name, forKey: "name")
                 self.userDefaults.set(answer.data?.surname, forKey: "surname")
                 self.userDefaults.set(answer.data?.userid, forKey: "userId")

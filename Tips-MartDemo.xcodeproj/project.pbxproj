@@ -10,7 +10,6 @@
 		C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FCD2265F4BC00736885 /* WebView.storyboard */; };
 		C2059FD02265F50D00736885 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FCF2265F50D00736885 /* WebView.swift */; };
 		C2059FD22265F53500736885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FD12265F53500736885 /* WebViewController.swift */; };
-		C2059FD42266083C00736885 /* ShopsTestWithScroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */; };
 		C217763C22675E1800D6C97A /* GetLogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217763B22675E1800D6C97A /* GetLogos.swift */; };
 		C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */; };
 		C2184A9A226DB22D00ABE8C3 /* RefreshBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */; };
@@ -22,6 +21,13 @@
 		C23E9F6622670DE0002191E3 /* Shops.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23E9F6522670DDF002191E3 /* Shops.storyboard */; };
 		C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E9F6722671DFB002191E3 /* ShopsModel.swift */; };
 		C23E9F6A22671FDF002191E3 /* ShopsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */; };
+		C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115142281B3AF004F41E1 /* CheckBoxButton.swift */; };
+		C241151A2281B933004F41E1 /* MaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115192281B933004F41E1 /* MaleButton.swift */; };
+		C241151C2281B95A004F41E1 /* FemaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C241151B2281B95A004F41E1 /* FemaleButton.swift */; };
+		C241151F2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C241151E2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift */; };
+		C24115212281C080004F41E1 /* LoginVCLittleFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115202281C080004F41E1 /* LoginVCLittleFunctions.swift */; };
+		C24115262281C1E7004F41E1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115252281C1E7004F41E1 /* LoginViewModel.swift */; };
+		C24115282281C346004F41E1 /* UserDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115272281C346004F41E1 /* UserDataBase.swift */; };
 		C242835F226469B200750768 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242835E226469B200750768 /* ProfileModel.swift */; };
 		C242836122646A5500750768 /* APIChangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836022646A5500750768 /* APIChangeInfo.swift */; };
 		C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24283622264C04400750768 /* MainTabBarControllerViewController.swift */; };
@@ -61,7 +67,6 @@
 		C27A02172272F6F20005BE33 /* MainNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A02162272F6F20005BE33 /* MainNotificationView.swift */; };
 		C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A021822731C390005BE33 /* TimerForRefresh.swift */; };
 		C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27E331B227C291000F4BF56 /* SearchShopRealm.swift */; };
-		C27FF739227AF96A00E04B0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27FF738227AF96A00E04B0F /* Images.xcassets */; };
 		C27FF73B227B022100E04B0F /* NotifTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27FF73A227B022100E04B0F /* NotifTableView.swift */; };
 		C283C843228034BD00714B98 /* AnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283C842228034BD00714B98 /* AnimateView.swift */; };
 		C283C8492280380A00714B98 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C283C8482280380A00714B98 /* LoginScreen.storyboard */; };
@@ -111,7 +116,6 @@
 		C2059FCD2265F4BC00736885 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		C2059FCF2265F50D00736885 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		C2059FD12265F53500736885 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopsTestWithScroll.storyboard; sourceTree = "<group>"; };
 		C217763B22675E1800D6C97A /* GetLogos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLogos.swift; sourceTree = "<group>"; };
 		C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalance.swift; sourceTree = "<group>"; };
 		C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalanceModel.swift; sourceTree = "<group>"; };
@@ -123,6 +127,13 @@
 		C23E9F6522670DDF002191E3 /* Shops.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shops.storyboard; sourceTree = "<group>"; };
 		C23E9F6722671DFB002191E3 /* ShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsModel.swift; sourceTree = "<group>"; };
 		C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsAPIRequest.swift; sourceTree = "<group>"; };
+		C24115142281B3AF004F41E1 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
+		C24115192281B933004F41E1 /* MaleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleButton.swift; sourceTree = "<group>"; };
+		C241151B2281B95A004F41E1 /* FemaleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleButton.swift; sourceTree = "<group>"; };
+		C241151E2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerForPhoneFormatter.swift; sourceTree = "<group>"; };
+		C24115202281C080004F41E1 /* LoginVCLittleFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCLittleFunctions.swift; sourceTree = "<group>"; };
+		C24115252281C1E7004F41E1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C24115272281C346004F41E1 /* UserDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataBase.swift; sourceTree = "<group>"; };
 		C242835E226469B200750768 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		C242836022646A5500750768 /* APIChangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIChangeInfo.swift; sourceTree = "<group>"; };
 		C24283622264C04400750768 /* MainTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +152,7 @@
 		C242C4912270770F008B359A /* WDHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDHistoryController.swift; sourceTree = "<group>"; };
 		C242C493227077A6008B359A /* WDHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDHistoryView.swift; sourceTree = "<group>"; };
 		C242C49522707971008B359A /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		C242C49722707A16008B359A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = "Tips-MartDemo/Views/MapView.swift"; sourceTree = SOURCE_ROOT; };
+		C242C49722707A16008B359A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = "Tips-MartDemo/Screens/MapScene/MapView.swift"; sourceTree = SOURCE_ROOT; };
 		C242C49922707A2A008B359A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C242C49D2270A127008B359A /* NotoficationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotoficationCell.swift; sourceTree = "<group>"; };
 		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -150,7 +161,7 @@
 		C25A13B7225B405F00499C3C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		C25BBF652255E0D2008D78F9 /* Tips-MartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tips-MartDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BBF682255E0D2008D78F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C25BBF6A2255E0D2008D78F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		C25BBF6A2255E0D2008D78F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C25BBF6D2255E0D2008D78F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C25BBF702255E0D2008D78F9 /* Tips_MartDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tips_MartDemo.xcdatamodel; sourceTree = "<group>"; };
 		C25BBF722255E0D3008D78F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,7 +175,6 @@
 		C27A02162272F6F20005BE33 /* MainNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNotificationView.swift; sourceTree = "<group>"; };
 		C27A021822731C390005BE33 /* TimerForRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerForRefresh.swift; sourceTree = "<group>"; };
 		C27E331B227C291000F4BF56 /* SearchShopRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchShopRealm.swift; sourceTree = "<group>"; };
-		C27FF738227AF96A00E04B0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C27FF73A227B022100E04B0F /* NotifTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifTableView.swift; sourceTree = "<group>"; };
 		C283C842228034BD00714B98 /* AnimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateView.swift; sourceTree = "<group>"; };
 		C283C8482280380A00714B98 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
@@ -232,13 +242,274 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C24114FF22817D89004F41E1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C25BBF662255E0D2008D78F9 /* Products */,
+				C25BBF682255E0D2008D78F9 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C241150022817DAD004F41E1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C241151322818141004F41E1 /* MapScene */,
+				C241151222818119004F41E1 /* MainTabBarScene */,
+				C2411510228180C8004F41E1 /* LoginScene */,
+				C2411511228180EF004F41E1 /* PreLaunchScreen */,
+				C241150F2281809F004F41E1 /* MoreScene */,
+				C241150E2281805A004F41E1 /* ReferalsScene */,
+				C241150D22818020004F41E1 /* PurchasesHistoryScene */,
+				C241150C22817FB4004F41E1 /* WDScreens */,
+				C241150B22817F65004F41E1 /* WebView */,
+				C241150822817EDB004F41E1 /* Shops */,
+				C241150522817E74004F41E1 /* Notifications */,
+				C241150422817E4B004F41E1 /* ProfileScene */,
+				C241150322817E0C004F41E1 /* MainPageScreen */,
+				C241150122817DC3004F41E1 /* BarCodeScreen */,
+				C2C96D222255FC1C009F7050 /* LauncScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C241150122817DC3004F41E1 /* BarCodeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C242836C2264F51F00750768 /* BarCodeView.swift */,
+				C242836A2264F38700750768 /* BarCode.storyboard */,
+				C24283682264F36200750768 /* BorCodeGenViewController.swift */,
+			);
+			path = BarCodeScreen;
+			sourceTree = "<group>";
+		};
+		C241150322817E0C004F41E1 /* MainPageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C2492A992260996A007E2037 /* Profile.storyboard */,
+				C2492A9B2260A249007E2037 /* MainPageViewController.swift */,
+				C2492A9D2260A25E007E2037 /* MainPageView.swift */,
+			);
+			path = MainPageScreen;
+			sourceTree = "<group>";
+		};
+		C241150422817E4B004F41E1 /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+				C2369BB42265C32100FBB386 /* AccountViewController.swift */,
+				C24283662264D3C200750768 /* Account.storyboard */,
+				C2369BB22265C2DA00FBB386 /* AccountView.swift */,
+			);
+			path = ProfileScene;
+			sourceTree = "<group>";
+		};
+		C241150522817E74004F41E1 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				C241150722817EBE004F41E1 /* View */,
+				C241150622817EAC004F41E1 /* Controller */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		C241150622817EAC004F41E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2D8BC62226F50F700001C99 /* NotTableViewController.swift */,
+				C2D8BC5C226F3E9100001C99 /* MainNotificationsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C241150722817EBE004F41E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2D8BC58226F3A1C00001C99 /* NotificationsMain.storyboard */,
+				C2D8BC60226F4C0500001C99 /* NotifTable.storyboard */,
+				C27FF73A227B022100E04B0F /* NotifTableView.swift */,
+				C27A02162272F6F20005BE33 /* MainNotificationView.swift */,
+				C242C49D2270A127008B359A /* NotoficationCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C241150822817EDB004F41E1 /* Shops */ = {
+			isa = PBXGroup;
+			children = (
+				C241150A22817F49004F41E1 /* View */,
+				C241150922817F38004F41E1 /* Controller */,
+			);
+			path = Shops;
+			sourceTree = "<group>";
+		};
+		C241150922817F38004F41E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2429B2322660D8200EB7942 /* ShopsMainController.swift */,
+				C22C987D226798F900BC2106 /* DetailShopViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C241150A22817F49004F41E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C22C98772267987600BC2106 /* DetailShopView.storyboard */,
+				C23E9F6522670DDF002191E3 /* Shops.storyboard */,
+				C22C9879226798B800BC2106 /* DetailShopView.swift */,
+				C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C241150B22817F65004F41E1 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C2059FD12265F53500736885 /* WebViewController.swift */,
+				C2059FCD2265F4BC00736885 /* WebView.storyboard */,
+				C2059FCF2265F50D00736885 /* WebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		C241150C22817FB4004F41E1 /* WDScreens */ = {
+			isa = PBXGroup;
+			children = (
+				C242C4912270770F008B359A /* WDHistoryController.swift */,
+				C242C48D2270748F008B359A /* WDView.swift */,
+				C242C493227077A6008B359A /* WDHistoryView.swift */,
+				C242C48F2270750A008B359A /* WDHistory.storyboard */,
+				C242C489227067AC008B359A /* WithDrawal.storyboard */,
+				C242C48B22706E34008B359A /* WDViewController.swift */,
+			);
+			path = WDScreens;
+			sourceTree = "<group>";
+		};
+		C241150D22818020004F41E1 /* PurchasesHistoryScene */ = {
+			isa = PBXGroup;
+			children = (
+				C2D8BC2D226E07A500001C99 /* OperationHistoryView.swift */,
+				C2D8BC27226E014100001C99 /* OperationHistory.storyboard */,
+				C2D8BC2B226E071700001C99 /* HistoryCell.swift */,
+				C2D8BC29226E069000001C99 /* OperationHistoryController.swift */,
+			);
+			path = PurchasesHistoryScene;
+			sourceTree = "<group>";
+		};
+		C241150E2281805A004F41E1 /* ReferalsScene */ = {
+			isa = PBXGroup;
+			children = (
+				C2D8BC66226F5B0100001C99 /* ReferalView.swift */,
+				C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */,
+				C2D8BC6A226F5D0E00001C99 /* ReferalsViewController.swift */,
+			);
+			path = ReferalsScene;
+			sourceTree = "<group>";
+		};
+		C241150F2281809F004F41E1 /* MoreScene */ = {
+			isa = PBXGroup;
+			children = (
+				C270FC8C2269F5510059F161 /* MoreScreen.storyboard */,
+				C2D8BC68226F5D0300001C99 /* MoreViewController.swift */,
+				C2D8BC64226F5A6E00001C99 /* MoreScreenView.swift */,
+			);
+			path = MoreScene;
+			sourceTree = "<group>";
+		};
+		C2411510228180C8004F41E1 /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				C24115242281C1D3004F41E1 /* Model */,
+				C24115232281C1B8004F41E1 /* Controller */,
+				C24115222281C1A3004F41E1 /* View */,
+				C241151D2281BFF3004F41E1 /* Extension */,
+				C24115162281B7DC004F41E1 /* Minions */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		C2411511228180EF004F41E1 /* PreLaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C2F285F4226DDF42005DC8F8 /* WaitingScreen.storyboard */,
+				C2C96D202255FC17009F7050 /* WaitingScreenController.swift */,
+			);
+			path = PreLaunchScreen;
+			sourceTree = "<group>";
+		};
+		C241151222818119004F41E1 /* MainTabBarScene */ = {
+			isa = PBXGroup;
+			children = (
+				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
+				C24283622264C04400750768 /* MainTabBarControllerViewController.swift */,
+				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
+			);
+			path = MainTabBarScene;
+			sourceTree = "<group>";
+		};
+		C241151322818141004F41E1 /* MapScene */ = {
+			isa = PBXGroup;
+			children = (
+				C242C49522707971008B359A /* Map.storyboard */,
+				C242C49722707A16008B359A /* MapView.swift */,
+				C242C49922707A2A008B359A /* MapViewController.swift */,
+			);
+			path = MapScene;
+			sourceTree = "<group>";
+		};
+		C24115162281B7DC004F41E1 /* Minions */ = {
+			isa = PBXGroup;
+			children = (
+				C2E69A0322596327006FDDDB /* FloatingTextField.swift */,
+				C24115142281B3AF004F41E1 /* CheckBoxButton.swift */,
+				C24115192281B933004F41E1 /* MaleButton.swift */,
+				C241151B2281B95A004F41E1 /* FemaleButton.swift */,
+			);
+			path = Minions;
+			sourceTree = "<group>";
+		};
+		C241151D2281BFF3004F41E1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C241151E2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift */,
+				C24115202281C080004F41E1 /* LoginVCLittleFunctions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C24115222281C1A3004F41E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C283C8482280380A00714B98 /* LoginScreen.storyboard */,
+				C2FC25E222805FA100395247 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C24115232281C1B8004F41E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2FC25E022805C7C00395247 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C24115242281C1D3004F41E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C24115252281C1E7004F41E1 /* LoginViewModel.swift */,
+				C24115272281C346004F41E1 /* UserDataBase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C242836E2264F64100750768 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C24283642264C8DC00750768 /* ErrorAlerts.swift */,
 				C2D8BC33226F0BED00001C99 /* HTMLParser.swift */,
 				C27A02142272F03D0005BE33 /* ExtensionUiTextField.swift */,
 				C242836F2264F65200750768 /* BarCodeGenerator.swift */,
-				C2E69A0322596327006FDDDB /* FloatingTextField.swift */,
 				C2E69A07225975B4006FDDDB /* HideOrNot.swift */,
 				C2E69A052259636F006FDDDB /* ValidPhonePass.swift */,
 				C27A021822731C390005BE33 /* TimerForRefresh.swift */,
@@ -248,61 +519,10 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		C2429B25226610B900EB7942 /* ShopsTableViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				C2429B2322660D8200EB7942 /* ShopsMainController.swift */,
-				C22C987D226798F900BC2106 /* DetailShopViewController.swift */,
-				C2429B572266171F00EB7942 /* CellForShopsTV */,
-			);
-			path = ShopsTableViewControllers;
-			sourceTree = "<group>";
-		};
-		C2429B4E2266165600EB7942 /* ShopsStoryboards */ = {
-			isa = PBXGroup;
-			children = (
-				C22C98772267987600BC2106 /* DetailShopView.storyboard */,
-				C23E9F6522670DDF002191E3 /* Shops.storyboard */,
-			);
-			path = ShopsStoryboards;
-			sourceTree = "<group>";
-		};
-		C2429B572266171F00EB7942 /* CellForShopsTV */ = {
-			isa = PBXGroup;
-			children = (
-				C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */,
-			);
-			path = CellForShopsTV;
-			sourceTree = "<group>";
-		};
-		C2492A982260993A007E2037 /* Strotyboards */ = {
-			isa = PBXGroup;
-			children = (
-				C2429B4E2266165600EB7942 /* ShopsStoryboards */,
-				C25BBF6C2255E0D2008D78F9 /* Main.storyboard */,
-				C2492A992260996A007E2037 /* Profile.storyboard */,
-				C24283662264D3C200750768 /* Account.storyboard */,
-				C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */,
-				C270FC8C2269F5510059F161 /* MoreScreen.storyboard */,
-				C2059FCD2265F4BC00736885 /* WebView.storyboard */,
-				C242836A2264F38700750768 /* BarCode.storyboard */,
-				C2059FD32266083C00736885 /* ShopsTestWithScroll.storyboard */,
-				C2F285F4226DDF42005DC8F8 /* WaitingScreen.storyboard */,
-				C2D8BC27226E014100001C99 /* OperationHistory.storyboard */,
-				C242C489227067AC008B359A /* WithDrawal.storyboard */,
-				C242C48F2270750A008B359A /* WDHistory.storyboard */,
-				C2D8BC5A226F3A2600001C99 /* Notifications */,
-				C242C49522707971008B359A /* Map.storyboard */,
-				C283C8482280380A00714B98 /* LoginScreen.storyboard */,
-			);
-			path = Strotyboards;
-			sourceTree = "<group>";
-		};
 		C25BBF5C2255E0D2008D78F9 = {
 			isa = PBXGroup;
 			children = (
 				C25BBF672255E0D2008D78F9 /* Tips-MartDemo */,
-				C25BBF662255E0D2008D78F9 /* Products */,
 				DB4E567917A9798C36844C29 /* Pods */,
 				77D1A4D29CE950756B10B282 /* Frameworks */,
 			);
@@ -314,27 +534,24 @@
 				C25BBF652255E0D2008D78F9 /* Tips-MartDemo.app */,
 			);
 			name = Products;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C25BBF672255E0D2008D78F9 /* Tips-MartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C241150022817DAD004F41E1 /* Screens */,
+				C24114FF22817D89004F41E1 /* App */,
 				C299E5332271C9A300D6CC05 /* Realm */,
 				C242836E2264F64100750768 /* Helpers */,
-				C2A8C7712261DCA400F2332F /* Views */,
-				C2492A982260993A007E2037 /* Strotyboards */,
 				C29356E2225CAF13004F4510 /* APIManager */,
 				C2BE0BF0225B656A00A0BFCF /* Model */,
 				C2E699F82258B26C006FDDDB /* Fonts */,
-				C2C96D222255FC1C009F7050 /* LauncScreen */,
-				C25BBF682255E0D2008D78F9 /* AppDelegate.swift */,
-				C2E59631225DECD2001D09D9 /* Controllers */,
 				C25BBF722255E0D3008D78F9 /* Assets.xcassets */,
 				C25BBF772255E0D3008D78F9 /* Info.plist */,
 				C2F285FA226DF5F6005DC8F8 /* URLS.swift */,
 				C25BBF6F2255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld */,
 				C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */,
-				C27FF738227AF96A00E04B0F /* Images.xcassets */,
 			);
 			path = "Tips-MartDemo";
 			sourceTree = "<group>";
@@ -364,27 +581,6 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
-		C2A8C7712261DCA400F2332F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C2492A9D2260A25E007E2037 /* MainPageView.swift */,
-				C242836C2264F51F00750768 /* BarCodeView.swift */,
-				C2369BB22265C2DA00FBB386 /* AccountView.swift */,
-				C2059FCF2265F50D00736885 /* WebView.swift */,
-				C22C9879226798B800BC2106 /* DetailShopView.swift */,
-				C2D8BC2D226E07A500001C99 /* OperationHistoryView.swift */,
-				C2D8BC64226F5A6E00001C99 /* MoreScreenView.swift */,
-				C2D8BC66226F5B0100001C99 /* ReferalView.swift */,
-				C242C48D2270748F008B359A /* WDView.swift */,
-				C242C493227077A6008B359A /* WDHistoryView.swift */,
-				C242C49D2270A127008B359A /* NotoficationCell.swift */,
-				C27A02162272F6F20005BE33 /* MainNotificationView.swift */,
-				C27FF73A227B022100E04B0F /* NotifTableView.swift */,
-				C2FC25E222805FA100395247 /* LoginView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		C2BE0BF0225B656A00A0BFCF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,53 +600,9 @@
 		C2C96D222255FC1C009F7050 /* LauncScreen */ = {
 			isa = PBXGroup;
 			children = (
-				C2C96D202255FC17009F7050 /* WaitingScreenController.swift */,
 				C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */,
 			);
 			path = LauncScreen;
-			sourceTree = "<group>";
-		};
-		C2D8BC5A226F3A2600001C99 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				C2D8BC58226F3A1C00001C99 /* NotificationsMain.storyboard */,
-				C2D8BC60226F4C0500001C99 /* NotifTable.storyboard */,
-			);
-			path = Notifications;
-			sourceTree = "<group>";
-		};
-		C2D8BC5B226F3E7100001C99 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				C2D8BC5C226F3E9100001C99 /* MainNotificationsController.swift */,
-				C2D8BC62226F50F700001C99 /* NotTableViewController.swift */,
-			);
-			path = Notifications;
-			sourceTree = "<group>";
-		};
-		C2E59631225DECD2001D09D9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C242C48B22706E34008B359A /* WDViewController.swift */,
-				C2D8BC5B226F3E7100001C99 /* Notifications */,
-				C2492A9B2260A249007E2037 /* MainPageViewController.swift */,
-				C25BBF6A2255E0D2008D78F9 /* ViewController.swift */,
-				C24283622264C04400750768 /* MainTabBarControllerViewController.swift */,
-				C24283642264C8DC00750768 /* ErrorAlerts.swift */,
-				C24283682264F36200750768 /* BorCodeGenViewController.swift */,
-				C2369BB42265C32100FBB386 /* AccountViewController.swift */,
-				C2059FD12265F53500736885 /* WebViewController.swift */,
-				C2D8BC29226E069000001C99 /* OperationHistoryController.swift */,
-				C2D8BC2B226E071700001C99 /* HistoryCell.swift */,
-				C2429B25226610B900EB7942 /* ShopsTableViewControllers */,
-				C2D8BC68226F5D0300001C99 /* MoreViewController.swift */,
-				C2D8BC6A226F5D0E00001C99 /* ReferalsViewController.swift */,
-				C242C4912270770F008B359A /* WDHistoryController.swift */,
-				C242C49722707A16008B359A /* MapView.swift */,
-				C242C49922707A2A008B359A /* MapViewController.swift */,
-				C2FC25E022805C7C00395247 /* LoginViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C2E699F82258B26C006FDDDB /* Fonts */ = {
@@ -536,7 +688,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */,
-				C27FF739227AF96A00E04B0F /* Images.xcassets in Resources */,
 				C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */,
 				C2D8BC61226F4C0500001C99 /* NotifTable.storyboard in Resources */,
 				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
@@ -555,7 +706,6 @@
 				C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */,
 				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
 				C2F285F5226DDF42005DC8F8 /* WaitingScreen.storyboard in Resources */,
-				C2059FD42266083C00736885 /* ShopsTestWithScroll.storyboard in Resources */,
 				C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */,
 				C242C4902270750B008B359A /* WDHistory.storyboard in Resources */,
 				C2D8BC28226E014100001C99 /* OperationHistory.storyboard in Resources */,
@@ -580,6 +730,8 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSUtilitiesSource/iOSUtilitiesSource.framework",
@@ -594,6 +746,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSUtilitiesSource.framework",
@@ -650,6 +804,7 @@
 				C2D8BC2C226E071800001C99 /* HistoryCell.swift in Sources */,
 				C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */,
 				C242836D2264F51F00750768 /* BarCodeView.swift in Sources */,
+				C241151F2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift in Sources */,
 				C2369BB52265C32100FBB386 /* AccountViewController.swift in Sources */,
 				C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */,
 				C2F285F9226DF0EA005DC8F8 /* GetInfoModel.swift in Sources */,
@@ -666,15 +821,19 @@
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
+				C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */,
 				C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
+				C241151C2281B95A004F41E1 /* FemaleButton.swift in Sources */,
 				C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */,
+				C24115262281C1E7004F41E1 /* LoginViewModel.swift in Sources */,
 				C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */,
 				C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */,
 				C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */,
 				C2D8BC67226F5B0100001C99 /* ReferalView.swift in Sources */,
 				C2D8BC5D226F3E9100001C99 /* MainNotificationsController.swift in Sources */,
 				C283C843228034BD00714B98 /* AnimateView.swift in Sources */,
+				C24115212281C080004F41E1 /* LoginVCLittleFunctions.swift in Sources */,
 				C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */,
 				C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
@@ -683,6 +842,7 @@
 				C242C49A22707A2A008B359A /* MapViewController.swift in Sources */,
 				C2F285F7226DF086005DC8F8 /* GetReferalsIncome.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
+				C24115282281C346004F41E1 /* UserDataBase.swift in Sources */,
 				C242C48C22706E34008B359A /* WDViewController.swift in Sources */,
 				C270FC872269BD750059F161 /* Refresh.swift in Sources */,
 				C242C4922270770F008B359A /* WDHistoryController.swift in Sources */,
@@ -700,6 +860,7 @@
 				C2429B2422660D8200EB7942 /* ShopsMainController.swift in Sources */,
 				C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */,
 				C2FC25E122805C7C00395247 /* LoginViewController.swift in Sources */,
+				C241151A2281B933004F41E1 /* MaleButton.swift in Sources */,
 				C2F285FB226DF5F6005DC8F8 /* URLS.swift in Sources */,
 				C2C96D212255FC17009F7050 /* WaitingScreenController.swift in Sources */,
 				C2D8BC63226F50F700001C99 /* NotTableViewController.swift in Sources */,
