@@ -15,7 +15,7 @@ extension LoginViewController: UITextFieldDelegate{
             AnimateView().movePlaceHolderZero(view: loginView.phoneNumberLabel)
             
         }
-        UserDefaults.standard.set(textField.text, forKey: "phoneNumber")
+       
         if let phoneNumber = textField.text{
         self.loginModel.phoneNumber = phoneNumber
         }
@@ -23,7 +23,9 @@ extension LoginViewController: UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         AnimateView().movePlaceHolderUp(view: loginView.phoneNumberLabel)
+        if textField.text?.count == 0{
         setUpPhoneFormat()
+        }
     }
     private func setUpPhoneFormat(){
         loginView.phoneNumberTextField.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: " (###) ###-##-##")

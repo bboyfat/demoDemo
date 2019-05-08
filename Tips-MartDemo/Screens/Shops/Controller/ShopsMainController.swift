@@ -28,22 +28,6 @@ class ShopsMainController: UIViewController{
     
     
     
-    let activityController: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView()
-        view.style = UIActivityIndicatorView.Style.whiteLarge
-        view.color = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1)
-        return view
-    }()
-    
-    let blurView: UIView = {
-        let view = UIView()
-        
-        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2049711045)
-        
-        
-        return view
-    }()
-    
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
     
     let tap = UITapGestureRecognizer()
@@ -156,13 +140,7 @@ class ShopsMainController: UIViewController{
         fetchDataFromRealm()
         contentType = .allShops
     }
-    func setUpActivity(cell: ShopsTableViewCell){
-        blurView.frame = cell.shopLogo.bounds
-        activityController.frame.origin.x = cell.shopLogo.center.x
-        blurView.addSubview(activityController)
-        cell.shopLogo.addSubview(blurView)
-        activityController.startAnimating()
-    }
+    
     
     
     
@@ -173,8 +151,6 @@ class ShopsMainController: UIViewController{
             }
         }
     }
-    
-    
     
     func fetchDataFromRealm(){
         do{
@@ -187,13 +163,6 @@ class ShopsMainController: UIViewController{
             print("Can't FETCH!!")
         }
     }
-    
-    
-    
-    
-    
-    
-    
 }
 
 
@@ -201,7 +170,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return self.shopsModelArray.count
+      
         switch contentType{
         case .allShops: return self.shopsModelArray.count
         case .selectedShops: return self.selectedShopsArray.count
@@ -252,11 +221,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     
     
-    func stopAnim(){
-        self.activityController.stopAnimating()
-        self.activityController.removeFromSuperview()
-        self.blurView.removeFromSuperview()
-    }
+   
     
 }
 

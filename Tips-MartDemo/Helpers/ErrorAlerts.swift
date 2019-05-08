@@ -17,7 +17,7 @@ class ErrorAlerts: UIViewController {
     }
     
 
-    func loginErrorAlert(controller: UIViewController){
+   static func loginErrorAlert(controller: UIViewController){
         let ac = UIAlertController(title: "Внимание!", message: "Проверьте правильность введенных данных и повторите попытку  еще раз", preferredStyle: .actionSheet)
         
         let action = UIAlertAction(title: "ОК", style: .default, handler: nil)

@@ -39,17 +39,20 @@ class AccountView: UIView {
     
     override func awakeFromNib() {
         
+        
+        setText()
+        addGradient()
+    }
+    
+    func addGradient(){
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         
-        
-        
-        navigationView.layer.insertSublayer(gradientLayer, at: 0)
         gradientLayer.colors = [purpleColor, finishColor]
-
-        setText()
-        
+        //         navigationView.layer.insertSublayer(gradientLayer, at: 0)
+        navigationView.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
     
     override func layoutSubviews() {
         

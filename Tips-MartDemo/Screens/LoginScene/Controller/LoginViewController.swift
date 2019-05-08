@@ -9,15 +9,24 @@
 import UIKit
 import SwiftPhoneNumberFormatter
 import RealmSwift
+
 class LoginViewController: UIViewController {
 
     @IBOutlet var loginView: LoginView!
     
+    var isAuthorized = false
+    
+   let blurView = BlurView()
+    
     // ShowHide
     let showOrHide = HideOrNot()
+    
     //MARK: Save and fetch models
+    
     var loginModel = LoginViewModel()
-    var userData = UserData()
+    var userDataModel = UserDataModel()
+    var userData: UserData?
+    
     //MARK: custom font
     let fonts = CustomFonts()
     //MARK: UserInfo Model
@@ -32,30 +41,45 @@ class LoginViewController: UIViewController {
         loginView.phoneNumberTextField.delegate = self
         tapEndEdit()
         getData()
-        fetchData()
-        
     }
     
-    //MARK: Fetch from data
-    
-    func fetchData(){
-        let realm = try! Realm()
+    private func checkAutorization() -> Bool{
         
-       let result = realm.objects(UserData.self)
-//        let res = realm.object(ofType: <#T##Element.Type#>, forPrimaryKey: <#T##KeyType#>)
-        
-//        self.userData = result as! UserData
-        
-        print(result.first?.name)
-        
+        APILogin().getAuthCode { (auth) in
+           
+            if auth.success == true{
+                self.presentTabBar()
+            }
+           
+        }
+        return true
     }
+    
+    private func presentTabBar(){
+        
+       let tabBarController = MainTabBarControllerViewController()
+                OperationQueue.main.addOperation {
+                    self.present(tabBarController, animated: true) {
+                        self.stopAnimateIndicator()
+                    }
+                }
+               
+    }
+    
+       
+    
+    private func stopAnimateIndicator(){
+        self.blurView.activityIndicator.startAnimating()
+        blurView.removeFromSuperview()
+    }
+    
+    
     
     //MARK: Send Requests buttonsAction
     
     @IBAction func sighnInBtnAction(_ sender: UIButton) {
-        APILogin().getAuthCode { (auth) in
-           
-        }
+        blurView.showActivityIndicatory(uiView: sender)
+         self.checkAutorization() 
     }
     
     @IBAction func sighnUpBtnAction(_ sender: UIButton) {
@@ -73,7 +97,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func completeBtnAction(_ sender: UIButton) {
-       self.loginModel.saveUserData()
+        if userData == nil{
+       self.userDataModel.saveUserData()
+        }
     }
     
     
@@ -109,22 +135,20 @@ class LoginViewController: UIViewController {
     private func getData(){
        
         self.loginView.passwordTextField.didEndEditing = { [weak self] in
-            self?.userDefaults.set($0.text, forKey: "password")
             if let password = $0.text{
                 self?.loginModel.password = password
+               self?.loginModel.saveUserData()
             }
         }
 
         loginView.senameTextField.didEndEditing = {[weak self] in
-            self?.userInfoModel.objChanges?.surname = $0.text
             if let secondName = $0.text{
-                self?.loginModel.secondName = secondName
+                self?.userDataModel.secondName = secondName
             }
         }
         loginView.nameTextField.didEndEditing = {[weak self] in
-            self?.userInfoModel.objChanges?.name = $0.text
             if let name = $0.text{
-                self?.loginModel.name = name
+                self?.userDataModel.name = name
             }
             }
         
@@ -138,7 +162,7 @@ class LoginViewController: UIViewController {
             let todayDate = date?.timeIntervalSince1970
             self?.userInfoModel.objChanges?.birthday = todayDate
             if let birthDay = todayDate{
-            self?.loginModel.birthDay = Double(birthDay)
+            self?.userDataModel.birthDay = Double(birthDay)
                 
             }
            }

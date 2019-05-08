@@ -22,7 +22,7 @@ struct UsersData: Decodable{
     var userid: Int
     var phoneNumber: String
     var name: String
-    var surname: String
+    var surname: String?
     var createdTime: String
     var refreshToken: RefresshToken
     var accessToken: AccesToken

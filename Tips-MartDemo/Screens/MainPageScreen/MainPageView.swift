@@ -44,7 +44,7 @@ class MainPageView: UIView {
     
     
     
-    let color = #colorLiteral(red: 0.3211668134, green: 0.2594678998, blue: 0.5882466435, alpha: 1)
+    
     
     let gradientLayer = CAGradientLayer()
     
@@ -85,11 +85,7 @@ class MainPageView: UIView {
    
    
     
-    @objc func returnHandle(){
-        
-        self.reloadInputViews()
-        
-    }
+  
     
     func addGradient(){
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)

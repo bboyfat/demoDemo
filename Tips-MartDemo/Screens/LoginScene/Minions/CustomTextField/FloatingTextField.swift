@@ -58,6 +58,12 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
         
     }
     
+    override func awakeFromNib() {
+        if self.text?.count != 0{
+            AnimateView().movePlaceHolderUp(view: self.floattingPlaceholder)
+        }
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -72,6 +78,7 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.delegate = self
+        
         setup()
     }
     

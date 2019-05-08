@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoreData
+import RealmSwift
 
 class APILogin{
     
@@ -16,9 +16,11 @@ class APILogin{
     
     func getAuthCode(completion:  @escaping (RegModelGet) -> Void) {
         
-        let phoneNumber = userDefaults.string(forKey: "phoneNumber")
-        let password = userDefaults.string(forKey: "password")
+       let userData = LoginViewModel().fetchDataFromRealm()
         
+        guard let phoneNumber = userData?.phoneNumber else { return}
+        guard let password = userData?.password else {return}
+
          let params = "phoneNumber=\(phoneNumber)&password=\(password)"
         
         print(phoneNumber)
@@ -39,25 +41,18 @@ class APILogin{
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {return}
-          
-            
-           
-            do{
+           do{
                 let answer = try JSONDecoder().decode(RegModelGet.self, from: data)
                completion(answer)
-                
-                self.userDefaults.set(answer.data?.name, forKey: "name")
-                self.userDefaults.set(answer.data?.surname, forKey: "surname")
-                self.userDefaults.set(answer.data?.userid, forKey: "userId")
-                self.userDefaults.set(answer.data?.accessToken.value, forKey: "accessToken")
-                self.userDefaults.set(answer.data?.refreshToken.value, forKey: "refreshToken")
-                    self.userDefaults.set(answer.data?.balance.green, forKey: "greenBalance")
-                        self.userDefaults.set(answer.data?.balance.gray, forKey: "grayBalance")
-                
+             print(answer)
+            self.userDefaults.set(answer.data?.accessToken.value, forKey: "accessToken")
+             
             } catch {
                 print("!!!!!!!!!!!!!!!!!!OOPS, we have an error",error)
             }
             }.resume()
         
     }
+    
+    
 }

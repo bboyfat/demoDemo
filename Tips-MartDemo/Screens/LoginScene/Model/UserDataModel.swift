@@ -14,16 +14,7 @@ enum Gender: String{
     case female = "female"
 }
 
-class LoginViewModel{
-    
-   
-    
-//    var shared = LoginViewModel(){
-//        didSet{
-//            saveUserData()
-//        }
-//    }
-    
+class UserDataModel{
     
     var phoneNumber: String = ""
     var password: String = ""
@@ -49,6 +40,16 @@ class LoginViewModel{
         } catch let saveErr{
             print("Can't save user's data", saveErr)
         }
+    }
+    
+    func fetchDataFromRealm() -> UserData?{
+        var userData: UserData?
+        
+        let realm = try! Realm()
+        let result = realm.objects(UserData.self)
+        
+        userData = result.first
+        return userData
     }
     
     

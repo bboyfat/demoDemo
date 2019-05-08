@@ -8,64 +8,58 @@
 
 import UIKit
 import Reachability
+import RealmSwift
 
 class WaitingScreenController: UIViewController {
     
+    var loginModel: LoginDataBase?
     
-    
-    
-    var registrationModel: RegistrationModelAPI  = RegistrationModelAPI()
-    var regAuth: RegModelGet?
-
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        if let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber"),
-            let password = UserDefaults.standard.string(forKey: "password"){
-            self.registrationModel.phoneNumber = phoneNumber
-            self.registrationModel.password = password
-            APILogin().getAuthCode() { (info) in
-                self.regAuth = info
-                OperationQueue.main.addOperation {
-                    self.presentMainTab()
-                }
-
-            }
-        } else {
+        loginModel = LoginViewModel().fetchDataFromRealm()
+        if loginModel != nil{
             OperationQueue.main.addOperation {
-                self.presentloginController()
+                APILogin().getAuthCode { (info) in
+                    if info.success == true{
+                        self.presentMainTab()
+                    } else {
+                        ErrorAlerts.loginErrorAlert(controller: self)
+                    }
+                }
+                
             }
+           
+        } else {
+            presentloginController()
         }
         
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       
+    func fetch(){
+        let realm = try! Realm()
+        
+        let result = realm.objects(LoginDataBase.self)
+        loginModel = result.first
         
     }
-    
-   
-    
-    
+        
+        
     func presentMainTab(){
         let tabBarController = MainTabBarControllerViewController()
         
+       
+            self.present(tabBarController, animated: true, completion: nil)
         
-//        guard let regData = self.regAuth else { return }
-//        if regData.success == true{
-            self.present(tabBarController, animated: true) {
-                
-            }
-//        } else {
-//
-//            ErrorAlerts().loginErrorAlert(controller: self)
-//        }
+
     }
     func presentloginController(){
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC") as! ViewController
-        self.present(vc, animated: true, completion: nil)
+        let vc = UIStoryboard(name: "LoginScreen", bundle: nil).instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
+        OperationQueue.main.addOperation {
+            self.present(vc, animated: true, completion: nil)
+        }
+        
     }
     
     
