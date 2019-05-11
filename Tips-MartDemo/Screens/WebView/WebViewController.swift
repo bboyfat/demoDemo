@@ -33,7 +33,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     func  laodUrl(){
-        let stringUrl = "https://tips-mart.com/confidential"
+        let stringUrl = "https://auth.tips-mart.com/google/login"
         guard  let url = URL(string: stringUrl) else {
             return
         }

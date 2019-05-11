@@ -26,13 +26,7 @@ class AccountView: UIView {
     @IBOutlet weak var nameSernameLabel: UILabel!
     @IBOutlet weak var greenBalanceLabel: UILabel!
     @IBOutlet weak var balanceGrayLabel: UILabel!
-    let name = UserDefaults.standard.string(forKey: "name")
-    let surname = UserDefaults.standard.string(forKey: "surname")
-    let userId = UserDefaults.standard.string(forKey: "userId")
-    let balanceGreen = UserDefaults.standard.string(forKey: "greenBalance")
-    let balanceGray = UserDefaults.standard.string(forKey: "grayBalance")
-    let totalCashBack = UserDefaults.standard.double(forKey: "totalCasback")
-    let referralsIncome = UserDefaults.standard.double(forKey: "referralsIncome")
+    
     
     
     
@@ -40,7 +34,7 @@ class AccountView: UIView {
     override func awakeFromNib() {
         
         
-        setText()
+        
         addGradient()
     }
     
@@ -49,28 +43,15 @@ class AccountView: UIView {
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         
         gradientLayer.colors = [purpleColor, finishColor]
-        //         navigationView.layer.insertSublayer(gradientLayer, at: 0)
-        navigationView.layer.insertSublayer(gradientLayer, at: 0)
+         navigationView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     
     override func layoutSubviews() {
-        
+        super.layoutIfNeeded()
         gradientLayer.frame = self.navigationView.bounds
         
         
-        //        navigationView.layer.addSublayer(gradientLayer)
-        
     }
-    func setText(){
-        guard let name = self.name, let surname = self.surname, let userId = self.userId, let greenBalanceString = balanceGreen, let grayBalanceString = balanceGray else { return }
-        
-        nameSernameLabel.text = name + " " + surname
-        
-        idLabel.text = "ID: \(userId)"
-        greenBalanceLabel.text = greenBalanceString + " грн."
-        balanceGrayLabel.text = grayBalanceString + " грн."
-        totalCahsbackLabel.text = String(totalCashBack)
-        referralsIncomeLabel.text = String(referralsIncome)
-    }
+    
 }

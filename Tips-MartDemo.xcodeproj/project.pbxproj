@@ -10,6 +10,11 @@
 		C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FCD2265F4BC00736885 /* WebView.storyboard */; };
 		C2059FD02265F50D00736885 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FCF2265F50D00736885 /* WebView.swift */; };
 		C2059FD22265F53500736885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FD12265F53500736885 /* WebViewController.swift */; };
+		C20C9F872286D5E50023D701 /* DetailRefController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F862286D5E50023D701 /* DetailRefController.swift */; };
+		C20C9F892286D5F90023D701 /* DetRefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F882286D5F90023D701 /* DetRefView.swift */; };
+		C20C9F8F2286D6420023D701 /* DetailReferalScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20C9F8E2286D6420023D701 /* DetailReferalScreen.storyboard */; };
+		C20C9F912286DF2C0023D701 /* DetaileRefCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F902286DF2C0023D701 /* DetaileRefCell.swift */; };
+		C20C9F932286E2180023D701 /* DetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F922286E2180023D701 /* DetailCellModel.swift */; };
 		C217763C22675E1800D6C97A /* GetLogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217763B22675E1800D6C97A /* GetLogos.swift */; };
 		C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */; };
 		C2184A9A226DB22D00ABE8C3 /* RefreshBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */; };
@@ -56,6 +61,8 @@
 		C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2492A992260996A007E2037 /* Profile.storyboard */; };
 		C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9B2260A249007E2037 /* MainPageViewController.swift */; };
 		C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9D2260A25E007E2037 /* MainPageView.swift */; };
+		C24C547422844D0F00AE45D5 /* ReferalsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C547322844D0F00AE45D5 /* ReferalsViewCell.swift */; };
+		C24C547622844F7800AE45D5 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C547522844F7800AE45D5 /* CellModel.swift */; };
 		C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A13B7225B405F00499C3C /* CustomFonts.swift */; };
 		C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF682255E0D2008D78F9 /* AppDelegate.swift */; };
 		C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF6A2255E0D2008D78F9 /* ViewController.swift */; };
@@ -120,6 +127,11 @@
 		C2059FCD2265F4BC00736885 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		C2059FCF2265F50D00736885 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		C2059FD12265F53500736885 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C20C9F862286D5E50023D701 /* DetailRefController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailRefController.swift; path = ../DetailRefController.swift; sourceTree = "<group>"; };
+		C20C9F882286D5F90023D701 /* DetRefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetRefView.swift; path = ../DetRefView.swift; sourceTree = "<group>"; };
+		C20C9F8E2286D6420023D701 /* DetailReferalScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = DetailReferalScreen.storyboard; path = ../DetailReferalScreen.storyboard; sourceTree = "<group>"; };
+		C20C9F902286DF2C0023D701 /* DetaileRefCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileRefCell.swift; path = ../DetaileRefCell.swift; sourceTree = "<group>"; };
+		C20C9F922286E2180023D701 /* DetailCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellModel.swift; sourceTree = "<group>"; };
 		C217763B22675E1800D6C97A /* GetLogos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLogos.swift; sourceTree = "<group>"; };
 		C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalance.swift; sourceTree = "<group>"; };
 		C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalanceModel.swift; sourceTree = "<group>"; };
@@ -166,6 +178,8 @@
 		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2492A9B2260A249007E2037 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C2492A9D2260A25E007E2037 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		C24C547322844D0F00AE45D5 /* ReferalsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferalsViewCell.swift; sourceTree = "<group>"; };
+		C24C547522844F7800AE45D5 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		C25A13B7225B405F00499C3C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		C25BBF652255E0D2008D78F9 /* Tips-MartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tips-MartDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BBF682255E0D2008D78F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +262,78 @@
 				F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C20C9F842286D5960023D701 /* ReferalMainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C20C9F8A2286D6040023D701 /* View */,
+				C20C9F8B2286D6130023D701 /* Controller */,
+				C20C9F8D2286D6240023D701 /* Model */,
+			);
+			path = ReferalMainScreen;
+			sourceTree = "<group>";
+		};
+		C20C9F852286D5AC0023D701 /* DetailReferalScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C20C9F952286E7720023D701 /* Controller */,
+				C20C9F942286E76C0023D701 /* View */,
+				C20C9F962286E77C0023D701 /* Model */,
+			);
+			path = DetailReferalScreen;
+			sourceTree = "<group>";
+		};
+		C20C9F8A2286D6040023D701 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2D8BC66226F5B0100001C99 /* ReferalView.swift */,
+				C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */,
+				C24C547322844D0F00AE45D5 /* ReferalsViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C20C9F8B2286D6130023D701 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2D8BC6A226F5D0E00001C99 /* ReferalsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C20C9F8D2286D6240023D701 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C24C547522844F7800AE45D5 /* CellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C20C9F942286E76C0023D701 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C20C9F8E2286D6420023D701 /* DetailReferalScreen.storyboard */,
+				C20C9F882286D5F90023D701 /* DetRefView.swift */,
+				C20C9F902286DF2C0023D701 /* DetaileRefCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C20C9F952286E7720023D701 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C20C9F862286D5E50023D701 /* DetailRefController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C20C9F962286E77C0023D701 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C20C9F922286E2180023D701 /* DetailCellModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C221B8432282CEB30081BFB1 /* ActivityIndicator */ = {
@@ -452,9 +538,8 @@
 		C241150E2281805A004F41E1 /* ReferalsScene */ = {
 			isa = PBXGroup;
 			children = (
-				C2D8BC66226F5B0100001C99 /* ReferalView.swift */,
-				C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */,
-				C2D8BC6A226F5D0E00001C99 /* ReferalsViewController.swift */,
+				C20C9F852286D5AC0023D701 /* DetailReferalScreen */,
+				C20C9F842286D5960023D701 /* ReferalMainScreen */,
 			);
 			path = ReferalsScene;
 			sourceTree = "<group>";
@@ -743,6 +828,7 @@
 				C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */,
 				C2D8BC61226F4C0500001C99 /* NotifTable.storyboard in Resources */,
 				C2E69A002258B2D8006FDDDB /* gotham_pro_medium.ttf in Resources */,
+				C20C9F8F2286D6420023D701 /* DetailReferalScreen.storyboard in Resources */,
 				C23E9F6622670DE0002191E3 /* Shops.storyboard in Resources */,
 				C242836B2264F38700750768 /* BarCode.storyboard in Resources */,
 				C24283672264D3C200750768 /* Account.storyboard in Resources */,
@@ -844,6 +930,7 @@
 				C2D8BC69226F5D0300001C99 /* MoreViewController.swift in Sources */,
 				C242C49E2270A127008B359A /* NotoficationCell.swift in Sources */,
 				C27A02172272F6F20005BE33 /* MainNotificationView.swift in Sources */,
+				C20C9F932286E2180023D701 /* DetailCellModel.swift in Sources */,
 				C29356E6225CAF39004F4510 /* APIManager.swift in Sources */,
 				C24283652264C8DC00750768 /* ErrorAlerts.swift in Sources */,
 				C2D8BC2E226E07A500001C99 /* OperationHistoryView.swift in Sources */,
@@ -866,6 +953,7 @@
 				C2184A9A226DB22D00ABE8C3 /* RefreshBalanceModel.swift in Sources */,
 				C2D8BC2A226E069000001C99 /* OperationHistoryController.swift in Sources */,
 				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
+				C24C547422844D0F00AE45D5 /* ReferalsViewCell.swift in Sources */,
 				C2059FD02265F50D00736885 /* WebView.swift in Sources */,
 				C242836122646A5500750768 /* APIChangeInfo.swift in Sources */,
 				C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */,
@@ -891,6 +979,7 @@
 				C24115212281C080004F41E1 /* LoginVCLittleFunctions.swift in Sources */,
 				C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */,
 				C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */,
+				C20C9F892286D5F90023D701 /* DetRefView.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C2429B562266171A00EB7942 /* ShopsTableViewCell.swift in Sources */,
 				C2059FD22265F53500736885 /* WebViewController.swift in Sources */,
@@ -904,12 +993,15 @@
 				C242C49822707A16008B359A /* MapView.swift in Sources */,
 				C2D8BC65226F5A6E00001C99 /* MoreScreenView.swift in Sources */,
 				C270FC892269C1C80059F161 /* RefreshModel.swift in Sources */,
+				C20C9F872286D5E50023D701 /* DetailRefController.swift in Sources */,
 				C27FF73B227B022100E04B0F /* NotifTableView.swift in Sources */,
 				C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */,
+				C24C547622844F7800AE45D5 /* CellModel.swift in Sources */,
 				C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */,
 				C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */,
 				C2E59636225E0BBE001D09D9 /* APILogin.swift in Sources */,
 				C2D8BC30226EFB3100001C99 /* OperationHistoryModel.swift in Sources */,
+				C20C9F912286DF2C0023D701 /* DetaileRefCell.swift in Sources */,
 				C242C494227077A6008B359A /* WDHistoryView.swift in Sources */,
 				C293570B225CCF38004F4510 /* AuthModel.swift in Sources */,
 				C2429B2422660D8200EB7942 /* ShopsMainController.swift in Sources */,

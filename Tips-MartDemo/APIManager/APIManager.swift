@@ -40,7 +40,7 @@ class APIManager {
                 let answer = try JSONDecoder().decode(AuthModel.self, from: data)
                 
                 completion(answer)
-                print(answer.code)
+              
                 
                print(answer)
                 

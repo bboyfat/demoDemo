@@ -53,7 +53,7 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
         }
         }
             didEndEditing(self)
-            print(textField.text)
+            
         
         
     }

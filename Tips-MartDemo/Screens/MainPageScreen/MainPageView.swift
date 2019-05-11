@@ -53,7 +53,7 @@ class MainPageView: UIView {
    
     override func awakeFromNib() {
         
-        banerView.animationImages = [UIImage(named: "banerBrowser"), UIImage(named: "BanerInvite"), UIImage(named: "BanerDownload")] as! [UIImage]
+        banerView.animationImages = [UIImage(named: "banerBrowser"), UIImage(named: "BanerInvite"), UIImage(named: "BanerDownload")] as? [UIImage]
         
         banerView.animationDuration = 10
         banerView.startAnimating()
