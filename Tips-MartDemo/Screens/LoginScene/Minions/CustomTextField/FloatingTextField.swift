@@ -26,7 +26,7 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
         return label
     }()
     
-    
+
     func setup() {
         
         floattingPlaceholder.text = "HELOOOOO WORLD"
@@ -59,9 +59,13 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
     }
     
     override func awakeFromNib() {
-        if self.text?.count != 0{
-            AnimateView().movePlaceHolderUp(view: self.floattingPlaceholder)
-        }
+        super.awakeFromNib()
+        
+    }
+    
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -80,9 +84,19 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
         self.delegate = self
         
         setup()
+        
     }
     
-    
+    func didCreated(){
+        if let count = self.text?.count{
+            if count > 0{
+                OperationQueue.main.addOperation {
+                    AnimateView().movePlaceHolderUp(view: self.floattingPlaceholder)
+                }
+                
+            }
+        }
+    }
     
     
  }

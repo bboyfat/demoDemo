@@ -134,6 +134,9 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="profileSettingsScreen:" destination="hQo-Eo-y28" eventType="touchUpInside" id="AP2-mU-mcp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31127223370000001" green="0.26175442339999999" blue="0.56865781550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

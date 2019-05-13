@@ -12,6 +12,7 @@ import RealmSwift
 class APILogin{
     
     let userDefaults = UserDefaults.standard
+    let loginOutputs = LogOutputViewModel()
     
     
     func getAuthCode(completion:  @escaping (UsersOutput) -> Void) {
@@ -46,6 +47,14 @@ class APILogin{
                completion(answer)
              print(answer)
             self.userDefaults.set(answer.data?.accessToken.value, forKey: "accessToken")
+            self.userDefaults.set(answer.data?.refreshToken.value, forKey: "refreshToken")
+            self.loginOutputs.name = answer.data?.name ?? ""
+            self.loginOutputs.surname = answer.data?.surname ?? ""
+            self.loginOutputs.gender = "male"
+            self.loginOutputs.birthDay = "09.09.1993"
+            
+            self.loginOutputs.saveData()
+            
              
             } catch {
                 print("!!!!!!!!!!!!!!!!!!OOPS, we have an error",error)

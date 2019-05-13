@@ -38,6 +38,13 @@ class AccountViewController: UIViewController {
         let vc = UIStoryboard(name: "WithDrawal", bundle: nil).instantiateViewController(withIdentifier: "withdrawalVc") as! WDViewController
         present(vc, animated: true, completion: nil)
     }
+    @IBAction func profileSettingsScreen(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "ProfileSettScreen", bundle: nil).instantiateViewController(withIdentifier: "ProfileSettingsVC") as! ProfileSetController
+        
+        present(vc, animated: true) {
+            
+        }
+    }
     
 }
 
