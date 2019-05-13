@@ -4,8 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need camera to set profile photo</string>
 	<key>CFBundleDisplayName</key>
 	<string>Tips-Mart</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need photo library only for using to set new photo to profile</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

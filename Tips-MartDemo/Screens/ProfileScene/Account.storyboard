@@ -545,6 +545,7 @@
                             <outlet property="idLabel" destination="862-dd-mB2" id="0Km-k6-6H8"/>
                             <outlet property="nameSernameLabel" destination="LYs-IR-cU2" id="5zZ-Nc-iuY"/>
                             <outlet property="navigationView" destination="WeM-xJ-d2z" id="BT6-bP-fMn"/>
+                            <outlet property="profilePhoto" destination="yGS-hf-PDW" id="hlT-T1-bYL"/>
                             <outlet property="referralsIncomeLabel" destination="dia-sS-3BP" id="cF1-54-h8w"/>
                             <outlet property="totalCahsbackLabel" destination="wc1-dT-AoB" id="gKx-Mi-0g1"/>
                         </connections>

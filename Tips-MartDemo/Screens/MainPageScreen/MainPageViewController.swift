@@ -13,7 +13,8 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 
     
     
-    
+    var avatarImage: UIImage?
+    var avatarModel: AvatarViewModel = AvatarViewModel()
     
     @IBOutlet var mainPageView: MainPageView!
     var refreshControl: UIRefreshControl!
@@ -42,8 +43,17 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         mainPageView.scrollView.addSubview(refreshControl)
 
-        
+        setAvatar(view: mainPageView.photoImageView)
     
+    }
+    
+    func setAvatar(view: UIImageView){
+        avatarImage = avatarModel.fetchImage()
+        if avatarImage != nil{
+            view.image = avatarImage
+        } else {
+            view.image = #imageLiteral(resourceName: "man")
+        }
     }
    
     

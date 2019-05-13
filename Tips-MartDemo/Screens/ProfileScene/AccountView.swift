@@ -19,6 +19,7 @@ class AccountView: UIView {
     
    
     @IBOutlet weak var navigationView: UIView!
+    @IBOutlet var profilePhoto: UIImageView!
     
     @IBOutlet weak var referralsIncomeLabel: UILabel!
     @IBOutlet weak var totalCahsbackLabel: UILabel!
