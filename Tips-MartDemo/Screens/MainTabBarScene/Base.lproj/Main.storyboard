@@ -790,7 +790,7 @@
         <!--Main Tab Bar Controller View Controller-->
         <scene sceneID="CdY-2A-b3Q">
             <objects>
-                <tabBarController id="syp-UH-O4Y" customClass="MainTabBarControllerViewController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBar" id="syp-UH-O4Y" customClass="MainTabBarControllerViewController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G6J-wO-EqG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

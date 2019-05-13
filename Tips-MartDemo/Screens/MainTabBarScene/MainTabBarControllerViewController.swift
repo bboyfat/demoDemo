@@ -12,15 +12,15 @@ import UIKit
 class MainTabBarControllerViewController: UITabBarController {
     
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
-     var countNotif = 0
-//    let notifications = UserDefaults.standard.dictionary(forKey: "notifications")
+    var countNotif = 0
+    //    let notifications = UserDefaults.standard.dictionary(forKey: "notifications")
     
     let mainVc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "mainScreenVc") as! MainPageViewController
     let profileVc = UIStoryboard(name: "Account", bundle: nil).instantiateViewController(withIdentifier: "acccountVC") as! AccountViewController
     let shopsVc = UIStoryboard(name: "Shops", bundle: nil).instantiateViewController(withIdentifier: "shopsVc")
     let referVc = UIStoryboard(name: "ReferalScreen", bundle: nil).instantiateViewController(withIdentifier: "referalVC")
     let moreVc = UIStoryboard(name: "MoreScreen", bundle: nil).instantiateViewController(withIdentifier: "MoreScreen")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,20 +37,16 @@ class MainTabBarControllerViewController: UITabBarController {
                 self.countNotif = notifications.count
                 print(self.countNotif, "adsfsagsdfgsdfhsd!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 OperationQueue.main.addOperation {
-                     self.setUpBadge()
+                    self.setUpBadge()
                 }
-               
+                
             }
             ShopsApiRequest().formRequest(accesToken: accessToken) { (model) in }
             TimerForRefresh().refreshInfo()
         }
         
+        viewControllers = [mainVc, profileVc, shopsVc, referVc, moreVc]
         
-        
-        
-       
-     viewControllers = [mainVc, profileVc, shopsVc, referVc, moreVc]
-       
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -62,16 +58,12 @@ class MainTabBarControllerViewController: UITabBarController {
         let stringCount = String(countNotif)
         
         if countNotif > 0{
-        self.mainVc.mainPageView.badgeLabel.setTitle(stringCount, for: .normal)
-             self.mainVc.mainPageView.badgeLabel.isHidden = false
+            self.mainVc.mainPageView.badgeLabel.setTitle(stringCount, for: .normal)
+            self.mainVc.mainPageView.badgeLabel.isHidden = false
         } else {
             self.mainVc.mainPageView.badgeLabel.isHidden = true
         }
         
     }
     
-   
-
-    
-
 }

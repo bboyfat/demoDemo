@@ -20,7 +20,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
   
     let accesToken = UserDefaults.standard.string(forKey: "accessToken")
 
-    var infoModel: RegModelGet = RegModelGet()
+    var infoModel: UsersOutput = UsersOutput()
     
     
    

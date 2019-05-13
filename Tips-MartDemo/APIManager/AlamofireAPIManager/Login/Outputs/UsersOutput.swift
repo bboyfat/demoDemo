@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct RegModelGet: Decodable{
+struct UsersOutput: Decodable{
     
     var success: Bool?
     var data: UsersData?

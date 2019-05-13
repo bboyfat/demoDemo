@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.0)
   - BadgeSwift (7.0.0)
   - Firebase/Core (5.13.0):
     - Firebase/CoreOnly
@@ -70,6 +71,7 @@ PODS:
   - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
+  - Alamofire
   - BadgeSwift
   - Firebase/Core
   - Firebase/Database
@@ -82,6 +84,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - BadgeSwift
     - Firebase
     - FirebaseAnalytics
@@ -109,6 +112,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/hasnine/iOSUtilitiesSource.git
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   BadgeSwift: 5cfacfad916d85e2f68d93dbb9ade4e9555903da
   Firebase: 6df9a6114bc9f106a98fe83d5438d4d9833c2019
   FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
@@ -127,6 +131,6 @@ SPEC CHECKSUMS:
   SwiftPhoneNumberFormatter: 089f2a71dd7be621e0045b01c689cd38eac0ce58
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
-PODFILE CHECKSUM: 00a579bd79f41feeedfdbe8c36f32b73b51e50b4
+PODFILE CHECKSUM: 5cb2b48d71246cf261b8032b19e7ab703eae0028
 
 COCOAPODS: 1.5.3

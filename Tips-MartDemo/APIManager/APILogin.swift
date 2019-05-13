@@ -14,7 +14,7 @@ class APILogin{
     let userDefaults = UserDefaults.standard
     
     
-    func getAuthCode(completion:  @escaping (RegModelGet) -> Void) {
+    func getAuthCode(completion:  @escaping (UsersOutput) -> Void) {
         
        let userData = LoginViewModel().fetchDataFromRealm()
         
@@ -32,7 +32,7 @@ class APILogin{
     
     
     
-    public func request(params: String, completion: @escaping (RegModelGet) -> Void){
+    public func request(params: String, completion: @escaping (UsersOutput) -> Void){
         guard let url = URL(string: URLS.login.rawValue) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -42,7 +42,7 @@ class APILogin{
         session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {return}
            do{
-                let answer = try JSONDecoder().decode(RegModelGet.self, from: data)
+                let answer = try JSONDecoder().decode(UsersOutput.self, from: data)
                completion(answer)
              print(answer)
             self.userDefaults.set(answer.data?.accessToken.value, forKey: "accessToken")

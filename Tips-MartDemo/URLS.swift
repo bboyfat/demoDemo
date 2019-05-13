@@ -10,7 +10,7 @@ import Foundation
 
 //reachebi
 enum URLS: String{
-    case registrationComplete = "https://client.tips-mart.com/auth/v1/registration"
+    case authURL = "https://client.tips-mart.com/auth/v1/registration"
     case login = "https://client.tips-mart.com/auth/v1/login"
     case changeInfo = "https://client.tips-mart.com/profile/v1/change-data"
     

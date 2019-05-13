@@ -47,10 +47,13 @@ class WaitingScreenController: UIViewController {
         
         
     func presentMainTab(){
-        let tabBarController = MainTabBarControllerViewController()
+        let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarControllerViewController
+        OperationQueue.main.addOperation {
+            self.present(tabBarController, animated: true) {
+               
+            }
+        }
         
-       
-            self.present(tabBarController, animated: true, completion: nil)
         
 
     }

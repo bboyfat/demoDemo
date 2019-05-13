@@ -17,6 +17,7 @@ target 'Tips-MartDemo' do
    pod 'SwiftPhoneNumberFormatter'
    pod 'ReachabilitySwift'
    pod 'BadgeSwift'
+   pod 'Alamofire'
 
    
      

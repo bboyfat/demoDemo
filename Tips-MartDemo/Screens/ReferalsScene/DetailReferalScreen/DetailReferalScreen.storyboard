@@ -45,6 +45,9 @@
                                                 <state key="normal" title="Друзья">
                                                     <color key="titleColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="friendsBtnAct:" destination="YVL-Yr-KME" eventType="touchUpInside" id="fTY-bM-xaO"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-zl-HvQ">
                                                 <rect key="frame" x="0.0" y="29" width="106.5" height="2"/>
@@ -57,7 +60,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4c1-vf-kXK">
-                                        <rect key="frame" x="153.5" y="0.0" width="107" height="31"/>
+                                        <rect key="frame" x="153.5" y="1" width="107" height="29"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyu-3d-hYu">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="29"/>
@@ -65,9 +68,12 @@
                                                 <state key="normal" title="Знакомые">
                                                     <color key="titleColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="acqBtnAct:" destination="YVL-Yr-KME" eventType="touchUpInside" id="e4H-bo-p8w"/>
+                                                </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBd-b4-uzh">
-                                                <rect key="frame" x="0.0" y="29" width="107" height="2"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBd-b4-uzh">
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="2"/>
                                                 <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -80,7 +86,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l81-yE-bcD">
-                                        <rect key="frame" x="307.5" y="0.0" width="106.5" height="31"/>
+                                        <rect key="frame" x="307.5" y="1" width="106.5" height="29"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihm-Xd-8hJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="29"/>
@@ -88,9 +94,12 @@
                                                 <state key="normal" title="Незнакомцы">
                                                     <color key="titleColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="strangBtnAct:" destination="YVL-Yr-KME" eventType="touchUpInside" id="JZB-PY-DHm"/>
+                                                </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kV-Hv-tkz">
-                                                <rect key="frame" x="0.0" y="29" width="106.5" height="2"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kV-Hv-tkz">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="2"/>
                                                 <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -241,6 +250,11 @@
                             <constraint firstItem="lxa-g0-0gr" firstAttribute="trailing" secondItem="gR9-YG-QZF" secondAttribute="trailing" id="zc7-yh-omK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lxa-g0-0gr"/>
+                        <connections>
+                            <outlet property="acqUnderscore" destination="cBd-b4-uzh" id="3YC-7K-HxK"/>
+                            <outlet property="frUnderscore" destination="J1h-zl-HvQ" id="Qkg-re-OR0"/>
+                            <outlet property="strangUnderscore" destination="3kV-Hv-tkz" id="Ios-7J-dLo"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="detRefTableView" destination="gR9-YG-QZF" id="0bN-RX-jKu"/>

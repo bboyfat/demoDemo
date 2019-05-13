@@ -11,12 +11,12 @@ import SwiftPhoneNumberFormatter
 import RealmSwift
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet var loginView: LoginView!
     
     var isAuthorized = false
     
-   let blurView = BlurView()
+    let blurView = BlurView()
     
     // ShowHide
     let showOrHide = HideOrNot()
@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     
     var userInfoModel = Changes()
     
-   //UserDefaults
+    //UserDefaults
     let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -46,27 +46,27 @@ class LoginViewController: UIViewController {
     private func checkAutorization() -> Bool{
         
         APILogin().getAuthCode { (auth) in
-           
+            
             if auth.success == true{
                 self.presentTabBar()
             }
-           
+            
         }
         return true
     }
     
     private func presentTabBar(){
         
-       let tabBarController = MainTabBarControllerViewController()
-                OperationQueue.main.addOperation {
-                    self.present(tabBarController, animated: true) {
-                        self.stopAnimateIndicator()
-                    }
-                }
-               
+        let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarControllerViewController
+        OperationQueue.main.addOperation {
+            self.present(tabBarController, animated: true) {
+                self.stopAnimateIndicator()
+            }
+        }
+        
     }
     
-       
+    
     
     private func stopAnimateIndicator(){
         self.blurView.activityIndicator.startAnimating()
@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func sighnInBtnAction(_ sender: UIButton) {
         blurView.showActivityIndicatory(uiView: sender)
-         self.checkAutorization() 
+        self.checkAutorization()
     }
     
     @IBAction func sighnUpBtnAction(_ sender: UIButton) {
@@ -98,7 +98,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func completeBtnAction(_ sender: UIButton) {
         if userData == nil{
-       self.userDataModel.saveUserData()
+            self.userDataModel.saveUserData()
         }
     }
     
@@ -109,15 +109,15 @@ class LoginViewController: UIViewController {
     @IBAction func choseLoginBtn(_ sender: UIButton) {
         let viewsToShow = [loginView.loginStackView, loginView.upEnterUnderscore, loginView.sighInBtn, loginView.phoneNumber, loginView.password]
         let viewsToHide = [loginView.registrationStackView, loginView.userInfoStack, loginView.registrationStackView, loginView.repeatPassword, loginView.friendsID, loginView.checkPrivacyStack, loginView.userInfoStack, loginView.senameStack, loginView.nameStack, loginView.birthDayStack, loginView.genderStack, loginView.upRegisterUnderscore, loginView.continueBtn, loginView.completeBtn, loginView.nameStack, loginView.senameStack, loginView.genderStack, loginView.birthDayStack, loginView.sighnUpBtn]
-       
+        
         changeFont(viewToMin:  loginView.upRegisterButton, viewToMax: loginView.upEnterButton)
         
-         changeViews(views: viewsToShow as! [UIView], view: viewsToHide as! [UIView])
+        changeViews(views: viewsToShow as! [UIView], view: viewsToHide as! [UIView])
         animateShowAndHide()
         
     }
     
-  
+    
     
     @IBAction func chooseRegistrtionBtn(_ sender: UIButton) {
         sender.setTitleColor(.white, for: .normal)
@@ -133,14 +133,14 @@ class LoginViewController: UIViewController {
     //MARK: Get DataFromTextFields to model
     
     private func getData(){
-       
+        
         self.loginView.passwordTextField.didEndEditing = { [weak self] in
             if let password = $0.text{
                 self?.loginModel.password = password
-               self?.loginModel.saveUserData()
+                self?.loginModel.saveUserData()
             }
         }
-
+        
         loginView.senameTextField.didEndEditing = {[weak self] in
             if let secondName = $0.text{
                 self?.userDataModel.secondName = secondName
@@ -150,25 +150,25 @@ class LoginViewController: UIViewController {
             if let name = $0.text{
                 self?.userDataModel.name = name
             }
-            }
+        }
         
         
         loginView.birthDayTextField.didEndEditing = {[weak self] in
             let date = self?.loginView.datePicker.date
             let dateFormater = DateFormatter()
-             dateFormater.dateFormat = "dd.MM.yyyy"
+            dateFormater.dateFormat = "dd.MM.yyyy"
             let birthDate = dateFormater.string(from: date ?? Date())
             $0.text = birthDate
             let todayDate = date?.timeIntervalSince1970
             self?.userInfoModel.objChanges?.birthday = todayDate
             if let birthDay = todayDate{
-            self?.userDataModel.birthDay = Double(birthDay)
+                self?.userDataModel.birthDay = Double(birthDay)
                 
             }
-           }
+        }
         
     }
-    }
+}
 
 
 

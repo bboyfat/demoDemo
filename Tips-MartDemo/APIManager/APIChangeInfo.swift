@@ -12,7 +12,7 @@ import Foundation
 class APIChangeInfo{
     
     
-    func getAuthCode(model: ProfileModel, accessToken: String, completion:  @escaping (RegModelGet) -> Void) {
+    func getAuthCode(model: ProfileModel, accessToken: String, completion:  @escaping (UsersOutput) -> Void) {
         let params: NSMutableDictionary = NSMutableDictionary()
         params.setValue(model.name, forKey: "name")
         params.setValue(model.surname, forKey: "surname")
@@ -38,7 +38,7 @@ class APIChangeInfo{
     
     
     
-    public func request(params: String, header: String, completion: @escaping (RegModelGet) -> Void){
+    public func request(params: String, header: String, completion: @escaping (UsersOutput) -> Void){
         guard let url = URL(string: "https://client.tips-mart.com/profile/v1/change-data") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -50,7 +50,7 @@ class APIChangeInfo{
             guard let data = data else {return}
             
             do{
-                let answer = try JSONDecoder().decode(RegModelGet.self, from: data)
+                let answer = try JSONDecoder().decode(UsersOutput.self, from: data)
                 completion(answer)
                 
                 

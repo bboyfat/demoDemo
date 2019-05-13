@@ -15,7 +15,7 @@ class APIRegComplete {
     let userDefaults = UserDefaults.standard
     
     
-    func getAuthCode(model: RegistrationModelAPI, completion: @escaping (RegModelGet) -> Void) {
+    func getAuthCode(model: RegistrationModelAPI, completion: @escaping (UsersOutput) -> Void) {
         
         let phoneNumber = model.phoneNumber
         let password = model.password
@@ -34,7 +34,7 @@ class APIRegComplete {
     
     
     
-    public func request(params: String, completion: @escaping (RegModelGet) -> Void){
+    public func request(params: String, completion: @escaping (UsersOutput) -> Void){
         guard let url = URL(string: "https://client.tips-mart.com/auth/v1/registration") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -47,7 +47,7 @@ class APIRegComplete {
             
             
             do{
-                let answer = try JSONDecoder().decode(RegModelGet.self, from: data)
+                let answer = try JSONDecoder().decode(UsersOutput.self, from: data)
                 completion(answer)
                 print(answer)
                 self.userDefaults.set(answer.data?.name, forKey: "name")
