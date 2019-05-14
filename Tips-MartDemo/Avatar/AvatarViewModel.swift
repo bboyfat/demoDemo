@@ -34,7 +34,7 @@ class AvatarViewModel{
         var image: UIImage?
         
         let result = realm.objects(AvatarBase.self)
-        let imageData = result.first
+        let imageData = result.last
         if let data = imageData?.photo{
            image = UIImage(data: data, scale: 80)!
         } else {

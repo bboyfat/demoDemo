@@ -66,12 +66,13 @@ class ProfileSetController: UIViewController{
     }
     
     @IBAction func saveInfoBtn(_ sender: UIBarButtonItem) {
-        let imageData = UIImage.pngData(self.settingsView.avatarView.image!)
+//        let imageData = UIImage.jpegData(self.settingsView.avatarView.image!)
+        let imgData = self.settingsView.avatarView.image!.jpegData(compressionQuality: 100)
         if avatarSettings.fetchImage() == nil{
-            self.avatarSettings.image = imageData()
+            self.avatarSettings.image = imgData
             self.avatarSettings.saveImage()
         } else {
-            if let data = imageData(){
+            if let data = imgData{
                 self.avatarSettings.updateImage(dataImage: data)
             } else {
                 return
@@ -87,7 +88,9 @@ extension ProfileSetController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editingImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             self.settingsView.avatarView.image = editingImage
-            
+            let imgData = editingImage.jpegData(compressionQuality: 100)
+            self.avatarSettings.image = imgData
+            self.avatarSettings.saveImage()
             
         } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             
