@@ -30,28 +30,44 @@
                                 </items>
                             </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yDt-TC-wsy">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="708"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpQ-9u-lEC" customClass="PullUpView" customModule="Tips_MartDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="xXG-9o-fCW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Cvs-UV-D5h" firstAttribute="bottom" secondItem="yDt-TC-wsy" secondAttribute="bottom" id="4xT-1E-Bl7"/>
                             <constraint firstItem="yDt-TC-wsy" firstAttribute="top" secondItem="haL-Mh-dqY" secondAttribute="bottom" id="8Lr-e9-9KK"/>
                             <constraint firstItem="Cvs-UV-D5h" firstAttribute="trailing" secondItem="yDt-TC-wsy" secondAttribute="trailing" id="8qi-19-YzO"/>
+                            <constraint firstAttribute="bottom" secondItem="kpQ-9u-lEC" secondAttribute="bottom" id="Qpm-Lk-5DC"/>
                             <constraint firstItem="haL-Mh-dqY" firstAttribute="trailing" secondItem="Cvs-UV-D5h" secondAttribute="trailing" id="TSg-xj-UId"/>
+                            <constraint firstItem="Cvs-UV-D5h" firstAttribute="trailing" secondItem="kpQ-9u-lEC" secondAttribute="trailing" id="VXn-iV-mLx"/>
                             <constraint firstItem="yDt-TC-wsy" firstAttribute="leading" secondItem="Cvs-UV-D5h" secondAttribute="leading" id="pMH-aU-gtf"/>
                             <constraint firstItem="haL-Mh-dqY" firstAttribute="top" secondItem="Cvs-UV-D5h" secondAttribute="top" id="q0A-fN-TzX"/>
+                            <constraint firstItem="kpQ-9u-lEC" firstAttribute="top" secondItem="yDt-TC-wsy" secondAttribute="bottom" id="qEC-4q-6wA"/>
                             <constraint firstItem="haL-Mh-dqY" firstAttribute="leading" secondItem="Cvs-UV-D5h" secondAttribute="leading" id="woV-yP-vzY"/>
+                            <constraint firstItem="kpQ-9u-lEC" firstAttribute="leading" secondItem="Cvs-UV-D5h" secondAttribute="leading" id="xI0-fe-nfK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cvs-UV-D5h"/>
+                        <connections>
+                            <outlet property="mapView" destination="yDt-TC-wsy" id="fQl-C9-hkQ"/>
+                            <outlet property="navigationItem" destination="haL-Mh-dqY" id="f31-mg-NRa"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="70x-zK-NmP" id="gQ4-Pi-E25"/>
+                        <outlet property="mapView" destination="yDt-TC-wsy" id="g3a-GE-Tkf"/>
+                        <outlet property="pullUPView" destination="kpQ-9u-lEC" id="zgi-9R-gGK"/>
+                        <outlet property="pullUpviewHeight" destination="xXG-9o-fCW" id="GIG-qw-Xj8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMe-Jd-EIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-748" y="-266"/>
+            <point key="canvasLocation" x="-749.27536231884062" y="-266.51785714285711"/>
         </scene>
     </scenes>
 </document>
