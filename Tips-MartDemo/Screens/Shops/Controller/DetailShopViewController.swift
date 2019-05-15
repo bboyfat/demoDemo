@@ -18,7 +18,7 @@ class DetailShopViewController: UIViewController {
         super.viewDidLoad()
         
         if let path = shopsModel{
-             GetLogos().urlPath(imagePath: path.pathImage , completion: { (image) in
+            GetLogos().urlPath(imagePath: path.pathImage , completion: { (image) in
                 self.detailView.logoImageView.image = image
                 guard let value = self.shopsModel?.value else { return}
                 self.detailView.cashbackValue.text = "\(value)"
@@ -35,5 +35,5 @@ class DetailShopViewController: UIViewController {
     }
     
     
-
+    
 }

@@ -24,26 +24,26 @@ class MainNotificationsController: UIViewController {
         setArrays()
         checkBadges()
         setViews()
-       
+        
         
     }
     
     func setViews(){
         
-            
-            // setup Date
-            notificationView.operatinsDate.text = setUpDate(string: operationArray.last?.created ?? " ")
-            notificationView.notificationsDate.text = setUpDate(string: notificationArray.last?.created ?? " ")
-            notificationView.newsDate.text = setUpDate(string: newsArray.last?.created ?? " ")
-            notificationView.specialProposeDate.text = setUpDate(string: specialsArray.last?.created ?? " ")
-            
-            // setup TextMessage
-            
-            notificationView.operationMessage.text = parseHtml(htmlString: operationArray.last?.text ?? " ")
-             notificationView.natificationsMessage.text = parseHtml(htmlString: notificationArray.last?.text ?? " ")
-             notificationView.newsMessage.text = parseHtml(htmlString: newsArray.last?.text ?? " ")
-             notificationView.specialProposeMessage.text = parseHtml(htmlString: specialsArray.last?.text ?? " ")
-            
+        
+        // setup Date
+        notificationView.operatinsDate.text = setUpDate(string: operationArray.last?.created ?? " ")
+        notificationView.notificationsDate.text = setUpDate(string: notificationArray.last?.created ?? " ")
+        notificationView.newsDate.text = setUpDate(string: newsArray.last?.created ?? " ")
+        notificationView.specialProposeDate.text = setUpDate(string: specialsArray.last?.created ?? " ")
+        
+        // setup TextMessage
+        
+        notificationView.operationMessage.text = parseHtml(htmlString: operationArray.last?.text ?? " ")
+        notificationView.natificationsMessage.text = parseHtml(htmlString: notificationArray.last?.text ?? " ")
+        notificationView.newsMessage.text = parseHtml(htmlString: newsArray.last?.text ?? " ")
+        notificationView.specialProposeMessage.text = parseHtml(htmlString: specialsArray.last?.text ?? " ")
+        
         
     }
     func setArrays(){
@@ -74,14 +74,14 @@ class MainNotificationsController: UIViewController {
     
     @IBAction func presentNewsTable(_ sender: UIButton) {
         let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
-         vc.navigationController?.title = "Новости"
+        vc.navigationController?.title = "Новости"
         vc.notifications = newsArray
         present(vc, animated: true, completion: nil)
     }
     
     @IBAction func presentNotifTableView(_ sender: UIButton) {
         let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
-         vc.navigationController?.title = "Уведомления"
+        vc.navigationController?.title = "Уведомления"
         vc.notifications = notificationArray
         present(vc, animated: true, completion: nil)
     }
@@ -97,7 +97,7 @@ class MainNotificationsController: UIViewController {
             self.notifications = Array(realm.objects(NotificationModelRealm.self))
             //        print(shopsModelArray[0].currency)
             OperationQueue.main.addOperation {
-//               self.view.reloadInputViews()
+                //               self.view.reloadInputViews()
                 self.checkBadges()
             }
             
@@ -120,7 +120,7 @@ class MainNotificationsController: UIViewController {
         return dateString
     }
     func parseHtml(htmlString: String) -> String{
-
+        
         return HTMLParser().parseHTML(htmlContent: htmlString)
     }
     

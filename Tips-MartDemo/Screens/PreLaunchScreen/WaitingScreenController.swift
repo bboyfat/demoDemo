@@ -16,7 +16,7 @@ class WaitingScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         loginModel = LoginViewModel().fetchDataFromRealm()
         if loginModel != nil{
             OperationQueue.main.addOperation {
@@ -29,7 +29,7 @@ class WaitingScreenController: UIViewController {
                 }
                 
             }
-           
+            
         } else {
             presentloginController()
         }
@@ -44,19 +44,16 @@ class WaitingScreenController: UIViewController {
         loginModel = result.first
         
     }
-        
-        
+    
+    
     func presentMainTab(){
         let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarControllerViewController
         OperationQueue.main.addOperation {
             self.present(tabBarController, animated: true) {
-               
+                
             }
         }
-        
-        
-
-    }
+     }
     func presentloginController(){
         let vc = UIStoryboard(name: "LoginScreen", bundle: nil).instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
         OperationQueue.main.addOperation {
@@ -64,9 +61,4 @@ class WaitingScreenController: UIViewController {
         }
         
     }
-    
-    
-
-   
-
 }

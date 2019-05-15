@@ -256,30 +256,30 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="daF-IC-UeI">
-                                                        <rect key="frame" x="204.5" y="9" width="88" height="42"/>
+                                                        <rect key="frame" x="204.5" y="9" width="71" height="34.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В ожидании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8HF-2O-Md8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="18.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="71" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="8HF-2O-Md8" secondAttribute="height" multiplier="43:9" id="MAA-tl-ClR"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44,95 грн" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="K8P-db-hQk">
-                                                                <rect key="frame" x="0.0" y="21.5" width="88" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="18" width="71" height="16.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="K8P-db-hQk" secondAttribute="height" multiplier="43:10" id="D9i-xm-TQm"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KD-FU-CZV">
-                                                        <rect key="frame" x="8" y="9" width="16" height="22"/>
+                                                        <rect key="frame" x="8" y="9" width="33.5" height="22"/>
                                                         <state key="normal" image="Group 5"/>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSK-9Y-C9m">
@@ -310,23 +310,23 @@
                                                         <state key="normal" image="Group 6"/>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="wfJ-2L-hn0">
-                                                        <rect key="frame" x="32" y="9" width="86.5" height="42"/>
+                                                        <rect key="frame" x="49.5" y="9" width="69" height="34.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На балансе" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GQl-9r-4YB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="17.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="69" height="14"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="GQl-9r-4YB" secondAttribute="height" multiplier="84:17" id="DTh-H0-oXQ"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="213,68 грн" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TGD-1M-uWH">
-                                                                <rect key="frame" x="0.0" y="20.5" width="86.5" height="21.5"/>
+                                                                <rect key="frame" x="0.0" y="17" width="69" height="17.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="TGD-1M-uWH" secondAttribute="height" multiplier="4:1" id="5ux-h9-4km"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="textColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>

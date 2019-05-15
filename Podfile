@@ -18,6 +18,7 @@ target 'Tips-MartDemo' do
    pod 'ReachabilitySwift'
    pod 'BadgeSwift'
    pod 'Alamofire'
+   pod 'AlamofireImage'
 
    
      

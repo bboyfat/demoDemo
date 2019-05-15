@@ -9,7 +9,7 @@
 import UIKit
 
 class ReferalsViewController: UIViewController {
-
+    
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
     @IBOutlet var refTableView: UITableView!
     @IBOutlet var referalsView: ReferalView!
@@ -19,11 +19,11 @@ class ReferalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        
     }
     
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
@@ -36,10 +36,10 @@ class ReferalsViewController: UIViewController {
     }
     
     func addRefCell(){
-      
-
+        
+        
     }
-
+    
 }
 
 extension ReferalsViewController: UITableViewDelegate, UITableViewDataSource{
@@ -50,14 +50,14 @@ extension ReferalsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = refTableView.dequeueReusableCell(withIdentifier: "refCell", for: indexPath) as! ReferalsViewCell
-         let data = cellModel[indexPath.row]
+        let data = cellModel[indexPath.row]
         cell.refImageView.image = data.image
-       
-     
+        
+        
         cell.frLbl.text = data.btnText
         cell.infoBtn.setImage(#imageLiteral(resourceName: "information копія"), for: .normal)
         cell.infoLbl.text = data.infoText
-      
+        
         cell.selectionStyle = .none
         
         return cell

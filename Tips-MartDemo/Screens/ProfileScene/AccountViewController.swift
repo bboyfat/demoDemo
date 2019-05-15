@@ -10,18 +10,18 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
-//    let accountView = AccountView()
+    //    let accountView = AccountView()
     @IBOutlet weak var accountView: AccountView!
     var avatarImage: UIImage?
     var avatarModel: AvatarViewModel = AvatarViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setAvatar(view: accountView.profilePhoto)
-       
+        
     }
     
     func setAvatar(view: UIImageView){
-       avatarImage = avatarModel.fetchImage()
+        avatarImage = avatarModel.fetchImage()
         if avatarImage != nil{
             view.image = avatarImage
         } else {
@@ -33,7 +33,7 @@ class AccountViewController: UIViewController {
         return .lightContent
     }
     
-
+    
     @IBAction func showHistoryButton(_ sender: UIButton) {
         
         let vc = UIStoryboard(name: "OperationHistory", bundle: nil).instantiateViewController(withIdentifier: "operationVC") as! OperationHistoryController

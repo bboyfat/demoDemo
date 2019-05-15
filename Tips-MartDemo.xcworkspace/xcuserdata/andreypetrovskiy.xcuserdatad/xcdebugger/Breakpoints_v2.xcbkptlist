@@ -90,7 +90,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "579464141.916466"
+                  timestampString = "579623330.991176"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -105,7 +105,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "579464141.918334"
+                  timestampString = "579623330.993771"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -120,7 +120,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "579464141.920156"
+                  timestampString = "579623330.996286"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -153,7 +153,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "579464141.926157"
+                  timestampString = "579623331.003145"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -168,7 +168,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "579464141.928097"
+                  timestampString = "579623331.0052609"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
@@ -680,134 +680,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-            timestampString = "579463995.184317"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "presentloginController()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-            timestampString = "579463995.184688"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "presentloginController()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-            timestampString = "579463995.184921"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "presentloginController()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-            timestampString = "579463995.185132"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "presentloginController()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tips_MartDemo.WaitingScreenController.presentloginController() -&gt; ()"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-                  timestampString = "579464141.972088"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "332">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Tips_MartDemo.WaitingScreenController.presentloginController() -&gt; ()"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-                  timestampString = "579464141.973611"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-            timestampString = "579463995.185343"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "presentloginController()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/PreLaunchScreen/WaitingScreenController.swift"
-            timestampString = "579463995.185549"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "presentloginController()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ReferalsScene/ReferalsViewController.swift"
             timestampString = "579101129.194857"
             startingColumnNumber = "9223372036854775807"
@@ -863,54 +735,6 @@
             startingLineNumber = "68"
             endingLineNumber = "68"
             landmarkName = "layoutIfNeeded()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Avatar/AvatarViewModel.swift"
-            timestampString = "579464392.956537"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "fetchImage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Avatar/AvatarViewModel.swift"
-            timestampString = "579464392.956617"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "fetchImage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Avatar/AvatarViewModel.swift"
-            timestampString = "579464392.956672"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "fetchImage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1016,13 +840,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.956802"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.220781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getLocation(controller:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1032,13 +856,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.957217"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.2208509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getLocation(controller:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1048,13 +872,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.957543"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.220903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getImages(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_MartDemo.MapAPI.getImages(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.082828"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in Tips_MartDemo.MapAPI.getImages(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.084626"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.2209491"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getImages(handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1064,13 +936,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.9579819"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.220994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "getImages(handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1080,13 +952,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.958395"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.2210391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getImages(handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1096,13 +968,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.958644"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.221086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1112,13 +984,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.9588701"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.22145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1128,13 +1000,157 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579464392.95909"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.221699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "saveInfoBtn(_:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_MartDemo.MapViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+                  timestampString = "579623331.106676"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Tips_MartDemo.MapViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+                  timestampString = "579623331.1082309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.2219369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_MartDemo.MapAPI.getLocation(controller: Tips_MartDemo.MapProtocol, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.112125"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "840">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Tips_MartDemo.ShopsCoordinates) -&gt; () in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_MartDemo.MapAPI.getLocation(controller: Tips_MartDemo.MapProtocol, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.11371"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.221987"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Tips_MartDemo.ShopsCoordinates) -&gt; () in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_MartDemo.MapAPI.getLocation(controller: Tips_MartDemo.MapProtocol, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.118402"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Tips_MartDemo.Locations) -&gt; () in closure #1 (Tips_MartDemo.ShopsCoordinates) -&gt; () in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_MartDemo.MapAPI.getLocation(controller: Tips_MartDemo.MapProtocol, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.120924"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.22203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getLocation(controller:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1144,13 +1160,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Avatar/AvatarViewModel.swift"
-            timestampString = "579464392.959311"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.222074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "fetchImage()"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getLocation(controller:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1160,45 +1176,268 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Avatar/AvatarViewModel.swift"
-            timestampString = "579464392.959361"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "fetchImage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Avatar/AvatarViewModel.swift"
-            timestampString = "579464392.959401"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "fetchImage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Avatar/AvatarViewModel.swift"
-            timestampString = "579464392.959439"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.222116"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "fetchImage()"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.222158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_MartDemo.MapAPI.getLocation(controller: Tips_MartDemo.MapProtocol, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.137095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_MartDemo.MapAPI.getLocation(controller: Tips_MartDemo.MapProtocol, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.1386189"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1548">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_MartDemo.MapAPI.getLocation(controller: Tips_MartDemo.MapProtocol, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+                  timestampString = "579623331.140125"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1748">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.222201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.222242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.222283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/MapAPI.swift"
+            timestampString = "579623317.2223229"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getLocation(controller:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.2223639"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.2226"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Tips_MartDemo.MapViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+                  timestampString = "579623331.1607111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 (Swift.Bool) -&gt; () in Tips_MartDemo.MapViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Tips-MartDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+                  timestampString = "579623331.162292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.222831"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.223031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.223225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/MapScene/Controller/MapViewController.swift"
+            timestampString = "579623317.223423"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

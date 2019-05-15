@@ -66,14 +66,10 @@ class LoginViewController: UIViewController {
         
     }
     
-    
-    
     private func stopAnimateIndicator(){
         self.blurView.activityIndicator.startAnimating()
         blurView.removeFromSuperview()
     }
-    
-    
     
     //MARK: Send Requests buttonsAction
     
@@ -151,7 +147,6 @@ class LoginViewController: UIViewController {
                 self?.userDataModel.name = name
             }
         }
-        
         
         loginView.birthDayTextField.didEndEditing = {[weak self] in
             let date = self?.loginView.datePicker.date

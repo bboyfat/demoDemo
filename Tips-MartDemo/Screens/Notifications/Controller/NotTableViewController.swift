@@ -18,32 +18,32 @@ class NotTableViewController: UIViewController {
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
     
     var notifications: [NotificationModelRealm] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        myTableView.rowHeight = UITableView.automaticDimension
+        //        myTableView.rowHeight = UITableView.automaticDimension
         
         
         if let accessToken = accessToken{
             
             RefreshToken().getBalance(header: accessToken) { (notifications) in
                 
+            }
         }
-        }
-
+        
     }
-
-       
+    
+    
     
     
     @IBAction func disVc(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-   
     
     
     
-
+    
+    
 }
 
 extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
@@ -55,8 +55,8 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print(notifications.count)
-       let cell = tableView.dequeueReusableCell(withIdentifier: "notCell", for: indexPath) as! NotoficationCell
-       let notification = notifications[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notCell", for: indexPath) as! NotoficationCell
+        let notification = notifications[indexPath.row]
         
         let info = HTMLParser().parseHTML(htmlContent: notification.text)
         let dateString = dateTostring(date: notification.created)
@@ -87,20 +87,20 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
         }
         presentActionSheet(indexPath: indexPath)
         return super.canPerformAction(action, withSender: sender)
-       
+        
     }
     func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
         
         if action == #selector(UIResponderStandardEditActions.copy){
             UIPasteboard.general.string = HTMLParser().parseHTML(htmlContent: notifications[indexPath.row].text)
         }
-       
+        
         
     }
-
+    
     
     func dateTostring(date: String) -> String{
-       var dateString = date
+        var dateString = date
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let dateFormatterPrint = DateFormatter()
@@ -134,7 +134,7 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
             self.presentActivityControler(text: [HTMLParser().parseHTML(htmlContent: self.notifications[indexPath.row].text)])
         }
         let copyaction = UIAlertAction(title: "Скопировать", style: .default) { (_) in
-             UIPasteboard.general.string = HTMLParser().parseHTML(htmlContent: self.notifications[indexPath.row].text)
+            UIPasteboard.general.string = HTMLParser().parseHTML(htmlContent: self.notifications[indexPath.row].text)
         }
         let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) { (_) in
             

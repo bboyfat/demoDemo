@@ -12,19 +12,18 @@ import WebKit
 class WebViewController: UIViewController, WKNavigationDelegate {
     
     var webView = WebView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         laodUrl()
-//
         
         webView.frame =  CGRect(x: 0, y: 20, width: self.view.frame.width, height: self.view.frame.height - 150)
-//        self.view.addSubview(webView)
+
         self.view.insertSubview(webView, at: 1)
         
     }
-       
+    
     @IBAction func endReading(_ sender: UIButton) {
         
         dismiss(animated: true) {
@@ -44,7 +43,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     
     
-   
     
-
+    
+    
 }

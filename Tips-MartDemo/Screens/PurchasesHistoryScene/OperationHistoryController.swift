@@ -9,7 +9,7 @@
 import UIKit
 
 class OperationHistoryController: UIViewController {
-
+    
     @IBOutlet var operatinHistoryView: OperationHistoryView!
     var itemsForRows: [Purchases] = []
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ extension OperationHistoryController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemsForRows.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = operatinHistoryView.myTableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryCell
         let item = itemsForRows[indexPath.row]
@@ -50,7 +50,7 @@ extension OperationHistoryController: UITableViewDelegate, UITableViewDataSource
         let datee = dateFormatterGet.date(from: stringDate)
         stringDate =  dateFormatterPrint.string(from: datee ?? Date())
         print(stringDate)
-       
+        
         cell.dateLabel.text = stringDate
         cell.orderInfoLabel.text = info
         if item.status == 0{

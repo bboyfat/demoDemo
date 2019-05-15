@@ -18,7 +18,7 @@ class MainPageView: UIView {
     @IBOutlet weak var banerView: UIImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     //MARK: Name ID
-  
+    
     @IBOutlet var nameSurnameLabel: UILabel!
     
     @IBOutlet var idLabel: UILabel!
@@ -27,7 +27,7 @@ class MainPageView: UIView {
     @IBOutlet weak var greenBalance: UILabel!
     
     @IBOutlet weak var grayBalance: UILabel!
-      @IBOutlet weak var badgeLabel: UIButton!
+    @IBOutlet weak var badgeLabel: UIButton!
     //MARK: Settings and Notif buttons outlet
     @IBOutlet weak var notificationBtn: UIButton!
     @IBOutlet weak var anotherCardsBtn: UIButton!
@@ -50,24 +50,24 @@ class MainPageView: UIView {
     
     let purpleColor = UIColor(red: 79/255, green: 67/255, blue: 145/255, alpha: 1).cgColor
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
-   
+    
     override func awakeFromNib() {
         
         banerView.animationImages = [UIImage(named: "banerBrowser"), UIImage(named: "BanerInvite"), UIImage(named: "BanerDownload")] as? [UIImage]
         
         banerView.animationDuration = 10
         banerView.startAnimating()
-      
+        
         photoImageView.layer.cornerRadius = 25
         photoImageView.layer.borderWidth = 2
         photoImageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1).cgColor
-       
-    
-       
         
-     setCornerForTopAndBottom()
         
-       setText()
+        
+        
+        setCornerForTopAndBottom()
+        
+        setText()
     }
     
     func setCornerForTopAndBottom(){
@@ -82,28 +82,24 @@ class MainPageView: UIView {
         
         addGradient()
     }
-   
-   
-    
-  
     
     func addGradient(){
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         
-         gradientLayer.colors = [purpleColor, finishColor]
+        gradientLayer.colors = [purpleColor, finishColor]
         //         navigationView.layer.insertSublayer(gradientLayer, at: 0)
         navigationView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-
+    
     override func layoutSubviews() {
-      
+        
         gradientLayer.frame = self.navigationView.bounds
-       
-       
-//        navigationView.layer.addSublayer(gradientLayer)
-       
+        
+        
+        //        navigationView.layer.addSublayer(gradientLayer)
+        
     }
     func setText(){
         guard let name = self.name, let surname = self.surname, let userId = self.userId, let greenBalanceString = balanceGreen, let grayBalanceString = balanceGray else { return }
@@ -114,5 +110,5 @@ class MainPageView: UIView {
         greenBalance.text = greenBalanceString + " грн."
         grayBalance.text = grayBalanceString + " грн."
     }
- 
+    
 }

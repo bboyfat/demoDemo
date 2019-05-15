@@ -20,13 +20,13 @@ class ProfileSetController: UIViewController{
     
     //MARK: User Data model
     
-   
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       getInfo()
+        
+        getInfo()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -66,7 +66,7 @@ class ProfileSetController: UIViewController{
     }
     
     @IBAction func saveInfoBtn(_ sender: UIBarButtonItem) {
-//        let imageData = UIImage.jpegData(self.settingsView.avatarView.image!)
+        //        let imageData = UIImage.jpegData(self.settingsView.avatarView.image!)
         let imgData = self.settingsView.avatarView.image!.jpegData(compressionQuality: 100)
         if avatarSettings.fetchImage() == nil{
             self.avatarSettings.image = imgData
@@ -94,7 +94,7 @@ extension ProfileSetController: UIImagePickerControllerDelegate, UINavigationCon
             
         } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             
-             self.settingsView.avatarView.image = originalImage
+            self.settingsView.avatarView.image = originalImage
             
         }
         picker.dismiss(animated: true) {

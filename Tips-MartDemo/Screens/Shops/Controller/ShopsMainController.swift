@@ -113,13 +113,13 @@ class ShopsMainController: UIViewController{
                         
                         if  let index = selectedShopsArray.firstIndex(of: shop){
                             self.selectedShopsArray.remove(at: index)
-//                             reloadData(myTableView: myTableView)
-//                            if shop == self.selectedShopsArray[row]{
+                            //                             reloadData(myTableView: myTableView)
+                            //                            if shop == self.selectedShopsArray[row]{
                             let indexPath = IndexPath(row: index, section: 0)
                             myTableView.deleteRows(at: [indexPath], with: .fade)
-//
-//                            print(shop.name, shop.isSelected)
-//                            }
+                            //
+                            //                            print(shop.name, shop.isSelected)
+                            //                            }
                             
                         }
                     }
@@ -170,7 +170,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      
+        
         switch contentType{
         case .allShops: return self.shopsModelArray.count
         case .selectedShops: return self.selectedShopsArray.count
@@ -221,7 +221,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     
     
-   
+    
     
 }
 
