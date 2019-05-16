@@ -91,6 +91,7 @@
 		C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299E5342271C9B100D6CC05 /* RealmModel.swift */; };
 		C2B80C83228C436E00C469D4 /* MapConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C82228C436E00C469D4 /* MapConstants.swift */; };
 		C2B80C85228C46DD00C469D4 /* MapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C84228C46DD00C469D4 /* MapAPI.swift */; };
+		C2B80C89228D953700C469D4 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C88228D953700C469D4 /* MapCell.swift */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
 		C2C26356228C09DE000389FB /* ShopsCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C26355228C09DE000389FB /* ShopsCoordinates.swift */; };
 		C2C96D212255FC17009F7050 /* WaitingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C96D202255FC17009F7050 /* WaitingScreenController.swift */; };
@@ -105,7 +106,6 @@
 		C2CCDB852289A48100FE508D /* AvatarBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CCDB842289A48100FE508D /* AvatarBase.swift */; };
 		C2CCDB882289A4CE00FE508D /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CCDB872289A4CE00FE508D /* AvatarViewModel.swift */; };
 		C2CED696228B420B00EEAD3A /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CED695228B420B00EEAD3A /* MapTableViewController.swift */; };
-		C2CED698228B421D00EEAD3A /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CED697228B421D00EEAD3A /* MapCell.swift */; };
 		C2CED69A228B422D00EEAD3A /* PullUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CED699228B422D00EEAD3A /* PullUpView.swift */; };
 		C2D8BC28226E014100001C99 /* OperationHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D8BC27226E014100001C99 /* OperationHistory.storyboard */; };
 		C2D8BC2A226E069000001C99 /* OperationHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8BC29226E069000001C99 /* OperationHistoryController.swift */; };
@@ -231,6 +231,7 @@
 		C299E5342271C9B100D6CC05 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		C2B80C82228C436E00C469D4 /* MapConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConstants.swift; sourceTree = "<group>"; };
 		C2B80C84228C46DD00C469D4 /* MapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPI.swift; sourceTree = "<group>"; };
+		C2B80C88228D953700C469D4 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2BA3C6E2257CEA50016CA9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,7 +248,6 @@
 		C2CCDB842289A48100FE508D /* AvatarBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarBase.swift; sourceTree = "<group>"; };
 		C2CCDB872289A4CE00FE508D /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
 		C2CED695228B420B00EEAD3A /* MapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
-		C2CED697228B421D00EEAD3A /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		C2CED699228B422D00EEAD3A /* PullUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpView.swift; sourceTree = "<group>"; };
 		C2D8BC27226E014100001C99 /* OperationHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OperationHistory.storyboard; sourceTree = "<group>"; };
 		C2D8BC29226E069000001C99 /* OperationHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationHistoryController.swift; sourceTree = "<group>"; };
@@ -837,7 +837,7 @@
 			isa = PBXGroup;
 			children = (
 				C242C49922707A2A008B359A /* MapViewController.swift */,
-				C2CED697228B421D00EEAD3A /* MapCell.swift */,
+				C2B80C88228D953700C469D4 /* MapCell.swift */,
 				C2DB62D2228BFD76005AA83D /* DroppablePin.swift */,
 				C2CED695228B420B00EEAD3A /* MapTableViewController.swift */,
 			);
@@ -1156,7 +1156,6 @@
 				C20C9FD7228731250023D701 /* AlamofireAPIManager.swift in Sources */,
 				C241151F2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift in Sources */,
 				C2369BB52265C32100FBB386 /* AccountViewController.swift in Sources */,
-				C2CED698228B421D00EEAD3A /* MapCell.swift in Sources */,
 				C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */,
 				C2F285F9226DF0EA005DC8F8 /* GetInfoModel.swift in Sources */,
 				C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */,
@@ -1210,6 +1209,7 @@
 				C242C48C22706E34008B359A /* WDViewController.swift in Sources */,
 				C270FC872269BD750059F161 /* Refresh.swift in Sources */,
 				C2CCDB8322898DC300FE508D /* GalleryPicker.swift in Sources */,
+				C2B80C89228D953700C469D4 /* MapCell.swift in Sources */,
 				C242C4922270770F008B359A /* WDHistoryController.swift in Sources */,
 				C2DB62D3228BFD76005AA83D /* DroppablePin.swift in Sources */,
 				C242C49822707A16008B359A /* MapView.swift in Sources */,

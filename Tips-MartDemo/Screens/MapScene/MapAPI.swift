@@ -13,7 +13,7 @@ import Alamofire
 class MapAPI{
    
     
-    var mapController: MapProtocol?
+   
     
     var coordinates: [ShopsCoordinates] = []
     
@@ -22,7 +22,7 @@ class MapAPI{
     var imageArray: [UIImage] = []
     
     
-    func getLocation(controller: MapProtocol, handler: @escaping (_ status: Bool) -> ()){
+    func getLocation( handler: @escaping (_ status: Bool) -> ()){
 //        coordinates = []
         
         Alamofire.request(shopsLocationUrl).responseJSON { (dataResponse) in
@@ -30,10 +30,10 @@ class MapAPI{
             
             do{
                 let json = try JSONDecoder().decode([ShopsCoordinates].self, from: data)
-                self.mapController?.coordinates = json
-                self.mapController?.coordinates.forEach({ (coordinate) in
+                self.coordinates = json
+                self.coordinates.forEach({ (coordinate) in
                     coordinate.locations.forEach({ (location) in
-                        self.mapController?.imageUrlArray.append(location.pathImage)
+                        self.imageUrlArray.append(location.pathImage)
                     })
                 })
                 handler(true)
@@ -50,7 +50,7 @@ class MapAPI{
         imageUrlArray.forEach { (url) in
             Alamofire.request(url).responseImage(completionHandler: { (imageData) in
                 guard let image = imageData.result.value else {return}
-                self.mapController?.imageArray.append(image)
+                self.imageArray.append(image)
                 handler(true)
             })
         }

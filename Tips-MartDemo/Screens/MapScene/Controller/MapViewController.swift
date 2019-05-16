@@ -12,75 +12,38 @@ import CoreLocation
 import Alamofire
 import AlamofireImage
 
-protocol MapProtocol {
-    var coordinates: [ShopsCoordinates] {get set}
-    
-    var imageUrlArray: [String] {get set}
-    var imageArray: [UIImage] {get set}
-}
 
-class MapViewController: UIViewController, UIGestureRecognizerDelegate, MapProtocol {
+class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet var pullUpviewHeight: NSLayoutConstraint!
     @IBOutlet var mapView: MKMapView!
     
     @IBOutlet var pullUPView: PullUpView!
     
-    var tableView: UITableView?
+    @IBOutlet weak var tableView: UITableView!
     
     var coordinates: [ShopsCoordinates] = []
     var locations: [Locations] = []
     var imageUrlArray: [String] = []
     var imageArray: [UIImage] = []
     
+    let apiManager = MapAPI()
     var regionRadius: Double = 1000
+    
+    let screenSizee = UIScreen.main.bounds.height
     
     var locationManager = CLLocationManager()
     let authorizationStatus = CLLocationManager.authorizationStatus()
     override func viewDidLoad() {
         super.viewDidLoad()
-        MapAPI().mapController = self
         
-        MapAPI().getLocation(controller: self) { (finished) in
-            if finished{
-              
-//                self.coordinates = MapAPI().coordinates
-                self.addLocations()
-                MapAPI().getImages(handler: { (finished) in
-                    if finished{
-                        
-                        self.pullUPView.addSubview(self.tableView!)
-                        self.tableView?.reloadData()
-                        self.addSwipe()
-                        print(finished)
-                    }
-                })
-            }
-        }
         
-        tableView = UITableView()
-        tableView?.delegate = self
-        tableView?.dataSource = self
-        tableView?.isScrollEnabled = false
-        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "mapCell")
-        
-//        getShops { (finish) in
-//            if finish{
-//
-//                self.getImages(handler: { (finished) in
-//                    if finished{
-        
-//                    }
-//                })
-//            }
-//        }
-        
+        getData()
+        configureLocationServices()
         centerMapOnUserLocation()
         mapView.showsUserLocation = true
         locationManager.delegate = self
         mapView.delegate = self
-        getAccess()
-        locationUpdate()
     }
     
     func addSwipe(){
@@ -101,48 +64,6 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate, MapProto
         dismiss(animated: true, completion: nil)
     }
     
-    func getAccess(){
-        let status = CLLocationManager.authorizationStatus()
-        
-        switch status {
-        case .authorizedAlways, .authorizedWhenInUse:
-            return
-        case .denied, .restricted:
-            print("location access denied")
-            
-        default:
-            locationManager.requestWhenInUseAuthorization()
-        }
-    }
-    
-    func getShops(handler: @escaping (_ status: Bool) -> ()){
-        Alamofire.request(shopsLocationUrl, method: .get).responseData { (dataResponse) in
-            guard let data = dataResponse.data else {return}
-            let result = try! JSONDecoder().decode([ShopsCoordinates].self, from: data)
-            print(result)
-            self.coordinates = result
-            self.coordinates.forEach({ (coordinate) in
-                coordinate.locations.forEach({ (path) in
-                    self.imageUrlArray.append(path.pathImage)
-                })
-            })
-            print(self.coordinates.count)
-            print(self.coordinates)
-            handler(true)
-        }
-    }
-    
-    func getImages(handler: @escaping (_ status: Bool) -> ()){
-        imageUrlArray.forEach { (url) in
-            Alamofire.request(url).responseImage(completionHandler: { (imageResponse) in
-                guard let image = imageResponse.result.value else {return}
-                self.imageArray.append(image)
-                handler(true)
-            })
-        }
-    }
-    
-    
     func addLocations(){
         var annotations: [DroppablePin] = []
         coordinates.forEach { (coordinates) in
@@ -152,18 +73,27 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate, MapProto
                 let annotation = DroppablePin(coordinate: coordinates, identifier: "tipsShop")
                 annotations.append(annotation)
             })
+            
             mapView.addAnnotations(annotations)
         }
     }
     
-    func locationUpdate(){
-        if (CLLocationManager.locationServicesEnabled()) {
-            
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startUpdatingLocation()
+    
+    
+    func getData(){
+        apiManager.getLocation { (finished) in
+            if finished{
+                self.coordinates = self.apiManager.coordinates
+                self.imageUrlArray = self.apiManager.imageUrlArray
+                self.addLocations()
+                self.addSwipe()
+                self.apiManager.getImages(handler: { (finished) in
+                    if finished{
+                        self.imageArray = self.apiManager.imageArray
+                        
+                    }
+                })
+            }
         }
     }
     
@@ -184,50 +114,64 @@ extension MapViewController: MKMapViewDelegate{
         view.animatesDrop = true
         view.pinTintColor = .purple
         view.addGestureRecognizer(tapGesture())
+        pullUPView.addGestureRecognizer(swipeGesture())
         return view
     }
-    
     func tapGesture() -> UITapGestureRecognizer{
         let tap = UITapGestureRecognizer(target: self, action: #selector(showInfo))
+        
         return tap
     }
+    func swipeGesture() -> UISwipeGestureRecognizer{
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(showInfo))
+        swipe.direction = .up
+        return swipe
+    }
     @objc func showInfo(){
-        self.pullUpviewHeight.constant = 500
+        self.pullUpviewHeight.constant = CGFloat(screenSizee / 2)
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
-            self.tableView?.frame = self.pullUPView.bounds
+            OperationQueue.main.addOperation {
+                self.tableView.delegate = self
+                self.tableView.dataSource = self
+                self.tableView.isScrollEnabled = true
+                self.tableView.reloadData()
+            }
+            
         }
     }
 }
 extension MapViewController: CLLocationManagerDelegate{
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("  kkk")
+    func configureLocationServices(){
+        if authorizationStatus == .notDetermined{
+            locationManager.requestAlwaysAuthorization()
+        } else {
+            return
+        }
     }
+    
     
 }
-
-
 extension MapViewController: UITableViewDelegate, UITableViewDataSource{
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return coordinates.count
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        
-        return locations.count
+        tableView.backgroundColor = .clear
+        tableView.separatorColor = .clear
+        return imageArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as! MapCell
         
         let loaction = locations[indexPath.row]
+        cell.backgroundColor = .clear
         
-        cell.textLabel?.text = loaction.address
-        cell.imageView?.clipsToBounds = true
-        cell.imageView?.contentMode = .scaleAspectFit
-        cell.imageView?.image = imageArray[indexPath.row]
+        cell.adresTextLabel.text = loaction.address
+        
+        cell.shopsImageView.image = imageArray[indexPath.row]
+        cell.selectionStyle = .none
         
         print(coordinates.count)
         
