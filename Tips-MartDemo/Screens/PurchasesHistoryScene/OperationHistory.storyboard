@@ -40,6 +40,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="filter" id="d5W-XL-92P">
                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="presentFilter:" destination="RVC-bg-hFp" id="3HO-cO-5ZZ"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

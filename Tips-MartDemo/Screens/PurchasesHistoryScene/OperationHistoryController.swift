@@ -24,6 +24,12 @@ class OperationHistoryController: UIViewController {
         }
     }
     
+    @IBAction func presentFilter(_ sender: UIBarButtonItem) {
+        let vc = UIStoryboard(name: "FilterView", bundle: nil).instantiateViewController(withIdentifier: "filterVc")
+        self.present(vc, animated: true) {
+            
+        }
+    }
     @IBAction func dissmisView(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }

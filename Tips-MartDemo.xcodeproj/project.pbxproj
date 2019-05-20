@@ -96,6 +96,8 @@
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
 		C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299E5342271C9B100D6CC05 /* RealmModel.swift */; };
+		C2A75D0E229303F100CE2CC9 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A75D0D229303F100CE2CC9 /* FilterController.swift */; };
+		C2A75D102293040200CE2CC9 /* FilterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A75D0F2293040200CE2CC9 /* FilterView.storyboard */; };
 		C2B80C83228C436E00C469D4 /* MapConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C82228C436E00C469D4 /* MapConstants.swift */; };
 		C2B80C85228C46DD00C469D4 /* MapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C84228C46DD00C469D4 /* MapAPI.swift */; };
 		C2B80C89228D953700C469D4 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C88228D953700C469D4 /* MapCell.swift */; };
@@ -243,6 +245,8 @@
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C293570A225CCF38004F4510 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		C299E5342271C9B100D6CC05 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		C2A75D0D229303F100CE2CC9 /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
+		C2A75D0F2293040200CE2CC9 /* FilterView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterView.storyboard; sourceTree = "<group>"; };
 		C2B80C82228C436E00C469D4 /* MapConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConstants.swift; sourceTree = "<group>"; };
 		C2B80C84228C46DD00C469D4 /* MapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPI.swift; sourceTree = "<group>"; };
 		C2B80C88228D953700C469D4 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
@@ -635,6 +639,8 @@
 			isa = PBXGroup;
 			children = (
 				C2D8BC2D226E07A500001C99 /* OperationHistoryView.swift */,
+				C2A75D0D229303F100CE2CC9 /* FilterController.swift */,
+				C2A75D0F2293040200CE2CC9 /* FilterView.storyboard */,
 				C2D8BC27226E014100001C99 /* OperationHistory.storyboard */,
 				C2D8BC2B226E071700001C99 /* HistoryCell.swift */,
 				C2D8BC29226E069000001C99 /* OperationHistoryController.swift */,
@@ -1074,6 +1080,7 @@
 				C20C0D742292DBA500EF89CC /* DetailMapCell.xib in Resources */,
 				C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */,
 				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
+				C2A75D102293040200CE2CC9 /* FilterView.storyboard in Resources */,
 				C2F285F5226DDF42005DC8F8 /* WaitingScreen.storyboard in Resources */,
 				C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */,
 				C242C4902270750B008B359A /* WDHistory.storyboard in Resources */,
@@ -1210,6 +1217,7 @@
 				C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */,
 				C26117E0228EB5D6005A9F68 /* LoginModelType.swift in Sources */,
 				C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */,
+				C2A75D0E229303F100CE2CC9 /* FilterController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C2CCDB7C22897DC600FE508D /* LoginOutputsRealm.swift in Sources */,
 				C241151C2281B95A004F41E1 /* FemaleButton.swift in Sources */,
