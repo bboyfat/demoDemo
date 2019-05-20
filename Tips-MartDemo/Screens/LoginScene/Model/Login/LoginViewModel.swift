@@ -9,7 +9,9 @@
 import Foundation
 import RealmSwift
 
-class LoginViewModel{
+class LoginViewModel: LoginModelType, Codable{
+   
+    
     
     var phoneNumber: String = ""
     var password: String = ""
@@ -17,10 +19,8 @@ class LoginViewModel{
     
     func saveUserData(){
         let loginData = LoginDataBase()
-       
         loginData.setValue(self.password, forKey: "password")
         loginData.setValue(self.phoneNumber, forKey: "phoneNumber")
-        //  userData.setValue(self.gender, forKey: "gender")
         let realm = try! Realm()
         do {
             try realm.write {
@@ -31,12 +31,25 @@ class LoginViewModel{
         }
     }
     
-    func fetchDataFromRealm() -> LoginDataBase?{
+    func cleraUserData(){
+        let realm = try! Realm()
+        let objectToDelete = realm.objects(LoginDataBase.self)
+        if objectToDelete.count > 1{
+        do{
+           try realm.write {
+               realm.delete(objectToDelete)
+            }
+        } catch let clearErr{
+            print("Can't remove", clearErr)
+        }
+        }
+    }
+    
+    func fetchUserData() -> LoginDataBase?{
         var loginData: LoginDataBase?
-        
         let realm = try! Realm()
         let result = realm.objects(LoginDataBase.self)
-        
+        print(result.count)
         loginData = result.first
         return loginData
     }

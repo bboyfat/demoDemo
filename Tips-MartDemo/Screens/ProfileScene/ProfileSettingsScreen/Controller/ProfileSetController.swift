@@ -26,11 +26,12 @@ class ProfileSetController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getInfo()
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        moveUp()
+         getInfo()
+         moveUp()
     }
     func getInfo(){
         if let userDataBase = LogOutputViewModel().fetchData(){

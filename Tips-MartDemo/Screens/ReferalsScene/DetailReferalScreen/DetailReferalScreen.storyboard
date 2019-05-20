@@ -132,7 +132,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="members" translatesAutoresizingMaskIntoConstraints="NO" id="m1f-CS-6qC">
                                                             <rect key="frame" x="10" y="10" width="41" height="41"/>
-                                                            <color key="backgroundColor" red="0.30588235289999999" green="0.27058823529999998" blue="0.56862745100000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" red="0.396078431372549" green="0.2627450980392157" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="m1f-CS-6qC" secondAttribute="height" multiplier="1:1" id="Qjo-l0-gZg"/>
                                                             </constraints>

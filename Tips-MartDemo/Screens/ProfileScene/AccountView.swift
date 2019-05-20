@@ -10,7 +10,7 @@ import UIKit
 
 class AccountView: UIView {
     
-    
+   
     let gradientLayer = CAGradientLayer()
     
     let purpleColor = UIColor(red: 79/255, green: 67/255, blue: 145/255, alpha: 1).cgColor
@@ -27,15 +27,16 @@ class AccountView: UIView {
     @IBOutlet weak var nameSernameLabel: UILabel!
     @IBOutlet weak var greenBalanceLabel: UILabel!
     @IBOutlet weak var balanceGrayLabel: UILabel!
+    @IBOutlet weak var badgeLabel: UIButton!
     
     
     
     
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         
-        
-        
+        setText()
         addGradient()
     }
     
@@ -47,6 +48,12 @@ class AccountView: UIView {
          navigationView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    func setText(){
+        if let userData = LogOutputViewModel().fetchData(){
+            self.idLabel.text = userData.accountID
+            self.nameSernameLabel.text = userData.name + " " + userData.surname
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutIfNeeded()

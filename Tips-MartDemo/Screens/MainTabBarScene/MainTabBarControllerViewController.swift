@@ -59,11 +59,13 @@ class MainTabBarControllerViewController: UITabBarController {
         
         if countNotif > 0{
             self.mainVc.mainPageView.badgeLabel.setTitle(stringCount, for: .normal)
+            
             self.mainVc.mainPageView.badgeLabel.isHidden = false
+            
         } else {
             self.mainVc.mainPageView.badgeLabel.isHidden = true
+            
         }
-        
     }
     
 }

@@ -12,15 +12,26 @@ import CoreLocation
 import Alamofire
 import AlamofireImage
 
+enum CellType{
+    case detailCell
+    case allCells
+}
+
+
 
 class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
+   
     @IBOutlet var pullUpviewHeight: NSLayoutConstraint!
     @IBOutlet var mapView: MKMapView!
     
     @IBOutlet var pullUPView: PullUpView!
     
     @IBOutlet weak var tableView: UITableView!
+  
+    let nib = UINib.init(nibName: "DetailMapCell", bundle: nil)
+    
+    var cellType: CellType = .allCells
     
     var coordinates: [ShopsCoordinates] = []
     var locations: [Locations] = []
@@ -31,12 +42,12 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     var regionRadius: Double = 1000
     
     let screenSizee = UIScreen.main.bounds.height
-    
+    let screenWidth = UIScreen.main.bounds.width
     var locationManager = CLLocationManager()
     let authorizationStatus = CLLocationManager.authorizationStatus()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.register(nib, forCellReuseIdentifier: "detailMapCell")
         
         getData()
         configureLocationServices()
@@ -110,15 +121,19 @@ extension MapViewController: MKMapViewDelegate{
         if annotation is MKUserLocation{
             return nil
         }
-        let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "tipsShop")
-        view.animatesDrop = true
-        view.pinTintColor = .purple
+        let view = MKAnnotationView(annotation: annotation, reuseIdentifier: "tipsShop")
+//        view.animatesDrop = true
+        view.image = #imageLiteral(resourceName: "Pin")
+        
+//        view.pinTintColor = .purple
+        view.backgroundColor = .clear
+        view.canShowCallout = false
         view.addGestureRecognizer(tapGesture())
         pullUPView.addGestureRecognizer(swipeGesture())
         return view
     }
     func tapGesture() -> UITapGestureRecognizer{
-        let tap = UITapGestureRecognizer(target: self, action: #selector(showInfo))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showDetails))
         
         return tap
     }
@@ -129,6 +144,7 @@ extension MapViewController: MKMapViewDelegate{
     }
     @objc func showInfo(){
         self.pullUpviewHeight.constant = CGFloat(screenSizee / 2)
+        self.cellType = .allCells
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
             OperationQueue.main.addOperation {
@@ -138,6 +154,19 @@ extension MapViewController: MKMapViewDelegate{
                 self.tableView.reloadData()
             }
             
+        }
+    }
+    @objc func showDetails(){
+        self.pullUpviewHeight.constant = CGFloat(screenSizee / 3)
+        self.cellType = .detailCell
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+            OperationQueue.main.addOperation {
+                self.tableView.delegate = self
+                self.tableView.dataSource = self
+                self.tableView.isScrollEnabled = true
+                self.tableView.reloadData()
+            }
         }
     }
 }
@@ -159,22 +188,40 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource{
         
         tableView.backgroundColor = .clear
         tableView.separatorColor = .clear
-        return imageArray.count
+        switch cellType {
+        case .allCells:
+            return imageArray.count
+        case .detailCell:
+            return 1
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as! MapCell
+        
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "detailMapCell", for: indexPath) as! DetailMapCell
+        let mapCell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as! MapCell
         
         let loaction = locations[indexPath.row]
-        cell.backgroundColor = .clear
+        mapCell.adresTextLabel.text = loaction.address
+        mapCell.shopsImageView.image = imageArray[indexPath.row]
+       
+//        detailCell.detaliImageView.image = imageArray[0]
+//        detailCell.addressLbl.text = "Аддрес:" + " " + locations[0].address
+//        detailCell.phoneNumberLbl.text = "Номер телефона:" + " " + locations[0].phoneNumber
         
-        cell.adresTextLabel.text = loaction.address
+        mapCell.backgroundColor = .clear
+        detailCell.backgroundColor = .clear
+        detailCell.selectionStyle = .none
+        mapCell.selectionStyle = .none
         
-        cell.shopsImageView.image = imageArray[indexPath.row]
-        cell.selectionStyle = .none
+        switch cellType{
+        case .detailCell: return detailCell
+        case .allCells: return mapCell
+        }
         
-        print(coordinates.count)
-        
-        return cell
+       
     }
+    
+    
 }

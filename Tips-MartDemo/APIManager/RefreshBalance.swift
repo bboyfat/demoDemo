@@ -46,7 +46,7 @@ class RefreshToken{
                     if self.checkDataRealm(answer: answer.data.notifications){
                         self.saveData(answer: answer.data.notifications)
                     }
-                    print(self.checkDataRealm(answer: answer.data.notifications), "!!!!!!!!!!!!!q3wrghjelifuvivpwqehpoasjdvcosdv;asjdv;oaskndvalskdv9238y102963501293560192835019283501283560123650129365012356109236501923650192365")
+                    print(self.checkDataRealm(answer: answer.data.notifications))
                     
                     
 
@@ -75,9 +75,6 @@ class RefreshToken{
             notifRealmData.setValue(notification.kind, forKey: "kind")
             notifRealmData.setValue(notification.notificationID, forKey: "notificationID")
             notifRealmData.setValue(notification.text, forKey: "text")
-            
-          
-           
             
             OperationQueue.main.addOperation {
                 let realm = try! Realm()

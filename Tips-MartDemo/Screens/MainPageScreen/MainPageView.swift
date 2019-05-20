@@ -23,9 +23,7 @@ class MainPageView: UIView {
     
     @IBOutlet var idLabel: UILabel!
     //MARK: Balance Outlet
-    
     @IBOutlet weak var greenBalance: UILabel!
-    
     @IBOutlet weak var grayBalance: UILabel!
     @IBOutlet weak var badgeLabel: UIButton!
     //MARK: Settings and Notif buttons outlet
@@ -34,18 +32,6 @@ class MainPageView: UIView {
     @IBOutlet weak var myCardBtn: UIButton!
     
     //MARK: Get data from user defaults
-    
-    let name = UserDefaults.standard.string(forKey: "name")
-    let surname = UserDefaults.standard.string(forKey: "surname")
-    let userId = UserDefaults.standard.string(forKey: "userId")
-    let balanceGreen = UserDefaults.standard.string(forKey: "greenBalance")
-    let balanceGray = UserDefaults.standard.string(forKey: "grayBalance")
-    
-    
-    
-    
-    
-    
     let gradientLayer = CAGradientLayer()
     
     let purpleColor = UIColor(red: 79/255, green: 67/255, blue: 145/255, alpha: 1).cgColor
@@ -55,18 +41,12 @@ class MainPageView: UIView {
         
         banerView.animationImages = [UIImage(named: "banerBrowser"), UIImage(named: "BanerInvite"), UIImage(named: "BanerDownload")] as? [UIImage]
         
-        banerView.animationDuration = 10
+        banerView.animationDuration = 8
         banerView.startAnimating()
-        
         photoImageView.layer.cornerRadius = 25
         photoImageView.layer.borderWidth = 2
         photoImageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1).cgColor
-        
-        
-        
-        
         setCornerForTopAndBottom()
-        
         setText()
     }
     
@@ -91,24 +71,22 @@ class MainPageView: UIView {
         //         navigationView.layer.insertSublayer(gradientLayer, at: 0)
         navigationView.layer.insertSublayer(gradientLayer, at: 0)
     }
+    func setText(){
+        if let userData = LogOutputViewModel().fetchData(){
+            self.idLabel.text = userData.accountID
+            self.nameSurnameLabel.text = userData.name + " " + userData.surname
+        }
+    }
     
     
     override func layoutSubviews() {
-        
+        super.layoutSubviews()
         gradientLayer.frame = self.navigationView.bounds
         
         
-        //        navigationView.layer.addSublayer(gradientLayer)
+       
         
     }
-    func setText(){
-        guard let name = self.name, let surname = self.surname, let userId = self.userId, let greenBalanceString = balanceGreen, let grayBalanceString = balanceGray else { return }
-        
-        nameSurnameLabel.text = name + " " + surname
-        
-        idLabel.text = "ID: \(userId)"
-        greenBalance.text = greenBalanceString + " грн."
-        grayBalance.text = grayBalanceString + " грн."
-    }
+   
     
 }

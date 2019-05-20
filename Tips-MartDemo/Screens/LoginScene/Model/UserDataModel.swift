@@ -21,7 +21,6 @@ class UserDataModel{
     var name: String = ""
     var secondName: String = ""
     var birthDay: Double = 0.0
-    var gender = Gender.RawValue.self
     var authCode: Int = 0
     
     func saveUserData(){
@@ -31,7 +30,7 @@ class UserDataModel{
         userData.setValue(String(self.birthDay), forKey: "birthDay")
         userData.setValue(self.password, forKey: "password")
         userData.setValue(self.phoneNumber, forKey: "phoneNumber")
-      //  userData.setValue(self.gender, forKey: "gender")
+      
         let realm = try! Realm()
         do {
             try realm.write {

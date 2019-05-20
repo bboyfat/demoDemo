@@ -10,12 +10,14 @@
 		C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2059FCD2265F4BC00736885 /* WebView.storyboard */; };
 		C2059FD02265F50D00736885 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FCF2265F50D00736885 /* WebView.swift */; };
 		C2059FD22265F53500736885 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2059FD12265F53500736885 /* WebViewController.swift */; };
+		C20C0D732292DBA500EF89CC /* DetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C0D712292DBA500EF89CC /* DetailMapCell.swift */; };
+		C20C0D742292DBA500EF89CC /* DetailMapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20C0D722292DBA500EF89CC /* DetailMapCell.xib */; };
 		C20C9F872286D5E50023D701 /* DetailRefController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F862286D5E50023D701 /* DetailRefController.swift */; };
 		C20C9F892286D5F90023D701 /* DetRefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F882286D5F90023D701 /* DetRefView.swift */; };
 		C20C9F8F2286D6420023D701 /* DetailReferalScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20C9F8E2286D6420023D701 /* DetailReferalScreen.storyboard */; };
 		C20C9F912286DF2C0023D701 /* DetaileRefCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F902286DF2C0023D701 /* DetaileRefCell.swift */; };
 		C20C9F932286E2180023D701 /* DetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9F922286E2180023D701 /* DetailCellModel.swift */; };
-		C20C9FD7228731250023D701 /* AlamofireAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9FD6228731250023D701 /* AlamofireAPIManager.swift */; };
+		C20C9FD7228731250023D701 /* AlamofireLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C9FD6228731250023D701 /* AlamofireLogin.swift */; };
 		C217763C22675E1800D6C97A /* GetLogos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217763B22675E1800D6C97A /* GetLogos.swift */; };
 		C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */; };
 		C2184A9A226DB22D00ABE8C3 /* RefreshBalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */; };
@@ -34,6 +36,9 @@
 		C23E9F6622670DE0002191E3 /* Shops.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23E9F6522670DDF002191E3 /* Shops.storyboard */; };
 		C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E9F6722671DFB002191E3 /* ShopsModel.swift */; };
 		C23E9F6A22671FDF002191E3 /* ShopsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */; };
+		C23FAD582290245700372B5B /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAD572290245700372B5B /* PresentController.swift */; };
+		C23FAD5A229024AA00372B5B /* LoginSubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAD59229024AA00372B5B /* LoginSubController.swift */; };
+		C23FAD5C229024CA00372B5B /* RegistrationSubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAD5B229024CA00372B5B /* RegistrationSubController.swift */; };
 		C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115142281B3AF004F41E1 /* CheckBoxButton.swift */; };
 		C241151A2281B933004F41E1 /* MaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115192281B933004F41E1 /* MaleButton.swift */; };
 		C241151C2281B95A004F41E1 /* FemaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C241151B2281B95A004F41E1 /* FemaleButton.swift */; };
@@ -65,6 +70,7 @@
 		C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2492A992260996A007E2037 /* Profile.storyboard */; };
 		C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9B2260A249007E2037 /* MainPageViewController.swift */; };
 		C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9D2260A25E007E2037 /* MainPageView.swift */; };
+		C24ADDA1228EF73D005936F6 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24ADDA0228EF73D005936F6 /* TestViewController.swift */; };
 		C24C547422844D0F00AE45D5 /* ReferalsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C547322844D0F00AE45D5 /* ReferalsViewCell.swift */; };
 		C24C547622844F7800AE45D5 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C547522844F7800AE45D5 /* CellModel.swift */; };
 		C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A13B7225B405F00499C3C /* CustomFonts.swift */; };
@@ -74,6 +80,7 @@
 		C25BBF712255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C25BBF6F2255E0D2008D78F9 /* Tips_MartDemo.xcdatamodeld */; };
 		C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF722255E0D3008D78F9 /* Assets.xcassets */; };
 		C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */; };
+		C26117E0228EB5D6005A9F68 /* LoginModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26117DF228EB5D6005A9F68 /* LoginModelType.swift */; };
 		C270FC872269BD750059F161 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270FC862269BD750059F161 /* Refresh.swift */; };
 		C270FC892269C1C80059F161 /* RefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270FC882269C1C80059F161 /* RefreshModel.swift */; };
 		C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */; };
@@ -148,12 +155,14 @@
 		C2059FCD2265F4BC00736885 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		C2059FCF2265F50D00736885 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		C2059FD12265F53500736885 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C20C0D712292DBA500EF89CC /* DetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapCell.swift; sourceTree = "<group>"; };
+		C20C0D722292DBA500EF89CC /* DetailMapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMapCell.xib; sourceTree = "<group>"; };
 		C20C9F862286D5E50023D701 /* DetailRefController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailRefController.swift; path = ../DetailRefController.swift; sourceTree = "<group>"; };
 		C20C9F882286D5F90023D701 /* DetRefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetRefView.swift; path = ../DetRefView.swift; sourceTree = "<group>"; };
 		C20C9F8E2286D6420023D701 /* DetailReferalScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = DetailReferalScreen.storyboard; path = ../DetailReferalScreen.storyboard; sourceTree = "<group>"; };
 		C20C9F902286DF2C0023D701 /* DetaileRefCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetaileRefCell.swift; path = ../DetaileRefCell.swift; sourceTree = "<group>"; };
 		C20C9F922286E2180023D701 /* DetailCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellModel.swift; sourceTree = "<group>"; };
-		C20C9FD6228731250023D701 /* AlamofireAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIManager.swift; sourceTree = "<group>"; };
+		C20C9FD6228731250023D701 /* AlamofireLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireLogin.swift; sourceTree = "<group>"; };
 		C217763B22675E1800D6C97A /* GetLogos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLogos.swift; sourceTree = "<group>"; };
 		C2184A97226DB0C300ABE8C3 /* RefreshBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalance.swift; sourceTree = "<group>"; };
 		C2184A99226DB22D00ABE8C3 /* RefreshBalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshBalanceModel.swift; sourceTree = "<group>"; };
@@ -172,6 +181,9 @@
 		C23E9F6522670DDF002191E3 /* Shops.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shops.storyboard; sourceTree = "<group>"; };
 		C23E9F6722671DFB002191E3 /* ShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsModel.swift; sourceTree = "<group>"; };
 		C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsAPIRequest.swift; sourceTree = "<group>"; };
+		C23FAD572290245700372B5B /* PresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
+		C23FAD59229024AA00372B5B /* LoginSubController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSubController.swift; sourceTree = "<group>"; };
+		C23FAD5B229024CA00372B5B /* RegistrationSubController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSubController.swift; sourceTree = "<group>"; };
 		C24115142281B3AF004F41E1 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		C24115192281B933004F41E1 /* MaleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleButton.swift; sourceTree = "<group>"; };
 		C241151B2281B95A004F41E1 /* FemaleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleButton.swift; sourceTree = "<group>"; };
@@ -203,6 +215,7 @@
 		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2492A9B2260A249007E2037 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C2492A9D2260A25E007E2037 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		C24ADDA0228EF73D005936F6 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C24C547322844D0F00AE45D5 /* ReferalsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferalsViewCell.swift; sourceTree = "<group>"; };
 		C24C547522844F7800AE45D5 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		C25A13B7225B405F00499C3C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
@@ -214,6 +227,7 @@
 		C25BBF722255E0D3008D78F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C25BBF752255E0D3008D78F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25BBF772255E0D3008D78F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C26117DF228EB5D6005A9F68 /* LoginModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelType.swift; sourceTree = "<group>"; };
 		C270FC862269BD750059F161 /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
 		C270FC882269C1C80059F161 /* RefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModel.swift; sourceTree = "<group>"; };
 		C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReferalScreen.storyboard; sourceTree = "<group>"; };
@@ -384,7 +398,7 @@
 				C2CB12332288375B008B3590 /* InputModel.swift */,
 				C2CB124022883966008B3590 /* Registration */,
 				C2CB123D22883902008B3590 /* Login */,
-				C20C9FD6228731250023D701 /* AlamofireAPIManager.swift */,
+				C20C9FD6228731250023D701 /* AlamofireLogin.swift */,
 			);
 			name = AlamofireAPIManager;
 			path = APIManager/AlamofireAPIManager;
@@ -458,8 +472,19 @@
 			children = (
 				C221B84A2282FF920081BFB1 /* LoginViewModel.swift */,
 				C221B84C2282FFCB0081BFB1 /* LoginDataBase.swift */,
+				C26117DF228EB5D6005A9F68 /* LoginModelType.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		C23FAD562290243400372B5B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C23FAD572290245700372B5B /* PresentController.swift */,
+				C23FAD59229024AA00372B5B /* LoginSubController.swift */,
+				C23FAD5B229024CA00372B5B /* RegistrationSubController.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C24114FF22817D89004F41E1 /* App */ = {
@@ -703,6 +728,7 @@
 			isa = PBXGroup;
 			children = (
 				C283C8482280380A00714B98 /* LoginScreen.storyboard */,
+				C24ADDA0228EF73D005936F6 /* TestViewController.swift */,
 				C2FC25E222805FA100395247 /* LoginView.swift */,
 			);
 			path = View;
@@ -711,6 +737,7 @@
 		C24115232281C1B8004F41E1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C23FAD562290243400372B5B /* New Group */,
 				C2FC25E022805C7C00395247 /* LoginViewController.swift */,
 			);
 			path = Controller;
@@ -827,6 +854,8 @@
 			isa = PBXGroup;
 			children = (
 				C242C49722707A16008B359A /* MapView.swift */,
+				C20C0D712292DBA500EF89CC /* DetailMapCell.swift */,
+				C20C0D722292DBA500EF89CC /* DetailMapCell.xib */,
 				C2CED699228B422D00EEAD3A /* PullUpView.swift */,
 				C242C49522707971008B359A /* Map.storyboard */,
 			);
@@ -1042,6 +1071,7 @@
 				C22C98782267987600BC2106 /* DetailShopView.storyboard in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
 				C25BBF6E2255E0D2008D78F9 /* Main.storyboard in Resources */,
+				C20C0D742292DBA500EF89CC /* DetailMapCell.xib in Resources */,
 				C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */,
 				C2E699FE2258B2D0006FDDDB /* gotham_pro_light.ttf in Resources */,
 				C2F285F5226DDF42005DC8F8 /* WaitingScreen.storyboard in Resources */,
@@ -1131,6 +1161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23FAD5A229024AA00372B5B /* LoginSubController.swift in Sources */,
 				C23E9F6A22671FDF002191E3 /* ShopsAPIRequest.swift in Sources */,
 				C2D8BC69226F5D0300001C99 /* MoreViewController.swift in Sources */,
 				C242C49E2270A127008B359A /* NotoficationCell.swift in Sources */,
@@ -1153,10 +1184,11 @@
 				C29356DF225CA7E8004F4510 /* RegistrationModelAPI.swift in Sources */,
 				C221B8402282CC7B0081BFB1 /* BlurView.swift in Sources */,
 				C242836D2264F51F00750768 /* BarCodeView.swift in Sources */,
-				C20C9FD7228731250023D701 /* AlamofireAPIManager.swift in Sources */,
+				C20C9FD7228731250023D701 /* AlamofireLogin.swift in Sources */,
 				C241151F2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift in Sources */,
 				C2369BB52265C32100FBB386 /* AccountViewController.swift in Sources */,
 				C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */,
+				C23FAD5C229024CA00372B5B /* RegistrationSubController.swift in Sources */,
 				C2F285F9226DF0EA005DC8F8 /* GetInfoModel.swift in Sources */,
 				C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */,
 				C2E59630225DE2E5001D09D9 /* UsersOutput.swift in Sources */,
@@ -1176,6 +1208,7 @@
 				C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */,
+				C26117E0228EB5D6005A9F68 /* LoginModelType.swift in Sources */,
 				C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C2CCDB7C22897DC600FE508D /* LoginOutputsRealm.swift in Sources */,
@@ -1191,6 +1224,7 @@
 				C24283692264F36200750768 /* BorCodeGenViewController.swift in Sources */,
 				C2D8BC67226F5B0100001C99 /* ReferalView.swift in Sources */,
 				C2D8BC5D226F3E9100001C99 /* MainNotificationsController.swift in Sources */,
+				C20C0D732292DBA500EF89CC /* DetailMapCell.swift in Sources */,
 				C2CB123C22883888008B3590 /* IntroduceInput.swift in Sources */,
 				C283C843228034BD00714B98 /* AnimateView.swift in Sources */,
 				C24115212281C080004F41E1 /* LoginVCLittleFunctions.swift in Sources */,
@@ -1200,6 +1234,7 @@
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C2429B562266171A00EB7942 /* ShopsTableViewCell.swift in Sources */,
 				C2059FD22265F53500736885 /* WebViewController.swift in Sources */,
+				C24ADDA1228EF73D005936F6 /* TestViewController.swift in Sources */,
 				C242C49A22707A2A008B359A /* MapViewController.swift in Sources */,
 				C2F285F7226DF086005DC8F8 /* GetReferalsIncome.swift in Sources */,
 				C2CB1238228837AB008B3590 /* AuthInput.swift in Sources */,
@@ -1231,6 +1266,7 @@
 				C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */,
 				C2CB123A22883823008B3590 /* RgistrationInput.swift in Sources */,
 				C2FC25E122805C7C00395247 /* LoginViewController.swift in Sources */,
+				C23FAD582290245700372B5B /* PresentController.swift in Sources */,
 				C241151A2281B933004F41E1 /* MaleButton.swift in Sources */,
 				C221B8472282D9D00081BFB1 /* SighnInButton.swift in Sources */,
 				C2CCDB882289A4CE00FE508D /* AvatarViewModel.swift in Sources */,

@@ -43,7 +43,7 @@ class LogOutputViewModel{
         let realm = try! Realm()
         let result = realm.objects(LoginOutputsRealm.self)
         
-        loginOutputs = result.first
+        loginOutputs = result.last
         return loginOutputs
     }
     

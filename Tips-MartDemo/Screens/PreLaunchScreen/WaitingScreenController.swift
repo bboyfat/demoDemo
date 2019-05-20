@@ -17,7 +17,7 @@ class WaitingScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginModel = LoginViewModel().fetchDataFromRealm()
+        loginModel = LoginViewModel().fetchUserData()
         if loginModel != nil{
             OperationQueue.main.addOperation {
                 APILogin().getAuthCode { (info) in
@@ -34,14 +34,6 @@ class WaitingScreenController: UIViewController {
             presentloginController()
         }
         
-        
-    }
-    
-    func fetch(){
-        let realm = try! Realm()
-        
-        let result = realm.objects(LoginDataBase.self)
-        loginModel = result.first
         
     }
     

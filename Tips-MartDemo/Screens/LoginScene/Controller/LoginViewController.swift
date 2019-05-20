@@ -9,6 +9,8 @@
 import UIKit
 import SwiftPhoneNumberFormatter
 import RealmSwift
+import Alamofire
+
 
 class LoginViewController: UIViewController {
     
@@ -38,21 +40,27 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
         loginView.phoneNumberTextField.delegate = self
         tapEndEdit()
         getData()
     }
     
-    private func checkAutorization() -> Bool{
-        
-        APILogin().getAuthCode { (auth) in
-            
-            if auth.success == true{
+    private func checkAutorization(){
+         self.loginModel.cleraUserData()
+        AlamofireLogin().postRequest(model: self.loginModel, url: URLS.login.rawValue, handler: { (finished) in
+           if finished{
                 self.presentTabBar()
+            } else {
+                self.stopAnimateIndicator()
+                ErrorAlerts.loginErrorAlert(controller: self)
+                self.loginModel.cleraUserData()
             }
-            
-        }
-        return true
+        })
+        
+        
+        
     }
     
     private func presentTabBar(){
@@ -67,14 +75,23 @@ class LoginViewController: UIViewController {
     }
     
     private func stopAnimateIndicator(){
-        self.blurView.activityIndicator.startAnimating()
-        blurView.removeFromSuperview()
+        OperationQueue.main.addOperation {
+            self.blurView.activityIndicator.startAnimating()
+            self.blurView.removeFromSuperview()
+        }
+        
     }
+    
+    
+    
+    
     
     //MARK: Send Requests buttonsAction
     
     @IBAction func sighnInBtnAction(_ sender: UIButton) {
+        self.view.endEditing(true)
         blurView.showActivityIndicatory(uiView: sender)
+        self.loginModel.saveUserData()
         self.checkAutorization()
     }
     
@@ -133,7 +150,7 @@ class LoginViewController: UIViewController {
         self.loginView.passwordTextField.didEndEditing = { [weak self] in
             if let password = $0.text{
                 self?.loginModel.password = password
-                self?.loginModel.saveUserData()
+                
             }
         }
         

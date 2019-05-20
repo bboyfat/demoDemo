@@ -14,6 +14,8 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var accountView: AccountView!
     var avatarImage: UIImage?
     var avatarModel: AvatarViewModel = AvatarViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setAvatar(view: accountView.profilePhoto)

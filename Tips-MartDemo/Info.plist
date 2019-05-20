@@ -2,16 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To show you the closest shops to you we need to ger your agree</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Need camera to set profile photo</string>
 	<key>CFBundleDisplayName</key>
 	<string>Tips-Mart</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Need photo library only for using to set new photo to profile</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -48,6 +42,14 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Need camera to set profile photo</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To show you the closest shops to you we need to ger your agree</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To show you the closest shops to you we need to ger your agree</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need photo library only for using to set new photo to profile</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>gotham_pro.ttf</string>
@@ -71,8 +73,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>To show you the closest shops to you we need to ger your agree</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -17,7 +17,7 @@ class APILogin{
     
     func getAuthCode(completion:  @escaping (UsersOutput) -> Void) {
         
-       let userData = LoginViewModel().fetchDataFromRealm()
+       let userData = LoginViewModel().fetchUserData()
         
         guard let phoneNumber = userData?.phoneNumber else { return}
         guard let password = userData?.password else {return}
@@ -46,14 +46,7 @@ class APILogin{
                 let answer = try JSONDecoder().decode(UsersOutput.self, from: data)
                completion(answer)
              print(answer)
-            self.userDefaults.set(answer.data?.accessToken.value, forKey: "accessToken")
-            self.userDefaults.set(answer.data?.refreshToken.value, forKey: "refreshToken")
-            self.loginOutputs.name = answer.data?.name ?? ""
-            self.loginOutputs.surname = answer.data?.surname ?? ""
-            self.loginOutputs.gender = "male"
-            self.loginOutputs.birthDay = "09.09.1993"
-            
-            self.loginOutputs.saveData()
+           
             
              
             } catch {
