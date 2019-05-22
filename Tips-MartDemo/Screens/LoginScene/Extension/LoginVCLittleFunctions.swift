@@ -17,10 +17,11 @@ extension LoginViewController{
     //Func to animate show and Hide property
     
      func animateShowAndHide(){
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+        
+        UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
-            
-        }, completion: nil)
+        }
+       
         
     }
     

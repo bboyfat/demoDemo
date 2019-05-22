@@ -50,7 +50,7 @@ class AccountView: UIView {
     
     func setText(){
         if let userData = LogOutputViewModel().fetchData(){
-            self.idLabel.text = userData.accountID
+            self.idLabel.text = userData.accountID.separate(every: 2, with: " ")
             self.nameSernameLabel.text = userData.name + " " + userData.surname
         }
     }

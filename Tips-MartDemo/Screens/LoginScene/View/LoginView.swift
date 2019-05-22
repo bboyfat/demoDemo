@@ -100,8 +100,8 @@ class LoginView: UIView {
     override func awakeFromNib() {
         setPhonelabel()
         setBirthDay()
-        passwordTextField.floattingPlaceholder.text = "Password"
-        repeatPassTextField.floattingPlaceholder.text = "Repeat password"
+        passwordTextField.floattingPlaceholder.text = "Пароль"
+        repeatPassTextField.floattingPlaceholder.text = "Повторите пароль"
         authCodeTextField.floattingPlaceholder.text = "Enter code from SMS"
         friendsIdTextField.floattingPlaceholder.text = "Friend's ID or phone Number"
         senameTextField.floattingPlaceholder.text = "Last Name"
@@ -118,7 +118,7 @@ class LoginView: UIView {
     
     //setup phoneLabel
     func setPhonelabel(){
-        phoneNumberLabel.text = "Phone number"
+        phoneNumberLabel.text = "Номер телефона"
         phoneNumberLabel.frame = phoneNumberTextField.bounds
         phoneNumberTextField.addSubview(phoneNumberLabel)
     }

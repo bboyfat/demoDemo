@@ -14,7 +14,7 @@ class BarCodeView: UIView {
     
     @IBOutlet weak var barCodeImageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
-    let userId = UserDefaults.standard.string(forKey: "userId")
+    let userId = LogOutputViewModel().fetchData()?.accountID
     let gradient = CAGradientLayer()
     let generator = BarCodeGenerator()
     let purpleColor = UIColor(red: 79/255, green: 67/255, blue: 145/255, alpha: 1).cgColor
@@ -36,7 +36,7 @@ class BarCodeView: UIView {
         
        let image =  generator.generateBrCode(from: id)
         self.barCodeImageView.image = image
-        self.idLabel.text = id
+        self.idLabel.text = id.separate(every: 2, with: " ")
     }
     
     override func layoutSubviews() {

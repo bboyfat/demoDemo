@@ -26,14 +26,12 @@ class BlurView: UIView {
         self.backgroundColor = UIColor(red: 69/255, green: 201/255, blue: 122/255, alpha: 1)
         self.clipsToBounds = true
         self.layer.cornerRadius = 10
-        self.layer.borderWidth = 1
-        self.layer.borderColor = #colorLiteral(red: 0.4182304144, green: 0.2545809448, blue: 0.5832342505, alpha: 1).cgColor
         self.addSubview(activityIndicator)
         uiView.addSubview(self)
     }
     
     override func layoutIfNeeded() {
-        
+        super.layoutIfNeeded()
     }
 
     

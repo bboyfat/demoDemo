@@ -31,6 +31,8 @@ class AlamofireLogin{
                     self.loginOutputs.surname = json.data?.surname ?? ""
                     self.loginOutputs.gender = "male"
                     self.loginOutputs.birthDay = "09.09.1993"
+                    guard let id = json.data?.userid else { return }
+                    self.loginOutputs.accountID = String(id)
                     if let id = json.data?.userid{
                         self.loginOutputs.accountID = String(id)
                     }

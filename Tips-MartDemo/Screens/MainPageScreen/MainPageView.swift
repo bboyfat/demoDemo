@@ -38,14 +38,7 @@ class MainPageView: UIView {
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
     
     override func awakeFromNib() {
-        
-        banerView.animationImages = [UIImage(named: "banerBrowser"), UIImage(named: "BanerInvite"), UIImage(named: "BanerDownload")] as? [UIImage]
-        
-        banerView.animationDuration = 8
-        banerView.startAnimating()
-        photoImageView.layer.cornerRadius = 25
-        photoImageView.layer.borderWidth = 2
-        photoImageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1).cgColor
+
         setCornerForTopAndBottom()
         setText()
     }
@@ -73,7 +66,7 @@ class MainPageView: UIView {
     }
     func setText(){
         if let userData = LogOutputViewModel().fetchData(){
-            self.idLabel.text = userData.accountID
+            self.idLabel.text = userData.accountID.separate(every: 2, with: " ")
             self.nameSurnameLabel.text = userData.name + " " + userData.surname
         }
     }
@@ -89,4 +82,10 @@ class MainPageView: UIView {
     }
    
     
+}
+
+extension String {
+    func separate(every stride: Int = 4, with separator: Character = " ") -> String {
+        return String(enumerated().map { $0 > 0 && $0 % stride == 0 ? [separator, $1] : [$1]}.joined())
+    }
 }

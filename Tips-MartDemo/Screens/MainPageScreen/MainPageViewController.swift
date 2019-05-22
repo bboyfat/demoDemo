@@ -11,8 +11,10 @@ import UIKit
 
 class MainPageViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet weak var pageControll: UIPageControl!
     
-    
+    @IBOutlet weak var collectionView: UICollectionView!
+    var banners = BannersViewModel().banners
     var avatarImage: UIImage?
     var avatarModel: AvatarViewModel = AvatarViewModel()
     
@@ -33,6 +35,9 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         mainPageView.scrollView.bounces  = true
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        setPages()
         mainPageView.scrollView.addSubview(refreshControl)
         setAvatar(view: mainPageView.photoImageView)
         
@@ -84,7 +89,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         
     }
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if scrollView.panGestureRecognizer.translation(in: scrollView.superview).y < 0{
+        if scrollView.panGestureRecognizer.translation(in: scrollView.superview).y < -10{
             let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(withIdentifier: "mapVc") as! MapViewController
             
             present(vc, animated: true, completion: nil)
@@ -99,5 +104,36 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         
         present(vc, animated: true, completion: nil)
     }
+    func setPages(){
+        pageControll.numberOfPages = banners.count
+        pageControll.currentPage = 0
+    }
     
+}
+
+extension MainPageViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return banners.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MainPageBannerCell
+        let banner = banners[indexPath.item]
+       cell.bannerImageView.image = banner.image
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        pageControll.currentPage = indexPath.item
+        
+    }
+    
+    
+}
+
+extension MainPageViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+    }
 }

@@ -28,6 +28,9 @@ class BorCodeGenViewController: UIViewController {
         
     }
     
+    @IBAction func dissmisBarVc(_ sender: Any) {
+        handleDismiss()
+    }
     
     
     @IBAction func openPrivacy(_ sender: UIButton) {

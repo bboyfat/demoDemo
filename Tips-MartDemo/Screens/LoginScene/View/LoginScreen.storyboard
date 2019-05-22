@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="height" constant="50" id="fib-Bs-FHp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="21"/>
-                                        <state key="normal" title="Sighn IN">
+                                        <state key="normal" title="Войти">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -57,7 +57,7 @@
                                             <constraint firstAttribute="height" constant="50" id="0ag-hg-7tc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="21"/>
-                                        <state key="normal" title="Sighn UP">
+                                        <state key="normal" title="Регистрация">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -79,7 +79,7 @@
                                             <constraint firstAttribute="height" constant="50" id="mod-tk-tPd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="21"/>
-                                        <state key="normal" title="Continue">
+                                        <state key="normal" title="Продолжить">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -101,7 +101,7 @@
                                             <constraint firstAttribute="height" constant="50" id="6P6-U5-UPy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="21"/>
-                                        <state key="normal" title="Complete">
+                                        <state key="normal" title="Завершить">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -628,13 +628,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7An-7O-Y6e">
-                                <rect key="frame" x="0.0" y="131" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="16"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="YuH-hK-pbr">
-                                <rect key="frame" x="20" y="212" width="374" height="30"/>
+                                <rect key="frame" x="20" y="167" width="374" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5d5-cx-EKr">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="36"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
                                         <state key="normal" title="Вход">
                                             <color key="titleColor" red="0.84389799833297729" green="0.83016663789749146" blue="0.89804917573928833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -644,7 +644,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-mk-vuF">
-                                        <rect key="frame" x="211.5" y="0.0" width="162.5" height="30"/>
+                                        <rect key="frame" x="211.5" y="0.0" width="162.5" height="36"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="20"/>
                                         <state key="normal" title="Регистрация">
                                             <color key="titleColor" red="0.43125534057617188" green="0.39010316133499146" blue="0.6431652307510376" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -656,7 +656,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vs1-io-Qan">
-                                <rect key="frame" x="71.5" y="242" width="60" height="4"/>
+                                <rect key="frame" x="71.5" y="203" width="60" height="4"/>
                                 <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="9Jz-ET-tLK"/>
@@ -664,7 +664,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-6K-Ao3">
-                                <rect key="frame" x="243" y="242" width="140" height="4"/>
+                                <rect key="frame" x="243" y="203" width="140" height="4"/>
                                 <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="33L-cT-hdY"/>
@@ -672,7 +672,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfi-D9-Tw9">
-                                <rect key="frame" x="20" y="286" width="374" height="200"/>
+                                <rect key="frame" x="20" y="247" width="374" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ppJ-Xn-203">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
@@ -831,6 +831,7 @@
                             <constraint firstItem="1xz-jl-CXr" firstAttribute="leading" secondItem="ZRc-oV-E5f" secondAttribute="leading" id="c7a-LS-L76"/>
                             <constraint firstItem="8Pm-5T-aCC" firstAttribute="top" secondItem="ZRc-oV-E5f" secondAttribute="top" constant="15" id="xB1-Pr-agp"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="QaO-05-te1"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="262" height="300"/>
@@ -871,6 +872,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.30748403072357178" green="0.26175197958946228" blue="0.56865787506103516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="ewv-FB-ym0"/>
                     </view>
                     <size key="freeformSize" width="800" height="500"/>
                 </viewController>

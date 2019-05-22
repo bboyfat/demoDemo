@@ -152,16 +152,16 @@
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auj-4P-W2p">
-                                                            <rect key="frame" x="122.66666666666669" y="12.666666666666664" width="16" height="22"/>
+                                                            <rect key="frame" x="121.66666666666669" y="10.666666666666664" width="16" height="22"/>
                                                             <state key="normal" image="info"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcw-Qa-cog">
-                                                            <rect key="frame" x="66" y="23.666666666666664" width="41.666666666666657" height="14.333333333333336"/>
+                                                            <rect key="frame" x="66" y="21.666666666666664" width="50.666666666666657" height="18"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Друзья">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
                                                                         <integer key="NSUnderline" value="1"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -191,7 +191,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="referalCell"/>
                                                     <constraints>
-                                                        <constraint firstItem="auj-4P-W2p" firstAttribute="leading" secondItem="hcw-Qa-cog" secondAttribute="trailing" constant="15" id="0lS-47-QvK"/>
+                                                        <constraint firstItem="auj-4P-W2p" firstAttribute="leading" secondItem="hcw-Qa-cog" secondAttribute="trailing" constant="5" id="0lS-47-QvK"/>
                                                         <constraint firstItem="sxs-35-0Hw" firstAttribute="leading" secondItem="f78-zv-kJx" secondAttribute="leading" constant="10" id="17S-Lj-6Cw"/>
                                                         <constraint firstAttribute="bottom" secondItem="sxs-35-0Hw" secondAttribute="bottom" constant="10" id="2ku-oA-70s"/>
                                                         <constraint firstItem="auj-4P-W2p" firstAttribute="centerY" secondItem="hcw-Qa-cog" secondAttribute="top" id="8YP-yF-qKY"/>
