@@ -14,9 +14,10 @@ class MainPageView: UIView {
     @IBOutlet weak var mapImageView: UIImageView!
     
     @IBOutlet weak var navigationView: UIView!
-    // Mark: ImageViews
-    @IBOutlet weak var banerView: UIImageView!
+
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var balanceStack: UIStackView!
+    @IBOutlet weak var pendingStack: UIStackView!
     //MARK: Name ID
     
     @IBOutlet var nameSurnameLabel: UILabel!
@@ -38,9 +39,10 @@ class MainPageView: UIView {
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
     
     override func awakeFromNib() {
-
+      super.awakeFromNib()
         setCornerForTopAndBottom()
         setText()
+        
     }
     
     func setCornerForTopAndBottom(){
@@ -84,8 +86,4 @@ class MainPageView: UIView {
     
 }
 
-extension String {
-    func separate(every stride: Int = 4, with separator: Character = " ") -> String {
-        return String(enumerated().map { $0 > 0 && $0 % stride == 0 ? [separator, $1] : [$1]}.joined())
-    }
-}
+

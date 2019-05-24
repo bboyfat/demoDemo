@@ -32,7 +32,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="История покупок" id="ZQM-Pw-PBZ">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="stop" id="aN5-o2-JRn">
+                                        <barButtonItem key="leftBarButtonItem" title="назад" image="Group 3-1" id="aN5-o2-JRn">
                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="dissmisView:" destination="RVC-bg-hFp" id="B9p-vY-ULs"/>
@@ -187,6 +187,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 3-1" width="6" height="10"/>
         <image name="filter" width="22" height="20"/>
         <image name="newspaper" width="48" height="48"/>
         <image name="notificatio Back" width="187.5" height="333.5"/>

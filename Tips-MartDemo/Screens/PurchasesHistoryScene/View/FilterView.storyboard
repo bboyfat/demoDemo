@@ -26,7 +26,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Фильтр покупок" id="R8L-gL-0Ni">
-                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="utG-iZ-f2P">
+                                        <barButtonItem key="leftBarButtonItem" title="назад" image="Group 3-1" style="done" id="utG-iZ-f2P">
                                             <color key="tintColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="dissmis:" destination="gdW-om-0kt" id="WlR-Ku-v3E"/>
@@ -241,6 +241,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 3-1" width="6" height="10"/>
         <image name="checkNonActive" width="24" height="24"/>
         <image name="empty" width="24" height="24"/>
     </resources>

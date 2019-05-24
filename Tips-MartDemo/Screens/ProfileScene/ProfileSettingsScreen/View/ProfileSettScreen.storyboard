@@ -25,7 +25,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Настройки" id="wtL-5q-geb">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="QSZ-Gz-hOy">
+                                        <barButtonItem key="leftBarButtonItem" image="Group 3-1" id="QSZ-Gz-hOy">
                                             <color key="tintColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="closeVc:" destination="SBa-yb-NEC" id="mxp-Cy-XsC"/>
@@ -291,6 +291,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 3-1" width="6" height="10"/>
         <image name="man" width="48" height="58"/>
         <image name="radiOn" width="14" height="14"/>
         <image name="radioOff" width="14" height="14"/>

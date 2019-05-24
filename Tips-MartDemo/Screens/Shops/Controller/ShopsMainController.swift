@@ -16,7 +16,9 @@ enum ContentType{
 }
 
 class ShopsMainController: UIViewController{
+    @IBOutlet weak var catWidth: NSLayoutConstraint!
     
+    @IBOutlet weak var categoriesTableView: UITableView!
     
     var shopsModelArray: [ShopsModels] = []
     var selectedShopsArray: [ShopsModels] = []
@@ -26,6 +28,13 @@ class ShopsMainController: UIViewController{
         }
     }
     
+    @IBAction func showCat(_ sender: UIButton) {
+        view.layoutIfNeeded()
+        catWidth.constant = self.view.frame.width - 100.0
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+    }
     
     
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")

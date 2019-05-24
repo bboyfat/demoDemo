@@ -28,6 +28,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yDd-pw-pHp"/>
                     </view>
+                    <connections>
+                        <outlet property="centerX" destination="8MR-ze-qIg" id="zZC-OK-vj5"/>
+                        <outlet property="centerY" destination="VZy-ua-0Ki" id="gs5-OU-64C"/>
+                        <outlet property="mainLogo" destination="ZM9-uv-o26" id="UJb-bR-vxr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ajb-hp-gPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

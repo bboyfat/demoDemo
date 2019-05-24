@@ -30,7 +30,7 @@
                                 <color key="barTintColor" red="0.99999719858169556" green="0.9999815821647644" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <navigationItem title="Новости" id="I08-aN-qcL">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="d4M-sl-skn">
+                                        <barButtonItem key="leftBarButtonItem" image="Group 3-1" id="d4M-sl-skn">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="disVc:" destination="Bb8-VU-t4a" id="I82-K0-IGW"/>
@@ -55,7 +55,7 @@
                                                     <rect key="frame" x="15" y="40.5" width="384" height="166.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-PU-DsH">
-                                                            <rect key="frame" x="20" y="33" width="324" height="80"/>
+                                                            <rect key="frame" x="20" y="33" width="324" height="43"/>
                                                             <string key="text">Владислав Кульчицкий, подтверждённые аккаунты дают доступ к ещё большим возможностям Tips Mart.
 </string>
                                                             <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="12"/>
@@ -64,7 +64,7 @@
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Детальнее:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyg-Q6-6L0">
-                                                            <rect key="frame" x="20" y="133" width="66" height="15"/>
+                                                            <rect key="frame" x="20" y="96" width="66" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="UZ0-NR-iNF"/>
                                                             </constraints>
@@ -73,7 +73,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40y-xK-OkA">
-                                                            <rect key="frame" x="96" y="133" width="156" height="27"/>
+                                                            <rect key="frame" x="96" y="96" width="156" height="52"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <state key="normal" title=" https://www.tips-mart.com">
                                                                 <color key="titleColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -202,6 +202,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 3-1" width="6" height="10"/>
         <image name="notificatio Back" width="187.5" height="333.5"/>
     </resources>
 </document>

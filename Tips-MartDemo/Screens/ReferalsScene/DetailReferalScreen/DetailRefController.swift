@@ -16,21 +16,12 @@ enum FriendsType{
 
 class DetailRefController: UIViewController {
     
-    var friendsType: FriendsType = .friends{
-        didSet{
-            self.detRefTableView.reloadData()
-        }
-    }
+    var friendsType: FriendsType = .friends
 
-    @IBOutlet var tableViewHeight: NSLayoutConstraint!
-    @IBOutlet var detRefTableView: UITableView!
+   
     @IBOutlet var detRefView: DetRefView!
     
-    var friendsArray: [DetailCellModel] = [DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Участников", valueText: "16 человек"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Зачислено", valueText: "1283,33 грн"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Операций", valueText: "20"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "В ожидании", valueText: "823,33 грн")]
-    var acquaintancesArray: [DetailCellModel] = [DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Участников", valueText: "20 человек"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Зачислено", valueText: "183,83 грн"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Операций", valueText: "34"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "В ожидании", valueText: "523,33 грн")
-    ]
-    var strangesrArray: [DetailCellModel] = [DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Участников", valueText: "30 человек"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Зачислено", valueText: "83,55 грн"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "Операций", valueText: "20"), DetailCellModel(image: #imageLiteral(resourceName: "members"), catText: "В ожидании", valueText: "422,33 грн")
-        ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -81,32 +72,3 @@ class DetailRefController: UIViewController {
 }
 
 
-extension DetailRefController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        tableViewHeight.constant = CGFloat(friendsArray.count * 61)
-        return friendsArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detRefCell", for: indexPath) as! DetaileRefCell
-        let data: DetailCellModel?
-        
-        switch friendsType {
-        case .friends: data = friendsArray[indexPath.row]
-        case .acquaintances: data = acquaintancesArray[indexPath.row]
-        case .strangers: data = strangesrArray[indexPath.row]
-         }
-        if let data = data{
-        cell.cellImageView.image = data.image
-        cell.catLbl.text = data.catText
-        cell.valueLbl.text = data.valueText
-        cell.selectionStyle = .none
-        }
-        return cell
-    }
-    
-    
-    
-    
-}

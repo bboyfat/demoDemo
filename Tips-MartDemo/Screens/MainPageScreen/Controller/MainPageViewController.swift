@@ -38,10 +38,24 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         collectionView.delegate = self
         collectionView.dataSource = self
         setPages()
+        addGestureToMap()
         mainPageView.scrollView.addSubview(refreshControl)
         setAvatar(view: mainPageView.photoImageView)
+        addTapToBalance()
+        addTapToPending()
         
     }
+    
+    func addGestureToMap(){
+        let tap = UITapGestureRecognizer()
+        mainPageView.mapImageView.isUserInteractionEnabled = true
+        tap.addTarget(self, action: #selector(presentMap))
+        mainPageView.mapImageView.addGestureRecognizer(tap)
+        }
+    @objc func presentMap(){
+        let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(withIdentifier: "mapVc") as! MapViewController
+        present(vc, animated: true, completion: nil)
+        }
     
     func setAvatar(view: UIImageView){
         avatarImage = avatarModel.fetchImage()
@@ -52,11 +66,26 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func addTapToBalance(){
+        let tap = UITapGestureRecognizer()
+        tap.addTarget(self, action: #selector(presentWD))
+        mainPageView.balanceStack.addGestureRecognizer(tap)
+    }
+    func addTapToPending(){
+        let tap = UITapGestureRecognizer()
+        tap.addTarget(self, action: #selector(presentPurchase))
+        mainPageView.pendingStack.addGestureRecognizer(tap)
+    }
     
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        refreshControl.endRefreshing()
+   @objc func presentWD(){
+        let vc = UIStoryboard(name: "WithDrawal", bundle: nil).instantiateViewController(withIdentifier: "withdrawalVc") as! WDViewController
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+   @objc func presentPurchase(){
+        let vc = UIStoryboard(name: "OperationHistory", bundle: nil).instantiateViewController(withIdentifier: "operationVC") as! OperationHistoryController
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -76,6 +105,20 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         refreshControl?.endRefreshing()
         
         
+    }
+    
+    
+    @IBAction func purchBtn(_ sender: UIButton) {
+//        presentPurchase()
+    }
+    @IBAction func wdBtn(_ sender: UIButton) {
+//        presentWD()
+    }
+    @IBAction func balanceInfoBtn(_ sender: UIButton) {
+        infoAlert().presentAlert(view: self, title: balanceMassege)
+    }
+    @IBAction func pendingBalanceInfoBtn(_ sender: UIButton) {
+        infoAlert().presentAlert(view: self, title: pendingBalanceMassege)
     }
     
     @IBAction func showMyCodeBtn(_ sender: UIButton) {
@@ -119,7 +162,7 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MainPageBannerCell
         let banner = banners[indexPath.item]
-       cell.bannerImageView.image = banner.image
+        cell.bannerImageView.image = banner.image
         
         return cell
     }

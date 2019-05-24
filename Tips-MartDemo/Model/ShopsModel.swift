@@ -10,20 +10,19 @@ import UIKit
 
 struct ShopsModel: Decodable {
     
-    var url: String
+    var pathToShop: String
     var name: String
     var type: String
     var shopID: Int
-    var pathImage: String
-    var isConnection: Bool
+    var pathToImage: String
+    var countReviews: Int
     var isInExtension: Bool
-    var extendedData: ExtendedData
-}
-
-struct ExtendedData: Decodable {
     var categories: [Int]
     var maxCashback: Cashback
+    var created: String
+    var status: Int
 }
+
 
 struct Cashback: Decodable {
     var currency: String

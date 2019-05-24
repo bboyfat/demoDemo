@@ -22,7 +22,7 @@
                                 <color key="barTintColor" red="0.99999719858169556" green="0.9999815821647644" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <navigationItem title="Карта" id="scl-Dn-kR1">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="xxv-7I-xpa">
+                                        <barButtonItem key="leftBarButtonItem" title="назад" image="Group 3-1" id="xxv-7I-xpa">
                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="disVcBtn:" destination="0KW-hT-uGc" id="vFo-qQ-BWU"/>
@@ -148,6 +148,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 3-1" width="6" height="10"/>
         <image name="notificatio Back" width="187.5" height="333.5"/>
     </resources>
 </document>

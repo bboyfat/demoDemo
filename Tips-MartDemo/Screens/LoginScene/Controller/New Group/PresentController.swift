@@ -10,6 +10,7 @@ import UIKit
 
 class PresentController: UIViewController {
 
+    @IBOutlet weak var regWidth: NSLayoutConstraint!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var regContainerView: NSLayoutConstraint!
     override func viewDidLoad() {
@@ -19,13 +20,18 @@ class PresentController: UIViewController {
     }
     
     @IBAction func signInBtn(_ sender: UIButton) {
-        
-        regContainerView.constant = 0
-        
+        view.layoutIfNeeded()
+         regWidth.constant = 0
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
     @IBAction func signUpBtn(_ sender: UIButton) {
-        
-        regContainerView.constant = stackView.frame.width
+        view.layoutIfNeeded()
+       regWidth.constant = self.view.frame.width
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
         
     }
     

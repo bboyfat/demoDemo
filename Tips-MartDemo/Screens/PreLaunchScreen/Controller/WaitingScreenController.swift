@@ -12,17 +12,27 @@ import RealmSwift
 
 class WaitingScreenController: UIViewController {
     
+    @IBOutlet weak var centerY: NSLayoutConstraint!
+    @IBOutlet weak var centerX: NSLayoutConstraint!
     var loginModel: LoginDataBase?
     
+    @IBOutlet weak var mainLogo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        animateLogo { (finish)  in
+            
+        }
         loginModel = LoginViewModel().fetchUserData()
         if loginModel != nil{
             OperationQueue.main.addOperation {
                 APILogin().getAuthCode { (info) in
                     if info.success == true{
-                        self.presentMainTab()
+                        self.animateLogo(handler: { (finish) in
+                            if finish{
+                                 self.presentMainTab()
+                            }
+                        })
+                       
                     } else {
                         ErrorAlerts.loginErrorAlert(controller: self)
                     }
@@ -31,10 +41,31 @@ class WaitingScreenController: UIViewController {
             }
             
         } else {
-            presentloginController()
+            animateLogo { (finish) in
+                if finish{
+                    self.presentloginController()
+                }
+            }
+            
         }
         
         
+    }
+    
+    func animateLogo(handler: @escaping (_ status: Bool) -> ()){
+        OperationQueue.main.addOperation {
+            
+            self.centerY.constant = -300
+            
+            UIView.animate(withDuration: 0.4) {
+                self.view.layoutIfNeeded()
+                self.mainLogo.alpha = 0
+                
+                  handler(true)
+            }
+          
+        }
+       
     }
     
     

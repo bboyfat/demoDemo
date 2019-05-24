@@ -84,17 +84,17 @@ class ShopsApiRequest{
         
         answer.forEach({ (shop) in
             let shopsRealmData = ShopsModels()
-            shopsRealmData.setValue(shop.url, forKey: "url")
+            shopsRealmData.setValue(shop.pathToShop, forKey: "url")
             shopsRealmData.setValue(shop.type, forKey: "type")
             shopsRealmData.setValue(shop.shopID, forKey: "shopID")
-            shopsRealmData.setValue(shop.pathImage, forKey: "pathImage")
+            shopsRealmData.setValue(shop.pathToImage, forKey: "pathImage")
             shopsRealmData.setValue(shop.name, forKey: "name")
            
-            shop.extendedData.categories.forEach({ (each) in
+            shop.categories.forEach({ (each) in
                 shopsRealmData.setValue(each, forKey: "categories")
             })
-            shopsRealmData.setValue(shop.extendedData.maxCashback.currency, forKey: "currency")
-            shopsRealmData.setValue(shop.extendedData.maxCashback.value, forKey: "value")
+            shopsRealmData.setValue(shop.maxCashback.currency, forKey: "currency")
+            shopsRealmData.setValue(shop.maxCashback.value, forKey: "value")
             
             OperationQueue.main.addOperation {
                 let realm = try! Realm()
