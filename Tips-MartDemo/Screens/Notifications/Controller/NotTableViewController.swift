@@ -15,21 +15,28 @@ class NotTableViewController: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var navItem: UINavigationItem!
     
+    let menu = UIMenuController.shared
+    let moreAction = UIMenuItem(title: "Еще...", action: #selector(NotoficationCell.more(_:)))
+    
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
     
     var notifications: [NotificationModelRealm] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        myTableView.rowHeight = UITableView.automaticDimension
+        myTableView.allowsMultipleSelection  = true
+
         
-        
+        menu.menuItems = [moreAction]
         if let accessToken = accessToken{
             
             RefreshToken().getBalance(header: accessToken) { (notifications) in
                 
             }
         }
+        
+    }
+    @objc func canEdit(_ sender: Any?){
         
     }
     
@@ -57,42 +64,55 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
         print(notifications.count)
         let cell = tableView.dequeueReusableCell(withIdentifier: "notCell", for: indexPath) as! NotoficationCell
         let notification = notifications[indexPath.row]
-        
+        cell.delegate = self
         let info = HTMLParser().parseHTML(htmlContent: notification.text)
         let dateString = dateTostring(date: notification.created)
-        
-        
-        
         cell.textNotifLabel.attributedText = attributedNotificationText(text: info)
         cell.dateLabel.text = dateString
-        cell.selectionStyle = .none
         
+        cell.tintColor = #colorLiteral(red: 0, green: 0.8052297235, blue: 0.4442411065, alpha: 1)
         return cell
     }
+    
+    
     func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-   
-    func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        if action == #selector(cut(_:)) {
-            return true
-        }
-        if action == #selector(paste(_:)) {
-            return true
-        }
-        if action == #selector(copy(_:)){
-            return true
-        }
-        presentActionSheet(indexPath: indexPath)
-        return super.canPerformAction(action, withSender: sender)
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
+        return UITableViewCell.EditingStyle(rawValue: 3)!
     }
+    
+    func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        
+        
+        if action == moreAction.action{
+            return true
+        }
+        return false
+    }
+    
+    @objc func closeAlert(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
         
         if action == #selector(UIResponderStandardEditActions.copy){
             UIPasteboard.general.string = HTMLParser().parseHTML(htmlContent: notifications[indexPath.row].text)
         }
         
+        if action == #selector(UIResponderStandardEditActions.paste){
+            self.myTableView.isEditing = true
+            
+        }
+        
+        
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
         
     }
     
@@ -126,7 +146,7 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
         return attributedString
         
     }
-    func presentActionSheet(indexPath: IndexPath){
+    func presentActionSheet(indexPath: IndexPath) -> UIAlertController{
         let action = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let shareAction = UIAlertAction(title: "Поделиться", style: .default) { (_) in
             self.presentActivityControler(text: [HTMLParser().parseHTML(htmlContent: self.notifications[indexPath.row].text)])
@@ -135,14 +155,26 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
             UIPasteboard.general.string = HTMLParser().parseHTML(htmlContent: self.notifications[indexPath.row].text)
         }
         let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) { (_) in
+            self.notifications.remove(at: indexPath.row)
+            self.myTableView.beginUpdates()
+            self.myTableView.deleteRows(at: [indexPath], with: .left)
             
+            self.myTableView.endUpdates()
         }
+        
+        let cancelAction = UIAlertAction(title: "Отмена", style: .default) { (action) in
+            self.myTableView.isEditing = false
+        }
+        
+        
         action.addAction(shareAction)
         action.addAction(copyaction)
         action.addAction(deleteAction)
         
+        action.addAction(cancelAction)
         
-        self.present(action, animated: true, completion: nil)
+        
+        return action
     }
     func presentActivityControler(text: [Any]){
         let textToShare = text
@@ -155,6 +187,17 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
     }
+    
+    
+}
+
+extension NotTableViewController: NotificationCellDelegate{
+    func selectCells() {
+        
+        self.myTableView.isEditing = !self.myTableView.isEditing
+        
+    }
+    
     
     
 }

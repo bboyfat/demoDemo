@@ -14,7 +14,13 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewXib" customModule="Tips_MartDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="checkBoxBtn" destination="yLz-b8-eJ1" id="Azm-gi-nL7"/>
+                <outlet property="reviewTextView" destination="WXg-5e-uez" id="QoI-rz-MHa"/>
+                <outlet property="sendReviewBtn" destination="NaG-D5-0Dj" id="i88-k0-Zut"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="427" height="363"/>
@@ -71,7 +77,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отправить руководству без публикации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmO-aE-7Xc">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отправить руководству без публикации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="BmO-aE-7Xc">
                             <rect key="frame" x="45" y="0.0" width="337" height="30"/>
                             <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                             <nil key="textColor"/>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro_medium.ttf">
+            <string>GothamPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpecialPropose" customModule="Tips_MartDemo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="243"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame-2" translatesAutoresizingMaskIntoConstraints="NO" id="b6p-hw-u3j">
+                    <rect key="frame" x="0.0" y="44" width="494" height="182"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="6V1-wZ-UGJ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Опрос о магазине " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z9-my-Zzb">
+                    <rect key="frame" x="131" y="59" width="232" height="22"/>
+                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пройдите опрос и получите 50 бонусов на счет и еще что-то в подарок! Это займет не более 4 минут. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-Go-8o4">
+                    <rect key="frame" x="20" y="111" width="454" height="28.5"/>
+                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-4s-Pp5">
+                    <rect key="frame" x="40" y="159.5" width="414" height="40"/>
+                    <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3T2-dh-64s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
+                    <state key="normal" title="Перейти " image="surprize">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QrH-Go-8o4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="2Mg-2d-wde"/>
+                <constraint firstAttribute="trailing" secondItem="QrH-Go-8o4" secondAttribute="trailing" constant="20" id="BzI-no-jVT"/>
+                <constraint firstItem="nmX-4s-Pp5" firstAttribute="top" secondItem="QrH-Go-8o4" secondAttribute="bottom" constant="20" id="Gla-9w-Hjp"/>
+                <constraint firstItem="QrH-Go-8o4" firstAttribute="top" secondItem="1z9-my-Zzb" secondAttribute="bottom" constant="30" id="MPv-sA-rWR"/>
+                <constraint firstItem="1z9-my-Zzb" firstAttribute="centerX" secondItem="b6p-hw-u3j" secondAttribute="centerX" id="TgF-Mc-VK5"/>
+                <constraint firstItem="1z9-my-Zzb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="ZZw-NQ-mbC"/>
+                <constraint firstItem="b6p-hw-u3j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aD3-Py-iXJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="b6p-hw-u3j" secondAttribute="trailing" id="hKk-vx-nS5"/>
+                <constraint firstItem="nmX-4s-Pp5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="jpo-Gu-SA1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="b6p-hw-u3j" secondAttribute="bottom" id="nAh-iG-66h"/>
+                <constraint firstItem="b6p-hw-u3j" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="neW-qh-99y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nmX-4s-Pp5" secondAttribute="trailing" constant="40" id="vwy-1j-7UO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="195.6521739130435" y="289.28571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Frame-2" width="375" height="182"/>
+        <image name="surprize" width="15" height="14"/>
+    </resources>
+</document>

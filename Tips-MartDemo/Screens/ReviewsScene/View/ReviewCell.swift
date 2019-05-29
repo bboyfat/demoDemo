@@ -10,6 +10,7 @@ import UIKit
 
 protocol ReviewsCellDelegate: AnyObject {
     func reviewsTableViewCell(_ reviewCell: ReviewCell)
+    func cellDidChange(_ reviewcell: ReviewCell)
 }
 
 class ReviewCell: UITableViewCell {
@@ -20,7 +21,7 @@ class ReviewCell: UITableViewCell {
     @IBOutlet weak var reviewView: UIView!
     @IBOutlet weak var writeReviewBtn: UIButton!
     @IBOutlet weak var cellHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var reviewXib: ReviewXib!
     
     var isChanged = false 
     
@@ -28,6 +29,7 @@ class ReviewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        reviewXib.sendReviewBtn.addTarget(self, action: #selector(animteFuckingCell), for: .touchUpInside)
         writeReviewBtn.addTarget(self, action: #selector(animteFuckingCell), for: .touchUpInside)
     }
     override func layoutSubviews() {
@@ -37,7 +39,8 @@ class ReviewCell: UITableViewCell {
     
     @objc func animteFuckingCell(){
         if let delegate = delegate{
-            self.delegate?.reviewsTableViewCell(self)
+            delegate.reviewsTableViewCell(self)
+            delegate.cellDidChange(self)
      
         }
     }

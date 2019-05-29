@@ -75,6 +75,12 @@ class ShopsMainController: UIViewController{
     
     @objc func handleEndEdit(){
         view.endEditing(true)
+        view.layoutIfNeeded()
+        catWidth.constant = 0
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+        
     }
     
     

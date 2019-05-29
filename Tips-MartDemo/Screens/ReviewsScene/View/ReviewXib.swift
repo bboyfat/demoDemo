@@ -9,16 +9,22 @@
 import UIKit
 
 class ReviewXib: UIView{
+    @IBOutlet weak var sendReviewBtn: UIButton!
+    @IBOutlet weak var checkBoxBtn: CheckBoxButton!
     
+    @IBOutlet weak var reviewTextView: UITextView!
     let nibName = "ReviewXib"
     
     var contentVIew: UIView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        sendReviewBtn.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
     }
     
+    @objc func handleSend(){
+        print("Sent Btn")
+    }
     
     
     required init?(coder aDecoder: NSCoder) {

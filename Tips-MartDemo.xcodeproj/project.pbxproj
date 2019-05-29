@@ -64,6 +64,8 @@
 		C242C49822707A16008B359A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242C49722707A16008B359A /* MapView.swift */; };
 		C242C49A22707A2A008B359A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242C49922707A2A008B359A /* MapViewController.swift */; };
 		C242C49E2270A127008B359A /* NotoficationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242C49D2270A127008B359A /* NotoficationCell.swift */; };
+		C245D1A5229BE55800EF7886 /* SpecialPropose.xib in Resources */ = {isa = PBXBuildFile; fileRef = C245D1A4229BE55800EF7886 /* SpecialPropose.xib */; };
+		C245D1A7229BE56D00EF7886 /* SpecialPropose.swift in Sources */ = {isa = PBXBuildFile; fileRef = C245D1A6229BE56D00EF7886 /* SpecialPropose.swift */; };
 		C2492A9A2260996A007E2037 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2492A992260996A007E2037 /* Profile.storyboard */; };
 		C2492A9C2260A249007E2037 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9B2260A249007E2037 /* MainPageViewController.swift */; };
 		C2492A9E2260A25E007E2037 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2492A9D2260A25E007E2037 /* MainPageView.swift */; };
@@ -226,6 +228,8 @@
 		C242C49722707A16008B359A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = "Tips-MartDemo/Screens/MapScene/View/MapView.swift"; sourceTree = SOURCE_ROOT; };
 		C242C49922707A2A008B359A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C242C49D2270A127008B359A /* NotoficationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotoficationCell.swift; sourceTree = "<group>"; };
+		C245D1A4229BE55800EF7886 /* SpecialPropose.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialPropose.xib; sourceTree = "<group>"; };
+		C245D1A6229BE56D00EF7886 /* SpecialPropose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialPropose.swift; sourceTree = "<group>"; };
 		C2492A992260996A007E2037 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C2492A9B2260A249007E2037 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C2492A9D2260A25E007E2037 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
@@ -440,6 +444,8 @@
 			isa = PBXGroup;
 			children = (
 				C2C355832297EC2200492971 /* Reviews.storyboard */,
+				C245D1A4229BE55800EF7886 /* SpecialPropose.xib */,
+				C245D1A6229BE56D00EF7886 /* SpecialPropose.swift */,
 				C2C355872297F99200492971 /* ReviewCell.swift */,
 				C2CC262A22980722008DABAA /* ReviewsView.swift */,
 				C2CC262C22981706008DABAA /* ReviewXib.xib */,
@@ -1312,6 +1318,7 @@
 				C283C8492280380A00714B98 /* LoginScreen.storyboard in Resources */,
 				C270FC8D2269F5510059F161 /* MoreScreen.storyboard in Resources */,
 				C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */,
+				C245D1A5229BE55800EF7886 /* SpecialPropose.xib in Resources */,
 				C242C49622707971008B359A /* Map.storyboard in Resources */,
 				C22C98782267987600BC2106 /* DetailShopView.storyboard in Resources */,
 				C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */,
@@ -1470,6 +1477,7 @@
 				C241151C2281B95A004F41E1 /* FemaleButton.swift in Sources */,
 				C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */,
 				C24115262281C1E7004F41E1 /* UserDataModel.swift in Sources */,
+				C245D1A7229BE56D00EF7886 /* SpecialPropose.swift in Sources */,
 				C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */,
 				C221B84B2282FF920081BFB1 /* LoginViewModel.swift in Sources */,
 				C2CCDB8022897EBE00FE508D /* LogOutputViewModel.swift in Sources */,
