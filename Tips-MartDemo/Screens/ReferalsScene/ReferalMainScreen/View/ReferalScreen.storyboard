@@ -173,6 +173,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="friendsBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="f2b-2E-SMu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auj-4P-W2p">
                                                 <rect key="frame" x="126" y="7.3333333333333428" width="16" height="22"/>
@@ -242,6 +245,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="acqBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="bNs-NN-CEp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6u-sX-fSD">
                                                 <rect key="frame" x="152" y="7" width="16" height="22"/>
@@ -311,6 +317,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="strangersBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="Eo6-LJ-Bnq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-ct-Rcn">
                                                 <rect key="frame" x="166" y="7" width="16" height="22"/>

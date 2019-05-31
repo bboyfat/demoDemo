@@ -16,7 +16,12 @@ class MoreViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func presentFAQ(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "FAQ", bundle: nil).instantiateViewController(withIdentifier: "FAQVC") as! FAQController
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }

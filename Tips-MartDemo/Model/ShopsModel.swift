@@ -19,7 +19,7 @@ struct ShopsModel: Decodable {
     var isInExtension: Bool
     var categories: [Int]
     var maxCashback: Cashback
-    var created: String
+//    var created: String
     var status: Int
 }
 

@@ -20,8 +20,18 @@ class ErrorAlerts: UIViewController {
    static func loginErrorAlert(controller: UIViewController){
         let ac = UIAlertController(title: "Внимание!", message: "Проверьте правильность введенных данных и повторите попытку  еще раз", preferredStyle: .actionSheet)
         
-        let action = UIAlertAction(title: "ОК", style: .default, handler: nil)
+    let action = UIAlertAction(title: "OK", style: .default) { (_) in
+        self.presentloginController(controller: controller)
+    }
         ac.addAction(action)
         controller.present(ac, animated: true, completion: nil)
+    }
+    
+    static func presentloginController(controller: UIViewController){
+        let vc = UIStoryboard(name: "LoginScreen", bundle: nil).instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
+        OperationQueue.main.addOperation {
+            controller.present(vc, animated: true, completion: nil)
+        }
+        
     }
 }

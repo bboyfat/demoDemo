@@ -11,12 +11,14 @@ import RealmSwift
 
 class NotTableViewController: UIViewController {
     
+    @IBOutlet weak var deleteViewHeight: NSLayoutConstraint!
     @IBOutlet var notificationView: NotifTableView!
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var selectedRowsCount: UILabel!
     
     let menu = UIMenuController.shared
-    let moreAction = UIMenuItem(title: "Еще...", action: #selector(NotoficationCell.more(_:)))
+    let moreAction = UIMenuItem(title: "Еще...", action: #selector(NotificationCell.more(_:)))
     
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
     
@@ -25,7 +27,7 @@ class NotTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.allowsMultipleSelection  = true
-
+        
         
         menu.menuItems = [moreAction]
         if let accessToken = accessToken{
@@ -36,11 +38,20 @@ class NotTableViewController: UIViewController {
         }
         
     }
-    @objc func canEdit(_ sender: Any?){
-        
+    
+    
+    
+    @IBAction func deleteAction(_ sender: Any) {
+        if let indexPath = myTableView.indexPathForSelectedRow{
+            self.notifications.remove(at: indexPath.row)
+            self.myTableView.beginUpdates()
+            self.myTableView.deleteRows(at: [indexPath], with: .right)
+            self.myTableView.endUpdates()
+            
+        }
+        self.myTableView.isEditing = false
+        self.deleteViewHeight.constant = 0
     }
-    
-    
     
     
     @IBAction func disVc(_ sender: Any) {
@@ -58,11 +69,14 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
         return notifications.count
     }
     
-    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let count = self.myTableView.indexPathsForSelectedRows?.count ?? 0
+            self.selectedRowsCount.text = "Выбрано: \(count)"
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(notifications.count)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "notCell", for: indexPath) as! NotoficationCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notCell", for: indexPath) as! NotificationCell
         let notification = notifications[indexPath.row]
         cell.delegate = self
         let info = HTMLParser().parseHTML(htmlContent: notification.text)
@@ -85,8 +99,6 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        
-        
         if action == moreAction.action{
             return true
         }
@@ -105,14 +117,11 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
         
         if action == #selector(UIResponderStandardEditActions.paste){
             self.myTableView.isEditing = true
-            
         }
-        
-        
-        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+       let count = self.myTableView.indexPathsForSelectedRows?.count ?? 0
+        self.selectedRowsCount.text = "Выбрано: \(count)"
         
     }
     
@@ -148,6 +157,7 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func presentActionSheet(indexPath: IndexPath) -> UIAlertController{
         let action = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        action.view.isUserInteractionEnabled = true
         let shareAction = UIAlertAction(title: "Поделиться", style: .default) { (_) in
             self.presentActivityControler(text: [HTMLParser().parseHTML(htmlContent: self.notifications[indexPath.row].text)])
         }
@@ -165,12 +175,9 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
         let cancelAction = UIAlertAction(title: "Отмена", style: .default) { (action) in
             self.myTableView.isEditing = false
         }
-        
-        
         action.addAction(shareAction)
         action.addAction(copyaction)
         action.addAction(deleteAction)
-        
         action.addAction(cancelAction)
         
         
@@ -194,8 +201,22 @@ extension NotTableViewController: UITableViewDelegate, UITableViewDataSource{
 extension NotTableViewController: NotificationCellDelegate{
     func selectCells() {
         
+        var isEditable = false
         self.myTableView.isEditing = !self.myTableView.isEditing
-        
+        isEditable = myTableView.isEditing
+        if isEditable{
+            self.view.layoutIfNeeded()
+            deleteViewHeight.constant = 60
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            self.view.layoutIfNeeded()
+            deleteViewHeight.constant = 0
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     

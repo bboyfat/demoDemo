@@ -14,8 +14,8 @@ class RefreshToken{
     
     
     func getBalance(header: String, completion: @escaping ([NotificationModel]) -> Void){
-     
-
+        
+        
         let urlString = "https://client.tips-mart.com/home/v1/load-page"
         guard let url = URL(string: urlString) else { return}
         
@@ -37,29 +37,24 @@ class RefreshToken{
             }
             if let data = data{
                 do{
-                 let answer = try JSONDecoder().decode(RefreshBalance.self, from: data)
-                    print(answer)
-    
+                    let answer = try JSONDecoder().decode(RefreshBalance.self, from: data)
+                    
                     completion(answer.data.notifications)
                     
                     
                     if self.checkDataRealm(answer: answer.data.notifications){
                         self.saveData(answer: answer.data.notifications)
                     }
-                    print(self.checkDataRealm(answer: answer.data.notifications))
-                    
-                    
-
                     UserDefaults.standard.set(answer.data.balance.green, forKey: "greenBalance")
                     UserDefaults.standard.set(answer.data.balance.gray, forKey: "grayBalance")
                     
-                  
+                    
                     
                 } catch let refrErr{
                     print("problem with data", refrErr)
                 }
             }
-        }.resume()
+            }.resume()
         
         
         
@@ -67,7 +62,7 @@ class RefreshToken{
     
     func saveData(answer: [NotificationModel]){
         
-       
+        
         answer.forEach({ (notification) in
             let notifRealmData = NotificationModelRealm()
             notifRealmData.setValue(notification.created, forKey: "created")
@@ -108,7 +103,7 @@ class RefreshToken{
         if shopsModelArray.count != answer.count || shopsModelArray.count == 0{
             return true
         } else {
-         return false
+            return false
         }
         
         

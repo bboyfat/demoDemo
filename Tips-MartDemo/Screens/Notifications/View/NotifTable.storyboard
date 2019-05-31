@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
         <array key="gotham_pro_light.ttf">
             <string>GothamPro-Light</string>
         </array>
@@ -44,7 +47,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notCell" focusStyle="custom" rowHeight="207" id="JvN-M0-ppT" customClass="NotoficationCell" customModule="Tips_MartDemo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notCell" focusStyle="custom" rowHeight="207" id="JvN-M0-ppT" customClass="NotificationCell" customModule="Tips_MartDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="207"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JvN-M0-ppT" id="mKG-uH-8vk">
@@ -55,7 +58,7 @@
                                                     <rect key="frame" x="15" y="40.5" width="384" height="166.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-PU-DsH">
-                                                            <rect key="frame" x="20" y="33" width="324" height="43"/>
+                                                            <rect key="frame" x="20" y="33" width="324" height="42"/>
                                                             <string key="text">Владислав Кульчицкий, подтверждённые аккаунты дают доступ к ещё большим возможностям Tips Mart.
 </string>
                                                             <fontDescription key="fontDescription" name="GothamPro-Light" family="Gotham Pro" pointSize="12"/>
@@ -64,7 +67,7 @@
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Детальнее:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyg-Q6-6L0">
-                                                            <rect key="frame" x="20" y="96" width="66" height="15"/>
+                                                            <rect key="frame" x="20" y="95" width="66" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="UZ0-NR-iNF"/>
                                                             </constraints>
@@ -73,7 +76,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40y-xK-OkA">
-                                                            <rect key="frame" x="96" y="96" width="156" height="52"/>
+                                                            <rect key="frame" x="96" y="95" width="156" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <state key="normal" title=" https://www.tips-mart.com">
                                                                 <color key="titleColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -171,6 +174,46 @@
                                     <outlet property="delegate" destination="Bb8-VU-t4a" id="OmC-HU-Cfd"/>
                                 </connections>
                             </tableView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVB-qM-SxI">
+                                <rect key="frame" x="0.0" y="862" width="414" height="0.0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G01-3K-mbx">
+                                        <rect key="frame" x="282" y="-15" width="82" height="30"/>
+                                        <color key="backgroundColor" red="0.83852752392667196" green="0.17211519596460972" blue="0.18343132318811173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="ne0-YV-FmA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="6" minY="0.0" maxX="7" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Удалить">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deleteAction:" destination="Bb8-VU-t4a" eventType="touchUpInside" id="K5k-Nq-yDz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрано:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTz-ra-dzq">
+                                        <rect key="frame" x="50" y="-6.5" width="69" height="13"/>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                        <color key="textColor" red="0.576468825340271" green="0.57247310876846313" blue="0.57647168636322021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="4dI-Gb-NvQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="G01-3K-mbx" secondAttribute="trailing" constant="50" id="KAw-wd-G7t"/>
+                                    <constraint firstItem="sTz-ra-dzq" firstAttribute="centerY" secondItem="pVB-qM-SxI" secondAttribute="centerY" id="i3A-3L-Ztw"/>
+                                    <constraint firstItem="sTz-ra-dzq" firstAttribute="leading" secondItem="pVB-qM-SxI" secondAttribute="leading" constant="50" id="mYU-Dc-UZZ"/>
+                                    <constraint firstItem="G01-3K-mbx" firstAttribute="centerY" secondItem="pVB-qM-SxI" secondAttribute="centerY" id="owJ-bE-DAR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -179,12 +222,15 @@
                             <constraint firstItem="atM-YR-Dpc" firstAttribute="leading" secondItem="1yk-ca-vZ3" secondAttribute="leading" id="9cD-n6-lIT"/>
                             <constraint firstItem="1yk-ca-vZ3" firstAttribute="bottom" secondItem="fC2-1g-UT1" secondAttribute="bottom" id="E4F-X1-icm"/>
                             <constraint firstAttribute="trailing" secondItem="atM-YR-Dpc" secondAttribute="trailing" id="EtG-VR-XjL"/>
+                            <constraint firstItem="pVB-qM-SxI" firstAttribute="trailing" secondItem="1yk-ca-vZ3" secondAttribute="trailing" id="FzJ-yH-rHJ"/>
                             <constraint firstItem="fk9-Fp-9Sp" firstAttribute="top" secondItem="atM-YR-Dpc" secondAttribute="bottom" id="K9i-t9-yw6"/>
                             <constraint firstItem="1yk-ca-vZ3" firstAttribute="trailing" secondItem="fC2-1g-UT1" secondAttribute="trailing" id="OtR-3J-4Ne"/>
                             <constraint firstItem="1yk-ca-vZ3" firstAttribute="bottom" secondItem="fk9-Fp-9Sp" secondAttribute="bottom" id="QZs-99-tFU"/>
                             <constraint firstItem="1yk-ca-vZ3" firstAttribute="trailing" secondItem="fk9-Fp-9Sp" secondAttribute="trailing" id="cBZ-WH-547"/>
+                            <constraint firstItem="pVB-qM-SxI" firstAttribute="leading" secondItem="1yk-ca-vZ3" secondAttribute="leading" id="dpz-8W-uc3"/>
                             <constraint firstItem="atM-YR-Dpc" firstAttribute="top" secondItem="1yk-ca-vZ3" secondAttribute="top" id="jH1-hk-uR2"/>
                             <constraint firstItem="fk9-Fp-9Sp" firstAttribute="leading" secondItem="1yk-ca-vZ3" secondAttribute="leading" id="kNI-A3-Tl8"/>
+                            <constraint firstItem="1yk-ca-vZ3" firstAttribute="bottom" secondItem="pVB-qM-SxI" secondAttribute="bottom" id="w4X-gC-2lV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1yk-ca-vZ3"/>
                         <connections>
@@ -193,9 +239,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="deleteViewHeight" destination="4dI-Gb-NvQ" id="yYu-h6-GPI"/>
                         <outlet property="myTableView" destination="fk9-Fp-9Sp" id="bNC-nM-Hpa"/>
                         <outlet property="navItem" destination="I08-aN-qcL" id="ny9-jR-Poh"/>
                         <outlet property="notificationView" destination="Z6u-KJ-8pL" id="UYs-vO-O10"/>
+                        <outlet property="selectedRowsCount" destination="sTz-ra-dzq" id="DbU-9g-mWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKZ-9c-AkH" userLabel="First Responder" sceneMemberID="firstResponder"/>

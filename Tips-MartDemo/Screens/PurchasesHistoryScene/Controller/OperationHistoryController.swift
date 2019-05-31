@@ -55,7 +55,7 @@ extension OperationHistoryController: UITableViewDelegate, UITableViewDataSource
 //        dateFormatterPrint.dateFormat = "dd.MM.yyyy HH:mm:ss"
 //        let datee = dateFormatterGet.date(from: stringDate)
 //        stringDate =  dateFormatterPrint.string(from: datee ?? Date())
-//        print(stringDate)
+
 //
 //        cell.dateLabel.text = stringDate
 //        cell.orderInfoLabel.text = info

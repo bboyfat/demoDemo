@@ -13,7 +13,7 @@ protocol NotificationCellDelegate: AnyObject{
     
 }
 
-class NotoficationCell: UITableViewCell {
+class NotificationCell: UITableViewCell {
     
     @IBOutlet weak var textNotifLabel: UILabel!
     
@@ -21,6 +21,7 @@ class NotoficationCell: UITableViewCell {
     
     @IBOutlet weak var contentViewCell: UIView!
     @IBOutlet weak var backGroundView: UIView!
+    
     var delegate: NotificationCellDelegate?
     
     override func awakeFromNib() {
@@ -32,7 +33,6 @@ class NotoficationCell: UITableViewCell {
         if let delegate = delegate{
             delegate.selectCells()
         }
-        print("more!")
     }
     
     override func layoutSubviews() {

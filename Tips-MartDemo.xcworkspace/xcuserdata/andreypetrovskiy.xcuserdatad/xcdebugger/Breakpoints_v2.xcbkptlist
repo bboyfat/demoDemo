@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIRegComplete.swift"
-            timestampString = "579353902.689986"
+            timestampString = "580823020.400133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "request(params:completion:)"
             landmarkType = "7">
             <Locations>
@@ -90,11 +90,11 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "580748102.11742"
+                  timestampString = "580924799.0152709"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
                   offsetFromSymbolStart = "380">
                </Location>
                <Location
@@ -105,11 +105,11 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "580748102.119321"
+                  timestampString = "580924799.017501"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
                   offsetFromSymbolStart = "3184">
                </Location>
                <Location
@@ -120,11 +120,11 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "580748102.121127"
+                  timestampString = "580924799.0196331"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
                   offsetFromSymbolStart = "3400">
                </Location>
             </Locations>
@@ -137,13 +137,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIRegComplete.swift"
-            timestampString = "579353902.6901259"
+            timestampString = "580823020.400208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "request(params:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "54"
+            endingLineNumber = "54">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -153,11 +151,11 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "580748102.127347"
+                  timestampString = "580924799.025324"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
                   offsetFromSymbolStart = "1376">
                </Location>
                <Location
@@ -168,11 +166,11 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "580748102.129934"
+                  timestampString = "580924799.0271159"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
                   offsetFromSymbolStart = "3328">
                </Location>
             </Locations>
@@ -201,11 +199,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIChangeInfo.swift"
-            timestampString = "579353902.69024"
+            timestampString = "580823020.400317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "request(params:header:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -217,7 +215,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIManager.swift"
-            timestampString = "579878818.936712"
+            timestampString = "580823020.400382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -233,27 +231,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/APIManager.swift"
-            timestampString = "579878818.936772"
+            timestampString = "580823020.400442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "request(params:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/APIManager/APIManager.swift"
-            timestampString = "579878818.936814"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
             landmarkName = "request(params:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -841,7 +823,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579789421.0619791"
+            timestampString = "580820880.106864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -857,7 +839,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579789421.062029"
+            timestampString = "580820880.106941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -873,7 +855,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579789421.0620691"
+            timestampString = "580820880.106986"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -889,7 +871,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579789421.062109"
+            timestampString = "580820880.107023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -905,7 +887,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ProfileScene/ProfileSettingsScreen/Controller/ProfileSetController.swift"
-            timestampString = "579789421.062202"
+            timestampString = "580820880.107058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -1001,7 +983,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.80804"
+            timestampString = "580823020.401412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "postRequest(model:url:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
+            timestampString = "580823020.401464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -1017,11 +1015,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.8081"
+            timestampString = "580823020.401502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "postRequest(model:url:handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1033,7 +1031,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.80814"
+            timestampString = "580823020.4015369"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -1049,7 +1047,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.808175"
+            timestampString = "580823020.40157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -1065,7 +1063,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.808208"
+            timestampString = "580823020.401603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -1081,11 +1079,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.8082401"
+            timestampString = "580823020.4016401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "postRequest(model:url:handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1097,168 +1095,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.8082711"
+            timestampString = "580823020.401673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "postRequest(model:url:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/APIManager/AlamofireAPIManager/AlamofireLogin.swift"
-            timestampString = "580124165.808304"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "postRequest(model:url:handler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-            timestampString = "580747743.456728"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "MainPageBannerCell"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tips_MartDemo.MainPageBannerCell.bannerImageView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-                  timestampString = "580748102.239566"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tips_MartDemo.MainPageBannerCell.bannerImageView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-                  timestampString = "580748102.241563"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tips_MartDemo.MainPageBannerCell.bannerImageView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-                  timestampString = "580748102.24368"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tips_MartDemo.MainPageBannerCell.bannerImageView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-                  timestampString = "580748102.245887"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tips_MartDemo.MainPageBannerCell.init(frame: __C.CGRect) -&gt; Tips_MartDemo.MainPageBannerCell"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-                  timestampString = "580748102.2479039"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tips_MartDemo.MainPageBannerCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Tips_MartDemo.MainPageBannerCell&gt;"
-                  moduleName = "Tips-MartDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-                  timestampString = "580748102.249776"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-            timestampString = "580747743.45679"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "awakeFromNib()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tips-MartDemo/Screens/MainPageScreen/Banners/MainPageBannerCell.swift"
-            timestampString = "580747743.456829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1269,7 +1111,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-            timestampString = "580651961.272998"
+            timestampString = "580823020.401709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -1285,7 +1127,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "580748102.263411"
+                  timestampString = "580924799.1107841"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
@@ -1300,7 +1142,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "580748102.264798"
+                  timestampString = "580924799.112824"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "95"
@@ -1317,7 +1159,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-            timestampString = "580651961.273116"
+            timestampString = "580823020.401765"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -1333,7 +1175,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-            timestampString = "580651961.273174"
+            timestampString = "580823020.401799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -1349,7 +1191,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-            timestampString = "580651961.273226"
+            timestampString = "580823020.401831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -1365,7 +1207,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "580748102.7022491"
+                  timestampString = "580924799.124423"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
@@ -1380,7 +1222,7 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "580748102.703787"
+                  timestampString = "580924799.125935"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -1397,7 +1239,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-            timestampString = "580651961.2732739"
+            timestampString = "580823020.401875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
@@ -1413,7 +1255,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-            timestampString = "580651961.273322"
+            timestampString = "580823020.401911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -1467,6 +1309,38 @@
             startingLineNumber = "46"
             endingLineNumber = "46"
             landmarkName = "setSelected(_:animated:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/APIManager/APIManager.swift"
+            timestampString = "580823020.402035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "request(params:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/APIManager/APIManager.swift"
+            timestampString = "580823020.402079"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getAuthCode(model:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

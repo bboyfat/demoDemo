@@ -13,7 +13,6 @@ class MainTabBarControllerViewController: UITabBarController {
     
     let accessToken = UserDefaults.standard.string(forKey: "accessToken")
     var countNotif = 0
-    //    let notifications = UserDefaults.standard.dictionary(forKey: "notifications")
     
     let mainVc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "mainScreenVc") as! MainPageViewController
     let profileVc = UIStoryboard(name: "Account", bundle: nil).instantiateViewController(withIdentifier: "acccountVC") as! AccountViewController
@@ -35,7 +34,6 @@ class MainTabBarControllerViewController: UITabBarController {
             GetReferalsInfo().getInf(header: accessToken, urlString: URLS.referalsIncome.rawValue)
             RefreshToken().getBalance(header: accessToken) { (notifications) in
                 self.countNotif = notifications.count
-                print(self.countNotif, "adsfsagsdfgsdfhsd!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                 OperationQueue.main.addOperation {
                     self.setUpBadge()
                 }

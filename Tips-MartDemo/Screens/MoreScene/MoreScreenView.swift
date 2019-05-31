@@ -18,7 +18,7 @@ class MoreScreenView: UIView {
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
     
     override func awakeFromNib() {
-       
+       super.awakeFromNib()
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         

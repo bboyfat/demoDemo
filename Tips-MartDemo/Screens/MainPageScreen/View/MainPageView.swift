@@ -15,7 +15,7 @@ class MainPageView: UIView {
     
     @IBOutlet weak var navigationView: UIView!
 
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageView: AvatarView!
     @IBOutlet weak var balanceStack: UIStackView!
     @IBOutlet weak var pendingStack: UIStackView!
     //MARK: Name ID
@@ -32,6 +32,7 @@ class MainPageView: UIView {
     @IBOutlet weak var anotherCardsBtn: UIButton!
     @IBOutlet weak var myCardBtn: UIButton!
     
+    @IBOutlet weak var scrollContentView: UIView!
     //MARK: Get data from user defaults
     let gradientLayer = CAGradientLayer()
     

@@ -34,7 +34,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D21-LZ-MhO">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="M5B-H4-rse">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="M5B-H4-rse" customClass="AvatarView" customModule="Tips_MartDemo" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="55.5" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="60N-lK-93W"/>
@@ -94,7 +94,7 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcP-NM-odM">
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcP-NM-odM" userLabel="Logo">
                                                 <rect key="frame" x="96" y="14.5" width="128" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CcP-NM-odM" secondAttribute="height" multiplier="4:1" id="ecf-ey-XFl"/>
@@ -140,7 +140,7 @@
                                             <constraint firstAttribute="trailing" secondItem="4f5-v4-LID" secondAttribute="trailing" constant="35" id="Ve5-wn-gFH"/>
                                             <constraint firstAttribute="bottom" secondItem="M5B-H4-rse" secondAttribute="bottom" constant="8" id="byc-Ek-N17"/>
                                             <constraint firstItem="hsW-KS-GUm" firstAttribute="leading" secondItem="M5B-H4-rse" secondAttribute="trailing" constant="15" id="cLt-x9-7gj"/>
-                                            <constraint firstItem="4f5-v4-LID" firstAttribute="height" secondItem="CcP-NM-odM" secondAttribute="height" multiplier="1:1.5" constant="6.6862745098039156" id="e5G-HB-IdH"/>
+                                            <constraint firstItem="4f5-v4-LID" firstAttribute="height" secondItem="CcP-NM-odM" secondAttribute="height" multiplier="1:1.5" constant="6.6900000000000004" id="e5G-HB-IdH"/>
                                             <constraint firstItem="hsW-KS-GUm" firstAttribute="top" secondItem="CcP-NM-odM" secondAttribute="bottom" constant="15" id="fJd-GW-mFx"/>
                                             <constraint firstItem="hsW-KS-GUm" firstAttribute="centerY" secondItem="M5B-H4-rse" secondAttribute="centerY" id="hY7-C4-oLp"/>
                                             <constraint firstItem="lb7-sY-uAM" firstAttribute="leading" secondItem="4f5-v4-LID" secondAttribute="trailing" constant="-15" id="rcb-yd-Mdf"/>
@@ -307,8 +307,8 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="412" height="149.66666666666663"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BanerDownload" translatesAutoresizingMaskIntoConstraints="NO" id="uMN-Lx-pOu">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="371" height="150"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BanerDownload" translatesAutoresizingMaskIntoConstraints="NO" id="uMN-Lx-pOu">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="412" height="149.5"/>
                                                                 </imageView>
                                                             </subviews>
                                                         </view>
@@ -456,9 +456,9 @@
                                                 <viewLayoutGuide key="safeArea" id="gA5-eK-AQ8"/>
                                             </view>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapPicture" translatesAutoresizingMaskIntoConstraints="NO" id="7o4-Pf-qed">
-                                                <rect key="frame" x="0.0" y="326" width="320" height="150"/>
+                                                <rect key="frame" x="0.0" y="326" width="320" height="250"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="EtQ-PR-Vav"/>
+                                                    <constraint firstAttribute="height" constant="250" id="EtQ-PR-Vav"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -528,6 +528,7 @@
                             <outlet property="notificationBtn" destination="4f5-v4-LID" id="QBX-Sm-jnQ"/>
                             <outlet property="pendingStack" destination="daF-IC-UeI" id="tqK-nb-c9m"/>
                             <outlet property="photoImageView" destination="M5B-H4-rse" id="zNq-QB-P3C"/>
+                            <outlet property="scrollContentView" destination="0W9-oP-m69" id="gX6-bT-Hmo"/>
                             <outlet property="scrollView" destination="1Cc-kU-adT" id="9eh-AP-qaD"/>
                         </connections>
                     </view>

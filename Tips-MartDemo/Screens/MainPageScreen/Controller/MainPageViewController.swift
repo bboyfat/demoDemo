@@ -15,8 +15,6 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var banners = BannersViewModel().banners
-    var avatarImage: UIImage?
-    var avatarModel: AvatarViewModel = AvatarViewModel()
     
     @IBOutlet var mainPageView: MainPageView!
     var refreshControl: UIRefreshControl!
@@ -38,14 +36,14 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         collectionView.delegate = self
         collectionView.dataSource = self
         setPages()
+        mainPageView.photoImageView.parent = self
         addGestureToMap()
         mainPageView.scrollView.addSubview(refreshControl)
-        setAvatar(view: mainPageView.photoImageView)
         addTapToBalance()
         addTapToPending()
         
     }
-    
+  
     func addGestureToMap(){
         let tap = UITapGestureRecognizer()
         mainPageView.mapImageView.isUserInteractionEnabled = true
@@ -57,14 +55,8 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         present(vc, animated: true, completion: nil)
         }
     
-    func setAvatar(view: UIImageView){
-        avatarImage = avatarModel.fetchImage()
-        if avatarImage != nil{
-            view.image = avatarImage
-        } else {
-            view.image = #imageLiteral(resourceName: "man")
-        }
-    }
+    
+    
     
     func addTapToBalance(){
         let tap = UITapGestureRecognizer()
@@ -91,7 +83,13 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        mainPageView.scrollView.scrollsToTop = true
+        
+    }
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        return true
+    }
     
     @objc func didPullToRefresh() {
         
@@ -123,7 +121,6 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func showMyCodeBtn(_ sender: UIButton) {
         let vc = UIStoryboard(name: "BarCode", bundle: nil).instantiateViewController(withIdentifier: "BarCodeVC")
-        print("showMyCodeBtn")
         self.present(vc, animated: true) {
             UIView.animate(withDuration: 0.3, animations: {
                 UIScreen.main.brightness = 1.0
@@ -135,7 +132,10 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         if scrollView.panGestureRecognizer.translation(in: scrollView.superview).y < -10{
             let vc = UIStoryboard(name: "Map", bundle: nil).instantiateViewController(withIdentifier: "mapVc") as! MapViewController
             
-            present(vc, animated: true, completion: nil)
+            present(vc, animated: true) {
+                scrollView.scrollsToTop = true
+                scrollView.contentOffset = CGPoint(x: 0, y: 0)
+            }
         }
         
         

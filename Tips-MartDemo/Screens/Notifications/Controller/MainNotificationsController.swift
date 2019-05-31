@@ -95,9 +95,9 @@ class MainNotificationsController: UIViewController {
         do{
             let realm = try Realm()
             self.notifications = Array(realm.objects(NotificationModelRealm.self))
-            //        print(shopsModelArray[0].currency)
+         
             OperationQueue.main.addOperation {
-                //               self.view.reloadInputViews()
+               
                 self.checkBadges()
             }
             
@@ -116,7 +116,6 @@ class MainNotificationsController: UIViewController {
         dateFormatterPrint.dateFormat = "dd.MM.yyyy HH:mm:ss"
         let datee = dateFormatterGet.date(from: dateString)
         dateString =  dateFormatterPrint.string(from: datee ?? Date())
-        print(dateString)
         return dateString
     }
     func parseHtml(htmlString: String) -> String{

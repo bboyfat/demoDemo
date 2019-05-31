@@ -23,7 +23,6 @@ class AlamofireLogin{
         Alamofire.request(url, method: .post, parameters: params).response { (dataResponse) in
             do{
             let json = try JSONDecoder().decode(UsersOutput.self, from: dataResponse.data!)
-            print(json)
                 if json.success == true{
                     self.userDefaults.set(json.data?.accessToken.value, forKey: "accessToken")
                     self.userDefaults.set(json.data?.refreshToken.value, forKey: "refreshToken")

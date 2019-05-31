@@ -29,8 +29,6 @@ class APIChangeInfo{
         let optionsObject = NSString(data: jsonDatasonData!, encoding: String.Encoding.utf8.rawValue)! as String
         let postParamsString = "objChanges=\(optionsObject)"
         
-        
-        print(postParamsString)
         request(params: postParamsString, header: header, completion: completion)
         
         

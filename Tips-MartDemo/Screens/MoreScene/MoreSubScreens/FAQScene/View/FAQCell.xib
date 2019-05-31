@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FAQCell" rowHeight="53" id="KGk-i7-Jjw" customClass="FAQCell" customModule="Tips_MartDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="308" height="52.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpz-Vu-2YB">
+                        <rect key="frame" x="0.0" y="0.0" width="308" height="52.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e44-o8-Sm6">
+                                <rect key="frame" x="15" y="15" width="283" height="27.5"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="e44-o8-Sm6" secondAttribute="bottom" constant="10" id="7T5-WK-W2f"/>
+                            <constraint firstAttribute="trailing" secondItem="e44-o8-Sm6" secondAttribute="trailing" constant="10" id="JSD-ND-gzd"/>
+                            <constraint firstItem="e44-o8-Sm6" firstAttribute="leading" secondItem="mpz-Vu-2YB" secondAttribute="leading" constant="15" id="Rlx-pm-rGl"/>
+                            <constraint firstItem="e44-o8-Sm6" firstAttribute="top" secondItem="mpz-Vu-2YB" secondAttribute="top" constant="15" id="akU-BV-HI9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="mpz-Vu-2YB" secondAttribute="bottom" id="BBB-af-1DL"/>
+                    <constraint firstAttribute="trailing" secondItem="mpz-Vu-2YB" secondAttribute="trailing" id="Hpf-TK-Ucq"/>
+                    <constraint firstItem="mpz-Vu-2YB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QGD-nB-s0A"/>
+                    <constraint firstItem="mpz-Vu-2YB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lPy-b7-9Yu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="questionLabel" destination="e44-o8-Sm6" id="vcN-o4-Guz"/>
+            </connections>
+            <point key="canvasLocation" x="155.07246376811597" y="171.09375"/>
+        </tableViewCell>
+    </objects>
+</document>

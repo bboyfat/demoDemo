@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbk-V5-Dfr">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Answer Controller-->
+        <scene sceneID="qDu-pX-yYe">
+            <objects>
+                <viewController storyboardIdentifier="AnswerVC" id="lbk-V5-Dfr" customClass="AnswerController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VAw-Id-DiY" customClass="AnswerView" customModule="Tips_MartDemo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-ji-LrP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.99999719858169556" green="0.9999815821647644" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                    <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="vNK-Un-qVl">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="Frame-1" id="x0r-qS-t68">
+                                            <color key="tintColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="dismissVC:" destination="lbk-V5-Dfr" id="knI-Mm-4MK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-dI-5sb">
+                                <rect key="frame" x="15" y="108" width="369" height="37.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ygM-go-oer">
+                                        <rect key="frame" x="12" y="10" width="347" height="22.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWB-RH-gjU">
+                                                <rect key="frame" x="0.0" y="0.0" width="347" height="12.5"/>
+                                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                                <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kol-2h-fPq">
+                                                <rect key="frame" x="0.0" y="22.5" width="347" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                                                <color key="textColor" red="0.30748403070000002" green="0.27058823529411763" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6k-qJ-rjo">
+                                        <rect key="frame" x="0.0" y="0.0" width="2" height="37.5"/>
+                                        <color key="backgroundColor" red="0.30748403070000002" green="0.26175197960000002" blue="0.56865787509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="dOG-pJ-2R6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ygM-go-oer" secondAttribute="bottom" constant="5" id="DAj-m0-Oxp"/>
+                                    <constraint firstItem="ygM-go-oer" firstAttribute="top" secondItem="t7g-dI-5sb" secondAttribute="top" constant="10" id="Fg8-AF-8tA"/>
+                                    <constraint firstAttribute="bottom" secondItem="n6k-qJ-rjo" secondAttribute="bottom" id="SYa-OP-pS5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ygM-go-oer" secondAttribute="trailing" constant="10" id="VZ1-my-K17"/>
+                                    <constraint firstItem="n6k-qJ-rjo" firstAttribute="leading" secondItem="t7g-dI-5sb" secondAttribute="leading" id="pTV-yU-CkJ"/>
+                                    <constraint firstItem="ygM-go-oer" firstAttribute="leading" secondItem="n6k-qJ-rjo" secondAttribute="trailing" constant="10" id="vVB-rU-pto"/>
+                                    <constraint firstItem="n6k-qJ-rjo" firstAttribute="top" secondItem="t7g-dI-5sb" secondAttribute="top" id="yxA-od-5i3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t7g-dI-5sb" firstAttribute="leading" secondItem="rJG-wH-6dL" secondAttribute="leading" constant="15" id="2cP-hh-pYP"/>
+                            <constraint firstItem="JJx-ji-LrP" firstAttribute="top" secondItem="rJG-wH-6dL" secondAttribute="top" id="9ty-lG-aex"/>
+                            <constraint firstItem="t7g-dI-5sb" firstAttribute="top" secondItem="JJx-ji-LrP" secondAttribute="bottom" constant="20" id="FbG-ng-4s8"/>
+                            <constraint firstItem="JJx-ji-LrP" firstAttribute="leading" secondItem="VAw-Id-DiY" secondAttribute="leading" id="s3x-1a-Mv3"/>
+                            <constraint firstItem="rJG-wH-6dL" firstAttribute="trailing" secondItem="t7g-dI-5sb" secondAttribute="trailing" constant="30" id="sXo-HU-Qst"/>
+                            <constraint firstItem="rJG-wH-6dL" firstAttribute="trailing" secondItem="JJx-ji-LrP" secondAttribute="trailing" id="wJR-Su-qaV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rJG-wH-6dL"/>
+                        <connections>
+                            <outlet property="descriptionLabel" destination="CWB-RH-gjU" id="xaf-fm-mXP"/>
+                            <outlet property="exampleLabel" destination="kol-2h-fPq" id="2WW-IC-VPQ"/>
+                            <outlet property="navigation" destination="JJx-ji-LrP" id="bwx-I3-jv9"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="answerView" destination="VAw-Id-DiY" id="Int-Dz-fo9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjm-JX-jUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Frame-1" width="63" height="22"/>
+    </resources>
+</document>

@@ -22,17 +22,9 @@ class APIRegComplete {
         let authCode = model.authCode
         let inviter = model.inviter
         
-        
         let params = "phoneNumber=\(phoneNumber)&authCode=\(authCode)&password=\(password)&inviter=\(inviter)"
-        
-
-        print(params)
         request(params: params, completion: completion)
-        
-        
-    }
-    
-    
+     }
     
     public func request(params: String, completion: @escaping (UsersOutput) -> Void){
         guard let url = URL(string: "https://client.tips-mart.com/auth/v1/registration") else { return }

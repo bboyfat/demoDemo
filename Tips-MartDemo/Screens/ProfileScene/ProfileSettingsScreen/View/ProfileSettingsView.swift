@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileSettingsView: UIView {
 
-    @IBOutlet var avatarView: UIImageView!
+    @IBOutlet var avatarView: AvatarView!
     @IBOutlet var surnameTextField: FloatingTextField!
     @IBOutlet var birthDayTextField: FloatingTextField!
     @IBOutlet var nameTextField: FloatingTextField!

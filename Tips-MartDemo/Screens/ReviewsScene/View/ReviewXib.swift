@@ -23,7 +23,7 @@ class ReviewXib: UIView{
     }
     
     @objc func handleSend(){
-        print("Sent Btn")
+       
     }
     
     

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xMS-mG-qi8">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FAQVC-->
+        <scene sceneID="2Ug-De-tE2">
+            <objects>
+                <viewController storyboardIdentifier="FAQVC" title="FAQVC" id="xMS-mG-qi8" customClass="FAQController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7OV-sU-zZE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-HP-SEv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.99999719858169556" green="0.9999815821647644" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.61176294088363647" green="0.61175316572189331" blue="0.61176538467407227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Вопросы и ответы" id="WEp-sL-TPv">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="Frame-1" id="gHh-aG-SuY">
+                                            <color key="tintColor" red="0.45445352160000002" green="0.45445352160000002" blue="0.45445352160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="dismissFAQ:" destination="xMS-mG-qi8" id="rO0-r5-aJd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="idQ-ZP-teg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xMS-mG-qi8" id="xW9-zZ-6pw"/>
+                                    <outlet property="delegate" destination="xMS-mG-qi8" id="Dd9-8d-FXB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jWx-7I-BPL" firstAttribute="trailing" secondItem="idQ-ZP-teg" secondAttribute="trailing" id="D2i-JZ-Z1M"/>
+                            <constraint firstItem="rYN-HP-SEv" firstAttribute="top" secondItem="jWx-7I-BPL" secondAttribute="top" id="Hc8-3m-w5n"/>
+                            <constraint firstItem="idQ-ZP-teg" firstAttribute="top" secondItem="rYN-HP-SEv" secondAttribute="bottom" id="M2y-RN-G8W"/>
+                            <constraint firstItem="rYN-HP-SEv" firstAttribute="leading" secondItem="jWx-7I-BPL" secondAttribute="leading" id="TWt-tW-hc5"/>
+                            <constraint firstItem="jWx-7I-BPL" firstAttribute="bottom" secondItem="idQ-ZP-teg" secondAttribute="bottom" id="ZoT-EU-Kd1"/>
+                            <constraint firstItem="rYN-HP-SEv" firstAttribute="trailing" secondItem="jWx-7I-BPL" secondAttribute="trailing" id="jw5-ZR-QE8"/>
+                            <constraint firstItem="idQ-ZP-teg" firstAttribute="leading" secondItem="jWx-7I-BPL" secondAttribute="leading" id="kuK-6D-Rto"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jWx-7I-BPL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gx3-gm-Gak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="255.80357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Frame-1" width="63" height="22"/>
+    </resources>
+</document>

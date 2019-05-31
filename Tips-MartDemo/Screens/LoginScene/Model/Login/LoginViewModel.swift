@@ -49,7 +49,6 @@ class LoginViewModel: LoginModelType, Codable{
         var loginData: LoginDataBase?
         let realm = try! Realm()
         let result = realm.objects(LoginDataBase.self)
-        print(result.count)
         loginData = result.first
         return loginData
     }

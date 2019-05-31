@@ -38,7 +38,6 @@ class MapAPI{
                 })
                 handler(true)
             } catch {
-                print ("can't get the Coordinates")
                 handler(false)
             }
             

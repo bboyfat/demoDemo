@@ -52,7 +52,7 @@ class ShopsMainController: UIViewController{
         fetchDataFromRealm()
         tap.addTarget(self, action: #selector(handleEndEdit))
         self.shopsModelArray.forEach { (shop) in
-            print(shop.name, shop.isSelected)
+            
             if shop.isSelected{
                 self.selectedShopsArray.append(shop)
             }
@@ -85,24 +85,15 @@ class ShopsMainController: UIViewController{
     
     
     @IBAction func selectShop(_ sender: UIButton) {
-        print(sender.tag)
-        //        let indexPath = IndexPath(row: sender.tag, section: 0)
+        
         selectedShop(row: sender.tag, button: sender)
-        //      myTableView.reloadRows(at: [indexPath], with: .none)
         if let cell = sender.superview?.superview as? ShopsTableViewCell{
             cell.isSelectedShop = !cell.isSelectedShop
         }
-        
-        
-        
-        
-        
     }
     
     
     func selectedShop(row: Int, button: UIButton){
-        
-        
         var shop: ShopsModels?
         switch contentType{
         case .allShops: shop = shopsModelArray[row]
@@ -111,16 +102,13 @@ class ShopsMainController: UIViewController{
             break
         }
         if let shop = shop{
-            
             let realm = try! Realm()
-            
             do{
                 if !shop.isSelected{
                     try realm.write {
                         shop.isSelected = !shop.isSelected
-                        
                         self.selectedShopsArray.append(shop)
-                        print(shop.name, shop.isSelected)
+                       
                     }
                 } else {
                     try realm.write {
@@ -128,14 +116,8 @@ class ShopsMainController: UIViewController{
                         
                         if  let index = selectedShopsArray.firstIndex(of: shop){
                             self.selectedShopsArray.remove(at: index)
-                            //                             reloadData(myTableView: myTableView)
-                            //                            if shop == self.selectedShopsArray[row]{
                             let indexPath = IndexPath(row: index, section: 0)
                             myTableView.deleteRows(at: [indexPath], with: .fade)
-                            //
-                            //                            print(shop.name, shop.isSelected)
-                            //                            }
-                            
                         }
                     }
                     
@@ -170,9 +152,7 @@ class ShopsMainController: UIViewController{
     func fetchDataFromRealm(){
         do{
             let realm = try Realm()
-            
             self.shopsModelArray = Array(realm.objects(ShopsModels.self))
-            //        self.shopsModelArray
             self.reloadData(myTableView: self.myTableView)
         } catch {
             print("Can't FETCH!!")
@@ -269,7 +249,6 @@ extension ShopsMainController: UISearchBarDelegate{
         if result.count > 0{
             for shop in result{
                 findedShopsArray.append(shop)
-                print(shop.name)
             }
             shopsModelArray = findedShopsArray
             reloadData(myTableView: myTableView)

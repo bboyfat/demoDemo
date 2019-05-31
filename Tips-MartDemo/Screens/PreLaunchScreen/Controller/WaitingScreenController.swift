@@ -35,6 +35,7 @@ class WaitingScreenController: UIViewController {
                        
                     } else {
                         ErrorAlerts.loginErrorAlert(controller: self)
+                       
                     }
                 }
                 
@@ -55,9 +56,9 @@ class WaitingScreenController: UIViewController {
     func animateLogo(handler: @escaping (_ status: Bool) -> ()){
         OperationQueue.main.addOperation {
             
-            self.centerY.constant = -300
+            self.centerY.constant = -250
             
-            UIView.animate(withDuration: 0.4) {
+            UIView.animate(withDuration: 0.6) {
                 self.view.layoutIfNeeded()
                 self.mainLogo.alpha = 0
                 

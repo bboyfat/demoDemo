@@ -17,15 +17,13 @@ class APILogin{
     
     func getAuthCode(completion:  @escaping (UsersOutput) -> Void) {
         
-       let userData = LoginViewModel().fetchUserData()
+        let userData = LoginViewModel().fetchUserData()
         
         guard let phoneNumber = userData?.phoneNumber else { return}
         guard let password = userData?.password else {return}
-
-         let params = "phoneNumber=\(phoneNumber)&password=\(password)"
         
-        print(phoneNumber)
-        print(params)
+        let params = "phoneNumber=\(phoneNumber)&password=\(password)"
+        
         request(params: params, completion: completion)
         
         
@@ -42,13 +40,11 @@ class APILogin{
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {return}
-           do{
+            do{
+                
                 let answer = try JSONDecoder().decode(UsersOutput.self, from: data)
-               completion(answer)
-             print(answer)
-           
-            
-             
+                completion(answer)
+                
             } catch {
                 print("!!!!!!!!!!!!!!!!!!OOPS, we have an error",error)
             }

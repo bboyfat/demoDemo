@@ -40,7 +40,7 @@ class AvatarViewModel{
         } else {
             image = #imageLiteral(resourceName: "man")
         }
-        print(result.count)
+     
         return image
     }
     

@@ -12,12 +12,11 @@ import Foundation
 class Refresh{
     private let token = UserDefaults.standard.string(forKey: "refreshToken")
     func refreshToken(){
-//        https://client.tips-mart.com/auth/v1/refresh-token
         let urlString = "https://client.tips-mart.com/auth/v1/refresh-token"
         guard let url = URL(string: urlString) else { return}
         var urlRequest = URLRequest(url: url)
         guard let token = token else { return }
-        print(token)
+        
         urlRequest.httpMethod = "POST"
         let params = "token=\(token)"
         urlRequest.httpBody = params.data(using: String.Encoding.utf8)
@@ -33,14 +32,14 @@ class Refresh{
             }
             if let data = data{
                 do{
-                    print(data)
+                    
                 let answer = try JSONDecoder().decode(RefreshModel.self, from: data)
                     UserDefaults.standard.set(answer.data.accessToken.value, forKey: "accessToken")
                      UserDefaults.standard.set(answer.data.accessToken.expires, forKey: "accessTokenExpires")
                     UserDefaults.standard.set(answer.data.refreshToken.value, forKey: "refreshToken")
                     UserDefaults.standard.set(answer.data.refreshToken.expires, forKey: "refreshTokenExpires")
                     
-                print(answer)
+               
                 } catch let tokenErr{
                     print("Problem with data", tokenErr)
                 }

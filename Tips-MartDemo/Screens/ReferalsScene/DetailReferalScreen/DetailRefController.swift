@@ -16,15 +16,15 @@ enum FriendsType{
 
 class DetailRefController: UIViewController {
     
-    var friendsType: FriendsType = .friends
-
-   
+    var friendsType: FriendsType?
+    
+    
     @IBOutlet var detRefView: DetRefView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
     @IBAction func friendsBtnAct(_ sender: UIButton) {
@@ -35,13 +35,13 @@ class DetailRefController: UIViewController {
         HideOrNot().show(views: viewsToShow as! [UIView])
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
+            
         }
     }
     @IBAction func acqBtnAct(_ sender: UIButton) {
         friendsType = .acquaintances
         let viewsToHide = [detRefView.strangUnderscore, detRefView.frUnderscore]
         let viewsToShow = [detRefView.acqUnderscore]
-        
         HideOrNot().hide(views: viewsToHide as! [UIView])
         HideOrNot().show(views: viewsToShow as! [UIView])
         UIView.animate(withDuration: 0.3) {
@@ -62,13 +62,12 @@ class DetailRefController: UIViewController {
     
     @IBAction func returnBtn(_ sender: UIBarButtonItem) {
         dismiss(animated: true) {
-            
         }
     }
     
     
     
-
+    
 }
 
 

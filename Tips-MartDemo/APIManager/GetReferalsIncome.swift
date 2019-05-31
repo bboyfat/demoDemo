@@ -14,7 +14,7 @@ class GetReferalsInfo{
     func getInf(header: String, urlString: String){
         
         
-       
+        
         guard let url = URL(string: urlString) else { return}
         
         
@@ -36,8 +36,8 @@ class GetReferalsInfo{
             if let data = data{
                 do{
                     let answer = try JSONDecoder().decode(GetInfoModel.self, from: data)
-                    print(answer)
-                   UserDefaults.standard.set(answer.data.totalCashback, forKey: "totalCasback")
+                    
+                    UserDefaults.standard.set(answer.data.totalCashback, forKey: "totalCasback")
                     UserDefaults.standard.set(answer.data.referralsIncome, forKey: "referralsIncome")
                     
                     

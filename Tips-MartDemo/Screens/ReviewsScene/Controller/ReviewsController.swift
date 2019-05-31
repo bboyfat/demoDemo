@@ -65,7 +65,7 @@ extension ReviewsController: UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected")
+       
         
     }
     
@@ -81,7 +81,7 @@ extension ReviewsController: UITableViewDataSource, UITableViewDelegate{
             
             self.animateOnscroll(constant: 0)
         } else if (self.lastContentOffset > scrollView.contentOffset.y) {
-            print(scrollView.contentOffset.y)
+           
             self.animateOnscroll(constant: 200)
         } else {
     
