@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterForCategories" customModule="Tips_MartDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="showMoreBtn" destination="JTA-xF-PZM" id="Ikb-dR-S1v"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zyf-mX-ekE">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTA-xF-PZM">
+                            <rect key="frame" x="20" y="7.5" width="285" height="25"/>
+                            <state key="normal">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Показать еще">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30588235294117649" green="0.27058823529411763" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="GothamPro"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="JTA-xF-PZM" firstAttribute="leading" secondItem="Zyf-mX-ekE" secondAttribute="leading" constant="20" id="MAy-VP-xTV"/>
+                        <constraint firstItem="JTA-xF-PZM" firstAttribute="centerY" secondItem="Zyf-mX-ekE" secondAttribute="centerY" id="QwP-Fc-xXu"/>
+                        <constraint firstAttribute="trailing" secondItem="JTA-xF-PZM" secondAttribute="trailing" constant="20" id="flr-Tr-wfs"/>
+                        <constraint firstItem="JTA-xF-PZM" firstAttribute="centerX" secondItem="Zyf-mX-ekE" secondAttribute="centerX" id="vAK-WT-GQR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zyf-mX-ekE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3m8-2X-1ut"/>
+                <constraint firstItem="Zyf-mX-ekE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4lZ-NT-Gow"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zyf-mX-ekE" secondAttribute="trailing" id="OUL-xA-Ue8"/>
+                <constraint firstAttribute="bottom" secondItem="Zyf-mX-ekE" secondAttribute="bottom" id="f6M-88-9P5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-16.666666666666668" y="271.875"/>
+        </view>
+    </objects>
+</document>

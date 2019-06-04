@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 
+
 enum ContentType{
     case allShops
     case selectedShops
@@ -16,9 +17,9 @@ enum ContentType{
 }
 
 class ShopsMainController: UIViewController{
-    @IBOutlet weak var catWidth: NSLayoutConstraint!
+
     
-    @IBOutlet weak var categoriesTableView: UITableView!
+   
     
     var shopsModelArray: [ShopsModels] = []
     var selectedShopsArray: [ShopsModels] = []
@@ -28,12 +29,25 @@ class ShopsMainController: UIViewController{
         }
     }
     
-    @IBAction func showCat(_ sender: UIButton) {
-        view.layoutIfNeeded()
-        catWidth.constant = self.view.frame.width - 100.0
-        UIView.animate(withDuration: 0.4) {
-            self.view.layoutIfNeeded()
+    func filter(categiries: [Int])->[ShopsModels]{
+        var filteredShops: [ShopsModels] = []
+        
+        shopsModelArray.forEach { (filt) in
+            if filt.categories.contains(categiries[0]){
+                filteredShops.append(filt)
+            }
+            
         }
+        print(filteredShops.count)
+        return filteredShops
+    }
+    
+    @IBAction func showCat(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "categoriesVc") as! CategoriesController
+        
+        present(vc, animated: true, completion: nil)
+      
+       
     }
     
     
@@ -75,11 +89,6 @@ class ShopsMainController: UIViewController{
     
     @objc func handleEndEdit(){
         view.endEditing(true)
-        view.layoutIfNeeded()
-        catWidth.constant = 0
-        UIView.animate(withDuration: 0.4) {
-            self.view.layoutIfNeeded()
-        }
         
     }
     
@@ -186,7 +195,15 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
             break
         }
         
+        
         if let shop = shop {
+            let array = Array(shop.categories)
+            print(array)
+            cell.categories = []
+            array.forEach { (id) in
+                cell.categories.append(id)
+            }
+            
             cell.isSelectedShop = shop.isSelected
             let double = shop.value
             let valueOfCash = String(double)
@@ -206,11 +223,22 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "DetailShopView", bundle: nil).instantiateViewController(withIdentifier: "detailShopVC") as! DetailShopViewController
-        
-        vc.shopsModel =  self.shopsModelArray[indexPath.row]
-        present(vc, animated: true) {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ShopsTableViewCell{
+            let array = self.shopsModelArray[indexPath.section].categories
+           
+            array.forEach { (id) in
+                
+                cell.categories.append(id)
+            }
+            filter(categiries: [1502])
+            
+            print(cell.categories)
             
         }
+        vc.shopsModel =  self.shopsModelArray[indexPath.row]
+//        present(vc, animated: true) {
+        
+//        }
         
     }
     

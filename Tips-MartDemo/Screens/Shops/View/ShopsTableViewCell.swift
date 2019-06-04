@@ -23,6 +23,9 @@ class ShopsTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    var categories: [Int] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,9 +42,8 @@ class ShopsTableViewCell: UITableViewCell {
         shopName.text = nil
         percentOfCashBack.text = nil
         isSelectedShop = false
-//        if isSelectedShop {
-//        starSelect.setImage(#imageLiteral(resourceName: "nonSelectedStar"), for: .normal)
-//        }
+        categories = []
+
     }
 
 }

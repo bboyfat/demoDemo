@@ -14,7 +14,7 @@ class ShopsApiRequest{
     
     
     func formRequest(accesToken: String, completion: @escaping([ShopsModel]) -> Void){
-       
+        
         let stringUrl = "https://tips-mart.com/files/shops.json"
         let url = URL(string: stringUrl)
         guard let forcedURL = url else { return }
@@ -37,15 +37,15 @@ class ShopsApiRequest{
             }
             if let data = data {
                 do{
-                   
-                    let answer = try JSONDecoder().decode([ShopsModel].self, from: data)
-                   
-                    completion(answer)
                     
+                    let answer = try JSONDecoder().decode([ShopsModel].self, from: data)
+                    
+                    completion(answer)
+                   
                     if self.checkDataRealm(answer: answer){
-                    self.saveRealmData(answer: answer)
+                        self.saveRealmData(answer: answer)
                     }
-                    } catch let APIerr {
+                } catch let APIerr {
                     
                     print("Can't decode shops data", APIerr)
                     
@@ -54,10 +54,10 @@ class ShopsApiRequest{
             
             
             
-        }.resume()
+            }.resume()
     }
     func checkDataRealm(answer: [ShopsModel]) -> Bool{
-       
+        
         var shopsModelArray: [ShopsModels] = []
         do{
             let realm = try Realm()
@@ -86,10 +86,11 @@ class ShopsApiRequest{
             shopsRealmData.setValue(shop.shopID, forKey: "shopID")
             shopsRealmData.setValue(shop.pathToImage, forKey: "pathImage")
             shopsRealmData.setValue(shop.name, forKey: "name")
-           
-            shop.categories.forEach({ (each) in
-                shopsRealmData.setValue(each, forKey: "categories")
-            })
+            
+            
+            shopsRealmData.setValue(shop.categories, forKey: "categories")
+            
+            
             shopsRealmData.setValue(shop.maxCashback.currency, forKey: "currency")
             shopsRealmData.setValue(shop.maxCashback.value, forKey: "value")
             
@@ -110,8 +111,8 @@ class ShopsApiRequest{
         })
         
     }
-   
-        
+    
+    
     
     
 }

@@ -1,5 +1,5 @@
 //
-//  SubCategoriCell.swift
+//  RowsCatCell.swift
 //  Tips-MartDemo
 //
 //  Created by Andrey Petrovskiy on 5/31/19.
@@ -8,23 +8,29 @@
 
 import UIKit
 
-class SubCategoriCell: UITableViewCell, CategoriesCell {
-    @IBOutlet weak var isSelectBtn: CheckBoxButton!
-    @IBOutlet weak var categorieLabel: UILabel!
+protocol CategoriesCell: UITableViewCell {
     
-    var childCategories:[SubCategoriCell] = []
+}
+
+class RowsCatCell: UITableViewCell, CategoriesCell {
+
+    @IBOutlet weak var categoriesLabel: UILabel!
     
-    var id: [Int] = []
+    var id: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        if selected{
+           accessoryType = .checkmark
+        } else {
+            accessoryType = .none
+        }
         
-        // Configure the view for the selected state
     }
     
 }

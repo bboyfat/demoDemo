@@ -91,11 +91,11 @@
                                     <constraint firstItem="95D-wz-pJd" firstAttribute="top" secondItem="PBN-z6-NwE" secondAttribute="top" id="A0V-dH-WKw"/>
                                     <constraint firstAttribute="bottom" secondItem="95D-wz-pJd" secondAttribute="bottom" id="CQl-dL-LAY"/>
                                     <constraint firstItem="ryf-xo-avv" firstAttribute="leading" secondItem="PBN-z6-NwE" secondAttribute="leading" id="Lk6-yr-xm2"/>
-                                    <constraint firstAttribute="trailing" secondItem="95D-wz-pJd" secondAttribute="trailing" id="LlX-hF-69R"/>
                                     <constraint firstAttribute="width" secondItem="PBN-z6-NwE" secondAttribute="height" multiplier="9:1" id="MhR-hX-HgV"/>
                                     <constraint firstItem="95D-wz-pJd" firstAttribute="leading" secondItem="2Fp-Jt-aVU" secondAttribute="trailing" id="QeA-0J-yf3"/>
                                     <constraint firstItem="2Fp-Jt-aVU" firstAttribute="top" secondItem="PBN-z6-NwE" secondAttribute="top" id="Sg6-pY-hes"/>
                                     <constraint firstAttribute="bottom" secondItem="2Fp-Jt-aVU" secondAttribute="bottom" id="ZdF-hD-MNk"/>
+                                    <constraint firstAttribute="trailing" secondItem="95D-wz-pJd" secondAttribute="trailing" id="dTd-3T-eSA"/>
                                     <constraint firstAttribute="bottom" secondItem="ryf-xo-avv" secondAttribute="bottom" id="ju9-wl-f0D"/>
                                     <constraint firstItem="ryf-xo-avv" firstAttribute="top" secondItem="PBN-z6-NwE" secondAttribute="top" id="wwK-64-GFy"/>
                                 </constraints>
@@ -206,38 +206,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dJi-EU-SqS">
-                                <rect key="frame" x="414" y="44" width="0.0" height="852"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" id="D2M-yo-2W7"/>
-                                </constraints>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="dJi-EU-SqS" secondAttribute="trailing" id="6SN-6w-jC5"/>
+                            <constraint firstItem="QHj-pe-dnH" firstAttribute="trailing" secondItem="ojl-MO-Q6E" secondAttribute="trailing" id="3eH-zu-Mgz"/>
                             <constraint firstItem="QHj-pe-dnH" firstAttribute="leading" secondItem="ojl-MO-Q6E" secondAttribute="leading" id="A7L-Nw-JeK"/>
+                            <constraint firstAttribute="trailing" secondItem="6h3-1f-qDT" secondAttribute="trailing" id="PCa-fn-K90"/>
                             <constraint firstAttribute="bottom" secondItem="QHj-pe-dnH" secondAttribute="bottom" id="QVH-J8-rEZ"/>
-                            <constraint firstItem="dJi-EU-SqS" firstAttribute="leading" secondItem="PBN-z6-NwE" secondAttribute="trailing" id="S1b-yR-vmr"/>
                             <constraint firstItem="6h3-1f-qDT" firstAttribute="top" secondItem="ojl-MO-Q6E" secondAttribute="top" constant="20" id="S7w-48-Zgi"/>
                             <constraint firstItem="QHj-pe-dnH" firstAttribute="top" secondItem="U1K-1l-mNA" secondAttribute="bottom" constant="5" id="UjA-Sv-n5Y"/>
                             <constraint firstItem="PBN-z6-NwE" firstAttribute="leading" secondItem="ojl-MO-Q6E" secondAttribute="leading" id="VGX-US-KvL"/>
                             <constraint firstItem="U1K-1l-mNA" firstAttribute="top" secondItem="PBN-z6-NwE" secondAttribute="bottom" id="WnU-6r-sRF"/>
                             <constraint firstAttribute="trailing" secondItem="U1K-1l-mNA" secondAttribute="trailing" id="aL3-xp-IEs"/>
-                            <constraint firstItem="dJi-EU-SqS" firstAttribute="leading" secondItem="QHj-pe-dnH" secondAttribute="trailing" id="bys-ce-Cv2"/>
-                            <constraint firstItem="dJi-EU-SqS" firstAttribute="leading" secondItem="6h3-1f-qDT" secondAttribute="trailing" id="eQ1-70-DYF"/>
+                            <constraint firstItem="ojl-MO-Q6E" firstAttribute="trailing" secondItem="PBN-z6-NwE" secondAttribute="trailing" id="di1-D7-fPw"/>
                             <constraint firstItem="PBN-z6-NwE" firstAttribute="top" secondItem="6h3-1f-qDT" secondAttribute="bottom" constant="20" id="gAZ-IH-04s"/>
                             <constraint firstItem="6h3-1f-qDT" firstAttribute="leading" secondItem="ojl-MO-Q6E" secondAttribute="leading" id="hni-l5-fsU"/>
                             <constraint firstItem="U1K-1l-mNA" firstAttribute="leading" secondItem="nJn-cf-uun" secondAttribute="leading" id="sEl-1k-ovz"/>
-                            <constraint firstItem="dJi-EU-SqS" firstAttribute="top" secondItem="ojl-MO-Q6E" secondAttribute="top" id="sZg-dS-jyg"/>
-                            <constraint firstAttribute="bottom" secondItem="dJi-EU-SqS" secondAttribute="bottom" id="tM7-pW-MFt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ojl-MO-Q6E"/>
                     </view>
                     <connections>
-                        <outlet property="catWidth" destination="D2M-yo-2W7" id="H0J-B2-Bnd"/>
-                        <outlet property="categoriesTableView" destination="dJi-EU-SqS" id="CxM-GR-aoK"/>
                         <outlet property="myTableView" destination="QHj-pe-dnH" id="1lk-gx-wKg"/>
                     </connections>
                 </viewController>
