@@ -9,24 +9,24 @@
 import UIKit
 
 class FilterButton: UIButton {
-
     
-        var isAgreed: Bool = false
-        
-        override func awakeFromNib() {
-            self.addTarget(self, action: #selector(handleAgree), for: .touchUpInside)
+    
+    var isAgreed: Bool = false
+    
+    override func awakeFromNib() {
+        self.addTarget(self, action: #selector(handleAgree), for: .touchUpInside)
+    }
+    
+    @objc func handleAgree(){
+        isAgreed = !isAgreed
+        if isAgreed {
+            setImage(#imageLiteral(resourceName: "full"), for: .normal)
+        } else {
+            setImage(#imageLiteral(resourceName: "empty"), for: .normal)
         }
         
-        @objc func handleAgree(){
-            isAgreed = !isAgreed
-            if isAgreed {
-                setImage(#imageLiteral(resourceName: "full"), for: .normal)
-            } else {
-                setImage(#imageLiteral(resourceName: "empty"), for: .normal)
-            }
-            
-            
-        }
-
-
+        
+    }
+    
+    
 }

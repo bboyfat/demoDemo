@@ -13,41 +13,34 @@ import RealmSwift
 enum ContentType{
     case allShops
     case selectedShops
+    case filteredShops
     case visitedShops
 }
+protocol FilterCategoryDelegate{
+     func filter(categiries: [Int])
+    var contentType: ContentType {get set}
+}
 
-class ShopsMainController: UIViewController{
-
+class ShopsMainController: UIViewController, FilterCategoryDelegate{
     
-   
+    
+    
     
     var shopsModelArray: [ShopsModels] = []
     var selectedShopsArray: [ShopsModels] = []
+    var filteredShopsArray: [ShopsModels] = []
     var contentType: ContentType = .allShops {
         didSet{
-            reloadData(myTableView: myTableView)
+          
         }
     }
     
-    func filter(categiries: [Int])->[ShopsModels]{
-        var filteredShops: [ShopsModels] = []
-        
-        shopsModelArray.forEach { (filt) in
-            if filt.categories.contains(categiries[0]){
-                filteredShops.append(filt)
-            }
-            
-        }
-        print(filteredShops.count)
-        return filteredShops
-    }
+    
     
     @IBAction func showCat(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "categoriesVc") as! CategoriesController
+
         
-        present(vc, animated: true, completion: nil)
-      
-       
+        
     }
     
     
@@ -55,8 +48,21 @@ class ShopsMainController: UIViewController{
     
     let tap = UITapGestureRecognizer()
     
+  
+    @IBOutlet var myTableView: UITableView!
     
-    @IBOutlet weak var myTableView: UITableView!
+    func filter(categiries: [Int]){
+        
+        contentType = .filteredShops
+        shopsModelArray.forEach { (filt) in
+            if filt.categories.contains(categiries[0]){
+                filteredShopsArray.append(filt)
+            }
+            
+        }
+        reloadData(myTableView: myTableView)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,7 +123,7 @@ class ShopsMainController: UIViewController{
                     try realm.write {
                         shop.isSelected = !shop.isSelected
                         self.selectedShopsArray.append(shop)
-                       
+                        
                     }
                 } else {
                     try realm.write {
@@ -176,6 +182,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch contentType{
+        case .filteredShops: return self.filteredShopsArray.count
         case .allShops: return self.shopsModelArray.count
         case .selectedShops: return self.selectedShopsArray.count
         case .visitedShops: return 0
@@ -189,6 +196,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
         
         var shop: ShopsModels?
         switch contentType{
+        case .filteredShops: shop = filteredShopsArray[indexPath.row]
         case .allShops: shop = shopsModelArray[indexPath.row]
         case .selectedShops: shop = selectedShopsArray[indexPath.row]
         default:
@@ -225,7 +233,7 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
         let vc = UIStoryboard(name: "DetailShopView", bundle: nil).instantiateViewController(withIdentifier: "detailShopVC") as! DetailShopViewController
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ShopsTableViewCell{
             let array = self.shopsModelArray[indexPath.section].categories
-           
+            
             array.forEach { (id) in
                 
                 cell.categories.append(id)
@@ -236,9 +244,9 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
             
         }
         vc.shopsModel =  self.shopsModelArray[indexPath.row]
-//        present(vc, animated: true) {
+        //        present(vc, animated: true) {
         
-//        }
+        //        }
         
     }
     

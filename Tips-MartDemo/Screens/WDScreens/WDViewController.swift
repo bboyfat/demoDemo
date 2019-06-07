@@ -13,7 +13,7 @@ class WDViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -26,5 +26,5 @@ class WDViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
+    
 }

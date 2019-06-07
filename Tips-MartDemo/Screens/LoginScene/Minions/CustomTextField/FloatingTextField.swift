@@ -21,8 +21,6 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
     
     open var floattingPlaceholder: UILabel = {
         let label = UILabel()
-        
-        
         return label
     }()
     

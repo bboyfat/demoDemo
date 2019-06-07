@@ -1,22 +1,24 @@
 //
-//  FooterForCategories.swift
+//  HeaderView.swift
 //  Tips-MartDemo
 //
-//  Created by Andrey Petrovskiy on 6/3/19.
+//  Created by Andrey Petrovskiy on 6/6/19.
 //  Copyright © 2019 Andrey Petrovskiy. All rights reserved.
 //
 
-
 import UIKit
 
-class FooterForCategories: UIView {
+
+class HeaderView: UIView {
     
-    
-    let nibName = "FooterForCategories"
+    @IBOutlet weak var categoriLabel: UILabel!
+    @IBOutlet weak var btnForView: UIButton!
+    var id = 1
+    var isOpen = false
+    let nibName = "HeaderView"
     
     var contentVIew: UIView?
     
-    @IBOutlet weak var showMoreBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -51,3 +53,4 @@ class FooterForCategories: UIView {
     }
     
 }
+

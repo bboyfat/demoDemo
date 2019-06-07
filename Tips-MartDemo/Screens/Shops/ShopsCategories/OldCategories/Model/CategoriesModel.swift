@@ -15,14 +15,12 @@ enum OnOFFShopsTypre{
     case allShops
 }
 
-struct CategoriesCellDataModel{
-    var title: String
-    var categoriID: Int
-    var childsTitle: [SubCategory]
-    var opened: Bool = false
-    
+struct CategoriesAdapter {
+    var categoryID: Int
+    var name: String
+    var subCategories: [SubCategory]
+    var switchTable: SwithcForTable = .closed
 }
-import Foundation
 
 
 
