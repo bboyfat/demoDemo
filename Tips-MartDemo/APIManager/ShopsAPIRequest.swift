@@ -41,7 +41,6 @@ class ShopsApiRequest{
                     let answer = try JSONDecoder().decode([ShopsModel].self, from: data)
                     
                     completion(answer)
-                   
                     if self.checkDataRealm(answer: answer){
                         self.saveRealmData(answer: answer)
                     }

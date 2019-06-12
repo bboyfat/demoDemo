@@ -11,20 +11,15 @@ import AlamofireImage
 import Alamofire
 
 class MapAPI{
-   
-    
-   
     
     var coordinates: [ShopsCoordinates] = []
-    
     
     var imageUrlArray: [String] = []
     var imageArray: [UIImage] = []
     
     
     func getLocation( handler: @escaping (_ status: Bool) -> ()){
-//        coordinates = []
-        
+       
         Alamofire.request(shopsLocationUrl).responseJSON { (dataResponse) in
             guard let data = dataResponse.data else { return }
             

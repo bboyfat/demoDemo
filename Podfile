@@ -19,6 +19,8 @@ target 'Tips-MartDemo' do
    pod 'BadgeSwift'
    pod 'Alamofire'
    pod 'AlamofireImage'
+   pod 'RxSwift'
+   pod 'RxCocoa'
 
    
      

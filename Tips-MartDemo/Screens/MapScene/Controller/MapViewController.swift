@@ -90,6 +90,11 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
+    @IBAction func categoriesBtn(_ sender: Any) {
+        let vc = UIStoryboard(name: "CategoriesMain", bundle: nil).instantiateViewController(withIdentifier: "categoriesController") as! MainCategoriesController
+        vc.categoriesFor = .map
+        present(vc, animated: true, completion: nil)
+    }
     
     func getData(){
         apiManager.getLocation { (finished) in

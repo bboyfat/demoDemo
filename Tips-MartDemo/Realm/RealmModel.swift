@@ -16,8 +16,6 @@ class ShopsModels: Object{
     @objc dynamic var type: String = ""
     @objc dynamic var shopID: Int = 0
     @objc dynamic var pathImage: String = ""
-//    @objc dynamic var isConnection: Bool = false
-//    @objc dynamic var isInExtension: Bool = false
     var categories = List<Int>()
     @objc dynamic var currency = ""
      @objc dynamic var value = 0.0

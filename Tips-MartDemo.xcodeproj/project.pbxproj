@@ -48,8 +48,8 @@
 		C22C987E226798F900BC2106 /* DetailShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C987D226798F900BC2106 /* DetailShopViewController.swift */; };
 		C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2369BB22265C2DA00FBB386 /* AccountView.swift */; };
 		C2369BB52265C32100FBB386 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2369BB42265C32100FBB386 /* AccountViewController.swift */; };
+		C2374A6022AFED0B00870898 /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2374A5F22AFED0B00870898 /* CategoryCellModel.swift */; };
 		C23E9F6622670DE0002191E3 /* Shops.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23E9F6522670DDF002191E3 /* Shops.storyboard */; };
-		C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E9F6722671DFB002191E3 /* ShopsModel.swift */; };
 		C23E9F6A22671FDF002191E3 /* ShopsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */; };
 		C23FAD582290245700372B5B /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FAD572290245700372B5B /* PresentController.swift */; };
 		C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115142281B3AF004F41E1 /* CheckBoxButton.swift */; };
@@ -100,6 +100,13 @@
 		C25BBF732255E0D3008D78F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF722255E0D3008D78F9 /* Assets.xcassets */; };
 		C25BBF762255E0D3008D78F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25BBF742255E0D3008D78F9 /* LaunchScreen.storyboard */; };
 		C26117E0228EB5D6005A9F68 /* LoginModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26117DF228EB5D6005A9F68 /* LoginModelType.swift */; };
+		C26BDB7522AAB285003EC631 /* ShModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BDB7422AAB285003EC631 /* ShModel.swift */; };
+		C26BDB7722AAB536003EC631 /* ShopsMOdel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BDB7622AAB536003EC631 /* ShopsMOdel.swift */; };
+		C26BDB7922AAB68D003EC631 /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BDB7822AAB68D003EC631 /* ShopViewModel.swift */; };
+		C26BDB7C22AAB7EB003EC631 /* ShopsDataSource + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BDB7B22AAB7EB003EC631 /* ShopsDataSource + Delegate.swift */; };
+		C26BDB7E22AABC1F003EC631 /* ShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BDB7D22AABC1F003EC631 /* ShopsViewController.swift */; };
+		C26BDB8122AACEA7003EC631 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BDB8022AACEA7003EC631 /* Filter.swift */; };
+		C26BDB8322AAD949003EC631 /* CategoriesForFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BDB8222AAD949003EC631 /* CategoriesForFilter.swift */; };
 		C270FC872269BD750059F161 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270FC862269BD750059F161 /* Refresh.swift */; };
 		C270FC892269C1C80059F161 /* RefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270FC882269C1C80059F161 /* RefreshModel.swift */; };
 		C270FC8B2269DEF10059F161 /* ReferalScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */; };
@@ -118,6 +125,8 @@
 		C29356E6225CAF39004F4510 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29356E5225CAF39004F4510 /* APIManager.swift */; };
 		C293570B225CCF38004F4510 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C293570A225CCF38004F4510 /* AuthModel.swift */; };
 		C299E5352271C9B100D6CC05 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299E5342271C9B100D6CC05 /* RealmModel.swift */; };
+		C29B1AA722AE5023000D837C /* ExtensionArray + Remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29B1AA622AE5023000D837C /* ExtensionArray + Remove.swift */; };
+		C2A47BA622B1161A00E823B3 /* CategoriesFor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A47BA522B1161A00E823B3 /* CategoriesFor.swift */; };
 		C2A75D0E229303F100CE2CC9 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A75D0D229303F100CE2CC9 /* FilterController.swift */; };
 		C2A75D102293040200CE2CC9 /* FilterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A75D0F2293040200CE2CC9 /* FilterView.storyboard */; };
 		C2AB431F2293F97700C1D3A6 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB431E2293F97700C1D3A6 /* FilterButton.swift */; };
@@ -264,8 +273,8 @@
 		C22C987D226798F900BC2106 /* DetailShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopViewController.swift; sourceTree = "<group>"; };
 		C2369BB22265C2DA00FBB386 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		C2369BB42265C32100FBB386 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		C2374A5F22AFED0B00870898 /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
 		C23E9F6522670DDF002191E3 /* Shops.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shops.storyboard; sourceTree = "<group>"; };
-		C23E9F6722671DFB002191E3 /* ShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsModel.swift; sourceTree = "<group>"; };
 		C23E9F6922671FDF002191E3 /* ShopsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsAPIRequest.swift; sourceTree = "<group>"; };
 		C23FAD572290245700372B5B /* PresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
 		C24115142281B3AF004F41E1 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
@@ -318,6 +327,13 @@
 		C25BBF752255E0D3008D78F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25BBF772255E0D3008D78F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C26117DF228EB5D6005A9F68 /* LoginModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelType.swift; sourceTree = "<group>"; };
+		C26BDB7422AAB285003EC631 /* ShModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShModel.swift; sourceTree = "<group>"; };
+		C26BDB7622AAB536003EC631 /* ShopsMOdel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsMOdel.swift; sourceTree = "<group>"; };
+		C26BDB7822AAB68D003EC631 /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		C26BDB7B22AAB7EB003EC631 /* ShopsDataSource + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopsDataSource + Delegate.swift"; sourceTree = "<group>"; };
+		C26BDB7D22AABC1F003EC631 /* ShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewController.swift; sourceTree = "<group>"; };
+		C26BDB8022AACEA7003EC631 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		C26BDB8222AAD949003EC631 /* CategoriesForFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesForFilter.swift; sourceTree = "<group>"; };
 		C270FC862269BD750059F161 /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
 		C270FC882269C1C80059F161 /* RefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModel.swift; sourceTree = "<group>"; };
 		C270FC8A2269DEF10059F161 /* ReferalScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReferalScreen.storyboard; sourceTree = "<group>"; };
@@ -336,6 +352,8 @@
 		C29356E5225CAF39004F4510 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C293570A225CCF38004F4510 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		C299E5342271C9B100D6CC05 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		C29B1AA622AE5023000D837C /* ExtensionArray + Remove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionArray + Remove.swift"; sourceTree = "<group>"; };
+		C2A47BA522B1161A00E823B3 /* CategoriesFor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesFor.swift; sourceTree = "<group>"; };
 		C2A75D0D229303F100CE2CC9 /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
 		C2A75D0F2293040200CE2CC9 /* FilterView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterView.storyboard; sourceTree = "<group>"; };
 		C2AB431E2293F97700C1D3A6 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterButton.swift; path = ../FilterButton.swift; sourceTree = "<group>"; };
@@ -583,6 +601,7 @@
 			isa = PBXGroup;
 			children = (
 				C218025622A699A40071CDDE /* Categories */,
+				C29B1AA622AE5023000D837C /* ExtensionArray + Remove.swift */,
 			);
 			path = UTILITIES;
 			sourceTree = "<group>";
@@ -607,6 +626,7 @@
 		C218026F22A94F7F0071CDDE /* NewCategories */ = {
 			isa = PBXGroup;
 			children = (
+				C26BDB8222AAD949003EC631 /* CategoriesForFilter.swift */,
 				C2ADBA9822A56481001AF895 /* Custom */,
 				C218027422A94FBA0071CDDE /* Controller */,
 				C218027322A94FB40071CDDE /* View */,
@@ -673,6 +693,7 @@
 			children = (
 				C2F49A9322A1585A003C811B /* RowsCatCell.swift */,
 				C2F49A9422A1585A003C811B /* RowsCatCell.xib */,
+				C2374A5F22AFED0B00870898 /* CategoryCellModel.swift */,
 			);
 			path = CategoryRow;
 			sourceTree = "<group>";
@@ -842,6 +863,7 @@
 		C241150022817DAD004F41E1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C2A47BA422B115FA00E823B3 /* Categories */,
 				C2C355822297EC0A00492971 /* ReviewsScene */,
 				C241151322818141004F41E1 /* MapScene */,
 				C241151222818119004F41E1 /* MainTabBarScene */,
@@ -926,7 +948,8 @@
 		C241150822817EDB004F41E1 /* Shops */ = {
 			isa = PBXGroup;
 			children = (
-				C255FD0422A128E200950F55 /* ShopsCategories */,
+				C26BDB7F22AACE98003EC631 /* Filter */,
+				C26BDB6E22AAB1E4003EC631 /* NewShopsScene */,
 				C241150A22817F49004F41E1 /* View */,
 				C241150922817F38004F41E1 /* Controller */,
 			);
@@ -947,7 +970,6 @@
 			isa = PBXGroup;
 			children = (
 				C22C98772267987600BC2106 /* DetailShopView.storyboard */,
-				C23E9F6522670DDF002191E3 /* Shops.storyboard */,
 				C22C9879226798B800BC2106 /* DetailShopView.swift */,
 				C2429B552266171A00EB7942 /* ShopsTableViewCell.swift */,
 			);
@@ -1188,6 +1210,66 @@
 			path = OldCategories;
 			sourceTree = "<group>";
 		};
+		C26BDB6E22AAB1E4003EC631 /* NewShopsScene */ = {
+			isa = PBXGroup;
+			children = (
+				C26BDB7A22AAB7D6003EC631 /* DataSourceDelegate */,
+				C26BDB7322AAB244003EC631 /* API */,
+				C26BDB7022AAB201003EC631 /* Model */,
+				C26BDB7222AAB20E003EC631 /* ViewModel */,
+				C26BDB6F22AAB1F0003EC631 /* Controller */,
+			);
+			path = NewShopsScene;
+			sourceTree = "<group>";
+		};
+		C26BDB6F22AAB1F0003EC631 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C26BDB7D22AABC1F003EC631 /* ShopsViewController.swift */,
+				C23E9F6522670DDF002191E3 /* Shops.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C26BDB7022AAB201003EC631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C26BDB7422AAB285003EC631 /* ShModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C26BDB7222AAB20E003EC631 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C26BDB7822AAB68D003EC631 /* ShopViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C26BDB7322AAB244003EC631 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C26BDB7A22AAB7D6003EC631 /* DataSourceDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C26BDB7B22AAB7EB003EC631 /* ShopsDataSource + Delegate.swift */,
+			);
+			path = DataSourceDelegate;
+			sourceTree = "<group>";
+		};
+		C26BDB7F22AACE98003EC631 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				C26BDB8022AACEA7003EC631 /* Filter.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		C276D439228835B6007138C5 /* InputModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,6 +1303,15 @@
 				C299E5342271C9B100D6CC05 /* RealmModel.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		C2A47BA422B115FA00E823B3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C2A47BA522B1161A00E823B3 /* CategoriesFor.swift */,
+				C255FD0422A128E200950F55 /* ShopsCategories */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		C2ADBA9822A56481001AF895 /* Custom */ = {
@@ -1283,8 +1374,8 @@
 				C29356DE225CA7E8004F4510 /* RegistrationModelAPI.swift */,
 				C293570A225CCF38004F4510 /* AuthModel.swift */,
 				C242835E226469B200750768 /* ProfileModel.swift */,
-				C23E9F6722671DFB002191E3 /* ShopsModel.swift */,
 				C2F285F8226DF0EA005DC8F8 /* GetInfoModel.swift */,
+				C26BDB7622AAB536003EC631 /* ShopsMOdel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1725,6 +1816,9 @@
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSUtilitiesSource/iOSUtilitiesSource.framework",
@@ -1743,6 +1837,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSUtilitiesSource.framework",
@@ -1803,6 +1900,7 @@
 				C2DEEBB82295AE7200FCEDC8 /* InfoAlert.swift in Sources */,
 				C2AB431F2293F97700C1D3A6 /* FilterButton.swift in Sources */,
 				C2AF211C2296D90A0013EC82 /* RegistrationXib.swift in Sources */,
+				C2374A6022AFED0B00870898 /* CategoryCellModel.swift in Sources */,
 				C29356E6225CAF39004F4510 /* APIManager.swift in Sources */,
 				C2D3AEE022A011BC00A81F45 /* AnswerView.swift in Sources */,
 				C2D3AEDE22A0112500A81F45 /* AnswerController.swift in Sources */,
@@ -1825,6 +1923,7 @@
 				C242836D2264F51F00750768 /* BarCodeView.swift in Sources */,
 				C2F49A9022A14287003C811B /* CategoriesController.swift in Sources */,
 				C2CC262F2298182C008DABAA /* ReviewXib.swift in Sources */,
+				C26BDB7522AAB285003EC631 /* ShModel.swift in Sources */,
 				C20C9FD7228731250023D701 /* AlamofireLogin.swift in Sources */,
 				C241151F2281C013004F41E1 /* LoginControllerForPhoneFormatter.swift in Sources */,
 				C2369BB52265C32100FBB386 /* AccountViewController.swift in Sources */,
@@ -1833,11 +1932,14 @@
 				C2E5962E225DDE87001D09D9 /* APIRegComplete.swift in Sources */,
 				C2E59630225DE2E5001D09D9 /* UsersOutput.swift in Sources */,
 				C2DEEBBC2296B12400FCEDC8 /* RoundImageView.swift in Sources */,
+				C26BDB7C22AAB7EB003EC631 /* ShopsDataSource + Delegate.swift in Sources */,
+				C26BDB7E22AABC1F003EC631 /* ShopsViewController.swift in Sources */,
 				C2C355882297F99200492971 /* ReviewCell.swift in Sources */,
 				C2184A9A226DB22D00ABE8C3 /* RefreshBalanceModel.swift in Sources */,
 				C2D8BC2A226E069000001C99 /* OperationHistoryController.swift in Sources */,
 				C2CB123622883771008B3590 /* LoginInput.swift in Sources */,
 				C218026022A82F7D0071CDDE /* ViewForHeader.swift in Sources */,
+				C26BDB8122AACEA7003EC631 /* Filter.swift in Sources */,
 				C2C3924222954B9E0074F48E /* BannersModel.swift in Sources */,
 				C25A13B8225B406000499C3C /* CustomFonts.swift in Sources */,
 				C24C547422844D0F00AE45D5 /* ReferalsViewCell.swift in Sources */,
@@ -1846,6 +1948,7 @@
 				C2184A98226DB0C300ABE8C3 /* RefreshBalance.swift in Sources */,
 				C2CCDB852289A48100FE508D /* AvatarBase.swift in Sources */,
 				C2FC25E322805FA100395247 /* LoginView.swift in Sources */,
+				C2A47BA622B1161A00E823B3 /* CategoriesFor.swift in Sources */,
 				C221B84D2282FFCB0081BFB1 /* LoginDataBase.swift in Sources */,
 				C2D8BC34226F0BED00001C99 /* HTMLParser.swift in Sources */,
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
@@ -1853,9 +1956,11 @@
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2DEEBB62295AE3E00FCEDC8 /* Extensions.swift in Sources */,
 				C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */,
+				C26BDB8322AAD949003EC631 /* CategoriesForFilter.swift in Sources */,
 				C2ADBA9A22A564A6001AF895 /* CategoryButton.swift in Sources */,
 				C26117E0228EB5D6005A9F68 /* LoginModelType.swift in Sources */,
 				C2F49A9A22A15E12003C811B /* ServicesTableController.swift in Sources */,
+				C26BDB7722AAB536003EC631 /* ShopsMOdel.swift in Sources */,
 				C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */,
 				C2A75D0E229303F100CE2CC9 /* FilterController.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
@@ -1880,7 +1985,6 @@
 				C2ADBA9522A54E38001AF895 /* FooterForCategories.swift in Sources */,
 				C283C843228034BD00714B98 /* AnimateView.swift in Sources */,
 				C24115212281C080004F41E1 /* LoginVCLittleFunctions.swift in Sources */,
-				C23E9F6822671DFB002191E3 /* ShopsModel.swift in Sources */,
 				C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */,
 				C21E4BE322A15ECB0032EF95 /* CategoriesModel.swift in Sources */,
 				C20C9F892286D5F90023D701 /* DetRefView.swift in Sources */,
@@ -1898,6 +2002,7 @@
 				C2CB1238228837AB008B3590 /* AuthInput.swift in Sources */,
 				C2F49A9822A15DF6003C811B /* ProductsTableController.swift in Sources */,
 				C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */,
+				C29B1AA722AE5023000D837C /* ExtensionArray + Remove.swift in Sources */,
 				C21D8292228967C500554A9D /* ProfileSetController.swift in Sources */,
 				C24115282281C346004F41E1 /* UserDataBase.swift in Sources */,
 				C242C48C22706E34008B359A /* WDViewController.swift in Sources */,
@@ -1934,6 +2039,7 @@
 				C2369BB32265C2DA00FBB386 /* AccountView.swift in Sources */,
 				C2CB123A22883823008B3590 /* RgistrationInput.swift in Sources */,
 				C2FC25E122805C7C00395247 /* LoginViewController.swift in Sources */,
+				C26BDB7922AAB68D003EC631 /* ShopViewModel.swift in Sources */,
 				C23FAD582290245700372B5B /* PresentController.swift in Sources */,
 				C272D760229EA0D600FAEF6A /* BigAvatar.swift in Sources */,
 				C241151A2281B933004F41E1 /* MaleButton.swift in Sources */,

@@ -11,22 +11,16 @@ import UIKit
 
 class GetLogos{
     
-    
-    
     func urlPath(imagePath: String, completion: @escaping (UIImage?) -> Void) {
        
        
-          let urlString = "https://tips-mart.com/images/shops/\(imagePath)/logotype.png"
-        
-        
+        let urlString = "https://tips-mart.com/images/shops/\(imagePath)/logotype.png"
         
         guard let url = URL(string: urlString) else { return }
         var request = URLRequest(url: url)
         request.cachePolicy = .useProtocolCachePolicy
        
-        
-        
-       getImage(request: request, completion: completion)
+        getImage(request: request, completion: completion)
         
     }
     

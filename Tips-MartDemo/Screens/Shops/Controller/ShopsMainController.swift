@@ -23,9 +23,6 @@ protocol FilterCategoryDelegate{
 
 class ShopsMainController: UIViewController, FilterCategoryDelegate{
     
-    
-    
-    
     var shopsModelArray: [ShopsModels] = []
     var selectedShopsArray: [ShopsModels] = []
     var filteredShopsArray: [ShopsModels] = []
@@ -65,8 +62,6 @@ class ShopsMainController: UIViewController, FilterCategoryDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         myTableView.delegate = self
         myTableView.dataSource = self
         fetchDataFromRealm()
