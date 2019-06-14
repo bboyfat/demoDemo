@@ -67,7 +67,7 @@
                                 <rect key="frame" x="0.0" y="758.5" width="414" height="103.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Моей карты нет в списке" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7t-3N-dRr">
-                                        <rect key="frame" x="130" y="12.5" width="154" height="11"/>
+                                        <rect key="frame" x="130" y="22.5" width="154" height="11"/>
                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                         <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -100,7 +100,7 @@
                                     <constraint firstAttribute="trailing" secondItem="bQu-wb-B52" secondAttribute="trailing" constant="40" id="QCy-i5-e2I"/>
                                     <constraint firstAttribute="bottom" secondItem="bQu-wb-B52" secondAttribute="bottom" constant="30" id="UH9-88-Yvh"/>
                                     <constraint firstAttribute="width" secondItem="JCC-js-HIj" secondAttribute="height" multiplier="4:1" id="apf-wU-vup"/>
-                                    <constraint firstItem="bQu-wb-B52" firstAttribute="top" secondItem="T7t-3N-dRr" secondAttribute="bottom" constant="20" id="bgM-xQ-b9c"/>
+                                    <constraint firstItem="bQu-wb-B52" firstAttribute="top" secondItem="T7t-3N-dRr" secondAttribute="bottom" constant="10" id="bgM-xQ-b9c"/>
                                 </constraints>
                             </view>
                         </subviews>

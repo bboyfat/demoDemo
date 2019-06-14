@@ -155,6 +155,8 @@
 		C2AF21182296D4FC0013EC82 /* LoginXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AF21172296D4FC0013EC82 /* LoginXib.swift */; };
 		C2AF211A2296D8FC0013EC82 /* RegistrationXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AF21192296D8FC0013EC82 /* RegistrationXib.xib */; };
 		C2AF211C2296D90A0013EC82 /* RegistrationXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AF211B2296D90A0013EC82 /* RegistrationXib.swift */; };
+		C2B07E6922B3CA96002DC736 /* BarCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B07E6822B3CA96002DC736 /* BarCodeReader.swift */; };
+		C2B07E6B22B3DA89002DC736 /* CategoriesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B07E6A22B3DA89002DC736 /* CategoriesPicker.swift */; };
 		C2B80C83228C436E00C469D4 /* MapConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C82228C436E00C469D4 /* MapConstants.swift */; };
 		C2B80C85228C46DD00C469D4 /* MapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C84228C46DD00C469D4 /* MapAPI.swift */; };
 		C2B80C89228D953700C469D4 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C88228D953700C469D4 /* MapCell.swift */; };
@@ -402,6 +404,8 @@
 		C2AF21172296D4FC0013EC82 /* LoginXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginXib.swift; sourceTree = "<group>"; };
 		C2AF21192296D8FC0013EC82 /* RegistrationXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationXib.xib; sourceTree = "<group>"; };
 		C2AF211B2296D90A0013EC82 /* RegistrationXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationXib.swift; sourceTree = "<group>"; };
+		C2B07E6822B3CA96002DC736 /* BarCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReader.swift; sourceTree = "<group>"; };
+		C2B07E6A22B3DA89002DC736 /* CategoriesPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPicker.swift; sourceTree = "<group>"; };
 		C2B80C82228C436E00C469D4 /* MapConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConstants.swift; sourceTree = "<group>"; };
 		C2B80C84228C46DD00C469D4 /* MapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPI.swift; sourceTree = "<group>"; };
 		C2B80C88228D953700C469D4 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
@@ -1226,6 +1230,7 @@
 		C243BAC722B3B760003F5794 /* CreateCard */ = {
 			isa = PBXGroup;
 			children = (
+				C2B07E6722B3C9D9002DC736 /* BarCodeReader */,
 				C243BAC922B3B77B003F5794 /* Controller */,
 				C243BAC822B3B773003F5794 /* View */,
 			);
@@ -1244,6 +1249,7 @@
 			isa = PBXGroup;
 			children = (
 				C243BACC22B3BCD1003F5794 /* CreateCardController.swift */,
+				C2B07E6A22B3DA89002DC736 /* CategoriesPicker.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1491,6 +1497,14 @@
 				C2ADBA9922A564A6001AF895 /* CategoryButton.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		C2B07E6722B3C9D9002DC736 /* BarCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				C2B07E6822B3CA96002DC736 /* BarCodeReader.swift */,
+			);
+			path = BarCodeReader;
 			sourceTree = "<group>";
 		};
 		C2B80C7D228C430600C469D4 /* Utilities */ = {
@@ -2159,6 +2173,7 @@
 				C2D8BC34226F0BED00001C99 /* HTMLParser.swift in Sources */,
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */,
+				C2B07E6B22B3DA89002DC736 /* CategoriesPicker.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2DEEBB62295AE3E00FCEDC8 /* Extensions.swift in Sources */,
 				C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */,
@@ -2171,6 +2186,7 @@
 				C26BDB7722AAB536003EC631 /* ShopsMOdel.swift in Sources */,
 				C27A02152272F03D0005BE33 /* ExtensionUiTextField.swift in Sources */,
 				C2A75D0E229303F100CE2CC9 /* FilterController.swift in Sources */,
+				C2B07E6922B3CA96002DC736 /* BarCodeReader.swift in Sources */,
 				C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */,
 				C2F49A9522A1585A003C811B /* RowsCatCell.swift in Sources */,
 				C2CCDB7C22897DC600FE508D /* LoginOutputsRealm.swift in Sources */,
