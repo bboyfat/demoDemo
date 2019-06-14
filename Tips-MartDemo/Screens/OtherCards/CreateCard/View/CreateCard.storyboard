@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jNp-A5-0Eh">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
+        <array key="gotham_pro_medium.ttf">
+            <string>GothamPro-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Create Card Controller-->
+        <scene sceneID="3M1-od-0Q4">
+            <objects>
+                <viewController storyboardIdentifier="createCardVc" id="jNp-A5-0Eh" customClass="CreateCardController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFT-ya-yKK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon icon" translatesAutoresizingMaskIntoConstraints="NO" id="Q0o-TE-xyM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jq-xB-sLb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="14"/>
+                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Создать новую карту" id="PUr-Eg-Xvs">
+                                        <barButtonItem key="leftBarButtonItem" image="Group 3" id="xuY-72-m4x">
+                                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="dismissBtn:" destination="jNp-A5-0Eh" id="AdU-8V-TqE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qw4-r1-zIo">
+                                <rect key="frame" x="40" y="138" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="W5H-ob-uks"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNM-cz-W4W">
+                                <rect key="frame" x="40" y="208" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Tm-pd-Mqp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название карты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpS-gu-v4o">
+                                <rect key="frame" x="40" y="119" width="115" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYj-S8-4WK">
+                                <rect key="frame" x="40" y="186" width="16" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgB-Fw-8BV">
+                                <rect key="frame" x="40" y="298" width="334" height="40"/>
+                                <color key="backgroundColor" red="0.30588235294117649" green="0.27058823529411763" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="moT-nO-QS1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                <state key="normal" title="Рестораны">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dfn-Um-uWv">
+                                <rect key="frame" x="40" y="368" width="334" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08a-cr-mYC">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                        <color key="backgroundColor" red="0.30588235294117649" green="0.27058823529411763" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7nB-BM-7Zc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                        <state key="normal" title="Логотип">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK0-Tg-s0V">
+                                        <rect key="frame" x="182" y="0.0" width="152" height="40"/>
+                                        <color key="backgroundColor" red="0.30588235294117649" green="0.27058823529411763" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1eC-IP-Hms"/>
+                                        </constraints>
+                                        <state key="normal" image="photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите категорию" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vww-6v-x1S">
+                                <rect key="frame" x="40" y="279" width="119.5" height="14"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                                <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="0.86558219178082196" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="или сделайте фото" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-c4-Yzq">
+                                <rect key="frame" x="222" y="348" width="108" height="14"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.86558219179999996" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузите лого" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1U-4H-hKG">
+                                <rect key="frame" x="40" y="348" width="86.5" height="14"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.86558219179999996" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjA-Na-Fs8">
+                                <rect key="frame" x="40" y="742" width="334" height="40"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.78823529410000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zby-Py-bTW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
+                                <state key="normal" title="Добавить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createNewCard:" destination="jNp-A5-0Eh" eventType="touchUpInside" id="7JM-z7-TJK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rgB-Fw-8BV" firstAttribute="top" secondItem="tNM-cz-W4W" secondAttribute="bottom" constant="50" id="0Ix-7U-DTB"/>
+                            <constraint firstItem="dfn-Um-uWv" firstAttribute="top" secondItem="zZg-c4-Yzq" secondAttribute="bottom" constant="6" id="3wJ-so-shL"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="trailing" secondItem="rgB-Fw-8BV" secondAttribute="trailing" constant="40" id="7eT-9D-e79"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="trailing" secondItem="qw4-r1-zIo" secondAttribute="trailing" constant="40" id="D8A-Rq-LBh"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="trailing" secondItem="cjA-Na-Fs8" secondAttribute="trailing" constant="40" id="FpA-j6-gHp"/>
+                            <constraint firstItem="5jq-xB-sLb" firstAttribute="top" secondItem="8WV-Vf-lye" secondAttribute="top" id="HBj-vg-mGJ"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="trailing" secondItem="dfn-Um-uWv" secondAttribute="trailing" constant="40" id="Jgl-tN-MNc"/>
+                            <constraint firstItem="Vww-6v-x1S" firstAttribute="leading" secondItem="rgB-Fw-8BV" secondAttribute="leading" id="MYQ-Xo-yvr"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="bottom" secondItem="cjA-Na-Fs8" secondAttribute="bottom" constant="80" id="OKb-5q-yzJ"/>
+                            <constraint firstItem="dfn-Um-uWv" firstAttribute="leading" secondItem="8WV-Vf-lye" secondAttribute="leading" constant="40" id="PjA-4m-srH"/>
+                            <constraint firstItem="dfn-Um-uWv" firstAttribute="top" secondItem="Z1U-4H-hKG" secondAttribute="bottom" constant="6" id="Rqp-iD-mOT"/>
+                            <constraint firstItem="tNM-cz-W4W" firstAttribute="leading" secondItem="8WV-Vf-lye" secondAttribute="leading" constant="40" id="S1d-J5-HiQ"/>
+                            <constraint firstItem="qw4-r1-zIo" firstAttribute="leading" secondItem="8WV-Vf-lye" secondAttribute="leading" constant="40" id="Uo5-cQ-deM"/>
+                            <constraint firstItem="cjA-Na-Fs8" firstAttribute="leading" secondItem="8WV-Vf-lye" secondAttribute="leading" constant="40" id="VQR-YS-Bo7"/>
+                            <constraint firstItem="Z1U-4H-hKG" firstAttribute="leading" secondItem="08a-cr-mYC" secondAttribute="leading" id="X3j-hO-bmn"/>
+                            <constraint firstItem="Q0o-TE-xyM" firstAttribute="leading" secondItem="8WV-Vf-lye" secondAttribute="leading" id="XkA-dt-1SC"/>
+                            <constraint firstItem="zZg-c4-Yzq" firstAttribute="leading" secondItem="NK0-Tg-s0V" secondAttribute="leading" id="Ybe-2D-HP0"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="trailing" secondItem="tNM-cz-W4W" secondAttribute="trailing" constant="40" id="Zde-7H-sQS"/>
+                            <constraint firstItem="dfn-Um-uWv" firstAttribute="top" secondItem="rgB-Fw-8BV" secondAttribute="bottom" constant="30" id="cFL-5X-DQv"/>
+                            <constraint firstItem="rgB-Fw-8BV" firstAttribute="leading" secondItem="8WV-Vf-lye" secondAttribute="leading" constant="40" id="djg-pS-uOR"/>
+                            <constraint firstItem="5jq-xB-sLb" firstAttribute="leading" secondItem="gFT-ya-yKK" secondAttribute="leading" id="ghM-dt-eWV"/>
+                            <constraint firstItem="qw4-r1-zIo" firstAttribute="top" secondItem="5jq-xB-sLb" secondAttribute="bottom" constant="50" id="jMF-16-Om0"/>
+                            <constraint firstAttribute="bottom" secondItem="Q0o-TE-xyM" secondAttribute="bottom" id="jYs-If-Ik9"/>
+                            <constraint firstItem="tNM-cz-W4W" firstAttribute="top" secondItem="qw4-r1-zIo" secondAttribute="bottom" constant="30" id="l8L-Ke-o1n"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="trailing" secondItem="5jq-xB-sLb" secondAttribute="trailing" id="pFe-ul-5OM"/>
+                            <constraint firstItem="8WV-Vf-lye" firstAttribute="trailing" secondItem="Q0o-TE-xyM" secondAttribute="trailing" id="pk9-L1-ClU"/>
+                            <constraint firstItem="Q0o-TE-xyM" firstAttribute="top" secondItem="5jq-xB-sLb" secondAttribute="bottom" id="qcV-kB-ssb"/>
+                            <constraint firstItem="rgB-Fw-8BV" firstAttribute="top" secondItem="Vww-6v-x1S" secondAttribute="bottom" constant="5" id="uOi-ei-Wws"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8WV-Vf-lye"/>
+                    </view>
+                    <connections>
+                        <outlet property="idTextFiled" destination="tNM-cz-W4W" id="5OM-he-wdE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bON-8T-oFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211.59420289855075" y="-40.178571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group 3" width="63" height="22"/>
+        <image name="fon icon" width="375" height="597.5"/>
+        <image name="photo" width="24" height="20"/>
+    </resources>
+</document>

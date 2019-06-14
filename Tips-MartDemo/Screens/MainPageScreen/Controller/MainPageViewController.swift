@@ -74,7 +74,11 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
         
         self.present(vc, animated: true, completion: nil)
     }
-   @objc func presentPurchase(){
+    @IBAction func otherCardsBtn(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "OtherCards", bundle: nil).instantiateViewController(withIdentifier: "otherCardVc") as! OtherCardsController
+        present(vc, animated: true, completion: nil)
+    }
+    @objc func presentPurchase(){
         let vc = UIStoryboard(name: "OperationHistory", bundle: nil).instantiateViewController(withIdentifier: "operationVC") as! OperationHistoryController
         
         self.present(vc, animated: true, completion: nil)

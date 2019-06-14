@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tmO-jt-loJ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Other Cards Controller-->
+        <scene sceneID="veh-kj-VcM">
+            <objects>
+                <viewController storyboardIdentifier="otherCardVc" id="tmO-jt-loJ" customClass="OtherCardsController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FjH-09-3xV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQf-bP-hT6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="14"/>
+                                    <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Другие карты" id="9Oy-bK-AAh">
+                                        <barButtonItem key="leftBarButtonItem" image="Group 3" id="Kyt-eT-HnM">
+                                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="backBtn:" destination="tmO-jt-loJ" id="cKZ-2B-NBk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="кнопка моя карта" id="Za7-fX-qoB"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="center" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQv-oc-hDA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-Ig-Ijg">
+                                <rect key="frame" x="0.0" y="194" width="414" height="668"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="O8i-vD-6Rs">
+                                    <size key="itemSize" width="110" height="52"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="11" maxX="15" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="555-yC-CWD" customClass="CardCell" customModule="Tips_MartDemo" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="11" width="110" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7y-uy-eAh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="52"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="кнопка моя карта" translatesAutoresizingMaskIntoConstraints="NO" id="zrw-ix-Js3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="52"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="zrw-ix-Js3" firstAttribute="leading" secondItem="p7y-uy-eAh" secondAttribute="leading" id="6HB-CX-eM8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zrw-ix-Js3" secondAttribute="bottom" id="M68-BN-lCL"/>
+                                                        <constraint firstItem="zrw-ix-Js3" firstAttribute="top" secondItem="p7y-uy-eAh" secondAttribute="top" id="VNk-Mt-oag"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zrw-ix-Js3" secondAttribute="trailing" id="gQL-w3-dBp"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="1" height="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="p7y-uy-eAh" firstAttribute="top" secondItem="555-yC-CWD" secondAttribute="top" id="HKm-ew-F2V"/>
+                                            <constraint firstAttribute="trailing" secondItem="p7y-uy-eAh" secondAttribute="trailing" id="ORP-4r-JYx"/>
+                                            <constraint firstAttribute="bottom" secondItem="p7y-uy-eAh" secondAttribute="bottom" id="dN7-CV-X7E"/>
+                                            <constraint firstItem="p7y-uy-eAh" firstAttribute="leading" secondItem="555-yC-CWD" secondAttribute="leading" id="gz7-vx-Xjl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="imageView" destination="zrw-ix-Js3" id="lhG-hD-ZvG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addCardCell" id="2BA-c6-n8L" customClass="AddCardCell" customModule="Tips_MartDemo" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="11" width="110" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9c-Ie-Wzd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="52"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="добавить карту" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9H-DQ-lRZ">
+                                                            <rect key="frame" x="0.0" y="19.5" width="110" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="I9H-DQ-lRZ" firstAttribute="centerY" secondItem="V9c-Ie-Wzd" secondAttribute="centerY" id="1p1-mV-4f8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="I9H-DQ-lRZ" secondAttribute="trailing" id="MA0-Dx-tka"/>
+                                                        <constraint firstItem="I9H-DQ-lRZ" firstAttribute="leading" secondItem="V9c-Ie-Wzd" secondAttribute="leading" id="mfY-5n-OhO"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="V9c-Ie-Wzd" secondAttribute="trailing" id="0Qi-Ig-gfk"/>
+                                            <constraint firstItem="V9c-Ie-Wzd" firstAttribute="leading" secondItem="2BA-c6-n8L" secondAttribute="leading" id="a91-c2-aoO"/>
+                                            <constraint firstAttribute="bottom" secondItem="V9c-Ie-Wzd" secondAttribute="bottom" id="fIt-Xe-DCg"/>
+                                            <constraint firstItem="V9c-Ie-Wzd" firstAttribute="top" secondItem="2BA-c6-n8L" secondAttribute="top" id="sIi-Bt-b4A"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="title" destination="I9H-DQ-lRZ" id="j13-Bx-JWz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-G1-aqP">
+                                <rect key="frame" x="0.0" y="144" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваши карты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzS-dZ-mfg">
+                                        <rect key="frame" x="20" y="19" width="86.5" height="12.5"/>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                        <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlS-T5-oVt">
+                                        <rect key="frame" x="278" y="18.5" width="116" height="13"/>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                        <state key="normal" title="Сортировать " image="Vector">
+                                            <color key="titleColor" red="0.30588235294117649" green="0.27058823529411763" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ku8-c6-7v4">
+                                        <rect key="frame" x="20" y="49" width="374" height="1"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="poC-v1-FUS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nzS-dZ-mfg" firstAttribute="leading" secondItem="Mvh-G1-aqP" secondAttribute="leading" constant="20" id="LDZ-xj-0wY"/>
+                                    <constraint firstItem="nzS-dZ-mfg" firstAttribute="centerY" secondItem="Mvh-G1-aqP" secondAttribute="centerY" id="OUQ-KX-ndb"/>
+                                    <constraint firstAttribute="bottom" secondItem="ku8-c6-7v4" secondAttribute="bottom" id="WYc-zv-N3S"/>
+                                    <constraint firstAttribute="trailing" secondItem="ku8-c6-7v4" secondAttribute="trailing" constant="20" id="ayd-aG-RP4"/>
+                                    <constraint firstItem="mlS-T5-oVt" firstAttribute="centerY" secondItem="Mvh-G1-aqP" secondAttribute="centerY" id="hDj-9P-yHY"/>
+                                    <constraint firstAttribute="trailing" secondItem="mlS-T5-oVt" secondAttribute="trailing" constant="20" id="hWJ-kH-hJo"/>
+                                    <constraint firstAttribute="height" constant="50" id="oHf-61-1mm"/>
+                                    <constraint firstItem="ku8-c6-7v4" firstAttribute="leading" secondItem="Mvh-G1-aqP" secondAttribute="leading" constant="20" id="ztz-C4-vSj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v2-xM-TGp">
+                                <rect key="frame" x="334" y="622" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.86558219179999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="RIf-xt-i3s"/>
+                                    <constraint firstAttribute="height" constant="40" id="iwW-aG-J6E"/>
+                                </constraints>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.27058823529999998" green="0.78823529410000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.86558219179999996" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addCard:" destination="tmO-jt-loJ" eventType="touchUpInside" id="ua9-Kc-0j0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OPM-Ig-Ijg" firstAttribute="leading" secondItem="3GT-SL-xxL" secondAttribute="leading" id="6Y8-Ej-syb"/>
+                            <constraint firstItem="jQf-bP-hT6" firstAttribute="trailing" secondItem="3GT-SL-xxL" secondAttribute="trailing" id="7cN-Ya-M0i"/>
+                            <constraint firstItem="3GT-SL-xxL" firstAttribute="bottom" secondItem="OPM-Ig-Ijg" secondAttribute="bottom" id="98e-Nd-nIZ"/>
+                            <constraint firstItem="Mvh-G1-aqP" firstAttribute="leading" secondItem="3GT-SL-xxL" secondAttribute="leading" id="Db7-Go-aLL"/>
+                            <constraint firstItem="3GT-SL-xxL" firstAttribute="trailing" secondItem="1v2-xM-TGp" secondAttribute="trailing" constant="40" id="GBR-nY-XOF"/>
+                            <constraint firstItem="3GT-SL-xxL" firstAttribute="trailing" secondItem="Mvh-G1-aqP" secondAttribute="trailing" id="INC-NL-DVe"/>
+                            <constraint firstItem="OPM-Ig-Ijg" firstAttribute="top" secondItem="Mvh-G1-aqP" secondAttribute="bottom" id="ING-qM-LzY"/>
+                            <constraint firstItem="3GT-SL-xxL" firstAttribute="bottom" secondItem="1v2-xM-TGp" secondAttribute="bottom" constant="200" id="Iwl-dT-RPJ"/>
+                            <constraint firstItem="JQv-oc-hDA" firstAttribute="top" secondItem="jQf-bP-hT6" secondAttribute="bottom" id="Niw-2T-8we"/>
+                            <constraint firstItem="JQv-oc-hDA" firstAttribute="trailing" secondItem="3GT-SL-xxL" secondAttribute="trailing" id="WlY-OS-oVI"/>
+                            <constraint firstItem="jQf-bP-hT6" firstAttribute="top" secondItem="3GT-SL-xxL" secondAttribute="top" id="Zcn-3u-i8f"/>
+                            <constraint firstItem="jQf-bP-hT6" firstAttribute="leading" secondItem="3GT-SL-xxL" secondAttribute="leading" id="buP-t5-fTQ"/>
+                            <constraint firstItem="3GT-SL-xxL" firstAttribute="trailing" secondItem="OPM-Ig-Ijg" secondAttribute="trailing" id="e06-h4-dnT"/>
+                            <constraint firstItem="Mvh-G1-aqP" firstAttribute="top" secondItem="JQv-oc-hDA" secondAttribute="bottom" id="sAT-gX-es4"/>
+                            <constraint firstItem="JQv-oc-hDA" firstAttribute="leading" secondItem="3GT-SL-xxL" secondAttribute="leading" id="xcf-vd-hil"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3GT-SL-xxL"/>
+                    </view>
+                    <connections>
+                        <outlet property="colletctionView" destination="OPM-Ig-Ijg" id="SMa-I1-4GI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuc-oX-yqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group 3" width="63" height="22"/>
+        <image name="Vector" width="18" height="12"/>
+        <image name="кнопка моя карта" width="63" height="30"/>
+    </resources>
+</document>

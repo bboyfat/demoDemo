@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xco-zH-NEj">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add Cart Controller-->
+        <scene sceneID="Rsc-Cq-3mq">
+            <objects>
+                <viewController storyboardIdentifier="addCrdVc" id="xco-zH-NEj" customClass="AddCartController" customModule="Tips_MartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9bU-78-i4Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="center" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-Xs-K5A">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NId-a3-qek">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="14"/>
+                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Добавить карту" id="SFA-yK-8fo">
+                                        <barButtonItem key="leftBarButtonItem" image="Group 3" id="ZXx-Nz-aim">
+                                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="backBtn:" destination="xco-zH-NEj" id="h0f-rJ-CNW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d09-bm-ymh">
+                                <rect key="frame" x="0.0" y="144" width="414" height="614.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addCell" id="LeP-Jf-ZiD">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LeP-Jf-ZiD" id="H3F-vP-quU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCC-js-HIj">
+                                <rect key="frame" x="0.0" y="758.5" width="414" height="103.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Моей карты нет в списке" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7t-3N-dRr">
+                                        <rect key="frame" x="130" y="12.5" width="154" height="11"/>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                                        <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-wb-B52">
+                                        <rect key="frame" x="40" y="43.5" width="334" height="30"/>
+                                        <state key="normal" title="Создать новую карту">
+                                            <color key="titleColor" red="0.27058823529411763" green="0.78823529411764703" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.27058823529999998" green="0.78823529410000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="createNewCard:" destination="xco-zH-NEj" eventType="touchUpInside" id="9qw-Tw-IjR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bQu-wb-B52" firstAttribute="leading" secondItem="JCC-js-HIj" secondAttribute="leading" constant="40" id="0Vz-zp-ZDj"/>
+                                    <constraint firstItem="T7t-3N-dRr" firstAttribute="centerX" secondItem="bQu-wb-B52" secondAttribute="centerX" id="Lbv-DD-xdN"/>
+                                    <constraint firstAttribute="trailing" secondItem="bQu-wb-B52" secondAttribute="trailing" constant="40" id="QCy-i5-e2I"/>
+                                    <constraint firstAttribute="bottom" secondItem="bQu-wb-B52" secondAttribute="bottom" constant="30" id="UH9-88-Yvh"/>
+                                    <constraint firstAttribute="width" secondItem="JCC-js-HIj" secondAttribute="height" multiplier="4:1" id="apf-wU-vup"/>
+                                    <constraint firstItem="bQu-wb-B52" firstAttribute="top" secondItem="T7t-3N-dRr" secondAttribute="bottom" constant="20" id="bgM-xQ-b9c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kvo-A2-kve" firstAttribute="trailing" secondItem="JCC-js-HIj" secondAttribute="trailing" id="7cv-aW-1AB"/>
+                            <constraint firstItem="NId-a3-qek" firstAttribute="leading" secondItem="9bU-78-i4Z" secondAttribute="leading" id="906-h3-7RX"/>
+                            <constraint firstItem="d09-bm-ymh" firstAttribute="top" secondItem="Cv8-Xs-K5A" secondAttribute="bottom" id="9YC-Qp-m61"/>
+                            <constraint firstItem="Kvo-A2-kve" firstAttribute="trailing" secondItem="Cv8-Xs-K5A" secondAttribute="trailing" id="E7W-rz-3YQ"/>
+                            <constraint firstItem="JCC-js-HIj" firstAttribute="bottom" secondItem="Kvo-A2-kve" secondAttribute="bottom" id="Fx7-Gz-ONH"/>
+                            <constraint firstItem="d09-bm-ymh" firstAttribute="leading" secondItem="Kvo-A2-kve" secondAttribute="leading" id="TqT-u0-X5S"/>
+                            <constraint firstItem="Cv8-Xs-K5A" firstAttribute="top" secondItem="NId-a3-qek" secondAttribute="bottom" id="Zcp-vi-bGk"/>
+                            <constraint firstItem="JCC-js-HIj" firstAttribute="top" secondItem="d09-bm-ymh" secondAttribute="bottom" id="e7b-If-H53"/>
+                            <constraint firstItem="JCC-js-HIj" firstAttribute="leading" secondItem="Kvo-A2-kve" secondAttribute="leading" id="hre-iN-0OA"/>
+                            <constraint firstItem="Cv8-Xs-K5A" firstAttribute="leading" secondItem="9bU-78-i4Z" secondAttribute="leading" id="ht0-qm-aDj"/>
+                            <constraint firstItem="Cv8-Xs-K5A" firstAttribute="top" secondItem="NId-a3-qek" secondAttribute="bottom" id="iVA-Pg-qUW"/>
+                            <constraint firstItem="NId-a3-qek" firstAttribute="top" secondItem="Kvo-A2-kve" secondAttribute="top" id="im4-JY-pWd"/>
+                            <constraint firstItem="Kvo-A2-kve" firstAttribute="trailing" secondItem="NId-a3-qek" secondAttribute="trailing" id="tfC-fF-5d9"/>
+                            <constraint firstItem="Kvo-A2-kve" firstAttribute="trailing" secondItem="d09-bm-ymh" secondAttribute="trailing" id="u1C-dy-5AX"/>
+                            <constraint firstItem="Cv8-Xs-K5A" firstAttribute="top" secondItem="NId-a3-qek" secondAttribute="bottom" id="z2z-Cg-mrm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kvo-A2-kve"/>
+                    </view>
+                    <connections>
+                        <outlet property="addCardTableView" destination="d09-bm-ymh" id="tDa-cV-4Zt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHz-R8-jqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260.86956521739131" y="-14.0625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group 3" width="63" height="22"/>
+    </resources>
+</document>
