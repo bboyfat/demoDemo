@@ -9,39 +9,21 @@
 import UIKit
 
 class BarCodeView: UIView {
-
-    @IBOutlet weak var navigationView: UIView!
     
     @IBOutlet weak var barCodeImageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
     let userId = LogOutputViewModel().fetchData()?.accountID
-    let gradient = CAGradientLayer()
-    let generator = BarCodeGenerator()
-    let purpleColor = UIColor(red: 79/255, green: 67/255, blue: 145/255, alpha: 1).cgColor
-    let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
     
+    let generator = BarCodeGenerator()
     override func awakeFromNib() {
+        super.awakeFromNib()
         guard let id = userId else {
             return
         }
         
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 1, y: 0)
-        gradient.colors = [purpleColor, finishColor]
-        
-        navigationView.layer.insertSublayer(gradient, at: 0)
-        
-        
-        
-        
        let image =  generator.generateBrCode(from: id)
         self.barCodeImageView.image = image
         self.idLabel.text = id.separate(every: 2, with: " ")
-    }
-    
-    override func layoutSubviews() {
-        gradient.frame = navigationView.bounds
-        
     }
     
 }

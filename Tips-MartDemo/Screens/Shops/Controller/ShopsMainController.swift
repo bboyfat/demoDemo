@@ -113,7 +113,7 @@ class ShopsMainController: UIViewController, FilterCategoryDelegate{
         }
         if let shop = shop{
             let realm = try! Realm()
-            do{
+            do {
                 if !shop.isSelected{
                     try realm.write {
                         shop.isSelected = !shop.isSelected
@@ -239,9 +239,6 @@ extension ShopsMainController: UITableViewDelegate, UITableViewDataSource{
             
         }
         vc.shopsModel =  self.shopsModelArray[indexPath.row]
-        //        present(vc, animated: true) {
-        
-        //        }
         
     }
     

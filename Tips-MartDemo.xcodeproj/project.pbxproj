@@ -60,6 +60,7 @@
 		C24115212281C080004F41E1 /* LoginVCLittleFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115202281C080004F41E1 /* LoginVCLittleFunctions.swift */; };
 		C24115262281C1E7004F41E1 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115252281C1E7004F41E1 /* UserDataModel.swift */; };
 		C24115282281C346004F41E1 /* UserDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24115272281C346004F41E1 /* UserDataBase.swift */; };
+		C242628522B92F4A00645F1F /* ImagePickerForCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242628422B92F4A00645F1F /* ImagePickerForCard.swift */; };
 		C242835F226469B200750768 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242835E226469B200750768 /* ProfileModel.swift */; };
 		C242836122646A5500750768 /* APIChangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242836022646A5500750768 /* APIChangeInfo.swift */; };
 		C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24283622264C04400750768 /* MainTabBarControllerViewController.swift */; };
@@ -225,6 +226,8 @@
 		C2E69A0422596327006FDDDB /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A0322596327006FDDDB /* FloatingTextField.swift */; };
 		C2E69A062259636F006FDDDB /* ValidPhonePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A052259636F006FDDDB /* ValidPhonePass.swift */; };
 		C2E69A08225975B4006FDDDB /* HideOrNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E69A07225975B4006FDDDB /* HideOrNot.swift */; };
+		C2E7F28622BA30D700553ECE /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F28522BA30D700553ECE /* SearchBarDelegate.swift */; };
+		C2E7F28922BA71EE00553ECE /* CardsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F28822BA71EE00553ECE /* CardsDataBase.swift */; };
 		C2F285F5226DDF42005DC8F8 /* WaitingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F285F4226DDF42005DC8F8 /* WaitingScreen.storyboard */; };
 		C2F285F7226DF086005DC8F8 /* GetReferalsIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F285F6226DF086005DC8F8 /* GetReferalsIncome.swift */; };
 		C2F285F9226DF0EA005DC8F8 /* GetInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F285F8226DF0EA005DC8F8 /* GetInfoModel.swift */; };
@@ -234,6 +237,7 @@
 		C2F49A9622A1585A003C811B /* RowsCatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F49A9422A1585A003C811B /* RowsCatCell.xib */; };
 		C2F49A9822A15DF6003C811B /* ProductsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F49A9722A15DF6003C811B /* ProductsTableController.swift */; };
 		C2F49A9A22A15E12003C811B /* ServicesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F49A9922A15E12003C811B /* ServicesTableController.swift */; };
+		C2FAA2A322B759A80019CB43 /* BarCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FAA2A222B759A80019CB43 /* BarCodeController.swift */; };
 		C2FC25E122805C7C00395247 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC25E022805C7C00395247 /* LoginViewController.swift */; };
 		C2FC25E322805FA100395247 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FC25E222805FA100395247 /* LoginView.swift */; };
 		C6EEFF074AC8CA70738BF766 /* Pods_Tips_MartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */; };
@@ -307,6 +311,7 @@
 		C24115202281C080004F41E1 /* LoginVCLittleFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCLittleFunctions.swift; sourceTree = "<group>"; };
 		C24115252281C1E7004F41E1 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDataModel.swift; path = ../UserDataModel.swift; sourceTree = "<group>"; };
 		C24115272281C346004F41E1 /* UserDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDataBase.swift; path = ../UserDataBase.swift; sourceTree = "<group>"; };
+		C242628422B92F4A00645F1F /* ImagePickerForCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerForCard.swift; sourceTree = "<group>"; };
 		C242835E226469B200750768 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		C242836022646A5500750768 /* APIChangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIChangeInfo.swift; sourceTree = "<group>"; };
 		C24283622264C04400750768 /* MainTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +481,8 @@
 		C2E69A0322596327006FDDDB /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		C2E69A052259636F006FDDDB /* ValidPhonePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidPhonePass.swift; sourceTree = "<group>"; };
 		C2E69A07225975B4006FDDDB /* HideOrNot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideOrNot.swift; sourceTree = "<group>"; };
+		C2E7F28522BA30D700553ECE /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
+		C2E7F28822BA71EE00553ECE /* CardsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataBase.swift; sourceTree = "<group>"; };
 		C2F285F4226DDF42005DC8F8 /* WaitingScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaitingScreen.storyboard; sourceTree = "<group>"; };
 		C2F285F6226DF086005DC8F8 /* GetReferalsIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReferalsIncome.swift; sourceTree = "<group>"; };
 		C2F285F8226DF0EA005DC8F8 /* GetInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoModel.swift; sourceTree = "<group>"; };
@@ -485,6 +492,7 @@
 		C2F49A9422A1585A003C811B /* RowsCatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowsCatCell.xib; sourceTree = "<group>"; };
 		C2F49A9722A15DF6003C811B /* ProductsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableController.swift; sourceTree = "<group>"; };
 		C2F49A9922A15E12003C811B /* ServicesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableController.swift; sourceTree = "<group>"; };
+		C2FAA2A222B759A80019CB43 /* BarCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeController.swift; sourceTree = "<group>"; };
 		C2FC25E022805C7C00395247 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C2FC25E222805FA100395247 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F9A8CEB52E327CBAC097D76E /* Pods_Tips_MartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_MartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1179,6 +1187,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C242628322B92F1E00645F1F /* IMagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C242628422B92F4A00645F1F /* ImagePickerForCard.swift */,
+			);
+			path = IMagePicker;
+			sourceTree = "<group>";
+		};
 		C242836E2264F64100750768 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1230,6 +1246,7 @@
 		C243BAC722B3B760003F5794 /* CreateCard */ = {
 			isa = PBXGroup;
 			children = (
+				C242628322B92F1E00645F1F /* IMagePicker */,
 				C2B07E6722B3C9D9002DC736 /* BarCodeReader */,
 				C243BAC922B3B77B003F5794 /* Controller */,
 				C243BAC822B3B773003F5794 /* View */,
@@ -1432,6 +1449,7 @@
 			isa = PBXGroup;
 			children = (
 				C290704B22B156B4000725A4 /* OtherCardsModel.swift */,
+				C2E7F28822BA71EE00553ECE /* CardsDataBase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1503,6 +1521,7 @@
 			isa = PBXGroup;
 			children = (
 				C2B07E6822B3CA96002DC736 /* BarCodeReader.swift */,
+				C2FAA2A222B759A80019CB43 /* BarCodeController.swift */,
 			);
 			path = BarCodeReader;
 			sourceTree = "<group>";
@@ -1815,16 +1834,10 @@
 		C2E492E322B145BD00348488 /* OtherCards */ = {
 			isa = PBXGroup;
 			children = (
+				C2E7F28422BA309000553ECE /* OtherCards */,
 				C243BAC722B3B760003F5794 /* CreateCard */,
 				C23581DC22B392F0001ABEBF /* AddCard */,
 				C290705C22B2A07D000725A4 /* ModelDecorator */,
-				C290704D22B15CAE000725A4 /* CellForOtherCards */,
-				C290704422B15650000725A4 /* Model */,
-				C290704322B15646000725A4 /* ViewModel */,
-				C290704222B1563C000725A4 /* DataSourceDelegate */,
-				C290704122B1562E000725A4 /* Controller */,
-				C2E492E422B145C800348488 /* View */,
-				C290705222B16197000725A4 /* HeaderViewForOtherCards.swift */,
 			);
 			path = OtherCards;
 			sourceTree = "<group>";
@@ -1847,6 +1860,29 @@
 				C2E699FF2258B2D8006FDDDB /* gotham_pro_medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C2E7F28422BA309000553ECE /* OtherCards */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7F28722BA30DF00553ECE /* SearchBar */,
+				C290704D22B15CAE000725A4 /* CellForOtherCards */,
+				C290704422B15650000725A4 /* Model */,
+				C290704322B15646000725A4 /* ViewModel */,
+				C290704222B1563C000725A4 /* DataSourceDelegate */,
+				C290704122B1562E000725A4 /* Controller */,
+				C2E492E422B145C800348488 /* View */,
+				C290705222B16197000725A4 /* HeaderViewForOtherCards.swift */,
+			);
+			path = OtherCards;
+			sourceTree = "<group>";
+		};
+		C2E7F28722BA30DF00553ECE /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7F28522BA30D700553ECE /* SearchBarDelegate.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		C2F49A9B22A15E47003C811B /* Model */ = {
@@ -2174,10 +2210,12 @@
 				C217763C22675E1800D6C97A /* GetLogos.swift in Sources */,
 				C27E331C227C291000F4BF56 /* SearchShopRealm.swift in Sources */,
 				C2B07E6B22B3DA89002DC736 /* CategoriesPicker.swift in Sources */,
+				C242628522B92F4A00645F1F /* ImagePickerForCard.swift in Sources */,
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2DEEBB62295AE3E00FCEDC8 /* Extensions.swift in Sources */,
 				C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */,
 				C290704622B1567F000725A4 /* OtherCardsController.swift in Sources */,
+				C2FAA2A322B759A80019CB43 /* BarCodeController.swift in Sources */,
 				C26BDB8322AAD949003EC631 /* CategoriesForFilter.swift in Sources */,
 				C2ADBA9A22A564A6001AF895 /* CategoryButton.swift in Sources */,
 				C26117E0228EB5D6005A9F68 /* LoginModelType.swift in Sources */,
@@ -2214,6 +2252,7 @@
 				C24115212281C080004F41E1 /* LoginVCLittleFunctions.swift in Sources */,
 				C27A021922731C390005BE33 /* TimerForRefresh.swift in Sources */,
 				C21E4BE322A15ECB0032EF95 /* CategoriesModel.swift in Sources */,
+				C2E7F28922BA71EE00553ECE /* CardsDataBase.swift in Sources */,
 				C20C9F892286D5F90023D701 /* DetRefView.swift in Sources */,
 				C25BBF692255E0D2008D78F9 /* AppDelegate.swift in Sources */,
 				C272D75C229E99B100FAEF6A /* AvatarView.swift in Sources */,
@@ -2258,6 +2297,7 @@
 				C24C547622844F7800AE45D5 /* CellModel.swift in Sources */,
 				C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */,
 				C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */,
+				C2E7F28622BA30D700553ECE /* SearchBarDelegate.swift in Sources */,
 				C2CED69A228B422D00EEAD3A /* PullUpView.swift in Sources */,
 				C2E59636225E0BBE001D09D9 /* APILogin.swift in Sources */,
 				C2D8BC30226EFB3100001C99 /* OperationHistoryModel.swift in Sources */,

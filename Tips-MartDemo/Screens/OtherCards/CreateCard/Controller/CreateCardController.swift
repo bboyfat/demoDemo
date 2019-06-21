@@ -15,23 +15,22 @@ class CreateCardController: UIViewController, AVCaptureMetadataOutputObjectsDele
     @IBOutlet weak var pickerHeight: NSLayoutConstraint!
     @IBOutlet weak var categorisBtnLbl: UIButton!
     @IBOutlet weak var idTextFiled: UITextField!
-    @IBOutlet weak var categoriesPicker: UIPickerView!
-    var categoriesDSD = CategoriesPicker()
-    var reader: Reader?
     
-    let btn: UIButton = {
-        let button = UIButton()
-        button.setImage(#imageLiteral(resourceName: "barCode"), for: .normal)
-        button.addTarget(self, action: #selector(startScan), for: .touchUpInside)
-        button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        button.imageView?.frame = button.bounds
-        button.imageView?.contentMode = .scaleAspectFill
-        return button
-    }()
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cardNameTextField: UITextField!
+    @IBOutlet weak var categoriesPicker: UIPickerView!
+     var cardsDataBase = OtherCardsModel()
+    
+    var categoriesDSD = CategoriesPicker()
+    
+    var imagePicker: GalleryPickImagePickerForCard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        categorisBtnLbl.addTarget(self, action: #selector(changeCategory), for: .touchUpInside)
         endEditing()
+        imagePicker = GalleryPickImagePickerForCard()
+        imagePicker?.imagePicker.delegate = self
         categoriesPicker.dataSource = categoriesDSD
         categoriesPicker.delegate = categoriesDSD
         categoriesDSD.returnTitle = {[weak self] in
@@ -40,13 +39,12 @@ class CreateCardController: UIViewController, AVCaptureMetadataOutputObjectsDele
             self?.btnBottomConstraint.constant = 80
             UIView.animate(withDuration: 0.3) {
                 self?.view.layoutIfNeeded()
+                
             }
         }
-        categorisBtnLbl.addTarget(self, action: #selector(changeCategory), for: .touchUpInside)
-        idTextFiled.rightView = btn
-        idTextFiled.rightViewMode = .always
-        btn.addTarget(self, action: #selector(startScan), for: .touchUpInside)
+        
     }
+    
     func endEditing(){
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleEndEditing))
         self.view.addGestureRecognizer(tap)
@@ -70,32 +68,52 @@ class CreateCardController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     @IBAction func createNewCard(_ sender: UIButton) {
+        if let cardName = cardNameTextField.text,
+            let id = idTextFiled.text, let category = categorisBtnLbl.titleLabel?.text, let image = imageView.image{
+            cardsDataBase.cardName = cardName
+            cardsDataBase.cardId = id
+            cardsDataBase.category = category
+            cardsDataBase.logoImage = image
+            cardsDataBase.saveData()
+        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NewCartAdded"), object: self)
         dismiss(animated: true, completion: nil)
     }
-    @objc func startScan(){
-        self.reader = Reader(withViewController: self, view: self.view, codeOutputHandler: self.handleCode)
-        if let reader = self.reader{
-            reader.requestCaptureSessionStartRunning()
+    @IBAction func scanBtnAction(_ sender: Any) {
+        let vc = BarCodeController()
+        vc.endScaning = {[weak self] in
+            self?.idTextFiled.text = $0
+        }
+        self.present(vc, animated: true, completion: nil)
+    }
+    @IBAction func addLogoAction(_ sender: UIButton) {
+        setPicker(sourceType: .photoLibrary)
+    }
+    
+    @IBAction func madePhotoAction(_ sender: UIButton) {
+        setPicker(sourceType: .camera)
+    }
+    
+    func setPicker(sourceType: UIImagePickerController.SourceType){
+        imagePicker?.presentPickerController(sourceType: sourceType, controller: self)
+    }
+    
+}
+
+extension CreateCardController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editingImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+          imageView.image = editingImage
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+           imageView.image = originalImage
+        }
+        picker.dismiss(animated: true) {
+            
         }
     }
-    
-    func handleCode(code: String){
-        self.idTextFiled.text = code
-        reader?.previewLayer?.removeFromSuperlayer()
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
-    
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        self.reader?.readerDelegate(output, didOutput: metadataObjects, from: connection)
-        
-        guard let readebleObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject else { return }
-        guard let stringValue = readebleObject.stringValue else { return }
-        
-        self.idTextFiled.text = stringValue
-        
-        reader?.previewLayer?.removeFromSuperlayer()
-        
-        
-        
-    }
 }

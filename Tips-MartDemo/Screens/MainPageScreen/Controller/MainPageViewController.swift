@@ -124,12 +124,9 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func showMyCodeBtn(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "BarCode", bundle: nil).instantiateViewController(withIdentifier: "BarCodeVC")
-        self.present(vc, animated: true) {
-            UIView.animate(withDuration: 0.3, animations: {
-                UIScreen.main.brightness = 1.0
-            })
-        }
+        let vc = UIStoryboard(name: "BarCode", bundle: nil).instantiateViewController(withIdentifier: "BarCodeVC") as! BorCodeGenViewController
+        vc.senderIs = .mainPage
+        self.present(vc, animated: true, completion: nil)
         
     }
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

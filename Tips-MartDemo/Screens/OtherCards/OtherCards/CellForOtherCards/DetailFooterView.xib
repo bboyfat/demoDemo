@@ -93,6 +93,12 @@
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="iRr-NB-uQY" secondAttribute="trailing" id="shc-MP-G32"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="barCodeImage" destination="vSi-qV-bbz" id="HNc-Jy-Vuk"/>
+                <outlet property="cardIdLabel" destination="mML-Dp-CLM" id="FoO-i7-X0h"/>
+                <outlet property="cardNameLbl" destination="QTs-H6-UiG" id="btq-lR-ghI"/>
+                <outlet property="descriptionLbl" destination="iRr-NB-uQY" id="FWj-yh-Sgx"/>
+            </connections>
             <point key="canvasLocation" x="-157.97101449275362" y="239.39732142857142"/>
         </collectionReusableView>
     </objects>

@@ -12,7 +12,6 @@ import Foundation
 
 class ModelDecorator{
     
-    
     func mySorting<T>(_ array: [T]) -> [[T]]{
         var newArray: [[T]] = []
         array.forEach { (item) in
@@ -29,7 +28,5 @@ class ModelDecorator{
         }
         return newArray
     }
-    
-    
     
 }

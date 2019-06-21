@@ -18,12 +18,20 @@ class WDViewController: UIViewController {
     }
     
     @IBAction func wdHistoryBtn(_ sender: UIButton) {
+       presentHIstory()
+    }
+    
+    func presentHIstory(){
         let vc = UIStoryboard(name: "WDHistory", bundle: nil).instantiateViewController(withIdentifier: "wdHistoryVc") as! WDHistoryController
         present(vc, animated: true, completion: nil)
+        
     }
     
     @IBAction func backBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func operationHistory(_ sender: Any) {
+        presentHIstory()
     }
     
     

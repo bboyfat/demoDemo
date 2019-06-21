@@ -9,12 +9,16 @@
 import UIKit
 
 class AddCartController: UIViewController {
-
+    
     @IBOutlet weak var addCardTableView: UITableView!
+    
+   
     let addCardDSD = AddCardDSD()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         addCardTableView.dataSource = addCardDSD
     }
     

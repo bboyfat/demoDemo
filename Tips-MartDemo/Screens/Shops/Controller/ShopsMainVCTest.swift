@@ -30,7 +30,7 @@ class ShopsMainVCTest: XCTestCase {
         }
     }
 //    func testGetFilter(){
-//        XCTAssert(<#T##expression: Bool##Bool#>, <#T##message: String##String#>)
+//        XCTAssert(T##expression: Bool##Bool, <#T##message: String##String#>)
 //    }
 
 }
