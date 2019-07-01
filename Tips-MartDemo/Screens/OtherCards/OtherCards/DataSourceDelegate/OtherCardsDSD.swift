@@ -18,7 +18,7 @@ class OtherCardsDSD: NSObject, UICollectionViewDataSource{
         }
     }
     let layout = UICollectionViewFlowLayout()
-    var indexPathForSelected: IndexPath = IndexPath(item: 0, section: 0)
+//    var indexPathForSelected: IndexPath = IndexPath(item: 0, section: 0)
     var footerHeigth: CGFloat = 0
     var isOpen = false
     var section: Int = 0
@@ -60,10 +60,7 @@ class OtherCardsDSD: NSObject, UICollectionViewDataSource{
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "detailFooter")
         let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "detailFooter", for: indexPath) as! DetailFooterView
         
-            let model = viewModel.getModel(with: self.indexPathForSelected)
-            footerView.barCodeImage.image = barCodeGenerator.generateBrCode(from: model.cardId)
-            footerView.cardNameLbl.text = model.cardName
-            footerView.cardIdLabel.text = model.cardId
+        
 
         return footerView
     }
@@ -91,7 +88,6 @@ extension OtherCardsDSD: UICollectionViewDelegate{
             createNewCard()
             return
         } else {
-            self.indexPathForSelected = indexPath
             isOpen = !isOpen
             section = indexPath.section
             if isOpen{
@@ -106,6 +102,13 @@ extension OtherCardsDSD: UICollectionViewDelegate{
                 let set = IndexSet(integer: indexPath.section)
                 collectionView.reloadSections(set)
             }
+        }
+         let model = viewModel.getModel(with: indexPath)
+        if let footerView = collectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionFooter, at: IndexPath(item: 0, section: indexPath.section)) as? DetailFooterView{
+           
+            footerView.cardIdLabel.text = model.cardId
+            footerView.cardNameLbl.text = model.cardName
+            footerView.barCodeImage.image = barCodeGenerator.generateBrCode(from: model.cardId)
         }
         
     }

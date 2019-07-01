@@ -914,7 +914,6 @@
 		C23FAD562290243400372B5B /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				C23FAD572290245700372B5B /* PresentController.swift */,
 				C2AF21152296D4B40013EC82 /* LoginXib.xib */,
 				C2AF21192296D8FC0013EC82 /* RegistrationXib.xib */,
 				C2AF211B2296D90A0013EC82 /* RegistrationXib.swift */,
@@ -1100,6 +1099,7 @@
 		C2411510228180C8004F41E1 /* LoginScene */ = {
 			isa = PBXGroup;
 			children = (
+				C26E4F7422C128C7008A7DF4 /* TesWithXibs */,
 				C24115242281C1D3004F41E1 /* Model */,
 				C24115232281C1B8004F41E1 /* Controller */,
 				C24115222281C1A3004F41E1 /* View */,
@@ -1172,7 +1172,6 @@
 		C24115232281C1B8004F41E1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C23FAD562290243400372B5B /* New Group */,
 				C2FC25E022805C7C00395247 /* LoginViewController.swift */,
 			);
 			path = Controller;
@@ -1185,6 +1184,13 @@
 				C221B8482282FF5C0081BFB1 /* Registration */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C2412AF922C23CC4007AD8F8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		C242628322B92F1E00645F1F /* IMagePicker */ = {
@@ -1409,6 +1415,16 @@
 				C26BDB8022AACEA7003EC631 /* Filter.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		C26E4F7422C128C7008A7DF4 /* TesWithXibs */ = {
+			isa = PBXGroup;
+			children = (
+				C2412AF922C23CC4007AD8F8 /* API */,
+				C23FAD562290243400372B5B /* New Group */,
+				C23FAD572290245700372B5B /* PresentController.swift */,
+			);
+			path = TesWithXibs;
 			sourceTree = "<group>";
 		};
 		C276D439228835B6007138C5 /* InputModels */ = {
@@ -2067,8 +2083,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
@@ -2088,8 +2104,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",

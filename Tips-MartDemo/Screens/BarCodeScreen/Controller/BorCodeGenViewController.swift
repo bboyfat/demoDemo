@@ -15,7 +15,9 @@ enum SenderIs{
 
 class BorCodeGenViewController: UIViewController {
     
-    let barView = BarCodeView()
+    @IBOutlet var barCodeView: BarCodeView!
+    
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var otherCardsBtnLbl: UIButton!
     
     var senderIs: SenderIs = .mainPage
@@ -29,11 +31,23 @@ class BorCodeGenViewController: UIViewController {
         swipe.direction = .down
         whoIsSender()
         swipe.addTarget(self, action: #selector(handleDismiss))
-        barView.frame = self.view.bounds
-        view.addGestureRecognizer(swipe)
+        
         UIScreen.main.brightness = 1
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        OrientationManager.landscapeSupported = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        OrientationManager.landscapeSupported = false
+        //The code below will automatically rotate your device's orientation when you exit this ViewController
+        let orientationValue = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(orientationValue, forKey: "orientation")
+    }
+    
     func whoIsSender(){
         switch senderIs {
         case .mainPage:
@@ -43,6 +57,33 @@ class BorCodeGenViewController: UIViewController {
             print("MainPage")
             otherCardsBtnLbl.isHidden = true
         }
+    }
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        
+        switch UIDevice.current.orientation{
+        case .portrait:
+            otherCardsBtnLbl.isHidden = false
+            barCodeView.navigationBar.isHidden = false
+            topConstraint.constant = 30
+        case .portraitUpsideDown:
+            otherCardsBtnLbl.isHidden = true
+            barCodeView.navigationBar.isHidden = true
+             topConstraint.constant = 0
+        case .landscapeLeft:
+            otherCardsBtnLbl.isHidden = true
+            barCodeView.navigationBar.isHidden = true
+             topConstraint.constant = 0
+        case .landscapeRight:
+            otherCardsBtnLbl.isHidden = true
+            barCodeView.navigationBar.isHidden = true
+             topConstraint.constant = 0
+        default:
+            otherCardsBtnLbl.isHidden = false
+            barCodeView.navigationBar.isHidden = false
+             topConstraint.constant = 30
+        }
+        
+        
     }
     
     @IBAction func dissmisBarVc(_ sender: Any) {

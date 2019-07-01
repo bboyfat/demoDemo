@@ -109,6 +109,9 @@
                                         <color key="value" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareButtonAction:" destination="83j-iJ-P4O" eventType="touchUpInside" id="AMq-8d-SHc"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="NMe-3A-kdi">
                                 <rect key="frame" x="133.33333333333334" y="199.33333333333334" width="108.66666666666666" height="19.333333333333343"/>
@@ -178,8 +181,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auj-4P-W2p">
-                                                <rect key="frame" x="126" y="7.3333333333333428" width="16" height="22"/>
+                                                <rect key="frame" x="126" y="7.3333333333333428" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="P8m-nW-WqE"/>
+                                                    <constraint firstAttribute="width" constant="22" id="m17-YW-MPM"/>
+                                                </constraints>
                                                 <state key="normal" image="info"/>
+                                                <connections>
+                                                    <action selector="friendsInfoBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="Zau-xG-F0t"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -231,7 +241,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="Wch-TG-uHm"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOd-ro-eql">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOd-ro-eql">
                                                 <rect key="frame" x="71" y="18" width="76" height="25.333333333333329"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
@@ -240,18 +250,21 @@
                                                                 <color key="NSColor" red="0.2196078431372549" green="0.19607843137254902" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <font key="NSFont" size="15" name="GothamPro-Light"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                <integer key="NSUnderline" value="1"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
-                                                <connections>
-                                                    <action selector="acqBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="bNs-NN-CEp"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6u-sX-fSD">
-                                                <rect key="frame" x="152" y="7" width="16" height="22"/>
+                                                <rect key="frame" x="152" y="7" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="Pmp-Zm-PuT"/>
+                                                    <constraint firstAttribute="height" constant="22" id="WU4-ge-zVP"/>
+                                                </constraints>
                                                 <state key="normal" image="info"/>
+                                                <connections>
+                                                    <action selector="familiarInfoBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="yY4-Qb-ksz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,7 +316,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="xzD-JL-cM5"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caT-SW-fgP">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caT-SW-fgP">
                                                 <rect key="frame" x="66" y="18" width="95" height="25.333333333333329"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
@@ -312,18 +325,21 @@
                                                                 <color key="NSColor" red="0.2196078431372549" green="0.19607843137254902" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <font key="NSFont" size="15" name="GothamPro-Light"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                <integer key="NSUnderline" value="1"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
-                                                <connections>
-                                                    <action selector="strangersBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="Eo6-LJ-Bnq"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-ct-Rcn">
-                                                <rect key="frame" x="166" y="7" width="16" height="22"/>
+                                                <rect key="frame" x="166" y="7" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="XOt-AH-rjC"/>
+                                                    <constraint firstAttribute="width" constant="22" id="j7m-ri-bQ8"/>
+                                                </constraints>
                                                 <state key="normal" image="info"/>
+                                                <connections>
+                                                    <action selector="strangerInfoBtn:" destination="83j-iJ-P4O" eventType="touchUpInside" id="5Oj-pR-iz6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

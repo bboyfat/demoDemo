@@ -17,10 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-Zd-cGh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqf-eN-XNq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="684"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-SU-bmJ">
                                 <rect key="frame" x="30" y="772" width="354" height="60"/>
                                 <color key="backgroundColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -43,13 +47,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8XJ-Zd-cGh" firstAttribute="top" secondItem="Ix6-XN-W7H" secondAttribute="top" id="7kB-tu-jfP"/>
-                            <constraint firstAttribute="bottom" secondItem="8XJ-Zd-cGh" secondAttribute="bottom" id="GFi-fI-CQS"/>
+                            <constraint firstItem="y5O-SU-bmJ" firstAttribute="top" secondItem="cqf-eN-XNq" secondAttribute="bottom" id="HKK-0p-jf2"/>
                             <constraint firstItem="Ix6-XN-W7H" firstAttribute="trailing" secondItem="y5O-SU-bmJ" secondAttribute="trailing" constant="30" id="J0b-Zg-mcS"/>
-                            <constraint firstItem="8XJ-Zd-cGh" firstAttribute="leading" secondItem="Ix6-XN-W7H" secondAttribute="leading" id="M9v-hp-mwD"/>
                             <constraint firstItem="y5O-SU-bmJ" firstAttribute="leading" secondItem="Ix6-XN-W7H" secondAttribute="leading" constant="30" id="X6k-am-VGt"/>
+                            <constraint firstItem="Ix6-XN-W7H" firstAttribute="trailing" secondItem="cqf-eN-XNq" secondAttribute="trailing" id="bs5-7k-qI6"/>
                             <constraint firstItem="Ix6-XN-W7H" firstAttribute="bottom" secondItem="y5O-SU-bmJ" secondAttribute="bottom" constant="30" id="fwt-S9-tUP"/>
-                            <constraint firstItem="8XJ-Zd-cGh" firstAttribute="trailing" secondItem="Ix6-XN-W7H" secondAttribute="trailing" id="vYH-N9-RXP"/>
+                            <constraint firstItem="cqf-eN-XNq" firstAttribute="leading" secondItem="Ix6-XN-W7H" secondAttribute="leading" id="mXb-GZ-MMW"/>
+                            <constraint firstItem="cqf-eN-XNq" firstAttribute="top" secondItem="Ix6-XN-W7H" secondAttribute="top" id="ylG-y1-mVN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ix6-XN-W7H"/>
                     </view>

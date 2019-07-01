@@ -32,12 +32,22 @@ class ReferalsViewController: UIViewController {
     @IBAction func friendsBtn(_ sender: UIButton) {
         presentDetails(.friends)
     }
+    // share button
     
-    @IBAction func acqBtn(_ sender: UIButton) {
-        presentDetails(.acquaintances)
+    @IBAction func shareButtonAction(_ sender: Any) {
+       presentActivityControler(text: ["Helooou"])
     }
-    @IBAction func strangersBtn(_ sender: Any) {
-        presentDetails(.strangers)
+    #warning("Dont forget to made a new class foar activity controller")
+    func presentActivityControler(text: [Any]){
+        let textToShare = text
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        // exclude some activity types from the list (optional)
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.copyToPasteboard ]
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
     }
     func presentDetails(_ type: FriendsType){
         let vc = UIStoryboard(name: "DetailReferalScreen", bundle: nil).instantiateViewController(withIdentifier: "DetaiRefVc") as! DetailRefController
@@ -45,6 +55,18 @@ class ReferalsViewController: UIViewController {
         present(vc, animated: true) {
             
         }
+    }
+    // MARK: Info buttons stack
+    
+    @IBAction func strangerInfoBtn(_ sender: UIButton) {
+        InfoAlert().presentAlert(view: self, title: strangersInfoMessage)
+        
+    }
+    @IBAction func familiarInfoBtn(_ sender: UIButton) {
+        InfoAlert().presentAlert(view: self, title: familiarInfoMessage)
+    }
+    @IBAction func friendsInfoBtn(_ sender: UIButton) {
+        InfoAlert().presentAlert(view: self, title: friendsInfoMessage)
     }
     
 }

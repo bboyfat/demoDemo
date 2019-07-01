@@ -10,6 +10,7 @@ import UIKit
 
 class BarCodeView: UIView {
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var barCodeImageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
     let userId = LogOutputViewModel().fetchData()?.accountID

@@ -42,6 +42,17 @@ class OtherCardsModel: OtherCardsModelProtocol{
         return data
     }
     
+    func fetchWithPredicate(text: String) -> [CardsDataBase]{
+        let realm = try! Realm()
+        let predicate =  NSPredicate(format: "cardName contains[c] %@", text)
+        let result = Array(realm.objects(CardsDataBase.self).filter(predicate))
+        if result.count > 0{
+            return result
+        } else {
+            return fetchData() ?? []
+        }
+    }
+    
     func fetchData() -> [CardsDataBase]?{
         var cardsDataBase: [CardsDataBase]?
             let realm = try! Realm()

@@ -709,6 +709,7 @@
                         <viewLayoutGuide key="safeArea" id="giR-Bb-ndz"/>
                     </view>
                     <connections>
+                        <outlet property="loginFlow" destination="8HD-7G-0zI" id="ExJ-m3-8nb"/>
                         <outlet property="regWidth" destination="pp9-hs-LGN" id="bII-J2-rzM"/>
                     </connections>
                 </viewController>

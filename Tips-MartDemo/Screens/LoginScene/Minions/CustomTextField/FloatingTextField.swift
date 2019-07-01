@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 import UIKit
 
 @IBDesignable
@@ -26,7 +24,6 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
     
 
     func setup() {
-        
         floattingPlaceholder.text = "HELOOOOO WORLD"
         floattingPlaceholder.font = floattingPlaceholder.font.withSize(10)
         floattingPlaceholder.textColor = .lightGray
@@ -45,15 +42,10 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
     public func textFieldDidEndEditing(_ textField: UITextField){
         if let count = textField.text?.count{
             if count == 0{
-        
         AnimateView().movePlaceHolderZero(view: floattingPlaceholder)
-        
         }
         }
             didEndEditing(self)
-            
-        
-        
     }
     
     override func awakeFromNib() {
@@ -80,9 +72,7 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.delegate = self
-        
         setup()
-        
     }
     
     func didCreated(){
@@ -91,7 +81,6 @@ class FloatingTextField: UITextField, UITextFieldDelegate {
                 OperationQueue.main.addOperation {
                     AnimateView().movePlaceHolderUp(view: self.floattingPlaceholder)
                 }
-                
             }
         }
     }

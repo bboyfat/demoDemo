@@ -81,6 +81,9 @@
                                     <navigationItem title="Отзывы и опросы" id="SxG-n6-vpX">
                                         <barButtonItem key="leftBarButtonItem" image="Frame-1" id="HJp-CY-K8y">
                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="dismissBtn:" destination="WHa-Uz-bc4" id="s4B-U5-pOS"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

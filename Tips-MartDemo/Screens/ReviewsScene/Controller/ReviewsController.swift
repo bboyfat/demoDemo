@@ -28,6 +28,9 @@ class ReviewsController: UIViewController,  UIScrollViewDelegate {
     }
     
     
+    @IBAction func dismissBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     func changeInfo(){
         let tap = UITapGestureRecognizer()
         tap.addTarget(self, action: #selector(handleChangeInfo))

@@ -17,6 +17,8 @@ class AccountView: UIView {
     let finishColor = UIColor(red: 142/255, green: 81/255, blue: 178/255, alpha: 0.95).cgColor
     
     
+    @IBOutlet weak var balanceStack: UIStackView!
+    @IBOutlet weak var pendingStack: UIStackView!
     
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet var profilePhoto: AvatarView!

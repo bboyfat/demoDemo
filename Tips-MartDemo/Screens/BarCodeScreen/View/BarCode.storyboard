@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="gotham_pro.ttf">
-            <string>GothamPro</string>
+        <array key="gotham_pro_medium.ttf">
+            <string>GothamPro-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -23,23 +23,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-ZQ-oHl">
-                                <rect key="frame" x="20" y="138" width="374" height="187"/>
+                                <rect key="frame" x="20" y="118" width="374" height="187"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hr-VZ-a2R">
                                         <rect key="frame" x="10" y="10" width="354" height="147.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlB-R8-zTF" userLabel="LabelId">
-                                        <rect key="frame" x="165.5" y="162.5" width="43.5" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KlB-R8-zTF" userLabel="LabelId">
+                                        <rect key="frame" x="20" y="162.5" width="334" height="14.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14.5" id="Mjq-rj-wQ1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
                                         <color key="textColor" red="0.35673648118972778" green="0.25798922777175903" blue="0.56081348657608032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KlB-R8-zTF" secondAttribute="trailing" constant="20" id="23G-Fw-d7H"/>
+                                    <constraint firstItem="KlB-R8-zTF" firstAttribute="leading" secondItem="ZXj-ZQ-oHl" secondAttribute="leading" constant="20" id="6Lc-5R-jlH"/>
                                     <constraint firstItem="3hr-VZ-a2R" firstAttribute="top" secondItem="ZXj-ZQ-oHl" secondAttribute="top" constant="10" id="7UD-I3-ARC"/>
                                     <constraint firstItem="KlB-R8-zTF" firstAttribute="top" secondItem="3hr-VZ-a2R" secondAttribute="bottom" constant="5" id="8K7-2B-CgN"/>
                                     <constraint firstAttribute="bottom" secondItem="KlB-R8-zTF" secondAttribute="bottom" constant="10" id="9Ml-fj-wqP"/>
@@ -101,7 +103,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZXj-ZQ-oHl" firstAttribute="top" secondItem="t9K-en-Vxc" secondAttribute="bottom" constant="50" id="1gJ-5p-8Gg"/>
+                            <constraint firstItem="ZXj-ZQ-oHl" firstAttribute="top" secondItem="t9K-en-Vxc" secondAttribute="bottom" constant="30" id="1gJ-5p-8Gg"/>
                             <constraint firstItem="nTL-Lp-96W" firstAttribute="bottom" secondItem="3Gb-68-ejH" secondAttribute="bottom" constant="30" id="55U-Ni-tq9"/>
                             <constraint firstItem="t9K-en-Vxc" firstAttribute="trailing" secondItem="nTL-Lp-96W" secondAttribute="trailing" id="Gvq-qX-5uE"/>
                             <constraint firstItem="nTL-Lp-96W" firstAttribute="trailing" secondItem="ZXj-ZQ-oHl" secondAttribute="trailing" constant="20" id="H87-sA-01M"/>
@@ -115,10 +117,13 @@
                         <connections>
                             <outlet property="barCodeImageView" destination="3hr-VZ-a2R" id="UdC-rA-NrA"/>
                             <outlet property="idLabel" destination="KlB-R8-zTF" id="Pmt-qY-JqU"/>
+                            <outlet property="navigationBar" destination="t9K-en-Vxc" id="V8n-br-AOU"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="barCodeView" destination="xcu-au-Tlj" id="2pC-3A-bOH"/>
                         <outlet property="otherCardsBtnLbl" destination="3Gb-68-ejH" id="Owb-Df-r5i"/>
+                        <outlet property="topConstraint" destination="1gJ-5p-8Gg" id="oPV-ow-NtV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XP-IG-WWz" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class infoAlert{
+class InfoAlert{
     
     func presentAlert(view: UIViewController, title: String){
         let ac = UIAlertController(title: title, message: nil, preferredStyle: .alert)

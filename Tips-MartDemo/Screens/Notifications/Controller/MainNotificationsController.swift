@@ -85,6 +85,15 @@ class MainNotificationsController: UIViewController {
         vc.notifications = notificationArray
         present(vc, animated: true, completion: nil)
     }
+    
+    @IBAction func presentReviewsScreen(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Reviews", bundle: nil).instantiateViewController(withIdentifier: "reviewsVc") as! ReviewsController
+       
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
+    
     @IBAction func presentoperationsTable(_ sender: UIButton) {
         let vc = UIStoryboard(name: "NotifTable", bundle: nil).instantiateViewController(withIdentifier: "notTableVc") as! NotTableViewController
         

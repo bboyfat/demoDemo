@@ -249,14 +249,22 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afq-SN-xUG">
-                                                        <rect key="frame" x="119.5" y="6.5" width="16" height="22"/>
+                                                        <rect key="frame" x="115.5" y="5.5" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="HFh-Kf-umx"/>
+                                                            <constraint firstAttribute="height" constant="24" id="QXg-fS-ZRz"/>
+                                                        </constraints>
                                                         <state key="normal" image="info"/>
                                                         <connections>
                                                             <action selector="balanceInfoBtn:" destination="ezz-Vx-tRF" eventType="touchUpInside" id="q8h-7U-Vkn"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I07-Yb-r73">
-                                                        <rect key="frame" x="299" y="7" width="16" height="22"/>
+                                                        <rect key="frame" x="295" y="6" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="YRd-Ca-Q97"/>
+                                                            <constraint firstAttribute="height" constant="24" id="tgG-NO-cRv"/>
+                                                        </constraints>
                                                         <state key="normal" image="info"/>
                                                         <connections>
                                                             <action selector="pendingBalanceInfoBtn:" destination="ezz-Vx-tRF" eventType="touchUpInside" id="uCl-OM-0BJ"/>
@@ -269,13 +277,13 @@
                                                     <constraint firstAttribute="trailing" secondItem="gSK-9Y-C9m" secondAttribute="trailing" id="2gW-4D-AEz"/>
                                                     <constraint firstItem="2Hh-RF-xWD" firstAttribute="centerX" secondItem="Xbe-vD-cCZ" secondAttribute="centerX" id="3eD-p7-QHK"/>
                                                     <constraint firstItem="daF-IC-UeI" firstAttribute="top" secondItem="miK-ME-Ee6" secondAttribute="top" id="5mO-Go-aid"/>
-                                                    <constraint firstItem="I07-Yb-r73" firstAttribute="leading" secondItem="daF-IC-UeI" secondAttribute="trailing" constant="10" id="5qw-v6-Mri"/>
+                                                    <constraint firstItem="I07-Yb-r73" firstAttribute="leading" secondItem="daF-IC-UeI" secondAttribute="trailing" constant="6" id="5qw-v6-Mri"/>
                                                     <constraint firstItem="gSK-9Y-C9m" firstAttribute="leading" secondItem="Xbe-vD-cCZ" secondAttribute="leading" id="9Fh-CN-pt9"/>
                                                     <constraint firstItem="wfJ-2L-hn0" firstAttribute="centerY" secondItem="Xbe-vD-cCZ" secondAttribute="centerY" id="Afw-fT-Iba"/>
                                                     <constraint firstItem="2Hh-RF-xWD" firstAttribute="centerY" secondItem="Xbe-vD-cCZ" secondAttribute="centerY" id="Cvf-2e-AVa"/>
                                                     <constraint firstItem="miK-ME-Ee6" firstAttribute="leading" secondItem="2Hh-RF-xWD" secondAttribute="trailing" constant="30" id="KGT-BI-byv"/>
                                                     <constraint firstItem="wfJ-2L-hn0" firstAttribute="leading" secondItem="2KD-FU-CZV" secondAttribute="trailing" constant="10" id="Kak-Si-6fS"/>
-                                                    <constraint firstItem="afq-SN-xUG" firstAttribute="leading" secondItem="wfJ-2L-hn0" secondAttribute="trailing" constant="10" id="POe-GY-adP"/>
+                                                    <constraint firstItem="afq-SN-xUG" firstAttribute="leading" secondItem="wfJ-2L-hn0" secondAttribute="trailing" constant="6" id="POe-GY-adP"/>
                                                     <constraint firstItem="I07-Yb-r73" firstAttribute="centerY" secondItem="8HF-2O-Md8" secondAttribute="centerY" id="QOs-Ww-fg5"/>
                                                     <constraint firstItem="daF-IC-UeI" firstAttribute="leading" secondItem="miK-ME-Ee6" secondAttribute="trailing" constant="8" id="VHk-gw-Kx4"/>
                                                     <constraint firstAttribute="bottom" secondItem="2Hh-RF-xWD" secondAttribute="bottom" constant="10" id="XIu-AQ-rQm"/>
@@ -546,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnP-Ej-Dut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5680.8000000000002" y="-761.46926536731644"/>
+            <point key="canvasLocation" x="5679.375" y="-761.61971830985919"/>
         </scene>
     </scenes>
     <resources>

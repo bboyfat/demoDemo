@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol OtherCardsVieModelProtocol {
     func itemsCount(with section: Int) -> Int
@@ -24,7 +25,7 @@ enum SearchType{
 
 
 class OtherCardsViewModel: OtherCardsVieModelProtocol{
-  
+    
     var modelSorted: [[OtherCardsModel]]!
     var otherCardModel = OtherCardsModel(){
         didSet{
@@ -38,7 +39,7 @@ class OtherCardsViewModel: OtherCardsVieModelProtocol{
         return modelSorted.count
     }
     
-   
+    
     func getArray() -> [OtherCardsModel] {
         return model
     }
@@ -58,13 +59,31 @@ class OtherCardsViewModel: OtherCardsVieModelProtocol{
     }
     
     func sortingCards(text: String) {
-        var filtred: [OtherCardsModel] = []
-        filtred = model.filter({ (item) -> Bool in
-            let countryText: NSString = item.cardName as NSString
-            return (countryText.range(of: text, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-        })
-        modelSorted = decorator.mySorting(filtred)
-       
+//        var filtred: [OtherCardsModel] = []
+        
+//        filtred = model.filter({ (item) -> Bool in
+//            let countryText: NSString = item.cardName as NSString
+//            return (countryText.range(of: text, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+//        })
+       let data = otherCardModel.fetchWithPredicate(text: text)
+        var cards: [OtherCardsModel] = []
+        data.forEach { (item) in
+            let card = OtherCardsModel()
+            card.cardId = item.cardId
+            card.cardName = item.cardName
+            card.category = item.category
+            card.logoImage = UIImage(data: item.logoImage!)!
+            cards.append(card)
+        }
+        modelSorted = decorator.mySorting(cards)
+        
+    }
+    func prefetch() -> [CardsDataBase]{
+        if let data = otherCardModel.fetchData(){
+            return data
+        } else {
+            return []
+        }
     }
     
     func fetch(){
@@ -80,9 +99,9 @@ class OtherCardsViewModel: OtherCardsVieModelProtocol{
                 cards.append(oneCard)
             }
         }
-         self.model = cards
-         modelSorted = decorator.mySorting(cards)
-      
+        self.model = cards
+        modelSorted = decorator.mySorting(cards)
+        
     }
     func getNotif(){
         
@@ -93,9 +112,9 @@ class OtherCardsViewModel: OtherCardsVieModelProtocol{
         fetch()
     }
     init() {
-         fetch()
-       getNotif()
-       
+        fetch()
+        getNotif()
+        
     }
     deinit {
         NotificationCenter.default.removeObserver(self)

@@ -117,10 +117,10 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 //        presentWD()
     }
     @IBAction func balanceInfoBtn(_ sender: UIButton) {
-        infoAlert().presentAlert(view: self, title: balanceMassege)
+        InfoAlert().presentAlert(view: self, title: balanceMassege)
     }
     @IBAction func pendingBalanceInfoBtn(_ sender: UIButton) {
-        infoAlert().presentAlert(view: self, title: pendingBalanceMassege)
+        InfoAlert().presentAlert(view: self, title: pendingBalanceMassege)
     }
     
     @IBAction func showMyCodeBtn(_ sender: UIButton) {

@@ -9,13 +9,12 @@
 import Foundation
 
 protocol LoginModelType{
-    
+    //MARK: Properties
     var phoneNumber: String  {get set}
     var password: String {get set}
-    
-     func saveUserData()
-    
-      func cleraUserData()
-     func fetchUserData() -> LoginDataBase?
+    //MARK: Methods
+    func saveUserData()
+    func cleraUserData()
+    func fetchUserData() -> LoginDataBase?
     
 }

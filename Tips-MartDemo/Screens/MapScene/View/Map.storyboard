@@ -28,7 +28,7 @@
                                                 <action selector="disVcBtn:" destination="0KW-hT-uGc" id="vFo-qQ-BWU"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="cash" id="Vcx-us-fpc">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="Group 8-2" id="Vcx-us-fpc">
                                             <color key="tintColor" red="0.30588235289999999" green="0.27058823529999998" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="categoriesBtn:" destination="0KW-hT-uGc" id="DMT-AS-qGj"/>
@@ -155,7 +155,7 @@
     </scenes>
     <resources>
         <image name="Group 3-1" width="6" height="10"/>
-        <image name="cash" width="16" height="14"/>
+        <image name="Group 8-2" width="34" height="29"/>
         <image name="notificatio Back" width="187.5" height="333.5"/>
     </resources>
 </document>
