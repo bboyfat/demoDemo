@@ -116,6 +116,9 @@
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc9-c6-yCm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="93.5"/>
+                                                                <connections>
+                                                                    <action selector="showWdDetails:" destination="3xj-Qk-d6A" eventType="touchUpInside" id="pLz-1c-O1k"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,6 +164,12 @@
                                                                 <color key="textColor" red="0.32711974310000003" green="0.32553945449999999" blue="0.32870003170000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-T9-22u">
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="93.5"/>
+                                                                <connections>
+                                                                    <action selector="showPhoneDetails:" destination="3xj-Qk-d6A" eventType="touchUpInside" id="8up-wg-ZWP"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -168,8 +177,12 @@
                                                             <constraint firstItem="IFq-5W-DII" firstAttribute="top" secondItem="QQl-3Q-0am" secondAttribute="bottom" constant="10" id="2CK-1t-1WG"/>
                                                             <constraint firstItem="QQl-3Q-0am" firstAttribute="leading" secondItem="nPY-CO-yfh" secondAttribute="leading" constant="20" id="6BD-2Z-tcF"/>
                                                             <constraint firstItem="QQl-3Q-0am" firstAttribute="top" secondItem="nPY-CO-yfh" secondAttribute="top" constant="10" id="Coe-Hv-oUm"/>
+                                                            <constraint firstAttribute="bottom" secondItem="hIn-T9-22u" secondAttribute="bottom" id="LU8-6P-2eL"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hIn-T9-22u" secondAttribute="trailing" id="PcW-zR-Rfb"/>
                                                             <constraint firstAttribute="trailing" secondItem="QQl-3Q-0am" secondAttribute="trailing" constant="20" id="S9Q-Ua-RuG"/>
+                                                            <constraint firstItem="hIn-T9-22u" firstAttribute="leading" secondItem="nPY-CO-yfh" secondAttribute="leading" id="UHl-Ap-yTF"/>
                                                             <constraint firstItem="IFq-5W-DII" firstAttribute="leading" secondItem="nPY-CO-yfh" secondAttribute="leading" id="UZe-Da-z3C"/>
+                                                            <constraint firstItem="hIn-T9-22u" firstAttribute="top" secondItem="nPY-CO-yfh" secondAttribute="top" id="xlq-Ak-1eT"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -428,6 +441,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="heightDetailView" destination="1LB-p6-eHz" id="7Xh-Hu-UjL"/>
                         <outlet property="wdView" destination="Kxm-yC-hQw" id="3gA-es-Fhx"/>
                     </connections>
                 </viewController>

@@ -11,14 +11,22 @@ import UIKit
 class WDViewController: UIViewController {
     @IBOutlet var wdView: WDView!
     
+    @IBOutlet weak var heightDetailView: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func showPhoneDetails(_ sender: Any) {
+        heightDetailView.constant = 340
+    }
     @IBAction func wdHistoryBtn(_ sender: UIButton) {
        presentHIstory()
+    }
+    @IBAction func showWdDetails(_ sender: Any) {
+         heightDetailView.constant = 300
+        
     }
     
     func presentHIstory(){
