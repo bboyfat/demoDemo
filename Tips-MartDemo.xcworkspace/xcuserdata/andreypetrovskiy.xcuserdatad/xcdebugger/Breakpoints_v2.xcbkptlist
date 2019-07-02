@@ -90,12 +90,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "583755477.805938"
+                  timestampString = "583775520.503675"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "3968">
+                  offsetFromSymbolStart = "380">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -105,12 +105,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "583755477.809538"
+                  timestampString = "583775520.507883"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "4346">
+                  offsetFromSymbolStart = "3184">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -120,12 +120,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "583755477.813341"
+                  timestampString = "583775520.512329"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "4762">
+                  offsetFromSymbolStart = "3400">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -153,12 +153,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "583755477.823438"
+                  timestampString = "583775520.52232"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
                   endingLineNumber = "54"
-                  offsetFromSymbolStart = "1391">
+                  offsetFromSymbolStart = "1376">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -168,12 +168,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/APIManager/APIRegComplete.swift"
-                  timestampString = "583755477.82742"
+                  timestampString = "583775520.524261"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
                   endingLineNumber = "54"
-                  offsetFromSymbolStart = "4259">
+                  offsetFromSymbolStart = "3328">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1113,12 +1113,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "583755477.940835"
+                  timestampString = "583775520.618269"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "97"
                   endingLineNumber = "97"
-                  offsetFromSymbolStart = "712">
+                  offsetFromSymbolStart = "760">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1128,12 +1128,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "583755477.942914"
+                  timestampString = "583775520.621972"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "98"
                   endingLineNumber = "98"
-                  offsetFromSymbolStart = "41">
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1193,12 +1193,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "583755477.958557"
+                  timestampString = "583775520.642022"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "110"
                   endingLineNumber = "110"
-                  offsetFromSymbolStart = "386">
+                  offsetFromSymbolStart = "428">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1208,12 +1208,12 @@
                   moduleName = "Tips-MartDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/SkillUp/Tips-Mart/Tips-MartDemo/Tips-MartDemo/Screens/ReviewsScene/Controller/ReviewsController.swift"
-                  timestampString = "583755477.962271"
+                  timestampString = "583775520.645707"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
                   endingLineNumber = "111"
-                  offsetFromSymbolStart = "86">
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1417,7 +1417,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/WDScreens/WDViewController.swift"
-            timestampString = "583761196.968868"
+            timestampString = "583775519.59285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -1433,7 +1433,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/WDScreens/WDViewController.swift"
-            timestampString = "583761196.969251"
+            timestampString = "583775519.5929281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -1449,12 +1449,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-MartDemo/Screens/WDScreens/WDViewController.swift"
-            timestampString = "583761196.969489"
+            timestampString = "583775519.592983"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
             endingLineNumber = "60"
             landmarkName = "showWdDetails(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-MartDemo/Screens/CustomCameraScene/PhotoViewController.swift"
+            timestampString = "583775519.5930361"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "photoOutput(_:didFinishProcessingPhoto:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

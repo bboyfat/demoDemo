@@ -47,7 +47,8 @@ class OtherCardsDSD: NSObject, UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCell
         if indexPath.section < viewModel.sectionsCount(){
             let model = viewModel.getModel(with: indexPath)
-            cell.imageView.image = model.logoImage
+            let newImage = UIImage(cgImage: model.logoImage.cgImage!, scale: 100, orientation: .right)
+            cell.imageView.image = newImage
             
             return cell
         } else if indexPath.section == viewModel.sectionsCount(){

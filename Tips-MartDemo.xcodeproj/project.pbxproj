@@ -164,6 +164,8 @@
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
 		C2BF0F5C22CB5DD100EC4578 /* DetailWDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF0F5B22CB5DD100EC4578 /* DetailWDView.swift */; };
 		C2BF0F5E22CB602300EC4578 /* DetailWDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2BF0F5D22CB602300EC4578 /* DetailWDView.xib */; };
+		C2BF0F6122CB7FA300EC4578 /* CustomCameraScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2BF0F6022CB7FA300EC4578 /* CustomCameraScene.storyboard */; };
+		C2BF0F6322CB811100EC4578 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF0F6222CB811100EC4578 /* PhotoViewController.swift */; };
 		C2C26356228C09DE000389FB /* ShopsCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C26355228C09DE000389FB /* ShopsCoordinates.swift */; };
 		C2C355842297EC2200492971 /* Reviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C355832297EC2200492971 /* Reviews.storyboard */; };
 		C2C355862297F6DE00492971 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C355852297F6DE00492971 /* ReviewsController.swift */; };
@@ -421,6 +423,8 @@
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BF0F5B22CB5DD100EC4578 /* DetailWDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWDView.swift; sourceTree = "<group>"; };
 		C2BF0F5D22CB602300EC4578 /* DetailWDView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailWDView.xib; sourceTree = "<group>"; };
+		C2BF0F6022CB7FA300EC4578 /* CustomCameraScene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomCameraScene.storyboard; sourceTree = "<group>"; };
+		C2BF0F6222CB811100EC4578 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C2C26355228C09DE000389FB /* ShopsCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsCoordinates.swift; sourceTree = "<group>"; };
 		C2C355832297EC2200492971 /* Reviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reviews.storyboard; sourceTree = "<group>"; };
 		C2C355852297F6DE00492971 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
@@ -938,6 +942,7 @@
 		C241150022817DAD004F41E1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C2BF0F5F22CB7F8C00EC4578 /* CustomCameraScene */,
 				C2E492E322B145BD00348488 /* OtherCards */,
 				C2A47BA422B115FA00E823B3 /* Categories */,
 				C2C355822297EC0A00492971 /* ReviewsScene */,
@@ -1613,6 +1618,15 @@
 			path = DetailsView;
 			sourceTree = "<group>";
 		};
+		C2BF0F5F22CB7F8C00EC4578 /* CustomCameraScene */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF0F6022CB7FA300EC4578 /* CustomCameraScene.storyboard */,
+				C2BF0F6222CB811100EC4578 /* PhotoViewController.swift */,
+			);
+			path = CustomCameraScene;
+			sourceTree = "<group>";
+		};
 		C2C355822297EC0A00492971 /* ReviewsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -2069,6 +2083,7 @@
 				C2F285F5226DDF42005DC8F8 /* WaitingScreen.storyboard in Resources */,
 				C2059FCE2265F4BC00736885 /* WebView.storyboard in Resources */,
 				C2C355842297EC2200492971 /* Reviews.storyboard in Resources */,
+				C2BF0F6122CB7FA300EC4578 /* CustomCameraScene.storyboard in Resources */,
 				C272D75E229EA01500FAEF6A /* BigAvatar.xib in Resources */,
 				C23581DE22B392FF001ABEBF /* AddCard.storyboard in Resources */,
 				C242C4902270750B008B359A /* WDHistory.storyboard in Resources */,
@@ -2245,6 +2260,7 @@
 				C25BBF6B2255E0D2008D78F9 /* ViewController.swift in Sources */,
 				C2DEEBB62295AE3E00FCEDC8 /* Extensions.swift in Sources */,
 				C24115152281B3B0004F41E1 /* CheckBoxButton.swift in Sources */,
+				C2BF0F6322CB811100EC4578 /* PhotoViewController.swift in Sources */,
 				C290704622B1567F000725A4 /* OtherCardsController.swift in Sources */,
 				C2FAA2A322B759A80019CB43 /* BarCodeController.swift in Sources */,
 				C26BDB8322AAD949003EC631 /* CategoriesForFilter.swift in Sources */,

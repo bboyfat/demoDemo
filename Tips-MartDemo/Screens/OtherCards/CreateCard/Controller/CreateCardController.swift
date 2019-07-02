@@ -9,7 +9,11 @@
 import UIKit
 import AVFoundation
 
-class CreateCardController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+protocol CamerDelegate{
+    func setImage(image: UIImage)
+}
+
+class CreateCardController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, CamerDelegate {
     
     @IBOutlet weak var btnBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var pickerHeight: NSLayoutConstraint!
@@ -75,6 +79,9 @@ class CreateCardController: UIViewController, AVCaptureMetadataOutputObjectsDele
             cardsDataBase.category = category
             cardsDataBase.logoImage = image
             cardsDataBase.saveData()
+        } else {
+            return
+            print("OOOOOPSSPSPSPPSPS")
         }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NewCartAdded"), object: self)
         dismiss(animated: true, completion: nil)
@@ -91,7 +98,14 @@ class CreateCardController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     @IBAction func madePhotoAction(_ sender: UIButton) {
-        setPicker(sourceType: .camera)
+        let vc = UIStoryboard(name: "CustomCameraScene", bundle: nil).instantiateViewController(withIdentifier: "CustomCameraVC") as! PhotoViewController
+        vc.cameraDelegate = self
+        self.present(vc, animated: true, completion: nil)
+        
+//        setPicker(sourceType: .camera)
+    }
+    func setImage(image: UIImage){
+        self.imageView.image = image
     }
     
     func setPicker(sourceType: UIImagePickerController.SourceType){
