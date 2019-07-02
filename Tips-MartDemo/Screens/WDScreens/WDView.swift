@@ -11,7 +11,10 @@ import UIKit
 class WDView: UIView {
     
     @IBOutlet weak var navigationView: UIView!
+    @IBOutlet weak var cardInfoLbl: UILabel!
     
+    @IBOutlet weak var cardActivView: UIView!
+    @IBOutlet weak var phoneActiveView: UIView!
     let gradientLayer = CAGradientLayer()
     
     let purpleColor = UIColor(red: 79/255, green: 67/255, blue: 145/255, alpha: 1).cgColor

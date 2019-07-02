@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailWDView" customModule="Tips_MartDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="firstTextField" destination="vEs-vv-pxO" id="UhH-8G-5vo"/>
+                <outlet property="firstTextFieldName" destination="R6h-Za-sGO" id="7zJ-Ve-8PE"/>
+                <outlet property="minWdSumLabel" destination="p6C-7M-gBw" id="iG3-I0-fIU"/>
+                <outlet property="viewHeight" destination="vWQ-uK-XXl" id="nTX-Zl-FBb"/>
+                <outlet property="wdBtnOutlet" destination="fr1-kp-NxM" id="AAg-DE-8em"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="498"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oe9-ja-p12">
+                    <rect key="frame" x="0.0" y="44" width="444" height="420"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер карты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6h-Za-sGO">
+                            <rect key="frame" x="0.0" y="30" width="424" height="10"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="11"/>
+                            <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например:  1111 1111 1111 1111" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vEs-vv-pxO">
+                            <rect key="frame" x="0.0" y="41" width="444" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBg-WA-ebh">
+                            <rect key="frame" x="0.0" y="96" width="100" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="Tl8-5B-4us"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6C-7M-gBw">
+                            <rect key="frame" x="0.0" y="141" width="444" height="21.5"/>
+                            <string key="text">Минимальная сумма вывода составляет250 грн. 
+Для вывода суммы более 7000 грн. – обратитесь в Cлужбу поддержки.</string>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                            <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIL-rS-XG4">
+                            <rect key="frame" x="0.0" y="182.5" width="444" height="64.5"/>
+                            <string key="text">
+1. Вывести средства с разных аккаунтов на одинаковые реквизиты нельзя.
+2. Указывай только реальные,зарегистрированные данные.
+3. Заявка на вывод будет обработана в течение 1-3 рабочих дней.
+4. Комиссия на вывод средств10%</string>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                            <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-kp-NxM">
+                            <rect key="frame" x="20" y="360" width="404" height="40"/>
+                            <color key="backgroundColor" red="0.27058823529999998" green="0.78823529410000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Ir8-kn-pyM"/>
+                            </constraints>
+                            <state key="normal" title="Вывести средства">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Укажите сумму вывода" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvd-c5-dSw">
+                            <rect key="frame" x="0.0" y="85" width="130.5" height="10"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="11"/>
+                            <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-oN-egw">
+                            <rect key="frame" x="102" y="115" width="322" height="11"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                            <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="R6h-Za-sGO" firstAttribute="leading" secondItem="Oe9-ja-p12" secondAttribute="leading" id="03I-iw-d7O"/>
+                        <constraint firstItem="p6C-7M-gBw" firstAttribute="top" secondItem="KBg-WA-ebh" secondAttribute="bottom" constant="15" id="29a-RV-i0s"/>
+                        <constraint firstItem="fvd-c5-dSw" firstAttribute="leading" secondItem="Oe9-ja-p12" secondAttribute="leading" id="4MV-yK-Cey"/>
+                        <constraint firstItem="fr1-kp-NxM" firstAttribute="leading" secondItem="Oe9-ja-p12" secondAttribute="leading" constant="20" id="6bT-gM-hAO"/>
+                        <constraint firstAttribute="trailing" secondItem="VIL-rS-XG4" secondAttribute="trailing" id="8aA-AG-7CA"/>
+                        <constraint firstItem="vEs-vv-pxO" firstAttribute="leading" secondItem="Oe9-ja-p12" secondAttribute="leading" id="9pA-LG-ZTn"/>
+                        <constraint firstAttribute="trailing" secondItem="fr1-kp-NxM" secondAttribute="trailing" constant="20" id="C1C-HW-FuE"/>
+                        <constraint firstAttribute="trailing" secondItem="vEs-vv-pxO" secondAttribute="trailing" id="JGg-ZQ-vzK"/>
+                        <constraint firstAttribute="bottom" secondItem="fr1-kp-NxM" secondAttribute="bottom" constant="20" id="KjR-7u-yNL"/>
+                        <constraint firstAttribute="trailing" secondItem="p6C-7M-gBw" secondAttribute="trailing" id="Lhm-AB-6nu"/>
+                        <constraint firstItem="m3Y-oN-egw" firstAttribute="bottom" secondItem="KBg-WA-ebh" secondAttribute="bottom" id="NFk-Z2-9HL"/>
+                        <constraint firstItem="vEs-vv-pxO" firstAttribute="top" secondItem="R6h-Za-sGO" secondAttribute="bottom" constant="1" id="NwP-1v-nxt"/>
+                        <constraint firstItem="m3Y-oN-egw" firstAttribute="leading" secondItem="KBg-WA-ebh" secondAttribute="trailing" constant="2" id="PZ1-oY-pML"/>
+                        <constraint firstAttribute="trailing" secondItem="m3Y-oN-egw" secondAttribute="trailing" constant="20" id="SIF-8f-ZQe"/>
+                        <constraint firstItem="KBg-WA-ebh" firstAttribute="top" secondItem="fvd-c5-dSw" secondAttribute="bottom" constant="1" id="UHE-KI-G7t"/>
+                        <constraint firstItem="KBg-WA-ebh" firstAttribute="leading" secondItem="Oe9-ja-p12" secondAttribute="leading" id="ZOz-NI-Tb1"/>
+                        <constraint firstItem="R6h-Za-sGO" firstAttribute="top" secondItem="Oe9-ja-p12" secondAttribute="top" constant="30" id="cc1-4x-ksM"/>
+                        <constraint firstAttribute="trailing" secondItem="R6h-Za-sGO" secondAttribute="trailing" constant="20" id="lCQ-aE-pOv"/>
+                        <constraint firstItem="KBg-WA-ebh" firstAttribute="top" secondItem="vEs-vv-pxO" secondAttribute="bottom" constant="25" id="q4q-Lq-TZ7"/>
+                        <constraint firstItem="VIL-rS-XG4" firstAttribute="top" secondItem="p6C-7M-gBw" secondAttribute="bottom" constant="20" id="stI-kt-Gdc"/>
+                        <constraint firstItem="p6C-7M-gBw" firstAttribute="leading" secondItem="Oe9-ja-p12" secondAttribute="leading" id="uWn-ap-13y"/>
+                        <constraint firstAttribute="height" priority="800" constant="350" id="vWQ-uK-XXl"/>
+                        <constraint firstItem="VIL-rS-XG4" firstAttribute="leading" secondItem="Oe9-ja-p12" secondAttribute="leading" id="w5r-4e-a0e"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Oe9-ja-p12" secondAttribute="bottom" id="EAb-nj-gyt"/>
+                <constraint firstItem="Oe9-ja-p12" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OzQ-7Y-haB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Oe9-ja-p12" secondAttribute="trailing" id="i1w-9G-tWR"/>
+                <constraint firstItem="Oe9-ja-p12" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="r5h-Nz-TiV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="127.53623188405798" y="141.96428571428569"/>
+        </view>
+    </objects>
+</document>

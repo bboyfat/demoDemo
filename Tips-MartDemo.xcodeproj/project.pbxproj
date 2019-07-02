@@ -162,6 +162,8 @@
 		C2B80C85228C46DD00C469D4 /* MapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C84228C46DD00C469D4 /* MapAPI.swift */; };
 		C2B80C89228D953700C469D4 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B80C88228D953700C469D4 /* MapCell.swift */; };
 		C2BA3C6D22579FFB0016CA9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */; };
+		C2BF0F5C22CB5DD100EC4578 /* DetailWDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF0F5B22CB5DD100EC4578 /* DetailWDView.swift */; };
+		C2BF0F5E22CB602300EC4578 /* DetailWDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2BF0F5D22CB602300EC4578 /* DetailWDView.xib */; };
 		C2C26356228C09DE000389FB /* ShopsCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C26355228C09DE000389FB /* ShopsCoordinates.swift */; };
 		C2C355842297EC2200492971 /* Reviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C355832297EC2200492971 /* Reviews.storyboard */; };
 		C2C355862297F6DE00492971 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C355852297F6DE00492971 /* ReviewsController.swift */; };
@@ -417,6 +419,8 @@
 		C2BA3C6C22579FFA0016CA9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2BA3C6E2257CEA50016CA9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA3C702257CEA50016CA9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BF0F5B22CB5DD100EC4578 /* DetailWDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWDView.swift; sourceTree = "<group>"; };
+		C2BF0F5D22CB602300EC4578 /* DetailWDView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailWDView.xib; sourceTree = "<group>"; };
 		C2C26355228C09DE000389FB /* ShopsCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsCoordinates.swift; sourceTree = "<group>"; };
 		C2C355832297EC2200492971 /* Reviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reviews.storyboard; sourceTree = "<group>"; };
 		C2C355852297F6DE00492971 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
@@ -1600,6 +1604,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C2BF0F5A22CB5DB300EC4578 /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				C2BF0F5B22CB5DD100EC4578 /* DetailWDView.swift */,
+				C2BF0F5D22CB602300EC4578 /* DetailWDView.xib */,
+			);
+			path = DetailsView;
+			sourceTree = "<group>";
+		};
 		C2C355822297EC0A00492971 /* ReviewsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -1831,6 +1844,7 @@
 		C2DEEBCA2296C33300FCEDC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2BF0F5A22CB5DB300EC4578 /* DetailsView */,
 				C242C48D2270748F008B359A /* WDView.swift */,
 				C242C493227077A6008B359A /* WDHistoryView.swift */,
 				C242C48F2270750A008B359A /* WDHistory.storyboard */,
@@ -2032,6 +2046,7 @@
 				C242C48A227067AC008B359A /* WithDrawal.storyboard in Resources */,
 				C2ADBA9722A54E49001AF895 /* FooterForCategories.xib in Resources */,
 				C2AF21162296D4B40013EC82 /* LoginXib.xib in Resources */,
+				C2BF0F5E22CB602300EC4578 /* DetailWDView.xib in Resources */,
 				C2E699FA2258B2B0006FDDDB /* gotham_pro.ttf in Resources */,
 				C283C8492280380A00714B98 /* LoginScreen.storyboard in Resources */,
 				C270FC8D2269F5510059F161 /* MoreScreen.storyboard in Resources */,
@@ -2310,6 +2325,7 @@
 				C2C355862297F6DE00492971 /* ReviewsController.swift in Sources */,
 				C2D3AECE229FF36A00A81F45 /* FAQController.swift in Sources */,
 				C2DEEBB32295AD9100FCEDC8 /* ConstantsForMainPage.swift in Sources */,
+				C2BF0F5C22CB5DD100EC4578 /* DetailWDView.swift in Sources */,
 				C24C547622844F7800AE45D5 /* CellModel.swift in Sources */,
 				C24283632264C04400750768 /* MainTabBarControllerViewController.swift in Sources */,
 				C24283702264F65200750768 /* BarCodeGenerator.swift in Sources */,
